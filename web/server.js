@@ -22,7 +22,7 @@ var server = {
     //---------------------------------------------------------------------------------------------
 
     updateFileList:function(){
-        var walker  = walk.walk('./recipes', {followLinks:false});
+        var walker  = walk.walk('./web/recipes', {followLinks:false});
 
         walker.on('file', function(root, stat, next){
             server.files.push(stat.name.replace(/.json/g, ''));
@@ -42,14 +42,20 @@ var server = {
         var i = server.files.length-1;
         while(i >= 0){
             var name = server.files[i];
-            links += '<a href="recipe/'+name+'">'+name+'</a><br />';
+            links += '<a href="recipes/'+name+'">'+name+'</a><br />';
             i--;
         }
        res.send(links);
     },
 
     recipeDetail:function(req, res){
-        res.send('this is a detail')
+        fs.readFile('./web/'+req.url+'.json', 'utf8', function(err, data){
+            if(err != null){
+                res.status(404).send('404 Not found');
+            }else{
+                res.send(JSON.parse(data));
+            }
+        });
     },
 
     //---------------------------------------------------------------------------------------------
@@ -57,7 +63,7 @@ var server = {
     //---------------------------------------------------------------------------------------------
     urlConfs:function(){
         server.app.get('/', server.recipeListing);
-        server.app.get('/recipe/*', server.recipeDetail);
+        server.app.get('/recipes/*', server.recipeDetail);
     }
 }
 

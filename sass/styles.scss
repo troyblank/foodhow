@@ -1,0 +1,29 @@
+@import "normalize.scss";
+
+/* ------ MIXINS ------- */
+@mixin breakpoint($point) {
+    @if $point == TABLET {
+        @media only screen and (max-width: 768px) { @content; }
+    }
+    @else if $point == MOBILE {
+        @media only screen and (max-width: 600px) { @content; }
+    }
+    @else if $point == MOBILE_LANDSCAPE {
+        @media only screen and (max-width: 600px) and (orientation:landscape) { @content; }
+    }
+}
+
+/* ------ UTILS ------- */
+%clearfix {
+    zoom: 1;
+    &:before{
+        content: "\0020"; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0;
+    }
+    &:after{
+        content: "\0020"; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; clear: both;
+    }
+}
+
+/* ------ CSS ------- */
+//box size all the things!
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }

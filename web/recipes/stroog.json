@@ -1,7 +1,12 @@
 {
     "title":"Stroog",
     "ingredients":[
-        "1/2 cup of liquor",
+        "&frac12; cup of liquor",
         "duck heads"
+    ],
+    "directions":[
+        "place duck heads in liquor",
+        "stew at 350&deg;",
+        "kill those mother-fers"
     ]
 }

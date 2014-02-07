@@ -1,4 +1,5 @@
 var express = require('express');
+var handlebars = require('handlebars');
 var fs = require('fs');
 var walk    = require('walk');
 
@@ -53,8 +54,19 @@ var server = {
             if(err != null){
                 res.status(404).send('404 Not found');
             }else{
-                res.send(JSON.parse(data));
+                server.renderRecipe(JSON.parse(data), function(render){
+                    res.send(render);
+                });
             }
+        });
+    },
+
+    renderRecipe:function(json, callback){
+        fs.readFile('./web/templates/recipe.html', 'utf8', function(err, data){
+            var template = handlebars.compile(data);
+            //var context = {title: "My New Post", body: "This is my first post!"};
+            var html = template(json);
+            callback(html)
         });
     },
 

@@ -1,7 +1,9 @@
 var express = require('express');
-var handlebars = require('handlebars');
+var nunjucks = require('nunjucks');
 var fs = require('fs');
 var walk    = require('walk');
+
+nunjucks.configure('./web/templates', { autoescape: false });
 
 var server = {
 
@@ -54,19 +56,8 @@ var server = {
             if(err != null){
                 res.status(404).send('404 Not found');
             }else{
-                server.renderRecipe(JSON.parse(data), function(render){
-                    res.send(render);
-                });
+                res.send(nunjucks.render('recipe.html', JSON.parse(data)));
             }
-        });
-    },
-
-    renderRecipe:function(json, callback){
-        fs.readFile('./web/templates/recipe.html', 'utf8', function(err, data){
-            var template = handlebars.compile(data);
-            //var context = {title: "My New Post", body: "This is my first post!"};
-            var html = template(json);
-            callback(html)
         });
     },
 
@@ -78,7 +69,5 @@ var server = {
         server.app.get('/recipes/*', server.recipeDetail);
     }
 }
-
-
 
 server.initialize();

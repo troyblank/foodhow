@@ -1,13 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
 <div class="recipe">
-    <h1>{{title}}</h1>
+    <h1>{{ title }}</h1>
     <ul class="ingredients">
-        {{#each ingredients}}
-            <li>{{{this}}}</li>
-        {{/each}}
+        {% for ingredient in ingredients %}
+            <li>{{ ingredient }}</li>
+        {% endfor %}
     </ul>
     <ul class="directions">
-        {{#each directions}}
-            <li>{{{this}}}</li>
-        {{/each}}
+        {% for direction in directions %}
+            <li>{{ direction }}</li>
+        {% endfor %}
     </ul>
 </div>
+{% endblock %}

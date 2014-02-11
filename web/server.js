@@ -41,14 +41,14 @@ var server = {
     //VIEWS
     //---------------------------------------------------------------------------------------------
     recipeListing:function(req, res){
-        var links = '';
+        var links = new Array();
         var i = server.files.length-1;
         while(i >= 0){
             var name = server.files[i];
-            links += '<a href="recipes/'+name+'">'+name+'</a><br />';
+            links.push(name);
             i--;
         }
-       res.send(links);
+        res.send(nunjucks.render('list.html', {'links':links}));
     },
 
     recipeDetail:function(req, res){

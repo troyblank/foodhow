@@ -1,22 +1,23 @@
 {
-    "name":"foodHow",
-    "version":"0.0.1",
-    "main":"server.js",
-    "scripts":{
-        "test":"echo \"Error: no text specified\" && exit 1"
+    "name": "foodHow",
+    "version": "0.0.1",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no text specified\" && exit 1"
     },
-    "dependencies":{
-        "express":"3.4.8",
-        "nunjucks":"1.0.1",
-        "walk":"2.3.1"
+    "dependencies": {
+        "express": "3.4.8",
+        "nunjucks": "1.0.1",
+        "walk": "2.3.1"
     },
-    "devDependencies":{
+    "devDependencies": {
         "grunt": "~0.4.1",
         "grunt-contrib-sass": "~0.5.0",
         "grunt-contrib-watch": "~0.5.3",
         "matchdep": "~0.1.1",
-        "grunt-notify": "0.2.13"
+        "grunt-notify": "0.2.13",
+        "grunt-shell": "0.6.4"
     },
-    "author":"Troy Blank",
-    "license":"BSD"
+    "author": "Troy Blank",
+    "license": "BSD"
 }

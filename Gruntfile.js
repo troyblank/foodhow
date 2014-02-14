@@ -1,36 +1,36 @@
-module.exports = function(grunt){
+module.exports = function(grunt) {
 
     grunt.initConfig({
-        watch:{
+        watch: {
             sass: {
                 files: ['sass/{,*/}*.{scss,sass}'],
                 tasks: ['sass:dev', 'notify:sass']
             },
             livereload: {
-                options:{
-                    livereload:true,
+                options: {
+                    livereload: true,
                 },
                 files: [
-                    'website/styles/*.css'
+                    'web/static/styles/*.css'
                 ]
             }
         },
         sass: {
             dev: {
-                options:{
+                options: {
                     debugInfo: true,
                     sourcemap: true
                 },
                 files: {
-                    'web/styles/styles.css': 'sass/styles.scss'
+                    'web/static/styles/styles.css': 'sass/styles.scss'
                 }
             },
             stage: {
-                options:{
+                options: {
                     style: 'compressed'
                 },
                 files: {
-                    'web/styles/styles.css': 'sass/styles.scss'
+                    'web/static/styles/styles.css': 'sass/styles.scss'
                 }
             }
         },
@@ -41,12 +41,17 @@ module.exports = function(grunt){
                     message: 'SASS has compiled!'
                 }
             }
+        },
+        shell: {
+            startServer: {
+                command: 'node web/server.js'
+            }
         }
     });
 
     grunt.registerTask('default', [
-        'watch',
         'sass:dev',
+        'watch'
     ]);
 
     grunt.loadNpmTasks('grunt-contrib-watch');

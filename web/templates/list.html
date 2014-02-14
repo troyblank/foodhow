@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <header>
+        <h1>Food How</h1>
+    </header>
+
     {% for link in links %}
         <a href="recipes/{{ link }}">{{ link }}</a><br />
     {% endfor %}

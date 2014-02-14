@@ -48,7 +48,7 @@ var server = {
         var links = new Array();
         var i = server.files.length - 1;
         while (i >= 0) {
-            var name = server.files[i];
+            var name = server.files[i].replace('_', ' ');
             links.push(name);
             i--;
         }

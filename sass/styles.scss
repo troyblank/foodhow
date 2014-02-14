@@ -60,7 +60,7 @@ body > section{
     &.list{
         max-width:1000px; margin:0 auto;
         @extend %clearfix;
-        a { min-width:100px; padding:10px; display:block; float:left; color:$orange; }
+        a { padding:10px; display:block; float:left; color:$orange; }
     }
     &.recipe{
         header {

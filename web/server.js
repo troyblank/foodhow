@@ -48,8 +48,11 @@ var server = {
         var links = new Array();
         var i = server.files.length - 1;
         while (i >= 0) {
-            var name = server.files[i].replace('_', ' ');
-            links.push(name);
+            var name = server.files[i];
+            links.push({
+                'name': name.replace('_', ' '),
+                'url': 'recipes/' + name
+            });
             i--;
         }
         res.send(nunjucks.render('list.html', {

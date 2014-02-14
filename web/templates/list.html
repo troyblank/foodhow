@@ -10,7 +10,7 @@
     </section>
     <section class="list">
         {% for link in links %}
-            <a href="recipes/{{ link }}">{{ link }}</a>
+            <a href="{{ link.url }}">{{ link.name }}</a>
         {% endfor %}
     </section>
 {% endblock %}

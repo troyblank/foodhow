@@ -3,9 +3,14 @@
 {% block content %}
     <header>
         <h1>Food How</h1>
+        <p>Food How is a place on how to make food. You will find recipes on this site that are used to make foods that are probably pretty good to eat.</p>
     </header>
-
-    {% for link in links %}
-        <a href="recipes/{{ link }}">{{ link }}</a><br />
-    {% endfor %}
+    <section class="search">
+        <div><input type="text" name="search" placeholder="Search"></div>
+    </section>
+    <section class="list">
+        {% for link in links %}
+            <a href="recipes/{{ link }}">{{ link }}</a>
+        {% endfor %}
+    </section>
 {% endblock %}

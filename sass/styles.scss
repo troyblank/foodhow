@@ -58,7 +58,7 @@ body > section{
     &.list{
         max-width:1000px; margin:0 auto;
         @extend %clearfix;
-        a { padding:10px; display:block; float:left; color:$orange; }
+        a { margin:10px; padding:10px; display:block; float:left; color:$orange; border:1px dashed $orange; border-radius:10px; }
     }
     &.recipe{
         header {

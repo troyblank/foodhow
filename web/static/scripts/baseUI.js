@@ -17,6 +17,7 @@ var baseUI = {
 
         function addListeners() {
             $('input[name=search]').on('input', inputChangeHand);
+            $('input[name=search]').on('keydown', keypressHand);
         }
 
         function generateSearchList() {
@@ -27,6 +28,13 @@ var baseUI = {
 
         function inputChangeHand() {
             filterList($(this).val());
+        }
+
+        function keypressHand(e) {
+            var code = e.keyCode || e.which;
+            if (code === 13) {
+                $(this).blur();
+            }
         }
 
         function filterList(val) {

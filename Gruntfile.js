@@ -6,6 +6,10 @@ module.exports = function(grunt) {
                 files: ['sass/{,*/}*.{scss,sass}'],
                 tasks: ['sass:dev', 'notify:sass']
             },
+            uglify: {
+                files: ['web/static/scripts/*.js'],
+                tasks: ['uglify:dev', 'notify:uglify']
+            },
             livereload: {
                 options: {
                     livereload: true,
@@ -34,17 +38,30 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uglify: {
+            dev: {
+                files: {
+                    'web/static/scripts/base.min.js': ['web/static/scripts/baseUI.js']
+                }
+            },
+            stage: {
+                files: {
+                    'web/static/scripts/base.min.js': ['web/static/scripts/baseUI.js']
+                }
+            }
+        },
         notify: {
             sass: {
                 options: {
                     title: 'SASS',
                     message: 'SASS has compiled!'
                 }
-            }
-        },
-        shell: {
-            startServer: {
-                command: 'node web/server.js'
+            },
+            uglify: {
+                options: {
+                    title: 'Uglify',
+                    message: 'Uglify has compiled!'
+                }
             }
         }
     });

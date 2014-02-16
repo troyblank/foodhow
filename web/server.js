@@ -50,7 +50,7 @@ var server = {
         while (i >= 0) {
             var name = server.files[i];
             links.push({
-                'name': name.replace('_', ' '),
+                'name': name.replace(/_/g, ' '),
                 'url': 'recipes/' + name
             });
             i--;

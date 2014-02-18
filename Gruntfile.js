@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                 tasks: ['sass:dev', 'notify:sass']
             },
             uglify: {
-                files: ['web/static/scripts/*.js'],
+                files: ['web/static/scripts/*.js', 'web/static/scripts/lib/*.js'],
                 tasks: ['uglify:dev', 'notify:uglify']
             },
             livereload: {
@@ -41,12 +41,12 @@ module.exports = function(grunt) {
         uglify: {
             dev: {
                 files: {
-                    'web/static/scripts/base.min.js': ['web/static/scripts/baseUI.js']
+                    'web/static/scripts/base.min.js': ['web/static/scripts/lib/EventDispatcher.js', 'web/static/scripts/baseUI.js']
                 }
             },
             stage: {
                 files: {
-                    'web/static/scripts/base.min.js': ['web/static/scripts/baseUI.js']
+                    'web/static/scripts/base.min.js': ['web/static/scripts/lib/EventDispatcher.js', 'web/static/scripts/baseUI.js']
                 }
             }
         },

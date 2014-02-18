@@ -26,7 +26,8 @@ module.exports = function(grunt) {
                     sourcemap: true
                 },
                 files: {
-                    'web/static/styles/styles.css': 'sass/styles.scss'
+                    'web/static/styles/styles.css': 'sass/styles.scss',
+                    'web/static/styles/print.css': 'sass/print.scss'
                 }
             },
             stage: {
@@ -34,7 +35,8 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'web/static/styles/styles.css': 'sass/styles.scss'
+                    'web/static/styles/styles.css': 'sass/styles.scss',
+                    'web/static/styles/print.css': 'sass/print.scss'
                 }
             }
         },

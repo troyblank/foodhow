@@ -1,0 +1,11 @@
+h1 { font-size:2rem; }
+h2 { font-size:1rem; }
+
+body > section{
+    &.recipe{
+        ul,ol {
+            margin:0 0 20px 50px;
+            li { margin-bottom:5px; }
+        }
+    }
+}

@@ -3,4 +3,4 @@ Food how is an experimental Node.js recipe book that uses json files instead of 
 
 # To Do List
 * host it.
-* add and admin to allow creation and editing of recipes.
+* add an admin to allow creation and editing of recipes.

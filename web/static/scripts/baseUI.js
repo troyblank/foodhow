@@ -31,7 +31,7 @@ var baseUI = {
         }
 
         function filterList(val) {
-            var re = new RegExp(val, 'g');
+            var re = new RegExp(val, 'gi');
             var evalist = cleared ? list : shortList;
             for (var prop in evalist) {
                 if (prop.match(re) === null) {

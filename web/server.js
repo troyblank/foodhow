@@ -3,7 +3,7 @@ var nunjucks = require('nunjucks');
 var fs = require('fs');
 var walk = require('walk');
 
-nunjucks.configure('./web/templates', {
+nunjucks.configure(__dirname + '/templates', {
     autoescape: false
 });
 

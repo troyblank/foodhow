@@ -27,7 +27,7 @@ var server = {
     //---------------------------------------------------------------------------------------------
 
     updateFileList: function() {
-        var walker = walk.walk('./web/recipes', {
+        var walker = walk.walk(__dirname + '/recipes', {
             followLinks: false
         });
 

@@ -27,14 +27,14 @@
 /* ------ COLORS ------- */
 $cream:rgb(233,221,208);
 $brown:rgb(87,63,50);
+$brown_50:rgba(87,63,50, 0.5);
 $orange:rgb(177,141,74);
 
 /* ------ CSS ------- */
 //box size all the things!
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-body { font-family: 'Raleway', sans-serif; font-size:1rem; color:$brown; background:$cream; }
-
+body { padding-top:50px; font-family: 'Raleway', sans-serif; font-size:1rem; color:$brown; background:$cream; }
 
 
 a { color:$orange; text-decoration:none; }
@@ -47,6 +47,16 @@ body > header {
     margin:20px 0; padding:0 20px;
     h1 { text-align:center; }
     p { max-width:600px; text-align:center; margin:0 auto; }
+}
+
+body > nav {
+    position:fixed; top:0; left:0; width:100%; background:$brown_50;
+    .nav-wrapper { width:100%; max-width:1000px; margin:0 auto; padding-right:20px; }
+    a {
+        width:50px; height:50px; display:block; float:right; background:url('/images/icon_home.svg') $orange no-repeat; background-size:50%; background-position:50%; border:3px solid $brown;
+        &.guide { background-image:url('/images/icon_guide.svg') }
+        &.list { background-image:url('/images/icon_list.svg') }
+    }
 }
 
 body > section{

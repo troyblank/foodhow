@@ -43,6 +43,13 @@ h2 { max-width:600px; font-family:'Bitter', serif; font-size:1.5rem; margin:0 0 
 h3 { margin:0; font-family:'Bitter', serif; font-size:0.75rem; }
 p { line-height:1.5rem; }
 
+table{
+    width:100%; max-width:1000px; margin:0 auto; border-left: 1px solid $orange; border-right: 1px solid $orange;
+    tr { border-bottom:1px solid $orange; }
+    th { background:$brown; color:$cream; text-align:left; text-transform:uppercase; padding:5px; font-size:0.8em; }
+    td { font-size:0.8em; padding:5px; }
+}
+
 body > header {
     margin:20px 0; padding:0 20px;
     h1 { text-align:center; }
@@ -81,5 +88,9 @@ body > section{
             margin:0 0 50px 50px; padding:0;
             li { max-width:550px; margin-bottom:10px; line-height:1.5rem; }
         }
+    }
+
+    &.guide{
+        h1 { font-size: 2rem; text-align:center; }
     }
 }

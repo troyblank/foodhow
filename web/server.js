@@ -70,12 +70,17 @@ var server = {
         });
     },
 
+    guide: function(req, res) {
+        res.send(nunjucks.render('guide.html'));
+    },
+
     //---------------------------------------------------------------------------------------------
     //URL CONFS
     //---------------------------------------------------------------------------------------------
     urlConfs: function() {
         server.app.get('/', server.recipeListing);
         server.app.get('/recipes/*', server.recipeDetail);
+        server.app.get('/guide', server.guide);
 
         server.app.use(express.static(__dirname + '/static'));
     }

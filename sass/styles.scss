@@ -86,7 +86,10 @@ body > section{
 
         ul,ol {
             margin:0 0 50px 50px; padding:0;
-            li { max-width:550px; margin-bottom:10px; line-height:1.5rem; }
+            li {
+                max-width:550px; margin-bottom:10px; line-height:1.5rem;
+                &.active { list-style-image: url('/images/icon_shopping_cart.svg'); color:$orange;  }
+            }
         }
     }
 

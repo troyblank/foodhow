@@ -43,12 +43,12 @@ module.exports = function(grunt) {
         uglify: {
             dev: {
                 files: {
-                    'web/static/scripts/base.min.js': ['web/static/scripts/lib/EventDispatcher.js', 'web/static/scripts/baseUI.js']
+                    'web/static/scripts/base.min.js': ['web/static/scripts/lib/underscore.js', 'web/static/scripts/lib/backbone-min.js', 'web/static/scripts/lib/EventDispatcher.js', 'web/static/scripts/baseUI.js']
                 }
             },
             stage: {
                 files: {
-                    'web/static/scripts/base.min.js': ['web/static/scripts/lib/EventDispatcher.js', 'web/static/scripts/baseUI.js']
+                    'web/static/scripts/base.min.js': ['web/static/scripts/lib/underscore.js', 'web/static/scripts/lib/backbone-min.js', 'web/static/scripts/lib/EventDispatcher.js', 'web/static/scripts/baseUI.js']
                 }
             }
         },

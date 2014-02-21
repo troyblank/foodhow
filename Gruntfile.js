@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                 tasks: ['sass:dev', 'notify:sass']
             },
             uglify: {
-                files: ['web/static/scripts/*.js', 'web/static/scripts/lib/*.js'],
+                files: ['web/static/scripts/*.js', 'web/static/scripts/lib/*.js', 'web/static/scripts/models/*.js'],
                 tasks: ['uglify:dev', 'notify:uglify']
             },
             livereload: {
@@ -43,12 +43,28 @@ module.exports = function(grunt) {
         uglify: {
             dev: {
                 files: {
-                    'web/static/scripts/base.min.js': ['web/static/scripts/lib/underscore.js', 'web/static/scripts/lib/backbone-min.js', 'web/static/scripts/lib/EventDispatcher.js', 'web/static/scripts/baseUI.js']
+                    'web/static/scripts/base.min.js': [
+                        'web/static/scripts/lib/underscore.js',
+                        'web/static/scripts/lib/backbone-min.js',
+                        'web/static/scripts/lib/backbone.localStorage.js',
+                        'web/static/scripts/models/toGets.js',
+                        'web/static/scripts/models/toGet.js',
+                        'web/static/scripts/lib/EventDispatcher.js',
+                        'web/static/scripts/baseUI.js'
+                    ]
                 }
             },
             stage: {
                 files: {
-                    'web/static/scripts/base.min.js': ['web/static/scripts/lib/underscore.js', 'web/static/scripts/lib/backbone-min.js', 'web/static/scripts/lib/EventDispatcher.js', 'web/static/scripts/baseUI.js']
+                    'web/static/scripts/base.min.js': [
+                        'web/static/scripts/lib/underscore.js',
+                        'web/static/scripts/lib/backbone-min.js',
+                        'web/static/scripts/lib/backbone.localStorage.js',
+                        'web/static/scripts/models/toGets.js',
+                        'web/static/scripts/models/toGet.js',
+                        'web/static/scripts/lib/EventDispatcher.js',
+                        'web/static/scripts/baseUI.js'
+                    ]
                 }
             }
         },

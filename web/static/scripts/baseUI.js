@@ -1,6 +1,39 @@
 var baseUI = {
     initialize: function() {
         baseUI.listSearch();
+        baseUI.groceryList();
+    },
+    //-----------------------------------------------------------------------------------------
+    //LIST SEARCH
+    //-----------------------------------------------------------------------------------------
+    groceryList: function() {
+
+        var toGets = new toGets();
+
+        function initialize() {
+            console.log(toGets.add);
+            addListeners();
+        }
+
+        function addListeners() {
+            $('.ingredients li').on('click', ingredientAddHand);
+        }
+
+        //-----------------------------------------------------------------------------------------
+        //HANDLERS
+        //-----------------------------------------------------------------------------------------
+        function ingredientAddHand() {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active');
+                toGets.create({
+                    'title': $(this).html()
+                });
+            } else {
+                $(this).removeClass('active');
+            }
+        }
+
+        initialize();
     },
     //-----------------------------------------------------------------------------------------
     //LIST SEARCH
@@ -45,7 +78,7 @@ var baseUI = {
             }
         }
 
-        function clearShortList(){
+        function clearShortList() {
             cleared = true;
             shortList = {};
         }
@@ -55,9 +88,9 @@ var baseUI = {
         //-----------------------------------------------------------------------------------------
         function inputChangeHand() {
             var val = $(this).val();
-            if(val.length > 0){
+            if (val.length > 0) {
                 filterList(val);
-            }else{
+            } else {
                 clearShortList();
                 $('section.list > a').show();
             }
@@ -67,13 +100,13 @@ var baseUI = {
             var code = e.keyCode || e.which;
             if (code === 13) {
                 $(this).blur();
-            }else if(code == 8){
+            } else if (code == 8) {
                 //backspace - partial search clear need to reevaluate search.
                 EventDispatcher.dispatchEvent(EventDispatcher.ON_SEARCH_CLEAR);
             }
         }
 
-        function searchClearHand(){
+        function searchClearHand() {
             clearShortList();
         }
 

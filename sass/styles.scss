@@ -91,6 +91,7 @@ body > section{
                 &.active { list-style-image: url('/images/icon_shopping_cart.svg'); color:$orange;  }
             }
         }
+        .ingredients li { cursor:pointer; }
     }
 
     &.guide{

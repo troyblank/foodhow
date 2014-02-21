@@ -8,11 +8,16 @@ var baseUI = {
     //-----------------------------------------------------------------------------------------
     groceryList: function() {
 
-        var toGets = new toGets();
+        var ingredients = new ToGets();
+        ingredients.fetch();
 
         function initialize() {
-            console.log(toGets.add);
             addListeners();
+
+            console.log('------------')
+            ingredients.each(function(tg) {
+                console.log(tg)
+            });
         }
 
         function addListeners() {
@@ -25,7 +30,7 @@ var baseUI = {
         function ingredientAddHand() {
             if (!$(this).hasClass('active')) {
                 $(this).addClass('active');
-                toGets.create({
+                ingredients.create({
                     'title': $(this).html()
                 });
             } else {

@@ -1,4 +1,4 @@
-var toGet = Backbone.Model.extend({
+var ToGet = Backbone.Model.extend({
     defaults: {
         'title': '',
         'recipe': '',

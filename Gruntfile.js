@@ -47,9 +47,10 @@ module.exports = function(grunt) {
                         'web/static/scripts/lib/underscore.js',
                         'web/static/scripts/lib/backbone-min.js',
                         'web/static/scripts/lib/backbone.localStorage.js',
-                        'web/static/scripts/models/toGets.js',
-                        'web/static/scripts/models/toGet.js',
                         'web/static/scripts/lib/EventDispatcher.js',
+                        'web/static/scripts/models/toGet.js',
+                        'web/static/scripts/models/toGets.js',
+                        'web/static/scripts/views/ingredientView.js',
                         'web/static/scripts/baseUI.js'
                     ]
                 }
@@ -60,9 +61,10 @@ module.exports = function(grunt) {
                         'web/static/scripts/lib/underscore.js',
                         'web/static/scripts/lib/backbone-min.js',
                         'web/static/scripts/lib/backbone.localStorage.js',
-                        'web/static/scripts/models/toGets.js',
-                        'web/static/scripts/models/toGet.js',
                         'web/static/scripts/lib/EventDispatcher.js',
+                        'web/static/scripts/models/toGet.js',
+                        'web/static/scripts/models/toGets.js',
+                        'web/static/scripts/views/ingredientView.js',
                         'web/static/scripts/baseUI.js'
                     ]
                 }

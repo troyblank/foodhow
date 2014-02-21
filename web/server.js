@@ -74,6 +74,10 @@ var server = {
         res.send(nunjucks.render('guide.html'));
     },
 
+    shoppingList: function(req, res) {
+        res.send(nunjucks.render('base.html'));
+    },
+
     //---------------------------------------------------------------------------------------------
     //URL CONFS
     //---------------------------------------------------------------------------------------------
@@ -81,6 +85,7 @@ var server = {
         server.app.get('/', server.recipeListing);
         server.app.get('/recipes/*', server.recipeDetail);
         server.app.get('/guide', server.guide);
+        server.app.get('/shoppinglist', server.shoppingList);
 
         server.app.use(express.static(__dirname + '/static'));
     }

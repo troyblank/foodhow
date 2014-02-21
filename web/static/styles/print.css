@@ -1,16 +1,1 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/cygdrive\/s\/Desktop\/gits\/FoodHow\/sass\/print\.scss}line{font-family:\000031}}
-h1 {
-  font-size: 2rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/cygdrive\/s\/Desktop\/gits\/FoodHow\/sass\/print\.scss}line{font-family:\000032}}
-h2 {
-  font-size: 1rem; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/cygdrive\/s\/Desktop\/gits\/FoodHow\/sass\/print\.scss}line{font-family:\000036}}
-body > section.recipe ul, body > section.recipe ol {
-  margin: 0 0 20px 50px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/cygdrive\/s\/Desktop\/gits\/FoodHow\/sass\/print\.scss}line{font-family:\000038}}
-  body > section.recipe ul li, body > section.recipe ol li {
-    margin-bottom: 5px; }
-
-/*# sourceMappingURL=print.css.map */
+h1{font-size:2rem}h2{font-size:1rem}body>section.recipe ul,body>section.recipe ol{margin:0 0 20px 50px}body>section.recipe ul li,body>section.recipe ol li{margin-bottom:5px}

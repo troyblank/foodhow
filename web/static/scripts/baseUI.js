@@ -9,15 +9,9 @@ var baseUI = {
     groceryList: function() {
 
         var ingredients = new ToGets();
-        ingredients.fetch();
 
         function initialize() {
             addListeners();
-
-            console.log('------------')
-            ingredients.each(function(tg) {
-                console.log(tg)
-            });
         }
 
         function addListeners() {

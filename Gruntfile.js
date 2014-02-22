@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                 tasks: ['sass:dev', 'notify:sass']
             },
             uglify: {
-                files: ['web/static/scripts/*.js', 'web/static/scripts/lib/*.js', 'web/static/scripts/models/*.js'],
+                files: ['web/static/scripts/*.js', 'web/static/scripts/lib/*.js', 'web/static/scripts/models/*.js', 'web/static/scripts/views/*.js'],
                 tasks: ['uglify:dev', 'notify:uglify']
             },
             livereload: {
@@ -50,8 +50,11 @@ module.exports = function(grunt) {
                         'web/static/scripts/lib/EventDispatcher.js',
                         'web/static/scripts/models/toGet.js',
                         'web/static/scripts/models/toGets.js',
-                        'web/static/scripts/views/ingredientView.js',
+                        'web/static/scripts/views/ingredient.js',
                         'web/static/scripts/baseUI.js'
+                    ],
+                    'web/static/scripts/shoppingList.min.js': [
+                        'web/static/scripts/shoppingListUI.js'
                     ]
                 }
             },
@@ -64,8 +67,11 @@ module.exports = function(grunt) {
                         'web/static/scripts/lib/EventDispatcher.js',
                         'web/static/scripts/models/toGet.js',
                         'web/static/scripts/models/toGets.js',
-                        'web/static/scripts/views/ingredientView.js',
+                        'web/static/scripts/views/ingredient.js',
                         'web/static/scripts/baseUI.js'
+                    ],
+                    'web/static/scripts/shoppingList.min.js': [
+                        'web/static/scripts/shoppingListUI.js'
                     ]
                 }
             }

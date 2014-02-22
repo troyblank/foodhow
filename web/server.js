@@ -75,7 +75,7 @@ var server = {
     },
 
     shoppingList: function(req, res) {
-        res.send(nunjucks.render('base.html'));
+        res.send(nunjucks.render('shoppinglist.html'));
     },
 
     //---------------------------------------------------------------------------------------------

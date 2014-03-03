@@ -11,6 +11,9 @@ var baseUI = {
         var ingredients = new ToGets();
 
         function initialize() {
+            ingredients.fetch();
+
+            stageSetIngredientList();
             addListeners();
         }
 
@@ -18,21 +21,76 @@ var baseUI = {
             $('.ingredients li').on('click', ingredientAddHand);
         }
 
+        function stageSetIngredientList() {
+            var recipe = $('.recipe header h1').html();
+            $('.ingredients li').each(function(i, ele) {
+                var title = $(ele).html();
+                if (isIngredientInList(recipe, title)) {
+                    $(ele).addClass('active');
+                }
+
+            });
+        }
+
+        function isIngredientInList(recipe, title) {
+            var match = ingredients.where({
+                'recipe': recipe,
+                'title': title
+            });
+
+            if (match.length == 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function addIngredient(recipe, title) {
+            var match = ingredients.where({
+                'recipe': recipe,
+                'title': title
+            });
+
+            if (match.length == 0) {
+                ingredients.create({
+                    'recipe': recipe,
+                    'title': title
+                });
+            }
+        }
+
+        function removeIngredient(recipe, title) {
+            var match = ingredients.where({
+                'recipe': recipe,
+                'title': title
+            });
+
+            var i = match.length - 1;
+            while (i >= 0) {
+                match[i].destroy();
+                i--;
+            }
+        }
+
         //-----------------------------------------------------------------------------------------
         //HANDLERS
         //-----------------------------------------------------------------------------------------
         function ingredientAddHand() {
+            var recipe = $('.recipe header h1').html();
+            var title = $(this).html();
+
             if (!$(this).hasClass('active')) {
                 $(this).addClass('active');
-                ingredients.create({
-                    'title': $(this).html()
-                });
+                addIngredient(recipe, title);
             } else {
                 $(this).removeClass('active');
+                removeIngredient(recipe, title);
             }
         }
 
-        initialize();
+        if ($('section.recipe').length > 0) {
+            initialize();
+        }
     },
     //-----------------------------------------------------------------------------------------
     //LIST SEARCH

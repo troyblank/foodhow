@@ -19,6 +19,7 @@ var shoppingListUI = {
 		var frag = document.createDocumentFragment();
 
 		if (shoppingListUI.ingredients.length > 0) {
+			//need to bust these out into two groups, deactive and not.
 			var ul = document.createElement('ul');
 			shoppingListUI.ingredients.each(function(tg) {
 				var view = new IngredientView({
@@ -28,16 +29,19 @@ var shoppingListUI = {
 			});
 			frag.appendChild(ul);
 		} else {
-			//show empty list notification
-			var h1 = document.createElement('h1');
-			var p = document.createElement('p');
-			h1.innerHTML = 'This list is empty';
-			p.innerHTML = 'There is no ingredients on your list, browser some recipes and select some ingredients to add some.';
-			frag.appendChild(h1);
-			frag.appendChild(p);
+			shoppingListUI.appendEmptyList(frag);
 		}
 
 		$('#shopping-list').html(frag);
+	},
+
+	appendEmptyList: function(frag) {
+		var h1 = document.createElement('h1');
+		var p = document.createElement('p');
+		h1.innerHTML = 'This list is empty';
+		p.innerHTML = 'There is no ingredients on your list, browser some recipes and select some ingredients to add some.';
+		frag.appendChild(h1);
+		frag.appendChild(p);
 	},
 	//--------------------------------------------------------------------------------------------------
 	//HANDLERS

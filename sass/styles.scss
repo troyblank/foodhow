@@ -1,6 +1,8 @@
 @import "normalize.scss";
 
-/* ------ MIXINS ------- */
+//--------------------------------------------------------------------------------------------------
+//MIXINS
+//--------------------------------------------------------------------------------------------------
 @mixin breakpoint($point) {
     @if $point == TABLET {
         @media only screen and (max-width: 768px) { @content; }
@@ -13,7 +15,9 @@
     }
 }
 
-/* ------ UTILS ------- */
+//--------------------------------------------------------------------------------------------------
+//UTILS
+//--------------------------------------------------------------------------------------------------
 %clearfix {
     zoom: 1;
     &:before{
@@ -24,13 +28,17 @@
     }
 }
 
-/* ------ COLORS ------- */
+//--------------------------------------------------------------------------------------------------
+//COLORS
+//--------------------------------------------------------------------------------------------------
 $cream:rgb(233,221,208);
 $brown:rgb(87,63,50);
 $brown_50:rgba(87,63,50, 0.5);
 $orange:rgb(177,141,74);
 
-/* ------ CSS ------- */
+//--------------------------------------------------------------------------------------------------
+//CSS
+//--------------------------------------------------------------------------------------------------
 //box size all the things!
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -96,5 +104,20 @@ body > section{
 
     &.guide{
         h1 { font-size: 2rem; text-align:center; }
+    }
+}
+
+//--------------------------------------------------------------------------------------------------
+//SHOPPING LIST
+//--------------------------------------------------------------------------------------------------
+#shopping-list {
+    max-width:500px; margin:20px auto;
+    li {
+        max-width:500px; margin-bottom:5px; padding:10px 5px 10px 35px; background:$orange; cursor:pointer; list-style:none; color:$cream; position:relative;
+        &.deactive {
+            background:$brown_50; text-decoration:line-through;
+            &:after { background:url('/images/icon_x.svg') no-repeat 2px $cream; background-size:80%; }
+        }
+        &:after { width:20px; height:20px; background:$cream; border:2px solid $brown; content:""; position:absolute; top:10px; left:5px; }
     }
 }

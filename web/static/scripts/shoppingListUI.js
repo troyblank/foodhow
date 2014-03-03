@@ -5,8 +5,16 @@ var shoppingListUI = {
 	initialize: function() {
 		shoppingListUI.ingredients.fetch();
 		shoppingListUI.printIngredients();
+		shoppingListUI.addListeners();
 	},
 
+	addListeners: function() {
+		$('#shopping-list li').on('click', shoppingListUI.clickHand);
+	},
+
+	//--------------------------------------------------------------------------------------------------
+	//VIEW
+	//--------------------------------------------------------------------------------------------------
 	printIngredients: function() {
 		var frag = document.createDocumentFragment();
 
@@ -30,6 +38,16 @@ var shoppingListUI = {
 		}
 
 		$('#shopping-list').html(frag);
+	},
+	//--------------------------------------------------------------------------------------------------
+	//HANDLERS
+	//--------------------------------------------------------------------------------------------------
+	clickHand: function() {
+		if (!$(this).hasClass('deactive')) {
+			$(this).addClass('deactive');
+		} else {
+			$(this).removeClass('deactive');
+		}
 	}
 }
 

@@ -114,10 +114,10 @@ body > section{
     max-width:500px; margin:20px auto;
     li {
         max-width:500px; margin-bottom:5px; padding:10px 5px 10px 35px; background:$orange; cursor:pointer; list-style:none; color:$cream; position:relative;
-        &.deactive {
-            background:$brown_50; text-decoration:line-through;
-            &:after { background:url('/images/icon_x.svg') no-repeat 2px $cream; background-size:80%; }
-        }
         &:after { width:20px; height:20px; background:$cream; border:2px solid $brown; content:""; position:absolute; top:10px; left:5px; }
+    }
+    .checked li {
+        background:$brown_50; text-decoration:line-through;
+        &:after { background:url('/images/icon_x.svg') no-repeat 2px $cream; background-size:80%; }
     }
 }

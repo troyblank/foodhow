@@ -8,8 +8,19 @@ var shoppingListUI = {
 		shoppingListUI.addListeners();
 	},
 
+	refreshListeners: function() {
+		shoppingListUI.removeListeners();
+		shoppingListUI.addListeners();
+	},
+
+	removeListeners: function() {
+		$('#shopping-list .unchecked li').off('click', shoppingListUI.uncheckClickHand);
+		$('#shopping-list .checked li').off('click', shoppingListUI.checkedClickHand);
+	},
+
 	addListeners: function() {
-		$('#shopping-list li').on('click', shoppingListUI.clickHand);
+		$('#shopping-list .unchecked li').on('click', shoppingListUI.uncheckClickHand);
+		$('#shopping-list .checked li').on('click', shoppingListUI.checkedClickHand);
 	},
 
 	//--------------------------------------------------------------------------------------------------
@@ -19,20 +30,37 @@ var shoppingListUI = {
 		var frag = document.createDocumentFragment();
 
 		if (shoppingListUI.ingredients.length > 0) {
-			//need to bust these out into two groups, deactive and not.
-			var ul = document.createElement('ul');
-			shoppingListUI.ingredients.each(function(tg) {
-				var view = new IngredientView({
-					'title': tg.get('title')
-				});
-				ul.appendChild(view.render().el);
+			var unchecked = shoppingListUI.ingredients.where({
+				'checked': false
 			});
-			frag.appendChild(ul);
+			var checked = shoppingListUI.ingredients.where({
+				'checked': true
+			});
+
+			frag.appendChild(shoppingListUI.appendIngredientList(unchecked, 'unchecked'));
+			frag.appendChild(shoppingListUI.appendIngredientList(checked, 'checked'));
+
 		} else {
 			shoppingListUI.appendEmptyList(frag);
 		}
 
 		$('#shopping-list').html(frag);
+	},
+
+	appendIngredientList: function(list, className) {
+		var ul = document.createElement('ul');
+		ul.className = className;
+
+		for (var i = 0; i < list.length; i++) {
+			var tg = list[i];
+			var view = new IngredientView({
+				'id': tg.cid,
+				'title': tg.get('title')
+			});
+			ul.appendChild(view.render().el);
+		}
+
+		return ul;
 	},
 
 	appendEmptyList: function(frag) {
@@ -46,12 +74,21 @@ var shoppingListUI = {
 	//--------------------------------------------------------------------------------------------------
 	//HANDLERS
 	//--------------------------------------------------------------------------------------------------
-	clickHand: function() {
-		if (!$(this).hasClass('deactive')) {
-			$(this).addClass('deactive');
-		} else {
-			$(this).removeClass('deactive');
-		}
+	uncheckClickHand: function() {
+		var ingredient = shoppingListUI.ingredients.get($(this).attr('data-id'));
+		ingredient.set('checked', true);
+		ingredient.save();
+
+		$(this).prependTo('.checked');
+		shoppingListUI.refreshListeners();
+	},
+	checkedClickHand: function() {
+		var ingredient = shoppingListUI.ingredients.get($(this).attr('data-id'));
+		ingredient.set('checked', false);
+		ingredient.save();
+
+		$(this).prependTo('.unchecked');
+		shoppingListUI.refreshListeners();
 	}
 }
 

@@ -16,11 +16,30 @@ var shoppingListUI = {
 	removeListeners: function() {
 		$('#shopping-list .unchecked li').off('click', shoppingListUI.uncheckClickHand);
 		$('#shopping-list .checked li').off('click', shoppingListUI.checkedClickHand);
+		$('#clear-btn').off('click', shoppingListUI.clearHand);
 	},
 
 	addListeners: function() {
 		$('#shopping-list .unchecked li').on('click', shoppingListUI.uncheckClickHand);
 		$('#shopping-list .checked li').on('click', shoppingListUI.checkedClickHand);
+		$('#clear-btn').on('click', shoppingListUI.clearHand);
+	},
+
+	clearAllChecked: function() {
+		var i = $('#shopping-list .checked li').length - 1;
+		while (i >= 0) {
+			var ele = $('#shopping-list .checked li')[i];
+			var ingredient = shoppingListUI.ingredients.get($(ele).attr('data-id'));
+			ingredient.destroy();
+			i--;
+		}
+
+		$('#clear-btn').hide();
+		$('#shopping-list .checked').empty();
+
+		if ($('#shopping-list .unchecked li').length == 0) {
+			shoppingListUI.appendDoneList();
+		}
 	},
 
 	//--------------------------------------------------------------------------------------------------
@@ -37,17 +56,18 @@ var shoppingListUI = {
 				'checked': true
 			});
 
-			frag.appendChild(shoppingListUI.appendIngredientList(unchecked, 'unchecked'));
-			frag.appendChild(shoppingListUI.appendIngredientList(checked, 'checked'));
-
+			frag.appendChild(shoppingListUI.makeIngredientList(unchecked, 'unchecked'));
+			frag.appendChild(shoppingListUI.makeClearAllButton());
+			frag.appendChild(shoppingListUI.makeIngredientList(checked, 'checked'));
 		} else {
 			shoppingListUI.appendEmptyList(frag);
 		}
 
 		$('#shopping-list').html(frag);
+		shoppingListUI.updateClearAllButton();
 	},
 
-	appendIngredientList: function(list, className) {
+	makeIngredientList: function(list, className) {
 		var ul = document.createElement('ul');
 		ul.className = className;
 
@@ -71,6 +91,32 @@ var shoppingListUI = {
 		frag.appendChild(h1);
 		frag.appendChild(p);
 	},
+
+	appendDoneList: function() {
+		var frag = document.createDocumentFragment();
+		var h1 = document.createElement('h1');
+		var p = document.createElement('p');
+		h1.innerHTML = 'Done!';
+		p.innerHTML = 'Oh, so proud of you!';
+		frag.appendChild(h1);
+		frag.appendChild(p);
+		$('#shopping-list').html(frag);
+	},
+
+	makeClearAllButton: function() {
+		var button = document.createElement('button');
+		button.id = 'clear-btn';
+		button.innerHTML = 'Clear Checked';
+		return button;
+	},
+
+	updateClearAllButton: function() {
+		if (!$('#shopping-list .checked li').length > 0) {
+			$('#clear-btn').hide();
+		} else {
+			$('#clear-btn').show();
+		}
+	},
 	//--------------------------------------------------------------------------------------------------
 	//HANDLERS
 	//--------------------------------------------------------------------------------------------------
@@ -80,6 +126,7 @@ var shoppingListUI = {
 		ingredient.save();
 
 		$(this).prependTo('.checked');
+		shoppingListUI.updateClearAllButton();
 		shoppingListUI.refreshListeners();
 	},
 	checkedClickHand: function() {
@@ -88,7 +135,11 @@ var shoppingListUI = {
 		ingredient.save();
 
 		$(this).prependTo('.unchecked');
+		shoppingListUI.updateClearAllButton();
 		shoppingListUI.refreshListeners();
+	},
+	clearHand: function() {
+		shoppingListUI.clearAllChecked();
 	}
 }
 

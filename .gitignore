@@ -3,6 +3,7 @@
 # NODE #
 #########
 node_modules
+Gruntfile.js
 
 # SASS #
 ########

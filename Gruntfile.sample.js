@@ -1,3 +1,4 @@
+//Please copy as Gruntfile.js and replace any placeholder credintials in the deploy task.
 module.exports = function(grunt) {
 
     grunt.initConfig({

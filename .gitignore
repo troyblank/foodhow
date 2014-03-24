@@ -3,7 +3,6 @@
 # NODE #
 #########
 node_modules
-Gruntfile.js
 
 # SASS #
 ########
@@ -19,3 +18,7 @@ Gruntfile.js
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
+credentials/config.json
+credentials/id_rsa

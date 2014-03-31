@@ -87,7 +87,9 @@ var server = {
         server.app.get('/guide', server.guide);
         server.app.get('/shoppinglist', server.shoppingList);
 
-        server.app.use(express.static(__dirname + '/static'));
+        server.app.use(express.static(__dirname + '/static'), {
+            maxAge: 2592000000
+        });
     }
 }
 

@@ -13,6 +13,8 @@ var server = {
     files: [],
 
     initialize: function() {
+        server.app.use(express.compress());
+
         server.urlConfs();
         server.updateFileList();
     },
@@ -87,9 +89,9 @@ var server = {
         server.app.get('/guide', server.guide);
         server.app.get('/shoppinglist', server.shoppingList);
 
-        server.app.use(express.static(__dirname + '/static'), {
-            maxAge: 2592000000
-        });
+        server.app.use(express.static(__dirname + '/static', {
+            'maxAge': 2592000000
+        }));
     }
 }
 

@@ -112,6 +112,11 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
+    grunt.registerTask('deploy', [
+        'sshexec'
+    ]);
+
+
     grunt.loadNpmTasks('grunt-contrib-watch');
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 }

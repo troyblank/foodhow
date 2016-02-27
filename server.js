@@ -45,16 +45,18 @@ var server = {
     //VIEWS
     //---------------------------------------------------------------------------------------------
     recipeListing: function(req, res) {
-        var links = new Array();
-        var i = server.files.length - 1;
-        while (i >= 0) {
+        var links = new Array(),
+            files = server.files;
+            i = 0;
+
+        for(i; i < files.length; i++) {
             var name = server.files[i];
             links.push({
                 'name': name.replace(/_/g, ' '),
                 'url': 'recipes/' + name
             });
-            i--;
         }
+
         res.send(nunjucks.render('list.html', {
             'links': links
         }));

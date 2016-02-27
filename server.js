@@ -3,7 +3,7 @@ var nunjucks = require('nunjucks');
 var fs = require('fs');
 var walk = require('walk');
 
-nunjucks.configure(__dirname + '/templates', {
+nunjucks.configure(__dirname + '/web/templates', {
     autoescape: false
 });
 
@@ -27,7 +27,7 @@ var server = {
     //---------------------------------------------------------------------------------------------
 
     updateFileList: function() {
-        var walker = walk.walk(__dirname + '/recipes', {
+        var walker = walk.walk(__dirname + '/web//recipes', {
             followLinks: false
         });
 
@@ -61,7 +61,7 @@ var server = {
     },
 
     recipeDetail: function(req, res) {
-        fs.readFile(__dirname + req.url + '.json', 'utf8', function(err, data) {
+        fs.readFile(__dirname + /web/ + req.url + '.json', 'utf8', function(err, data) {
             if (err != null) {
                 res.status(404).send('404 Not found');
             } else {
@@ -87,7 +87,7 @@ var server = {
         server.app.get('/guide', server.guide);
         server.app.get('/shoppinglist', server.shoppingList);
 
-        server.app.use(express.static(__dirname + '/static'));
+        server.app.use(express.static(__dirname + '/web//static'));
     }
 }
 

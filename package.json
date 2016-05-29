@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no text specified\" && exit 1"
+    "start": "node server"
   },
   "dependencies": {
     "express": "3.4.8",

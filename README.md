@@ -1,15 +1,25 @@
 #Food How
 
-Food how is an experimental Node.js recipe book that uses json files instead of a database for portability. Let's do it! For more information see [troyblank.com](http://troyblank.com/specimens/2014/foodHow/, "Food How").
+Food how is an experimental Node.js recipe book that uses json files instead of a database for portability. For more information see [troyblank.com](http://troyblank.com/#portfolio:/specimens/2014/foodHow/, "Food How").
 
-## To Do List
-* add an admin to allow creation and editing of recipes.
+## Setup
+First thing you want to do is install all node packages run:
+
+    npm install
+
+In order to run the project run:
+
+    npm start
+
+## Adding recipes
+
+When adding recipes it's important to note that underscores will be used in lieu of spaces in file names. For example "Fig_Sauce.json" will show up as "Fig Sauce" to the user.
 
 ## License
 
 (The MIT License)
 
-Copyright (c) 2014 [Troy Blank](mailto:troy@troyblank.com, "Troy Blank")
+Copyright (c) 2014 [Troy Blank](http://www.troyblank.com/#mainNavContent:/contact/ "Troy Blank")
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

@@ -1,4 +1,4 @@
-#Food How
+# Food How
 
 Food how is an experimental Node.js recipe book that uses json files instead of a database for portability. For more information see [troyblank.com](http://troyblank.com/#portfolio:/specimens/2014/foodHow/, "Food How").
 
@@ -7,13 +7,47 @@ First thing you want to do is install all node packages run:
 
     npm install
 
+To build all assets run:
+
+    grunt build
+
 In order to run the project run:
 
     npm start
 
 ## Adding recipes
 
-When adding recipes it's important to note that underscores will be used in lieu of spaces in file names. For example "Fig_Sauce.json" will show up as "Fig Sauce" to the user.
+To add a recipe simply make a new json file in ```web/recipes``` that follows this format:
+
+        {
+            "title": "Some Food",
+            "meta": "This is a really good food.",
+            "ingredients": [
+                "1 meat",
+                "1 cup fruit",
+                "&frac12; tsp spice"
+            ],
+            "directions": [
+                "Mash ingredient togthere.".
+                "Eat."
+            ]
+        }
+
+When adding recipes it's important to note that underscores will be used in lieu of spaces in file names. For example "Some_Food.json" will show up as "Some Food" to the user.
+
+## Development
+
+To run a watcher simply run:
+
+    grunt
+    
+To push current master using [grunt-shell](https://www.npmjs.com/package/grunt-shell) you must make a config file
+
+    cp credentials/config.json.sample credentials/config.json
+    
+Then fill out all information, and commands you want. Also copy your id_rsa private key inside the credintials folder then run:
+
+    grunt deploy
 
 ## License
 

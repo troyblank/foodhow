@@ -4,12 +4,12 @@ module.exports = function (grunt, options) {
     return {
         'default': [
             'sass',
-            'uglify:dev',
+            'webpack',
             'watch'
         ],
         'build': [
             'sass',
-            'uglify:prod'
+            'webpack'
         ],
         'deploy': [
             'sshexec'

@@ -6,8 +6,8 @@ module.exports = {
         tasks: ['sass:dev', 'notify:sass']
     },
     uglify: {
-        files: ['web/static/scripts/*.js', 'web/static/scripts/lib/*.js', 'web/static/scripts/models/*.js', 'web/static/scripts/views/*.js'],
-        tasks: ['uglify:dev', 'notify:uglify']
+        files: ['assets/js/**/*.js'],
+        tasks: ['webpack', 'notify:webpack']
     },
     livereload: {
         options: {

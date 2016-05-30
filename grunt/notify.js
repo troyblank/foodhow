@@ -7,10 +7,10 @@ module.exports = {
             message: 'SASS has compiled!'
         }
     },
-    uglify: {
+    webpack: {
         options: {
-            title: 'Uglify',
-            message: 'Uglify has compiled!'
+            title: 'webpack',
+            message: 'webpack has compiled!'
         }
     }
 };

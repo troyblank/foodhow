@@ -1,5 +1,7 @@
 "use strict";
 
+var webpack = require('webpack');
+
 module.exports = {
     deploy: {
         entry: "./assets/js/entry.js",
@@ -20,6 +22,14 @@ module.exports = {
                     }
                 }
             ]
-        }
+        },
+        plugins: [
+            new webpack.optimize.UglifyJsPlugin({
+                comments: false,
+                compress: {
+                    warnings: false
+                }
+            })
+        ]
     }
 };

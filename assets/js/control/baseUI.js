@@ -2,89 +2,49 @@ import $ from 'jquery';
 import { ToGets } from '../models/toGets';
 import EventDispatcher from '../lib/EventDispatcher';
 
-var baseUI = {
-    initialize: function() {
+const baseUI = {
+    initialize() {
         baseUI.listSearch();
         baseUI.groceryList();
     },
+
     //-----------------------------------------------------------------------------------------
-    //LIST SEARCH
+    // LIST SEARCH
     //-----------------------------------------------------------------------------------------
-    groceryList: function() {
 
-        var ingredients = new ToGets();
-
-        function initialize() {
-            ingredients.fetch();
-
-            stageSetIngredientList();
-            addListeners();
-        }
-
-        function addListeners() {
-            $('.ingredients li').on('click', ingredientAddHand);
-        }
-
-        function stageSetIngredientList() {
-            var recipe = $('.recipe header h1').html();
-            $('.ingredients li').each(function(i, ele) {
-                var title = $(ele).html();
-                if (isIngredientInList(recipe, title)) {
-                    $(ele).addClass('active');
-                }
-
-            });
-        }
-
-        function isIngredientInList(recipe, title) {
-            var match = ingredients.where({
-                'recipe': recipe,
-                'title': title
-            });
-
-            if (match.length == 0) {
-                return false;
-            } else {
-                return true;
-            }
-        }
+    groceryList() {
+        const ingredients = new ToGets();
 
         function addIngredient(recipe, title) {
-
-
-
-            var match = ingredients.where({
-                'recipe': recipe,
-                'title': title
+            const match = ingredients.where({
+                recipe,
+                title
             });
 
-            if (match.length == 0) {
+            if (0 === match.length) {
                 ingredients.create({
-                    'recipe': recipe,
-                    'title': title
+                    recipe,
+                    title
                 });
             }
         }
 
         function removeIngredient(recipe, title) {
-            var match = ingredients.where({
-                'recipe': recipe,
-                'title': title
+            const match = ingredients.where({
+                recipe,
+                title
             });
+            let i = match.length - 1;
 
-            var i = match.length - 1;
-            while (i >= 0) {
+            while (0 <= i) {
                 match[i].destroy();
                 i--;
             }
         }
 
-        //-----------------------------------------------------------------------------------------
-        //HANDLERS
-        //-----------------------------------------------------------------------------------------
         function ingredientAddHand() {
-            var recipe = $('.recipe header h1').html();
-            var title = $(this).html();
+            const recipe = $('.recipe header h1').html();
+            const title = $(this).html();
 
             if (!$(this).hasClass('active')) {
                 $(this).addClass('active');
@@ -95,43 +55,65 @@ var baseUI = {
             }
         }
 
-        if ($('section.recipe').length > 0) {
+        function addListeners() {
+            $('.ingredients li').on('click', ingredientAddHand);
+        }
+
+        function isIngredientInList(recipe, title) {
+            const match = ingredients.where({
+                recipe,
+                title
+            });
+
+            if (0 === match.length) {
+                return false;
+            }
+
+            return true;
+        }
+
+        function stageSetIngredientList() {
+            const recipe = $('.recipe header h1').html();
+
+            $('.ingredients li').each((i, ele) => {
+                const title = $(ele).html();
+
+                if (isIngredientInList(recipe, title)) {
+                    $(ele).addClass('active');
+                }
+            });
+        }
+
+        function initialize() {
+            ingredients.fetch();
+
+            stageSetIngredientList();
+            addListeners();
+        }
+
+        if (0 < $('section.recipe').length) {
             initialize();
         }
     },
     //-----------------------------------------------------------------------------------------
-    //LIST SEARCH
+    // LIST SEARCH
     //-----------------------------------------------------------------------------------------
-    listSearch: function() {
-        var list = {};
-        var shortList = {}; //used on iterations of list to improve performance
-        var cleared = true;
+    listSearch() {
+        const list = {};
+        let shortList = {}; // used on iterations of list to improve performance
+        let cleared = true;
 
-        function initialize() {
-            $('input[name=search]').val('');
-
-            generateSearchList();
-            addListeners();
-        }
-
-        function addListeners() {
-            $('input[name=search]').on('input', inputChangeHand);
-            $('input[name=search]').on('keydown', keypressHand);
-
-            EventDispatcher.addEventListener(EventDispatcher.ON_SEARCH_CLEAR, searchClearHand);
-        }
-
-        function generateSearchList() {
-            $('section.list a').each(function(i, ele) {
-                list[$(ele).html()] = ele;
-            });
+        function clearShortList() {
+            cleared = true;
+            shortList = {};
         }
 
         function filterList(val) {
-            var re = new RegExp(val, 'gi');
-            var evalist = cleared ? list : shortList;
-            for (var prop in evalist) {
-                if (prop.match(re) === null) {
+            const re = new RegExp(val, 'gi');
+            const evalist = cleared ? list : shortList;
+
+            for (const prop of Object.keys(evalist)) {
+                if (null === prop.match(re)) {
                     $(evalist[prop]).hide();
                     delete shortList[prop];
                 } else {
@@ -142,17 +124,18 @@ var baseUI = {
             }
         }
 
-        function clearShortList() {
-            cleared = true;
-            shortList = {};
+        function generateSearchList() {
+            $('section.list a').each((i, ele) => {
+                list[$(ele).html()] = ele;
+            });
         }
 
         //-----------------------------------------------------------------------------------------
-        //HANDLERS
+        // HANDLERS
         //-----------------------------------------------------------------------------------------
         function inputChangeHand() {
-            var val = $(this).val();
-            if (val.length > 0) {
+            const val = $(this).val();
+            if (0 < val.length) {
                 filterList(val);
             } else {
                 clearShortList();
@@ -161,11 +144,11 @@ var baseUI = {
         }
 
         function keypressHand(e) {
-            var code = e.keyCode || e.which;
-            if (code === 13) {
+            const code = e.keyCode || e.which;
+            if (13 === code) {
                 $(this).blur();
-            } else if (code == 8) {
-                //backspace - partial search clear need to reevaluate search.
+            } else if (8 === code) {
+                // backspace - partial search clear need to reevaluate search.
                 EventDispatcher.dispatchEvent(EventDispatcher.ON_SEARCH_CLEAR);
             }
         }
@@ -174,8 +157,24 @@ var baseUI = {
             clearShortList();
         }
 
+        //-----------------------------------------------------------------------------------------
+
+        function addListeners() {
+            $('input[name=search]').on('input', inputChangeHand);
+            $('input[name=search]').on('keydown', keypressHand);
+
+            EventDispatcher.addEventListener(EventDispatcher.ON_SEARCH_CLEAR, searchClearHand);
+        }
+
+        function initialize() {
+            $('input[name=search]').val('');
+
+            generateSearchList();
+            addListeners();
+        }
+
         initialize();
     }
-}
+};
 
 $(document).ready(baseUI.initialize);

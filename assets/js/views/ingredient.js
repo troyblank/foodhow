@@ -1,19 +1,21 @@
-import _ from 'Underscore';
+import _ from 'underscore';
 
-var IngredientView = Backbone.View.extend({
-    initialize: function(options) {
+const IngredientView = Backbone.View.extend({
+    initialize(options) {
+        const template = _.template('<li data-id="<%= id %>"><%= title %></li>');
+
         this.options = options || {};
-        var template = _.template('<li data-id="<%= id %>"><%= title %></li>');
-        var html = template({
+        const html = template({
             id: this.options.id,
             title: this.options.title
         });
+
         this.setElement(html);
     },
 
-    render: function() {
+    render() {
         return this;
     }
 });
 
-export { IngredientView }
+export { IngredientView };

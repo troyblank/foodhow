@@ -1,6 +1,12 @@
 # Food How
 
+[![Build Status](https://travis-ci.org/troyblank/foodhow.svg?branch=master)](https://travis-ci.org/troyblank/foodhow)
+
 Food how is an experimental Node.js recipe book that uses json files instead of a database for portability. For more information see [troyblank.com](http://troyblank.com/#portfolio:/specimens/2014/foodHow/, "Food How").
+
+## Requirements
+
+* node >= 5.10.1
 
 ## Setup
 First thing you want to do is install all node packages run:
@@ -14,6 +20,10 @@ To build all assets run:
 In order to run the project run:
 
     npm start
+    
+## Test
+
+    npm test
 
 ## Adding recipes
 

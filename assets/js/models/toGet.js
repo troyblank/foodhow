@@ -1,15 +1,15 @@
-var ToGet = Backbone.Model.extend({
+const ToGet = Backbone.Model.extend({
     defaults: {
-        'title': '',
-        'recipe': '',
-        'checked': false
+        title: '',
+        recipe: '',
+        checked: false
     },
 
-    toggle: function() {
+    toggle() {
         this.save({
             checked: !this.get('checked')
         });
     }
 });
 
-export { ToGet }
+export { ToGet };

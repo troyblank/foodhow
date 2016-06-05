@@ -7,6 +7,9 @@ module.exports = function (grunt, options) {
             'webpack',
             'watch'
         ],
+        'test': [
+            'eslint'
+        ],
         'build': [
             'sass',
             'webpack'

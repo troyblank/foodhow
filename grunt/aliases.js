@@ -8,7 +8,8 @@ module.exports = function (grunt, options) {
             'watch'
         ],
         'test': [
-            'eslint'
+            'eslint',
+            'sasslint'
         ],
         'build': [
             'sass',

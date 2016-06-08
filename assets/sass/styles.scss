@@ -1,0 +1,303 @@
+@import '../../node_modules/normalize.css/normalize';
+
+//--------------------------------------------------------------------------------------------------
+// MIXINS
+//--------------------------------------------------------------------------------------------------
+@mixin breakpoint($point) {
+
+    @if $point == TABLET {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    } @else if $point == MOBILE {
+        @media only screen and (max-width: 600px) {
+            @content;
+        }
+    } @else if $point == MOBILE_LANDSCAPE {
+        @media only screen and (max-width: 600px) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
+//--------------------------------------------------------------------------------------------------
+// UTILS
+//--------------------------------------------------------------------------------------------------
+%clearfix {
+    zoom: 1;
+
+    &:before {
+        display: block;
+        width: 0;
+        height: 0;
+        content: '\0020';
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    &:after {
+        display: block;
+        width: 0;
+        height: 0;
+        clear: both;
+        content: '\0020';
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+//--------------------------------------------------------------------------------------------------
+// COLORS
+//--------------------------------------------------------------------------------------------------
+$cream: rgb(233, 221, 208);
+$brown: rgb(87, 63, 50);
+$brown-50: rgba(87, 63, 50, .5);
+$orange: rgb(177, 141, 74);
+
+//--------------------------------------------------------------------------------------------------
+// CSS
+//--------------------------------------------------------------------------------------------------
+//box size all the things!
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 50px;
+    background: $cream;
+    color: $brown;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    color: $orange;
+    text-decoration: none;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 5px 10px;
+    border: 3px solid $brown;
+    background: $orange no-repeat;
+    color: $cream;
+}
+
+h1 {
+    margin: 0 0 15px;
+    font-family: 'Bitter', serif;
+    font-size: 3rem;
+    line-height: 3.25rem;
+}
+
+h2 {
+    max-width: 600px;
+    margin: 0 0 10px 5px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid $brown;
+    font-family: 'Bitter', serif;
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin: 0;
+    font-family: 'Bitter', serif;
+    font-size: .75rem;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    border-right: 1px solid $orange;
+    border-left: 1px solid $orange;
+
+    tr {
+        border-bottom: 1px solid $orange;
+    }
+
+    th {
+        padding: 5px;
+        background: $brown;
+        color: $cream;
+        font-size: .8em;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    td {
+        padding: 5px;
+        font-size: .8em;
+    }
+}
+
+body > header {
+    margin: 20px 0;
+    padding: 0 20px;
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+body > nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $brown-50;
+
+    .nav-wrapper {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-right: 20px;
+    }
+
+    a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        float: right;
+        border: 3px solid $brown;
+        background: url('/images/icon_home.svg') $orange no-repeat;
+        background-position: 50%;
+        background-size: 50%;
+
+        &.guide {
+            background-image: url('/images/icon_guide.svg');
+        }
+
+        &.list {
+            background-image: url('/images/icon_list.svg');
+        }
+    }
+}
+
+body > section {
+    margin: 20px 0;
+    padding: 0 20px;
+
+    &.search {
+        & > div {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 300px;
+            text-align: center;
+        }
+    }
+
+    &.list {
+        @extend %clearfix;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        a {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            float: left;
+            border: 1px dashed $orange;
+            border-radius: 10px;
+            color: $orange;
+        }
+    }
+
+    &.recipe {
+        header {
+            margin-bottom: 30px;
+
+            h1 {
+                max-width: 600px;
+            }
+
+            h3 {
+                max-width: 560px;
+                margin: 0 0 0 30px;
+            }
+        }
+
+        ul, ol {
+            margin: 0 0 50px 50px;
+            padding: 0;
+
+            li {
+                max-width: 550px;
+                margin-bottom: 10px;
+                line-height: 1.5rem;
+
+                &.active {
+                    color: $orange;
+                    list-style-image: url('/images/icon_shopping_cart.svg');
+                }
+            }
+        }
+
+        .ingredients li {
+            cursor: pointer;
+        }
+    }
+
+    &.guide {
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+//--------------------------------------------------------------------------------------------------
+// SHOPPING LIST
+//--------------------------------------------------------------------------------------------------
+#shopping-list {
+    max-width: 500px;
+    margin: 20px auto;
+
+    li {
+        position: relative;
+        max-width: 500px;
+        margin-bottom: 5px;
+        padding: 10px 5px 10px 35px;
+        background: $orange;
+        color: $cream;
+        list-style: none;
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $brown;
+            background: $cream;
+            content: '';
+        }
+    }
+
+    .checked li {
+        background: $brown-50;
+        text-decoration: line-through;
+
+        &:after {
+            background: url('/images/icon_x.svg') no-repeat 2px $cream;
+            background-size: 80%;
+        }
+    }
+}

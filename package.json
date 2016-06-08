@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@troyblank/eslint-config-troyblank": "0.2.0",
+    "@troyblank/sasslint-config-troyblank": "0.1.0",
     "babel-core": "6.9.1",
     "babel-loader": "6.2.4",
     "babel-preset-es2015": "6.9.0",
@@ -26,13 +27,15 @@
     "grunt-eslint": "18.1.0",
     "grunt-notify": "0.4.5",
     "grunt-sass": "1.2.0",
+    "grunt-sass-lint": "0.2.0",
     "grunt-shell": "0.6.4",
     "grunt-ssh": "~0.11.1",
     "grunt-webpack": "1.0.11",
     "load-grunt-config": "0.19.2",
     "matchdep": "~0.1.1",
     "webpack": "1.13.1",
-    "webpack-dev-server": "1.14.1"
+    "webpack-dev-server": "1.14.1",
+    "normalize.css": "4.1.1"
   },
   "author": "Troy Blank",
   "license": "BSD"

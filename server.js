@@ -27,7 +27,7 @@ var server = {
     //---------------------------------------------------------------------------------------------
 
     updateFileList: function() {
-        var walker = walk.walk(__dirname + '/web//recipes', {
+        var walker = walk.walk(__dirname + '/recipes', {
             followLinks: false
         });
 
@@ -63,7 +63,7 @@ var server = {
     },
 
     recipeDetail: function(req, res) {
-        fs.readFile(__dirname + /web/ + req.url + '.json', 'utf8', function(err, data) {
+        fs.readFile(__dirname + req.url + '.json', 'utf8', function(err, data) {
             if (err != null) {
                 res.status(404).send('404 Not found');
             } else {

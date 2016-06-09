@@ -2,8 +2,8 @@
 
 module.exports = {
     sass: {
-        files: ['sass/{,*/}*.{scss,sass}'],
-        tasks: ['sass:dev', 'notify:sass']
+        files: ['assets/sass/{,*/}*.{scss,sass}'],
+        tasks: ['sass', 'notify:sass']
     },
     uglify: {
         files: ['assets/js/**/*.js'],

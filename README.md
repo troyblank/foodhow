@@ -6,7 +6,7 @@ Food how is an experimental Node.js recipe book that uses json files instead of 
 
 ## Requirements
 
-* node >= 5.10.1
+* node: 5.10.1
 
 ## Setup
 First thing you want to do is install all node packages run:

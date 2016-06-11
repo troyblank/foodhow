@@ -16,8 +16,8 @@
     "walk": "2.3.1"
   },
   "devDependencies": {
-    "@troyblank/eslint-config-troyblank": "0.2.0",
-    "@troyblank/sasslint-config-troyblank": "0.1.0",
+    "@troyblank/eslint-config-troyblank": "0.3.1",
+    "@troyblank/sasslint-config-troyblank": "0.2.0",
     "babel-core": "6.9.1",
     "babel-loader": "6.2.4",
     "babel-preset-es2015": "6.9.0",

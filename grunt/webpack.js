@@ -1,25 +1,36 @@
-"use strict";
-
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
     deploy: {
-        entry: "./assets/js/entry.js",
+        entry: './assets/js/main.js',
         output: {
-            path: "web/static/scripts",
-            filename: "base.js",
+            path: 'web/static/scripts',
+            filename: 'base.js'
         },
         module: {
             loaders: [
-                { 
-                    loader: "babel",
+                {
                     test: /\.jsx$|\.js$/,
+                    loader: 'babel',
                     include: [
-                        "assets/js"
+                        'assets/js',
+                        'node_modules/@troyblank/food-how-components/components'
                     ],
                     query: {
-                        presets: ["es2015"],
+                        presets: ['react', 'es2015']
                     }
+                },
+                {
+                    test: /\.scss$/,
+                    loaders: [
+                        'style',
+                        'css?modules&sourceMap',
+                        'sass'
+                    ],
+                    include: [
+                        'assets/sass',
+                        'node_modules/@troyblank/food-how-components/components'
+                    ]
                 }
             ]
         },

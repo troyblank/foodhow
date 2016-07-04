@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     sass: {
         files: ['assets/sass/{,*/}*.{scss,sass}'],
@@ -11,7 +9,7 @@ module.exports = {
     },
     livereload: {
         options: {
-            livereload: true,
+            livereload: true
         },
         files: [
             'web/static/styles/*.css'

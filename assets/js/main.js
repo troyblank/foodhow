@@ -5,4 +5,5 @@ Backbone.LocalStorage = LocalStorage;
 
 import './views/ingredient';
 import './control/baseUI';
+import './control/shoppingList';
 import './control/shoppingListUI';

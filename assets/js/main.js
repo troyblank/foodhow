@@ -1,9 +1,16 @@
-import Backbone from 'backbone';
-import LocalStorage from 'backbone.localstorage';
+import './legacy';
 
-Backbone.LocalStorage = LocalStorage;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import store from './store';
+import ShoppingList from './components/shoppingList';
 
-import './views/ingredient';
-import './control/baseUI';
-import './control/shoppingList';
-import './control/shoppingListUI';
+export default function Main() {
+    return (
+      <div>
+        <ShoppingList store={store} />
+      </div>
+    );
+}
+
+ReactDOM.render(<Main />, document.querySelector('#shopping-list-react'));

@@ -14,7 +14,7 @@ module.exports = {
                     loader: 'babel',
                     include: [
                         'assets/js',
-                        'node_modules/@troyblank/food-how-components/components'
+                        'node_modules/@troyblank/food-how-components'
                     ],
                     query: {
                         presets: ['react', 'es2015']
@@ -29,7 +29,7 @@ module.exports = {
                     ],
                     include: [
                         'assets/sass',
-                        'node_modules/@troyblank/food-how-components/components'
+                        'node_modules/@troyblank/food-how-components'
                     ]
                 }
             ]

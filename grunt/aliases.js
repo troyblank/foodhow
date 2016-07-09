@@ -5,9 +5,14 @@ module.exports = {
         'watch'
     ],
     test: [
-        'eslint',
-        'sasslint'
+        'lint',
+        'unit'
     ],
+    lint: [
+        'sasslint',
+        'eslint'
+    ],
+    unit: 'mocha_istanbul',
     build: [
         'sass',
         'webpack'

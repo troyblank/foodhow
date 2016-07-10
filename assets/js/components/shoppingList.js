@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
     GetShoppingList,
     NoResultMessage }
-    from '@troyblank/food-how-components/lib/index';
+    from '@troyblank/food-how-components';
 
 let ingredientNames;
 

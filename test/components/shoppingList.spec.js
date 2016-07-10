@@ -6,7 +6,7 @@ import ShoppingList from '../../assets/js/components/shoppingList';
 import {
     GetShoppingList,
     NoResultMessage }
-    from '@troyblank/food-how-components/lib/index';
+    from '@troyblank/food-how-components';
 
 describe('Shopping List', () => {
     const chance = new Chance();

@@ -1,9 +1,8 @@
-
 import 'mock-local-storage';
 import { assert } from 'chai';
 import Chance from 'chance';
 import store from '../assets/js/store';
-import { addIngredient } from '../assets/js/actions/index';
+import { addIngredient, removeIngredient } from '../assets/js/actions/index';
 
 describe('Store', () => {
     const chance = new Chance();
@@ -20,5 +19,13 @@ describe('Store', () => {
             ingredients[0],
             { name, recipe }
         );
+    });
+
+    it('should be able to dispatch and remove an ingredient', () => {
+        store.dispatch(removeIngredient(0));
+
+        const ingredients = JSON.parse(localStorage.getItem('food-how-ingredients'));
+
+        assert.equal(ingredients.length, 0);
     });
 });

@@ -2,7 +2,7 @@ import $ from 'jquery';
 import { ToGets } from '../models/toGets';
 import EventDispatcher from '../lib/EventDispatcher';
 import store from '../store';
-import { addIngredient as addIngredientAction } from '../actions/index';
+import { addIngredient as addIngredientAction, removeIngredient as removeIngredientAction } from '../actions/index';
 
 const baseUI = {
     initialize() {
@@ -44,6 +44,8 @@ const baseUI = {
                 match[i].destroy();
                 i--;
             }
+
+            store.dispatch(removeIngredientAction(i));
         }
 
         function ingredientAddHand() {

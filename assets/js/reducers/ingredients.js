@@ -1,4 +1,4 @@
-import { addIngredientType } from '../actions/ingredients';
+import { addIngredientType, removeIngredientType } from '../actions/ingredients';
 
 export default function ingredients(state = [], action) {
     switch (action.type) {
@@ -7,6 +7,9 @@ export default function ingredients(state = [], action) {
             name: action.name,
             recipe: action.recipe
         });
+        return state;
+    case removeIngredientType:
+        state.splice(action.index, 1);
         return state;
     default:
         return state;

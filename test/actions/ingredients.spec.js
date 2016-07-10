@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import Chance from 'chance';
-import { addIngredient, addIngredientType } from '../../assets/js/actions/index';
+import { addIngredient, addIngredientType, removeIngredient, removeIngredientType } from '../../assets/js/actions/index';
 
 describe('Ingredients Actions', () => {
     const chance = new Chance();
@@ -13,5 +13,13 @@ describe('Ingredients Actions', () => {
         assert.equal(action.type, addIngredientType);
         assert.equal(action.name, name);
         assert.equal(action.recipe, recipe);
+    });
+
+    it('should be able to generate a remove ingredient action', () => {
+        const index = chance.natural();
+        const action = removeIngredient(index);
+
+        assert.equal(action.type, removeIngredientType);
+        assert.equal(action.index, index);
     });
 });

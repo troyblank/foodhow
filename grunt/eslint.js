@@ -1,7 +1,7 @@
-'use strict';
-
 module.exports = {
     target: [
-        'assets/js/**/*.js'
+        'assets/js/**/*.js',
+        'test/**/*.js',
+        'grunt/**/*.js'
     ]
 };

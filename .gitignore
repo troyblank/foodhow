@@ -19,6 +19,6 @@ node_modules
 ehthumbs.db
 Thumbs.db
 
-
+coverage
 credentials/config.json
 credentials/id_rsa

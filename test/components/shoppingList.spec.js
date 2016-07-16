@@ -17,13 +17,28 @@ describe('Shopping List', () => {
             return { ingredients: [{ name: nameA }, { name: nameB }] };
         }
     };
+    const mockEmptyStore = {
+        getState() {
+            return { ingredients: [] };
+        }
+    };
+
+    it('should render a no results message', () => {
+        const wrapper = shallow(<ShoppingList store={mockEmptyStore} />);
+
+        assert.isTrue(wrapper.contains(
+          <section>
+            <NoResultMessage headline={'This list is empty'} message={'There is no ingredients on your list, add some to make a shopping list.'} />
+            <GetShoppingList list={[]} />
+          </section>
+        ));
+    });
 
     it('should render a get shopping list', () => {
         const wrapper = shallow(<ShoppingList store={mockStore} />);
 
         assert.isTrue(wrapper.contains(
           <section>
-            <NoResultMessage headline={'This list is empty'} message={'There is no ingredients on your list, add some to make a shopping list.'} />
             <GetShoppingList list={[nameA, nameB]} />
           </section>
         ));

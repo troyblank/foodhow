@@ -1,8 +1,9 @@
 # Food How
 
 [![Build Status](https://travis-ci.org/troyblank/foodhow.svg?branch=master)](https://travis-ci.org/troyblank/foodhow)
+[![Coverage Status](https://coveralls.io/repos/github/troyblank/foodhow/badge.svg?branch=master)](https://coveralls.io/github/troyblank/foodhow?branch=master)
 
-Food how is an experimental Node.js recipe book that uses json files instead of a database for portability. For more information see [troyblank.com](http://troyblank.com/#portfolio:/specimens/2014/foodHow/ "Food How").
+Food how is a Node.js recipe book that uses json files instead of a database for portability and convenience. For more information see [troyblank.com](http://troyblank.com/#portfolio:/specimens/2014/foodHow/ "Food How").
 
 ## Requirements
 
@@ -13,11 +14,7 @@ First thing you want to do is install all node packages run:
 
     npm install
 
-To build all assets run:
-
-    grunt build
-
-In order to run the project run:
+In order to build and run the project run:
 
     npm start
     

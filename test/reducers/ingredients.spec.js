@@ -5,6 +5,7 @@ import { addIngredientType, removeIngredientType } from '../../assets/js/actions
 
 describe('Ingredients Reducer', () => {
     const chance = new Chance();
+    const id = chance.natural();
     const name = chance.word();
     const recipe = chance.word();
 
@@ -19,20 +20,22 @@ describe('Ingredients Reducer', () => {
         assert.deepEqual(
             reducer({ ingredients: [] }, {
                 type: addIngredientType,
+                id,
                 name,
                 recipe
             }),
-            { ingredients: [{ name, recipe }] }
+            { ingredients: [{ id, name, recipe }] }
         );
 
         assert.deepEqual(
             reducer({ ingredients: [] }, {
                 type: addIngredientType,
+                id,
                 name,
                 recipe
             }),
-            { ingredients: [{ name, recipe }] },
-            { ingredients: [{ name, recipe }] }
+            { ingredients: [{ id, name, recipe }] },
+            { ingredients: [{ id, name, recipe }] }
         );
     });
 

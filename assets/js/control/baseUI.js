@@ -29,7 +29,7 @@ const baseUI = {
                     title
                 });
 
-                store.dispatch(addIngredientAction(title, recipe));
+                store.dispatch(addIngredientAction({ name: title, recipe }));
             }
         }
 

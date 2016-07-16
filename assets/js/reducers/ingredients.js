@@ -4,6 +4,7 @@ export default function ingredients(state = [], action) {
     switch (action.type) {
     case addIngredientType:
         state.push({
+            id: action.id,
             name: action.name,
             recipe: action.recipe
         });

@@ -2,9 +2,10 @@ const addIngredientType = 'ADD_INGREDIENT';
 const removeIngredientType = 'REMOVE_INGREDIENT';
 
 export { addIngredientType };
-export function addIngredient(name, recipe) {
+export function addIngredient({ id = new Date().getTime(), name, recipe }) {
     return {
         type: addIngredientType,
+        id,
         name,
         recipe
     };

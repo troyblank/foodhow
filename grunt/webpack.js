@@ -4,7 +4,7 @@ module.exports = {
     deploy: {
         entry: './assets/js/main.js',
         output: {
-            path: 'web/static/scripts',
+            path: 'public/static/scripts',
             filename: 'base.js'
         },
         module: {

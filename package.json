@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "grunt build && node server",
     "test": "grunt test"
   },
   "dependencies": {
@@ -28,6 +28,7 @@
     "css-loader": "0.23.1",
     "grunt": "~0.4.1",
     "grunt-cli": "1.2.0",
+    "grunt-contrib-imagemin": "1.0.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-eslint": "18.1.0",
     "grunt-mocha-istanbul": "5.0.1",

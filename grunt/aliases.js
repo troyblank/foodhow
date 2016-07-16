@@ -14,6 +14,7 @@ module.exports = {
     ],
     unit: 'mocha_istanbul',
     build: [
+        'imagemin',
         'sass',
         'webpack'
     ],

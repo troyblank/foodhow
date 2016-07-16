@@ -3,6 +3,7 @@
 # NODE #
 #########
 node_modules
+npm-debug.log
 
 # SASS #
 ########
@@ -19,6 +20,7 @@ node_modules
 ehthumbs.db
 Thumbs.db
 
+public
 coverage
 credentials/config.json
 credentials/id_rsa

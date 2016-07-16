@@ -8,7 +8,7 @@ module.exports = {
         expand: true,
         cwd: 'assets/sass',
         src: '**/*.scss',
-        dest: 'web/static/styles',
+        dest: 'public/static/styles',
         ext: '.css',
         extDot: 'last'
     }

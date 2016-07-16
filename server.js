@@ -3,7 +3,7 @@ var nunjucks = require('nunjucks');
 var fs = require('fs');
 var walk = require('walk');
 
-nunjucks.configure(__dirname + '/web/templates', {
+nunjucks.configure(__dirname + '/templates', {
     autoescape: false
 });
 
@@ -89,7 +89,7 @@ var server = {
         server.app.get('/guide', server.guide);
         server.app.get('/shoppinglist', server.shoppingList);
 
-        server.app.use(express.static(__dirname + '/web//static'));
+        server.app.use(express.static(__dirname + '/public//static'));
     }
 }
 

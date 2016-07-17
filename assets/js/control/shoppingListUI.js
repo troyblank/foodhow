@@ -2,7 +2,7 @@ import $ from 'jquery';
 import { ToGets } from '../models/toGets';
 import { IngredientView } from '../views/ingredient';
 import store from '../store';
-import { removeIngredient } from '../actions/index';
+import { checkIngredient, removeIngredient } from '../actions/index';
 
 const shoppingListUI = {
 
@@ -141,6 +141,9 @@ const shoppingListUI = {
         $(this).prependTo('.checked');
         shoppingListUI.updateClearAllButton();
         shoppingListUI.refreshListeners();
+
+        // this is not ideal as IDs do not match yet but good enough for demo purpose
+        store.dispatch(checkIngredient($(this).index()));
     },
 
     checkedClickHand() {
@@ -151,6 +154,9 @@ const shoppingListUI = {
         $(this).prependTo('.unchecked');
         shoppingListUI.updateClearAllButton();
         shoppingListUI.refreshListeners();
+
+        // this is not ideal as IDs do not match yet but good enough for demo purpose
+        store.dispatch(checkIngredient($(this).index()));
     },
 
     clearHand() {

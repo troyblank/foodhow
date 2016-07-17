@@ -18,7 +18,7 @@ describe('Store', () => {
         assert.equal(ingredients.length, 1);
         assert.deepEqual(
             ingredients[0],
-            { id, name, recipe }
+            { id, checked: false, name, recipe }
         );
     });
 

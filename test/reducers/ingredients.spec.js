@@ -6,6 +6,7 @@ import { addIngredientType, checkIngredientType, removeIngredientType } from '..
 describe('Ingredients Reducer', () => {
     const chance = new Chance();
     const id = chance.natural();
+    const checked = chance.bool();
     const name = chance.word();
     const recipe = chance.word();
 
@@ -21,21 +22,23 @@ describe('Ingredients Reducer', () => {
             reducer({ ingredients: [] }, {
                 type: addIngredientType,
                 id,
+                checked,
                 name,
                 recipe
             }),
-            { ingredients: [{ id, name, recipe }] }
+            { ingredients: [{ id, checked, name, recipe }] }
         );
 
         assert.deepEqual(
             reducer({ ingredients: [] }, {
                 type: addIngredientType,
                 id,
+                checked,
                 name,
                 recipe
             }),
-            { ingredients: [{ id, name, recipe }] },
-            { ingredients: [{ id, name, recipe }] }
+            { ingredients: [{ id, checked, name, recipe }] },
+            { ingredients: [{ id, checked, name, recipe }] }
         );
     });
 
@@ -53,6 +56,24 @@ describe('Ingredients Reducer', () => {
                 index: 0
             }),
             { ingredients: [{ id, checked: true, name, recipe }] }
+        );
+    });
+
+    it('should toggle back checking an ingredient', () => {
+        const state = reducer({ ingredients: [] }, {
+            type: addIngredientType,
+            id,
+            checked: true,
+            name,
+            recipe
+        });
+
+        assert.deepEqual(
+            reducer(state, {
+                type: checkIngredientType,
+                index: 0
+            }),
+            { ingredients: [{ id, checked: false, name, recipe }] }
         );
     });
 

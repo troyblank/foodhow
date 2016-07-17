@@ -6,12 +6,13 @@ export default function ingredients(state = [], action) {
     case addIngredientType:
         newState.push({
             id: action.id,
+            checked: action.checked,
             name: action.name,
             recipe: action.recipe
         });
         return newState;
     case checkIngredientType:
-        newState[action.index].checked = true;
+        newState[action.index].checked = !newState[action.index].checked;
         return newState;
     case removeIngredientType:
         newState.splice(action.index, 1);

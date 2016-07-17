@@ -1,17 +1,21 @@
-import { addIngredientType, removeIngredientType } from '../actions/ingredients';
+import { addIngredientType, checkIngredientType, removeIngredientType } from '../actions/ingredients';
 
 export default function ingredients(state = [], action) {
+    const newState = state;
     switch (action.type) {
     case addIngredientType:
-        state.push({
+        newState.push({
             id: action.id,
             name: action.name,
             recipe: action.recipe
         });
-        return state;
+        return newState;
+    case checkIngredientType:
+        newState[action.index].checked = true;
+        return newState;
     case removeIngredientType:
-        state.splice(action.index, 1);
-        return state;
+        newState.splice(action.index, 1);
+        return newState;
     default:
         return state;
     }

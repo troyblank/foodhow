@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import Chance from 'chance';
 import reducer from '../../assets/js/reducers/index';
-import { addIngredientType, checkIngredientType, removeIngredientType } from '../../assets/js/actions/index';
+import { addIngredientType, toggleIngredientType, removeIngredientType } from '../../assets/js/actions/index';
 
 describe('Ingredients Reducer', () => {
     const chance = new Chance();
@@ -52,8 +52,8 @@ describe('Ingredients Reducer', () => {
 
         assert.deepEqual(
             reducer(state, {
-                type: checkIngredientType,
-                index: 0
+                type: toggleIngredientType,
+                id
             }),
             { ingredients: [{ id, checked: true, name, recipe }] }
         );
@@ -70,8 +70,8 @@ describe('Ingredients Reducer', () => {
 
         assert.deepEqual(
             reducer(state, {
-                type: checkIngredientType,
-                index: 0
+                type: toggleIngredientType,
+                id
             }),
             { ingredients: [{ id, checked: false, name, recipe }] }
         );

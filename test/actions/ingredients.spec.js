@@ -2,8 +2,8 @@ import { assert } from 'chai';
 import Chance from 'chance';
 import { addIngredient,
         addIngredientType,
-        checkIngredient,
-        checkIngredientType,
+        toggleIngredient,
+        toggleIngredientType,
         removeIngredient,
         removeIngredientType
         } from '../../assets/js/actions/index';
@@ -38,11 +38,10 @@ describe('Ingredients Actions', () => {
     });
 
     it('should be able to generate a check ingredient action', () => {
-        const index = chance.natural();
-        const action = checkIngredient(index);
+        const action = toggleIngredient(id);
 
-        assert.equal(action.type, checkIngredientType);
-        assert.equal(action.index, index);
+        assert.equal(action.type, toggleIngredientType);
+        assert.equal(action.id, id);
     });
 
     it('should be able to generate a remove ingredient action', () => {

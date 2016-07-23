@@ -1,5 +1,5 @@
 const addIngredientType = 'ADD_INGREDIENT';
-const checkIngredientType = 'CHECK_INGREDIENT';
+const toggleIngredientType = 'TOGGLE_INGREDIENT';
 const removeIngredientType = 'REMOVE_INGREDIENT';
 
 export { addIngredientType };
@@ -13,11 +13,11 @@ export function addIngredient({ id = new Date().getTime(), checked = false, name
     };
 }
 
-export { checkIngredientType };
-export function checkIngredient(index) {
+export { toggleIngredientType };
+export function toggleIngredient(id) {
     return {
-        type: checkIngredientType,
-        index
+        type: toggleIngredientType,
+        id
     };
 }
 

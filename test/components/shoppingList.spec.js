@@ -24,12 +24,14 @@ describe('Shopping List', () => {
     it('should render a no results message', () => {
         const wrapper = shallow(<ShoppingList store={mockStore} />);
 
-        assert.isTrue(wrapper.contains(
-          <section>
-            <NoResultMessage headline={'This list is empty'} message={'There is no ingredients on your list, add some to make a shopping list.'} />
-            <GetShoppingList list={[]} />
-            <GotShoppingList list={[]} />
-          </section>
+        assert.isTrue(wrapper.containsMatchingElement(
+          <NoResultMessage headline={'This list is empty'} message={'There is no ingredients on your list, add some to make a shopping list.'} />
+        ));
+        assert.isTrue(wrapper.containsMatchingElement(
+          <GetShoppingList list={[]} />
+        ));
+        assert.isTrue(wrapper.containsMatchingElement(
+          <GotShoppingList list={[]} />
         ));
     });
 
@@ -40,11 +42,14 @@ describe('Shopping List', () => {
         ];
         const wrapper = shallow(<ShoppingList store={mockStore} />);
 
-        assert.isTrue(wrapper.contains(
-          <section>
-            <GetShoppingList list={[nameA, nameB]} />
-            <GotShoppingList list={[]} />
-          </section>
+        assert.isTrue(wrapper.containsMatchingElement(
+          <GetShoppingList list={ingredients} />
+        ));
+        assert.isTrue(wrapper.containsMatchingElement(
+          <GotShoppingList list={[]} />
+        ));
+        assert.isFalse(wrapper.containsMatchingElement(
+          <NoResultMessage />
         ));
     });
 
@@ -55,11 +60,14 @@ describe('Shopping List', () => {
         ];
         const wrapper = shallow(<ShoppingList store={mockStore} />);
 
-        assert.isTrue(wrapper.contains(
-          <section>
-            <GetShoppingList list={[]} />
-            <GotShoppingList list={[nameA, nameB]} />
-          </section>
+        assert.isTrue(wrapper.containsMatchingElement(
+          <GetShoppingList list={[]} />
+        ));
+        assert.isTrue(wrapper.containsMatchingElement(
+          <GotShoppingList list={ingredients} />
+        ));
+        assert.isFalse(wrapper.containsMatchingElement(
+          <NoResultMessage />
         ));
     });
 
@@ -69,13 +77,18 @@ describe('Shopping List', () => {
             { name: nameB, checked: false },
             { name: nameC, checked: true }
         ];
+        const getIngredients = ingredients.filter((ingredient) => !ingredient.checked);
+        const gotIngredients = ingredients.filter((ingredient) => ingredient.checked);
         const wrapper = shallow(<ShoppingList store={mockStore} />);
 
-        assert.isTrue(wrapper.contains(
-          <section>
-            <GetShoppingList list={[nameA, nameB]} />
-            <GotShoppingList list={[nameC]} />
-          </section>
+        assert.isTrue(wrapper.containsMatchingElement(
+          <GetShoppingList list={getIngredients} />
+        ));
+        assert.isTrue(wrapper.containsMatchingElement(
+          <GotShoppingList list={gotIngredients} />
+        ));
+        assert.isFalse(wrapper.containsMatchingElement(
+          <NoResultMessage />
         ));
     });
 });

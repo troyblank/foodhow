@@ -2,7 +2,7 @@ import 'mock-local-storage';
 import { assert } from 'chai';
 import Chance from 'chance';
 import store from '../assets/js/store';
-import { addIngredient, removeIngredient } from '../assets/js/actions/index';
+import { addIngredient, toggleIngredient, removeIngredient } from '../assets/js/actions/index';
 
 describe('Store', () => {
     const chance = new Chance();
@@ -18,8 +18,16 @@ describe('Store', () => {
         assert.equal(ingredients.length, 1);
         assert.deepEqual(
             ingredients[0],
-            { id, name, recipe }
+            { id, checked: false, name, recipe }
         );
+    });
+
+    it('should be able to dispatch and check an ingredient', () => {
+        store.dispatch(toggleIngredient(id));
+
+        const ingredients = JSON.parse(localStorage.getItem('food-how-ingredients'));
+
+        assert.isTrue(ingredients[0].checked);
     });
 
     it('should be able to dispatch and remove an ingredient', () => {

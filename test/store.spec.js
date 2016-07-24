@@ -1,4 +1,3 @@
-import 'mock-local-storage';
 import { assert } from 'chai';
 import Chance from 'chance';
 import store from '../assets/js/store';
@@ -9,6 +8,12 @@ describe('Store', () => {
     const id = chance.natural();
     const name = chance.word();
     const recipe = chance.word();
+
+    after(() => {
+        /* eslint-disable no-underscore-dangle */
+        localStorage._deleteLocation();
+        /* eslint-enable no-underscore-dangle */
+    });
 
     it('should be able to dispatch and store an ingredient', () => {
         store.dispatch(addIngredient({ id, name, recipe }));

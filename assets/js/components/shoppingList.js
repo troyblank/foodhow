@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-import { toggleIngredient } from '../actions/index';
 import {
     GetShoppingList,
     GotShoppingList,
     NoResultMessage }
     from '@troyblank/food-how-components';
 
-let store, showNoResult, getIngredients, gotIngredients;
+let showNoResult, getIngredients, gotIngredients;
 
 export default class ShoppingList extends Component {
     constructor(props) {
         super(props);
 
-        const ingredients = props.store.getState().ingredients;
-        store = props.store;
-        getIngredients = ingredients.filter((ingredient) => !ingredient.checked);
-        gotIngredients = ingredients.filter((ingredient) => ingredient.checked);
-        showNoResult = 0 === ingredients.length;
+        getIngredients = this.props.ingredients.filter((ingredient) => !ingredient.checked);
+        gotIngredients = this.props.ingredients.filter((ingredient) => ingredient.checked);
+        showNoResult = 0 === this.props.ingredients.length;
+
+        this.ingredientClickHand = this.ingredientClickHand.bind(this);
     }
 
     ingredientClickHand(id) {
-        store.dispatch(toggleIngredient(id));
+        this.props.toggleIngredient(id);
     }
 
     render() {

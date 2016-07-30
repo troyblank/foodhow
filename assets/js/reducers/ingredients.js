@@ -2,7 +2,7 @@ import { addIngredientType, toggleIngredientType, removeIngredientType } from '.
 
 export default function ingredients(state = [], action) {
     let toggleIndex;
-    const newState = state;
+    const newState = [...state];
 
     switch (action.type) {
     case addIngredientType:

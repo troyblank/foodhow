@@ -16,12 +16,11 @@ describe('Shopping List', () => {
     const nameA = chance.word();
     const nameB = chance.word();
     const nameC = chance.word();
-    const ingredientClickHand = ShoppingList.prototype.ingredientClickHand;
-    const mockStore = {
-        getState() {
-            return { ingredients };
-        },
-        dispatch() {}
+
+    const actionMocks = {
+        mockToggleIngredient() {
+            return true;
+        }
     };
 
     beforeEach(() => {
@@ -29,7 +28,8 @@ describe('Shopping List', () => {
     });
 
     it('should render a no results message', () => {
-        const wrapper = shallow(<ShoppingList store={mockStore} />);
+        const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
+        const ingredientClickHand = wrapper.instance().ingredientClickHand;
 
         assert.isTrue(wrapper.contains(
           <section>
@@ -45,7 +45,8 @@ describe('Shopping List', () => {
             { name: nameA, checked: false },
             { name: nameB, checked: false }
         ];
-        const wrapper = shallow(<ShoppingList store={mockStore} />);
+        const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
+        const ingredientClickHand = wrapper.instance().ingredientClickHand;
 
         assert.isTrue(wrapper.contains(
           <section>
@@ -60,7 +61,8 @@ describe('Shopping List', () => {
             { name: nameA, checked: true },
             { name: nameB, checked: true }
         ];
-        const wrapper = shallow(<ShoppingList store={mockStore} />);
+        const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
+        const ingredientClickHand = wrapper.instance().ingredientClickHand;
 
         assert.isTrue(wrapper.contains(
           <section>
@@ -78,7 +80,8 @@ describe('Shopping List', () => {
         ];
         const getIngredients = ingredients.filter((ingredient) => !ingredient.checked);
         const gotIngredients = ingredients.filter((ingredient) => ingredient.checked);
-        const wrapper = shallow(<ShoppingList store={mockStore} />);
+        const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
+        const ingredientClickHand = wrapper.instance().ingredientClickHand;
 
         assert.isTrue(wrapper.contains(
           <section>
@@ -89,7 +92,7 @@ describe('Shopping List', () => {
     });
 
     it('should handle ingredient toggling', () => {
-        const storeDispatch = sinon.spy(mockStore, 'dispatch');
+        const toggleIngredient = sinon.spy(actionMocks, 'mockToggleIngredient');
         const ShoppingListPrototype = ShoppingList.prototype;
         const id = chance.natural();
         sinon.spy(ShoppingListPrototype, 'ingredientClickHand');
@@ -98,12 +101,12 @@ describe('Shopping List', () => {
             { name: nameB, checked: false }
         ];
 
-        const wrapper = mount(<ShoppingList store={mockStore} />);
+        const wrapper = mount(<ShoppingList ingredients={ingredients} toggleIngredient={actionMocks.mockToggleIngredient} />);
 
         wrapper.find('li').at(0).simulate('click');
 
         assert.isTrue(ShoppingListPrototype.ingredientClickHand.calledOnce);
         assert.isTrue(Number(ShoppingListPrototype.ingredientClickHand.args[0]) === id);
-        assert.isTrue(storeDispatch.calledOnce);
+        assert.isTrue(toggleIngredient.calledOnce);
     });
 });

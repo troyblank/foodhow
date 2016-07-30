@@ -3,14 +3,10 @@ import './legacy';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import store from './store';
-import ShoppingList from './components/shoppingList';
+import { App } from './components/app';
 
 export default function Main() {
-    return (
-      <div>
-        <ShoppingList store={store} />
-      </div>
-    );
+    return <App store={store} />;
 }
 
 ReactDOM.render(<Main />, document.querySelector('#shopping-list-react'));

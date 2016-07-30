@@ -2,24 +2,30 @@ import { addIngredientType, toggleIngredientType, removeIngredientType } from '.
 
 export default function ingredients(state = [], action) {
     let toggleIndex;
-    const newState = [...state];
 
     switch (action.type) {
     case addIngredientType:
-        newState.push({
-            id: action.id,
-            checked: action.checked,
-            name: action.name,
-            recipe: action.recipe
-        });
-        return newState;
+        return [
+            ...state,
+            {
+                id: action.id,
+                checked: action.checked,
+                name: action.name,
+                recipe: action.recipe
+            }
+        ];
     case toggleIngredientType:
-        toggleIndex = newState.findIndex(ingredient => ingredient.id === action.id);
-        newState[toggleIndex].checked = !newState[toggleIndex].checked;
-        return newState;
+        toggleIndex = state.findIndex(ingredient => ingredient.id === action.id);
+        return [
+            ...state.slice(0, toggleIndex),
+            { ...state[toggleIndex], checked: !state[toggleIndex].checked },
+            ...state.slice(toggleIndex + 1)
+        ];
     case removeIngredientType:
-        newState.splice(action.index, 1);
-        return newState;
+        return [
+            ...state.slice(0, action.index),
+            ...state.slice(action.index + 1)
+        ];
     default:
         return state;
     }

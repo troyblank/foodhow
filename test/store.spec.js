@@ -36,7 +36,7 @@ describe('Store', () => {
     });
 
     it('should be able to dispatch and remove an ingredient', () => {
-        store.dispatch(removeIngredient(0));
+        store.dispatch(removeIngredient(name, recipe));
 
         const ingredients = JSON.parse(localStorage.getItem('food-how-ingredients'));
 

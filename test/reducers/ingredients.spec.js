@@ -87,7 +87,8 @@ describe('Ingredients Reducer', () => {
         assert.deepEqual(
             reducer(state, {
                 type: removeIngredientType,
-                index: 0
+                name,
+                recipe
             }),
             { ingredients: [] }
         );

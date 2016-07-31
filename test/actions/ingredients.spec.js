@@ -45,10 +45,10 @@ describe('Ingredients Actions', () => {
     });
 
     it('should be able to generate a remove ingredient action', () => {
-        const index = chance.natural();
-        const action = removeIngredient(index);
+        const action = removeIngredient(name, recipe);
 
         assert.equal(action.type, removeIngredientType);
-        assert.equal(action.index, index);
+        assert.equal(action.name, name);
+        assert.equal(action.recipe, recipe);
     });
 });

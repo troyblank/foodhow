@@ -1,8 +1,6 @@
 import $ from 'jquery';
 import { ToGets } from '../models/toGets';
 import { IngredientView } from '../views/ingredient';
-import store from '../store';
-import { removeIngredient } from '../actions/index';
 
 const shoppingListUI = {
 
@@ -39,7 +37,6 @@ const shoppingListUI = {
             const ele = $('#shopping-list .checked li')[i];
             const ingredient = shoppingListUI.ingredients.get($(ele).attr('data-id'));
             ingredient.destroy();
-            store.dispatch(removeIngredient(i));
             i--;
         }
 

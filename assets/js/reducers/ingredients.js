@@ -1,7 +1,7 @@
 import { addIngredientType, toggleIngredientType, removeIngredientType } from '../actions/ingredients';
 
 export default function ingredients(state = [], action) {
-    let toggleIndex;
+    let toggleIndex, removeIndex;
 
     switch (action.type) {
     case addIngredientType:
@@ -22,9 +22,10 @@ export default function ingredients(state = [], action) {
             ...state.slice(toggleIndex + 1)
         ];
     case removeIngredientType:
+        removeIndex = state.findIndex(ingredient => ingredient.name === action.name && ingredient.recipe === action.recipe);
         return [
-            ...state.slice(0, action.index),
-            ...state.slice(action.index + 1)
+            ...state.slice(0, removeIndex),
+            ...state.slice(removeIndex + 1)
         ];
     default:
         return state;

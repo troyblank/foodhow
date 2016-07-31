@@ -45,7 +45,7 @@ const baseUI = {
                 i--;
             }
 
-            store.dispatch(removeIngredientAction(i));
+            store.dispatch(removeIngredientAction(title, recipe));
         }
 
         function ingredientAddHand() {

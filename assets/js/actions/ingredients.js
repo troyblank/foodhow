@@ -22,9 +22,10 @@ export function toggleIngredient(id) {
 }
 
 export { removeIngredientType };
-export function removeIngredient(index) {
+export function removeIngredient(name, recipe) {
     return {
         type: removeIngredientType,
-        index
+        name,
+        recipe
     };
 }

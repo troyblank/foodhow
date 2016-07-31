@@ -11,10 +11,6 @@ export default class ShoppingList extends Component {
     constructor(props) {
         super(props);
 
-        getIngredients = this.props.ingredients.filter((ingredient) => !ingredient.checked);
-        gotIngredients = this.props.ingredients.filter((ingredient) => ingredient.checked);
-        showNoResult = 0 === this.props.ingredients.length;
-
         this.ingredientClickHand = this.ingredientClickHand.bind(this);
     }
 
@@ -23,6 +19,10 @@ export default class ShoppingList extends Component {
     }
 
     render() {
+        getIngredients = this.props.ingredients.filter((ingredient) => !ingredient.checked);
+        gotIngredients = this.props.ingredients.filter((ingredient) => ingredient.checked);
+        showNoResult = 0 === this.props.ingredients.length;
+
         return (
           <section>
             {showNoResult && <NoResultMessage headline={'This list is empty'} message={'There is no ingredients on your list, add some to make a shopping list.'} />}

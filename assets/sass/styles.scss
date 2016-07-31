@@ -1,4 +1,8 @@
 @import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/@troyblank/food-how-components/assets/sass/base/base';
+@import '../../node_modules/@troyblank/food-how-components/assets/sass/partials/resets';
+@import '../../node_modules/@troyblank/food-how-components/assets/sass/partials/styles';
+@import '../../node_modules/@troyblank/food-how-components/assets/sass/partials/typography';
 
 //--------------------------------------------------------------------------------------------------
 // RESETS
@@ -65,26 +69,6 @@ $orange: rgb(177, 141, 74);
 //--------------------------------------------------------------------------------------------------
 // CSS
 //--------------------------------------------------------------------------------------------------
-//box size all the things!
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body {
-    padding-top: 50px;
-    background: $cream;
-    color: $brown;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
-}
-
-a {
-    color: $orange;
-    text-decoration: none;
-}
-
 button {
     display: block;
     margin: 20px auto;
@@ -95,10 +79,7 @@ button {
 }
 
 h1 {
-    margin: 0 0 15px;
-    font-family: 'Bitter', serif;
-    font-size: 3rem;
-    line-height: 3.25rem;
+    @extend %heading-primary;
 }
 
 h2 {
@@ -114,10 +95,6 @@ h3 {
     margin: 0;
     font-family: 'Bitter', serif;
     font-size: .75rem;
-}
-
-p {
-    line-height: 1.5rem;
 }
 
 table {

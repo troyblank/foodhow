@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import Chance from 'chance';
 import reducer from '../../assets/js/reducers/index';
-import { addIngredientType, toggleIngredientType, removeIngredientType } from '../../assets/js/actions/index';
+import { addIngredientType, toggleIngredientType, removeIngredientType, removeCheckedIngredientsType } from '../../assets/js/actions/index';
 
 describe('Ingredients Reducer', () => {
     const chance = new Chance();
@@ -91,6 +91,33 @@ describe('Ingredients Reducer', () => {
                 recipe
             }),
             { ingredients: [] }
+        );
+    });
+
+    it('should handle removing checked ingredients', () => {
+        const state = { ingredients: [
+            {
+                id: 1,
+                checked: false
+            },
+            {
+                id: 2,
+                checked: true
+            },
+            {
+                id: 3,
+                checked: true
+            }
+        ] };
+
+        assert.deepEqual(
+            reducer(state, {
+                type: removeCheckedIngredientsType
+            }),
+            { ingredients: [{
+                id: 1,
+                checked: false
+            }] }
         );
     });
 });

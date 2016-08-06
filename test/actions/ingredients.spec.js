@@ -5,7 +5,9 @@ import { addIngredient,
         toggleIngredient,
         toggleIngredientType,
         removeIngredient,
-        removeIngredientType
+        removeIngredientType,
+        removeCheckedIngredients,
+        removeCheckedIngredientsType
         } from '../../assets/js/actions/index';
 
 describe('Ingredients Actions', () => {
@@ -50,5 +52,11 @@ describe('Ingredients Actions', () => {
         assert.equal(action.type, removeIngredientType);
         assert.equal(action.name, name);
         assert.equal(action.recipe, recipe);
+    });
+
+    it('should be able to remove all checked Ingredients', () => {
+        const action = removeCheckedIngredients();
+
+        assert.equal(action.type, removeCheckedIngredientsType);
     });
 });

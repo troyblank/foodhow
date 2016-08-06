@@ -1,4 +1,4 @@
-import { addIngredientType, toggleIngredientType, removeIngredientType } from '../actions/ingredients';
+import { addIngredientType, toggleIngredientType, removeIngredientType, removeCheckedIngredientsType } from '../actions/ingredients';
 
 export default function ingredients(state = [], action) {
     let toggleIndex, removeIndex;
@@ -27,6 +27,8 @@ export default function ingredients(state = [], action) {
             ...state.slice(0, removeIndex),
             ...state.slice(removeIndex + 1)
         ];
+    case removeCheckedIngredientsType:
+        return [...state].filter(ingredient => !ingredient.checked);
     default:
         return state;
     }

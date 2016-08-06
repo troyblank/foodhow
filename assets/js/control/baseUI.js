@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import { ToGets } from '../models/toGets';
 import EventDispatcher from '../lib/EventDispatcher';
 import store from '../store';
 import { addIngredient as addIngredientAction, removeIngredient as removeIngredientAction } from '../actions/index';
@@ -15,36 +14,11 @@ const baseUI = {
     //-----------------------------------------------------------------------------------------
 
     groceryList() {
-        const ingredients = new ToGets();
-
         function addIngredient(recipe, title) {
-            const match = ingredients.where({
-                recipe,
-                title
-            });
-
-            if (0 === match.length) {
-                ingredients.create({
-                    recipe,
-                    title
-                });
-
-                store.dispatch(addIngredientAction({ name: title, recipe }));
-            }
+            store.dispatch(addIngredientAction({ name: title, recipe }));
         }
 
         function removeIngredient(recipe, title) {
-            const match = ingredients.where({
-                recipe,
-                title
-            });
-            let i = match.length - 1;
-
-            while (0 <= i) {
-                match[i].destroy();
-                i--;
-            }
-
             store.dispatch(removeIngredientAction(title, recipe));
         }
 
@@ -65,34 +39,28 @@ const baseUI = {
             $('.ingredients li').on('click', ingredientAddHand);
         }
 
-        function isIngredientInList(recipe, title) {
-            const match = ingredients.where({
-                recipe,
-                title
-            });
-
-            if (0 === match.length) {
-                return false;
+        function isIngredientInList(ingredients, recipe, title) {
+            if (ingredients.find(ingredient => ingredient.name === title && ingredient.recipe === recipe)) {
+                return true;
             }
 
-            return true;
+            return false;
         }
 
         function stageSetIngredientList() {
+            const ingredients = store.getState().ingredients;
             const recipe = $('.recipe header h1').html();
 
             $('.ingredients li').each((i, ele) => {
                 const title = $(ele).html();
 
-                if (isIngredientInList(recipe, title)) {
+                if (isIngredientInList(ingredients, recipe, title)) {
                     $(ele).addClass('active');
                 }
             });
         }
 
         function initialize() {
-            ingredients.fetch();
-
             stageSetIngredientList();
             addListeners();
         }

@@ -67,12 +67,7 @@ $orange: rgb(177, 141, 74);
 // CSS
 //--------------------------------------------------------------------------------------------------
 button {
-    display: block;
     margin: 20px auto;
-    padding: 5px 10px;
-    border: 3px solid $brown;
-    background: $orange no-repeat;
-    color: $cream;
 }
 
 h1 {
@@ -241,46 +236,6 @@ body > section {
         h1 {
             font-size: 2rem;
             text-align: center;
-        }
-    }
-}
-
-//--------------------------------------------------------------------------------------------------
-// SHOPPING LIST
-//--------------------------------------------------------------------------------------------------
-#shopping-list, #shopping-list-react {
-    max-width: 500px;
-    margin: 20px auto;
-
-    li {
-        position: relative;
-        max-width: 500px;
-        margin-bottom: 5px;
-        padding: 10px 5px 10px 35px;
-        background: $orange;
-        color: $cream;
-        list-style: none;
-        cursor: pointer;
-
-        &:after {
-            position: absolute;
-            top: 10px;
-            left: 5px;
-            width: 20px;
-            height: 20px;
-            border: 2px solid $brown;
-            background: $cream;
-            content: '';
-        }
-    }
-
-    .checked li {
-        background: $brown-50;
-        text-decoration: line-through;
-
-        &:after {
-            background: url('/icons/icon_x.svg') no-repeat 2px $cream;
-            background-size: 80%;
         }
     }
 }

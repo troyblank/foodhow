@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {
+    Button,
     GetShoppingList,
     GotShoppingList,
     NoResultMessage }
     from '@troyblank/food-how-components';
 
-let showNoResult, getIngredients, gotIngredients;
+let showNoResult, showClearButton, getIngredients, gotIngredients;
 
 export default class ShoppingList extends Component {
     constructor(props) {
@@ -21,12 +22,14 @@ export default class ShoppingList extends Component {
     render() {
         getIngredients = this.props.ingredients.filter((ingredient) => !ingredient.checked);
         gotIngredients = this.props.ingredients.filter((ingredient) => ingredient.checked);
+        showClearButton = 0 !== gotIngredients.length;
         showNoResult = 0 === this.props.ingredients.length;
 
         return (
           <section>
             {showNoResult && <NoResultMessage headline={'This list is empty'} message={'There is no ingredients on your list, add some to make a shopping list.'} />}
             <GetShoppingList list={getIngredients} ingredientClickHand={this.ingredientClickHand} />
+            {showClearButton && <Button text="Clear checked" />}
             <GotShoppingList list={gotIngredients} ingredientClickHand={this.ingredientClickHand} />
           </section>
         );

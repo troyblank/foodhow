@@ -5,6 +5,7 @@ import { assert } from 'chai';
 import { shallow, mount } from 'enzyme';
 import ShoppingList from '../../assets/js/components/shoppingList';
 import {
+    Button,
     GetShoppingList,
     GotShoppingList,
     NoResultMessage }
@@ -67,6 +68,7 @@ describe('Shopping List', () => {
         assert.isTrue(wrapper.contains(
           <section>
             <GetShoppingList list={[]} ingredientClickHand={ingredientClickHand} />
+            <Button text="Clear checked" />
             <GotShoppingList list={ingredients} ingredientClickHand={ingredientClickHand} />
           </section>
         ));
@@ -86,6 +88,7 @@ describe('Shopping List', () => {
         assert.isTrue(wrapper.contains(
           <section>
             <GetShoppingList list={getIngredients} ingredientClickHand={ingredientClickHand} />
+            <Button text="Clear checked" />
             <GotShoppingList list={gotIngredients} ingredientClickHand={ingredientClickHand} />
           </section>
         ));

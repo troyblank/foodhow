@@ -3,7 +3,7 @@ import Chance from 'chance';
 import sinon from 'sinon';
 import { assert } from 'chai';
 import { shallow, mount } from 'enzyme';
-import ShoppingList from '../../assets/js/components/shoppingList';
+import ShoppingList from '../../assets/js/components/shoppingList/shoppingList';
 import {
     Button,
     GetShoppingList,
@@ -20,6 +20,9 @@ describe('Shopping List', () => {
 
     const actionMocks = {
         mockToggleIngredient() {
+            return true;
+        },
+        mockClearChecked() {
             return true;
         }
     };
@@ -64,11 +67,12 @@ describe('Shopping List', () => {
         ];
         const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
         const ingredientClickHand = wrapper.instance().ingredientClickHand;
+        const clearCheckedHand = wrapper.instance().clearCheckedHand;
 
         assert.isTrue(wrapper.contains(
           <section>
             <GetShoppingList list={[]} ingredientClickHand={ingredientClickHand} />
-            <Button text="Clear checked" />
+            <Button text="Clear checked" buttonClickHand={clearCheckedHand} />
             <GotShoppingList list={ingredients} ingredientClickHand={ingredientClickHand} />
           </section>
         ));
@@ -84,11 +88,12 @@ describe('Shopping List', () => {
         const gotIngredients = ingredients.filter((ingredient) => ingredient.checked);
         const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
         const ingredientClickHand = wrapper.instance().ingredientClickHand;
+        const clearCheckedHand = wrapper.instance().clearCheckedHand;
 
         assert.isTrue(wrapper.contains(
           <section>
             <GetShoppingList list={getIngredients} ingredientClickHand={ingredientClickHand} />
-            <Button text="Clear checked" />
+            <Button text="Clear checked" buttonClickHand={clearCheckedHand} />
             <GotShoppingList list={gotIngredients} ingredientClickHand={ingredientClickHand} />
           </section>
         ));
@@ -111,5 +116,22 @@ describe('Shopping List', () => {
         assert.isTrue(ShoppingListPrototype.ingredientClickHand.calledOnce);
         assert.isTrue(Number(ShoppingListPrototype.ingredientClickHand.args[0]) === id);
         assert.isTrue(toggleIngredient.calledOnce);
+    });
+
+    it('should handle removing all checked ingredients', () => {
+        const clearChecked = sinon.spy(actionMocks, 'mockClearChecked');
+        const ShoppingListPrototype = ShoppingList.prototype;
+        sinon.spy(ShoppingListPrototype, 'clearCheckedHand');
+        ingredients = [
+            { name: nameA, checked: false },
+            { name: nameB, checked: true }
+        ];
+
+        const wrapper = mount(<ShoppingList ingredients={ingredients} removeCheckedIngredients={actionMocks.mockClearChecked} />);
+
+        wrapper.find('button').simulate('click');
+
+        assert.isTrue(ShoppingListPrototype.clearCheckedHand.calledOnce);
+        assert.isTrue(clearChecked.calledOnce);
     });
 });

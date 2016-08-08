@@ -13,10 +13,15 @@ export default class ShoppingList extends Component {
         super(props);
 
         this.ingredientClickHand = this.ingredientClickHand.bind(this);
+        this.clearCheckedHand = this.clearCheckedHand.bind(this);
     }
 
     ingredientClickHand(id) {
         this.props.toggleIngredient(id);
+    }
+
+    clearCheckedHand() {
+        this.props.removeCheckedIngredients();
     }
 
     render() {
@@ -29,7 +34,7 @@ export default class ShoppingList extends Component {
           <section>
             {showNoResult && <NoResultMessage headline={'This list is empty'} message={'There is no ingredients on your list, add some to make a shopping list.'} />}
             <GetShoppingList list={getIngredients} ingredientClickHand={this.ingredientClickHand} />
-            {showClearButton && <Button text="Clear checked" />}
+            {showClearButton && <Button text="Clear checked" buttonClickHand={this.clearCheckedHand} />}
             <GotShoppingList list={gotIngredients} ingredientClickHand={this.ingredientClickHand} />
           </section>
         );

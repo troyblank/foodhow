@@ -3,8 +3,8 @@ module.exports = {
         files: ['assets/sass/{,*/}*.{scss,sass}'],
         tasks: ['sass', 'notify:sass']
     },
-    uglify: {
-        files: ['assets/js/**/*.js'],
+    webpack: {
+        files: ['assets/js/**/*.js', 'assets/js/**/*.scss'],
         tasks: ['webpack', 'notify:webpack']
     },
     livereload: {

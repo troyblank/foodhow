@@ -1,5 +1,6 @@
 import React from 'react';
 import Chance from 'chance';
+import styles from '../helpers/style-fakes';
 import sinon from 'sinon';
 import { assert } from 'chai';
 import { shallow, mount } from 'enzyme';
@@ -36,7 +37,7 @@ describe('Shopping List', () => {
         const ingredientClickHand = wrapper.instance().ingredientClickHand;
 
         assert.isTrue(wrapper.contains(
-          <section>
+          <section className={styles['shopping-list']}>
             <NoResultMessage headline={'This list is empty'} message={'There is no ingredients on your list, add some to make a shopping list.'} />
             <GetShoppingList list={[]} ingredientClickHand={ingredientClickHand} />
             <GotShoppingList list={[]} ingredientClickHand={ingredientClickHand} />
@@ -53,7 +54,7 @@ describe('Shopping List', () => {
         const ingredientClickHand = wrapper.instance().ingredientClickHand;
 
         assert.isTrue(wrapper.contains(
-          <section>
+          <section className={styles['shopping-list']}>
             <GetShoppingList list={ingredients} ingredientClickHand={ingredientClickHand} />
             <GotShoppingList list={[]} ingredientClickHand={ingredientClickHand} />
           </section>
@@ -70,7 +71,7 @@ describe('Shopping List', () => {
         const clearCheckedHand = wrapper.instance().clearCheckedHand;
 
         assert.isTrue(wrapper.contains(
-          <section>
+          <section className={styles['shopping-list']}>
             <GetShoppingList list={[]} ingredientClickHand={ingredientClickHand} />
             <Button text="Clear checked" buttonClickHand={clearCheckedHand} />
             <GotShoppingList list={ingredients} ingredientClickHand={ingredientClickHand} />
@@ -91,7 +92,7 @@ describe('Shopping List', () => {
         const clearCheckedHand = wrapper.instance().clearCheckedHand;
 
         assert.isTrue(wrapper.contains(
-          <section>
+          <section className={styles['shopping-list']}>
             <GetShoppingList list={getIngredients} ingredientClickHand={ingredientClickHand} />
             <Button text="Clear checked" buttonClickHand={clearCheckedHand} />
             <GotShoppingList list={gotIngredients} ingredientClickHand={ingredientClickHand} />

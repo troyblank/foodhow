@@ -28,7 +28,7 @@ module.exports = {
                         'sass'
                     ],
                     include: [
-                        'assets/sass',
+                        'assets',
                         'node_modules/@troyblank/food-how-components'
                     ]
                 }

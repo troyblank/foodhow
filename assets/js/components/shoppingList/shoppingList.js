@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './shoppingList.scss';
 import {
     Button,
     GetShoppingList,
@@ -31,7 +32,7 @@ export default class ShoppingList extends Component {
         showNoResult = 0 === this.props.ingredients.length;
 
         return (
-          <section>
+          <section className={styles['shopping-list']}>
             {showNoResult && <NoResultMessage headline={'This list is empty'} message={'There is no ingredients on your list, add some to make a shopping list.'} />}
             <GetShoppingList list={getIngredients} ingredientClickHand={this.ingredientClickHand} />
             {showClearButton && <Button text="Clear checked" buttonClickHand={this.clearCheckedHand} />}

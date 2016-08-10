@@ -1,5 +1,6 @@
 @import '../../node_modules/normalize.css/normalize';
 @import '../../node_modules/@troyblank/food-how-components/assets/sass/global';
+@import './silents/containers';
 
 //--------------------------------------------------------------------------------------------------
 // RESETS
@@ -163,7 +164,6 @@ body > nav {
 
 body > section {
     margin: 20px 0;
-    padding: 0 20px;
 
     &.search {
         & > div {
@@ -229,6 +229,8 @@ body > section {
     }
 
     &.guide {
+        @extend %page-wrap;
+
         h1 {
             font-size: 2rem;
             text-align: center;

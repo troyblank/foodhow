@@ -135,4 +135,23 @@ describe('Shopping List', () => {
         assert.isTrue(ShoppingListPrototype.clearCheckedHand.calledOnce);
         assert.isTrue(clearChecked.calledOnce);
     });
+
+    it('should render a done message', () => {
+        ingredients = [
+            { name: nameA, checked: true }
+        ];
+
+        const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
+        const ingredientClickHand = wrapper.instance().ingredientClickHand;
+
+        wrapper.setProps({ ingredients: [] });
+
+        assert.isTrue(wrapper.contains(
+          <section className={styles['shopping-list']}>
+            <NoResultMessage headline={'Done!'} message={'Oh, so proud of you!'} />
+            <GetShoppingList list={[]} ingredientClickHand={ingredientClickHand} />
+            <GotShoppingList list={[]} ingredientClickHand={ingredientClickHand} />
+          </section>
+        ));
+    });
 });

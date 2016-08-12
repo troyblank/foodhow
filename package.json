@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "start": "grunt build && node server",
-    "test": "grunt test"
+    "test": "grunt test",
+    "deploy": "grunt --environment production deploy"
   },
   "dependencies": {
     "express": "3.4.8",
@@ -27,6 +28,7 @@
     "css-loader": "0.23.1",
     "grunt": "~0.4.1",
     "grunt-cli": "1.2.0",
+    "grunt-contrib-clean": "1.0.0",
     "grunt-contrib-imagemin": "1.0.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-eslint": "18.1.0",
@@ -35,7 +37,7 @@
     "grunt-sass": "1.2.0",
     "grunt-sass-lint": "0.2.0",
     "grunt-shell": "0.6.4",
-    "grunt-ssh": "~0.11.1",
+    "grunt-ssh": "~0.12.9",
     "grunt-webpack": "1.0.11",
     "load-grunt-config": "0.19.2",
     "matchdep": "~0.1.1",

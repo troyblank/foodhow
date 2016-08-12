@@ -50,11 +50,11 @@ To run a watcher simply run:
     
 To push current master using [grunt-shell](https://www.npmjs.com/package/grunt-shell) you must make a config file
 
-    cp credentials/config.json.sample credentials/config.json
+    cp ssh/config.json.sample ssh/config.json
     
 Then fill out all information, and commands you want. Also copy your id_rsa private key inside the credintials folder then run:
 
-    grunt deploy
+    npm run deploy
 
 ## License
 

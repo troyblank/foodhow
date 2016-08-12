@@ -22,6 +22,6 @@ Thumbs.db
 
 public
 coverage
-credentials/config.json
-credentials/id_rsa
+ssh/config.json
+ssh/id_rsa
 scratch

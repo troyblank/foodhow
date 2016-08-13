@@ -1,10 +1,10 @@
 module.exports = {
     deploy: {
-        command: '<%= credentials.command %>',
+        command: '<%= ssh.command %>',
         options: {
-            host: '<%= credentials.host %>',
-            port: '<%= credentials.port %>',
-            username: '<%= credentials.username %>',
+            host: '<%= ssh.host %>',
+            port: '<%= ssh.port %>',
+            username: '<%= ssh.username %>',
             privateKey: '<%= privateKey %>'
         }
     }

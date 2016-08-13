@@ -1,0 +1,11 @@
+{
+	"host": "example.com",
+	"port": 22,
+	"username": "username",
+    "appPath": "~/webapps/foodhow",
+	"command": [
+        "cd ~/webapps/foodhow; git pull origin master",
+        "cd ~/webapps/foodhow; echo 'somePass' | sudo -S systemctl restart food-how.service",
+        "cd ~/webapps/foodhow; rm -rf public"
+	]
+}

@@ -14,11 +14,14 @@ module.exports = {
     ],
     unit: 'mocha_istanbul',
     build: [
+        'clean',
         'imagemin',
         'sass',
         'webpack'
     ],
     deploy: [
-        'sshexec'
+        'build',
+        'sshexec',
+        'sftp'
     ]
 };

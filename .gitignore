@@ -25,3 +25,4 @@ coverage
 ssh/config.json
 ssh/id_rsa
 scratch
+webpack-assets.json

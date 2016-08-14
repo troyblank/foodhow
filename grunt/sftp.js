@@ -1,7 +1,10 @@
 module.exports = {
     deploy: {
         files: {
-            './': 'public/**/*'
+            './': [
+                'public/**/*',
+                'webpack-assets.json'
+            ]
         },
         options: {
             path: '<%= ssh.appPath %>',

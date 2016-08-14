@@ -45,8 +45,8 @@ var server = {
     //VIEWS
     //---------------------------------------------------------------------------------------------
     recipeListing: function(req, res) {
-        var links = new Array(),
-            files = server.files;
+        const files = server.files;
+        let links = new Array(),
             i = 0;
 
         for(i; i < files.length; i++) {

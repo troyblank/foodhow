@@ -17,7 +17,9 @@ module.exports = {
         'clean',
         'imagemin',
         'sass',
-        'webpack'
+        'webpack',
+        'babel',
+        'copy'
     ],
     deploy: [
         'build',

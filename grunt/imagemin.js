@@ -3,12 +3,12 @@ module.exports = {
         expand: true,
         cwd: 'assets/icons',
         src: '**/*.svg',
-        dest: 'public/static/icons'
+        dest: 'dist/server/public/static/icons'
     },
     images: {
         expand: true,
         cwd: 'assets/images',
         src: '**/*',
-        dest: 'public/static/images'
+        dest: 'dist/server/public/static/images'
     }
 };

@@ -20,7 +20,7 @@ npm-debug.log
 ehthumbs.db
 Thumbs.db
 
-public
+dist
 coverage
 ssh/config.json
 ssh/id_rsa

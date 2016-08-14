@@ -1,4 +1,7 @@
 const webpack = require('webpack');
+const WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin');
+const webpackIsomorphicConfig = require('../src/isomorphic/webpackIsomorphicToolsConfiguration');
+const webpackIsomorphic = new WebpackIsomorphicToolsPlugin(webpackIsomorphicConfig);
 
 module.exports = (grunt) => {
     const env = JSON.stringify(grunt.option('environment') || 'development');
@@ -34,6 +37,9 @@ module.exports = (grunt) => {
                             'assets',
                             'node_modules/@troyblank/food-how-components'
                         ]
+                    },
+                    {
+                        test: webpackIsomorphic.regular_expression('images'), loader: 'url-loader?limit=10240'
                     }
                 ]
             },
@@ -48,7 +54,8 @@ module.exports = (grunt) => {
                     compress: {
                         warnings: false
                     }
-                })
+                }),
+                webpackIsomorphic.development()
             ]
         }
     };

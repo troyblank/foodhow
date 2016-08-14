@@ -5,8 +5,7 @@
     "appPath": "~/webapps/foodhow",
     "command": [
         "cd ~/webapps/foodhow; git pull origin master",
-        "cd ~/webapps/foodhow; rm -rf public",
-        "cd ~/webapps/foodhow; rm -f webpack-assets.json
+        "cd ~/webapps/foodhow; rm -rf dist"
     ],
     "postCommands": [
         "cd ~/webapps/foodhow; echo 'somePass' | sudo -S systemctl restart food-how.service"

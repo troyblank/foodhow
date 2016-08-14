@@ -1,5 +1,5 @@
 module.exports = {
     all: {
-        src: 'public'
+        src: 'dist'
     }
 };

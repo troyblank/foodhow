@@ -10,7 +10,7 @@ module.exports = (grunt) => {
         deploy: {
             entry: './assets/js/main.js',
             output: {
-                path: 'public/static/scripts',
+                path: 'dist/server/public/static/scripts',
                 filename: 'base.js'
             },
             module: {

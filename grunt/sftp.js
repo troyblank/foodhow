@@ -2,8 +2,7 @@ module.exports = {
     deploy: {
         files: {
             './': [
-                'public/**/*',
-                'webpack-assets.json'
+                'dist/**/*'
             ]
         },
         options: {

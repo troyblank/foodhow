@@ -21,7 +21,8 @@ module.exports = {
     ],
     deploy: [
         'build',
-        'sshexec',
-        'sftp'
+        'sshexec:preDeploy',
+        'sftp',
+        'sshexec:postDeploy'
     ]
 };

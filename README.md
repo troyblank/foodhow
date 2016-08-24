@@ -52,7 +52,7 @@ To push current master using [grunt-shell](https://www.npmjs.com/package/grunt-s
 
     cp ssh/config.json.sample ssh/config.json
     
-Then fill out all information, and commands you want. Also copy your id_rsa private key inside the credintials folder then run:
+Then fill out all information, and commands you want. Also copy your id_rsa private key inside the credentials folder then run:
 
     npm run deploy
 

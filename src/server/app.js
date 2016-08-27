@@ -1,9 +1,9 @@
-var webpackIsomoprhicTools = require('webpack-isomorphic-tools');
-var basePath = require('path').resolve(__dirname, '.');
+import WebpackIsomoprhicTools from 'webpack-isomorphic-tools';
+import WebpackIsomorphicToolsConfiguration from '../isomorphic/webpackIsomorphicToolsConfiguration';
+const basePath = require('path').resolve(__dirname, '.');
 
-global.webpackIsomoprhicTools = new webpackIsomoprhicTools(require('../isomorphic/webpackIsomorphicToolsConfiguration'))
-.development(process.env.NODE_ENV === 'development')
-.server(basePath, function()
-{
-  require('./server')
+global.webpackIsomoprhicTools = new WebpackIsomoprhicTools(WebpackIsomorphicToolsConfiguration)
+.development('development' === process.env.NODE_ENV)
+.server(basePath, () => {
+    require('./server');
 });

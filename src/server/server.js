@@ -3,6 +3,10 @@ var nunjucks = require('nunjucks');
 var fs = require('fs');
 var walk = require('walk');
 
+import React from 'react';
+import ReactDOM from 'react-dom/server';
+import Html from './components/html';
+
 nunjucks.configure(__dirname + '/templates', {
     autoescape: false
 });
@@ -78,6 +82,15 @@ var server = {
 
     shoppingList: function(req, res) {
         res.send(nunjucks.render('shoppinglist.html'));
+    },
+
+    shoppingList: function(req, res) {
+        res.send(
+            '<!doctype html>\n' +
+            ReactDOM.renderToString((
+               <Html assets={webpackIsomoprhicTools.assets()} />
+            ))
+        );
     },
 
     //---------------------------------------------------------------------------------------------

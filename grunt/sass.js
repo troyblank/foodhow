@@ -6,7 +6,7 @@ module.exports = {
 
     deploy: {
         expand: true,
-        cwd: 'assets/sass',
+        cwd: 'src/client/sass',
         src: '**/*.scss',
         dest: 'dist/server/public/static/styles',
         ext: '.css',

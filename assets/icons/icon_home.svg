@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" xml:space="preserve">
-<g>
-	<path fill="#E9DDD0" d="M49.36,25.616L27.072,3.306c-1.141-1.182-3.005-1.182-4.144,0L0.64,25.616
-		c-1.14,1.181-0.714,2.149,0.945,2.149H6.23v17.134c0,1.239,0.053,2.243,2.29,2.243h10.818V29.959H30.66v17.183h11.357
-		c1.706,0,1.751-1.004,1.751-2.243V27.765h4.646C50.075,27.765,50.499,26.797,49.36,25.616z"/>
-</g>
-</svg>

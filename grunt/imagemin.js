@@ -1,13 +1,13 @@
 module.exports = {
     icons: {
         expand: true,
-        cwd: 'assets/icons',
+        cwd: 'src/client/icons',
         src: '**/*.svg',
         dest: 'dist/server/public/static/icons'
     },
     images: {
         expand: true,
-        cwd: 'assets/images',
+        cwd: 'src/client/images',
         src: '**/*',
         dest: 'dist/server/public/static/images'
     }

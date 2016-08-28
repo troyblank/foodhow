@@ -1,10 +1,10 @@
 module.exports = {
     sass: {
-        files: ['assets/sass/{,*/}*.{scss,sass}'],
+        files: ['src/client/sass/{,*/}*.{scss,sass}'],
         tasks: ['sass', 'notify:sass']
     },
     webpack: {
-        files: ['assets/js/**/*.js', 'assets/js/**/*.scss'],
+        files: ['src/client/js/**/*.js', 'src/client/js/**/*.scss'],
         tasks: ['webpack', 'notify:webpack']
     },
     livereload: {

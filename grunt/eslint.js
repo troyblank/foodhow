@@ -2,7 +2,7 @@ module.exports = {
     target: [
         'src/isomoprhic/*.js',
         'src/server/components/**/*.js',
-        'assets/js/**/*.js',
+        'src/client/js/**/*.js',
         'recipes/**/*.json',
         'test/**/*.js',
         'grunt/**/*.js'

@@ -8,7 +8,7 @@ module.exports = (grunt) => {
 
     return {
         deploy: {
-            entry: './assets/js/main.js',
+            entry: './src/client/js/main.js',
             output: {
                 path: 'dist/server/public/static/scripts',
                 filename: 'base.js'
@@ -19,7 +19,7 @@ module.exports = (grunt) => {
                         test: /\.jsx$|\.js$/,
                         loader: 'babel',
                         include: [
-                            'assets/js',
+                            'src/client/js',
                             'node_modules/@troyblank/food-how-components'
                         ],
                         query: {
@@ -34,7 +34,7 @@ module.exports = (grunt) => {
                             'sass'
                         ],
                         include: [
-                            'assets',
+                            'src/client',
                             'node_modules/@troyblank/food-how-components'
                         ]
                     },

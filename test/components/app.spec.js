@@ -1,6 +1,6 @@
 
 import { assert } from 'chai';
-import { App, mapStateToProps, mapDispachToProps } from '../../assets/js/components/app';
+import { App, mapStateToProps, mapDispachToProps } from '../../src/client/js/components/app';
 
 describe('App', () => {
     const mockState = {

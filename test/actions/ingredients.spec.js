@@ -8,7 +8,7 @@ import { addIngredient,
         removeIngredientType,
         removeCheckedIngredients,
         removeCheckedIngredientsType
-        } from '../../assets/js/actions/index';
+        } from '../../src/client/js/actions/index';
 
 describe('Ingredients Actions', () => {
     const chance = new Chance();

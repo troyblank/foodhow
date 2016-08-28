@@ -4,7 +4,7 @@ import styles from '../helpers/style-fakes';
 import sinon from 'sinon';
 import { assert } from 'chai';
 import { shallow, mount } from 'enzyme';
-import ShoppingList from '../../assets/js/components/shoppingList/shoppingList';
+import ShoppingList from '../../src/client/js/components/shoppingList/shoppingList';
 import {
     Button,
     GetShoppingList,

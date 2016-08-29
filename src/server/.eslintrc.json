@@ -1,0 +1,7 @@
+{
+    "extends": "@troyblank/eslint-config-troyblank/configs/react.js",
+
+    "globals": {
+        "webpackIsomoprhicTools": true
+    }
+}

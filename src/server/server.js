@@ -1,74 +1,75 @@
-var express = require('express');
-var nunjucks = require('nunjucks');
-var fs = require('fs');
-var walk = require('walk');
+const express = require('express');
+const nunjucks = require('nunjucks');
+const fs = require('fs');
+const walk = require('walk');
 
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import Html from './components/html';
 
-nunjucks.configure(__dirname + '/templates', {
+nunjucks.configure(`${__dirname}/templates`, {
     autoescape: false
 });
 
-var server = {
-
+const server = {
     app: express(),
     files: [],
 
-    initialize: function() {
+    initialize() {
         server.urlConfs();
         server.updateFileList();
     },
 
-    startWebServer: function() {
+    startWebServer() {
         server.app.listen(8000);
+        /* eslint-disable no-console */
         console.log('Listening on port 8000');
+        /* eslint-enable no-console */
     },
 
     //---------------------------------------------------------------------------------------------
-    //FILE HANDLING
+    // FILE HANDLING
     //---------------------------------------------------------------------------------------------
-
-    updateFileList: function() {
-        var walker = walk.walk(__dirname + '/recipes', {
+    updateFileList() {
+        const walker = walk.walk(`${__dirname}/recipes`, {
             followLinks: false
         });
 
-        walker.on('file', function(root, stat, next) {
+        walker.on('file', (root, stat, next) => {
             server.files.push(stat.name.replace(/.json/g, ''));
             next();
         });
 
-        walker.on('end', function() {
+        walker.on('end', () => {
             server.startWebServer();
         });
     },
 
     //---------------------------------------------------------------------------------------------
-    //VIEWS
+    // VIEWS
     //---------------------------------------------------------------------------------------------
-    recipeListing: function(req, res) {
+    recipeListing(req, res) {
         const files = server.files;
-        let links = new Array(),
-            i = 0;
+        const links = [];
+        let i = 0;
+        let name;
 
-        for(i; i < files.length; i++) {
-            var name = server.files[i];
+        for (i; i < files.length; i++) {
+            name = server.files[i];
             links.push({
-                'name': name.replace(/_/g, ' '),
-                'url': 'recipes/' + name
+                name: name.replace(/_/g, ' '),
+                url: `recipes/${name}`
             });
         }
 
         res.send(nunjucks.render('list.html', {
-            'links': links
+            links
         }));
     },
 
-    recipeDetail: function(req, res) {
-        fs.readFile(__dirname + req.url + '.json', 'utf8', function(err, data) {
-            if (err != null) {
+    recipeDetail(req, res) {
+        fs.readFile(`${__dirname}${req.url}.json`, 'utf8', (err, data) => {
+            if (null != err) {
                 res.status(404).send('404 Not found');
             } else {
                 res.send(nunjucks.render('recipe.html', JSON.parse(data)));
@@ -76,34 +77,30 @@ var server = {
         });
     },
 
-    guide: function(req, res) {
+    guide(req, res) {
         res.send(nunjucks.render('guide.html'));
     },
 
-    shoppingList: function(req, res) {
-        res.send(nunjucks.render('shoppinglist.html'));
-    },
-
-    shoppingList: function(req, res) {
+    shoppingList(req, res) {
         res.send(
-            '<!doctype html>\n' +
-            ReactDOM.renderToString((
-               <Html assets={webpackIsomoprhicTools.assets()} />
-            ))
+            `<!doctype html>
+            ${ReactDOM.renderToString((
+              <Html assets={webpackIsomoprhicTools.assets()} />
+            ))}`
         );
     },
 
     //---------------------------------------------------------------------------------------------
-    //URL CONFS
+    // URL CONFS
     //---------------------------------------------------------------------------------------------
-    urlConfs: function() {
+    urlConfs() {
         server.app.get('/', server.recipeListing);
         server.app.get('/recipes/*', server.recipeDetail);
         server.app.get('/guide', server.guide);
         server.app.get('/shoppinglist', server.shoppingList);
 
-        server.app.use(express.static(__dirname + '/public//static'));
+        server.app.use(express.static(`${__dirname}/public/static`));
     }
-}
+};
 
-server.initialize();
+export default server;

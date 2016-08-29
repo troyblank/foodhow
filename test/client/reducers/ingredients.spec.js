@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import Chance from 'chance';
-import reducer from '../../src/client/js/reducers/index';
-import { addIngredientType, toggleIngredientType, removeIngredientType, removeCheckedIngredientsType } from '../../src/client/js/actions/index';
+import reducer from '../../../src/client/js/reducers/index';
+import { addIngredientType, toggleIngredientType, removeIngredientType, removeCheckedIngredientsType } from '../../../src/client/js/actions/index';
 
 describe('Ingredients Reducer', () => {
     const chance = new Chance();

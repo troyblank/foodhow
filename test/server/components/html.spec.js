@@ -6,14 +6,14 @@ import Html from '../../../src/server/components/html';
 
 describe('Html', () => {
     const chance = new Chance();
-    const js = chance.word();
-    const asset = chance.word();
+    const jsAsset = chance.word();
+    const styleAsset = chance.word();
     const assets = {
         javascript: {
-            js
+            jsAsset
         },
-        assets: {
-            asset
+        styles: {
+            styleAsset
         }
     };
 
@@ -30,10 +30,8 @@ describe('Html', () => {
               <link href={'/styles/styles.css'} rel={'stylesheet'} media={'all'} />
               <link href={'/styles/print.css'} rel={'stylesheet'} media={'print'} />
               {
-                Object.keys(assets.assets).map((style, i) =>
-                  <style key={i}>
-                    {assets.assets[style]._style}
-                  </style>
+                Object.keys(assets.styles).map((style, i) =>
+                  <link href={assets.styles[style]} key={i} rel="stylesheet" />
                 )
               }
             </head>

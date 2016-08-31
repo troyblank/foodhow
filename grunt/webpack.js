@@ -2,9 +2,44 @@ const webpack = require('webpack');
 const WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin');
 const webpackIsomorphicConfig = require('../src/isomorphic/webpackIsomorphicToolsConfiguration');
 const webpackIsomorphic = new WebpackIsomorphicToolsPlugin(webpackIsomorphicConfig);
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (grunt) => {
-    const env = JSON.stringify(grunt.option('environment') || 'development');
+    /* eslint-disable no-var */
+    var styleLoader, webpackIsomorphicToolsPlugin;
+    /* eslint-enable no-var */
+    const env = grunt.option('environment') || 'development';
+    const isProduction = 'production' === env;
+
+    // this could be improved by going to webpack.babel.js and using webpack-config-utils
+    if (isProduction) {
+        webpackIsomorphicToolsPlugin = webpackIsomorphic;
+        styleLoader = {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract(
+                'style',
+                'css?modules&sourceMap!sass'
+            ),
+            include: [
+                'src/client',
+                'node_modules/@troyblank/food-how-components'
+            ]
+        };
+    } else {
+        webpackIsomorphicToolsPlugin = webpackIsomorphic.development();
+        styleLoader = {
+            test: /\.scss$/,
+            loaders: [
+                'style',
+                'css?modules&sourceMap',
+                'sass'
+            ],
+            include: [
+                'src/client',
+                'node_modules/@troyblank/food-how-components'
+            ]
+        };
+    }
 
     return {
         deploy: {
@@ -26,18 +61,7 @@ module.exports = (grunt) => {
                             presets: ['react', 'es2015']
                         }
                     },
-                    {
-                        test: /\.scss$/,
-                        loaders: [
-                            'style',
-                            'css?modules&sourceMap',
-                            'sass'
-                        ],
-                        include: [
-                            'src/client',
-                            'node_modules/@troyblank/food-how-components'
-                        ]
-                    },
+                    styleLoader,
                     {
                         test: webpackIsomorphic.regular_expression('images'), loader: 'url-loader?limit=10240'
                     }
@@ -46,7 +70,7 @@ module.exports = (grunt) => {
             plugins: [
                 new webpack.DefinePlugin({
                     'process.env': {
-                        NODE_ENV: env
+                        NODE_ENV: JSON.stringify(env)
                     }
                 }),
                 new webpack.optimize.UglifyJsPlugin({
@@ -55,7 +79,8 @@ module.exports = (grunt) => {
                         warnings: false
                     }
                 }),
-                webpackIsomorphic.development()
+                new ExtractTextPlugin('../styles/[name]-[chunkhash].css'),
+                webpackIsomorphicToolsPlugin
             ]
         }
     };

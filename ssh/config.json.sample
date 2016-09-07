@@ -3,7 +3,7 @@
     "port": 22,
     "username": "username",
     "appPath": "~/webapps/foodhow",
-    "command": [
+    "preCommands": [
         "cd ~/webapps/foodhow; git pull origin master",
         "cd ~/webapps/foodhow; rm -rf dist"
     ],

@@ -2,7 +2,7 @@
     "host": "example.com",
     "port": 22,
     "username": "username",
-    "appPath": "~/webapps/foodhow",
+    "appPath": "/home/troy/webapps/foodhow/",
     "preCommands": [
         "cd ~/webapps/foodhow; git pull origin master",
         "cd ~/webapps/foodhow; rm -rf dist"

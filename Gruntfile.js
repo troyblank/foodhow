@@ -2,9 +2,8 @@
 
 module.exports = function (grunt) {
     const sshPath = 'ssh/config.json',
-        privateKeyPath = 'ssh/id_rsa',
         ssh = grunt.file.exists(sshPath) ? grunt.file.readJSON(sshPath) : null,
-        privateKey = grunt.file.exists(privateKeyPath) ? grunt.file.read(privateKeyPath) : null;
+        privateKey = (ssh && grunt.file.exists(ssh.privateKeyPath)) ? grunt.file.read(ssh.privateKeyPath) : null;
 
     require('load-grunt-config')(grunt, {
         data: {

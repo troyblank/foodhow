@@ -6,6 +6,7 @@ export default function Html({ assets }) {
       <html lang={'en-us'}>
         <head>
           <meta httpEquiv={'Content-Type'} content={'text/html; charset=utf-8'} />
+          <meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
           <title>Food How</title>
           <link href={'http://fonts.googleapis.com/css?family=Bitter:700|Raleway:500'} rel={'stylesheet'} />
           <link href={'/styles/styles.css'} rel={'stylesheet'} media={'all'} />

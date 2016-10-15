@@ -7,6 +7,10 @@ module.exports = {
         files: ['src/client/js/**/*.js', 'src/client/js/**/*.scss'],
         tasks: ['webpack', 'notify:webpack']
     },
+    copy: {
+        files: ['recipes/*.json'],
+        tasks: ['copy', 'notify:copy']
+    },
     livereload: {
         options: {
             livereload: true

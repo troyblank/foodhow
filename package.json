@@ -46,6 +46,7 @@
     "grunt-ssh": "~0.12.9",
     "grunt-webpack": "1.0.11",
     "load-grunt-config": "0.19.2",
+    "node-sass": "3.10.1",
     "matchdep": "~0.1.1",
     "react-redux": "4.4.5",
     "redux": "3.5.2",

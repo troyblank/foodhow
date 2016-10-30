@@ -5,6 +5,12 @@ module.exports = {
             message: 'SASS has compiled!'
         }
     },
+    copy: {
+        options: {
+            title: 'copy',
+            message: 'stuff was copied to dist!'
+        }
+    },
     webpack: {
         options: {
             title: 'webpack',

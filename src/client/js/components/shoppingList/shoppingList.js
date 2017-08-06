@@ -10,7 +10,7 @@ import {
 let showNoResult, showClearButton, getIngredients, gotIngredients, noResultHeadline, noResultMessage;
 
 export default class ShoppingList extends Component {
-
+    /* istanbul ignore next */ // https://github.com/gotwarlost/istanbul/issues/690
     constructor(props) {
         super(props);
 

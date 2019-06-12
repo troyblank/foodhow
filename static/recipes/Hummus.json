@@ -1,21 +1,22 @@
 {
     "title": "Hummus",
-    "meta": "can refrgerate for 3 days",
+    "meta": "Can refrgerate for 3 days. Liquid from can is experimental",
     "ingredients": [
-        "1 16 oz can of chickpeas (garbanzo beans)",
+        "1 garlic clove",
+        "1 lemon worth of juice",
+        "1 16oz can of chickpeas (garbanzo beans)",
         "&frac14; cup liquid from can of chickpeas",
-        "1 &frac12; TBSP TAHINI",
-        "4 TBSP lemon juice",
-        "1 crushed clove of garlic",
-        "2 TBSP olive oil",
-        "pita bread",
-        "&frac12; tsp salt"
+        "3 TBSP tahini",
+        "&frac12; cup olive oil",
+        "1 tsp cumin",
+        "1 tsp black pepper",
+        "1 tsp cayenne pepper",
+        "1 tsp salt"
     ],
     "directions": [
-        "Drain chickpeas and set aside liquid from can.",
-        "Combine remaining inredients in food processor.",
-        "Blend for 3 to 5 mins on low until thoroughly mixed and smooth.",
-        "Optionally sprinkle your fav Indian spice on top.",
-        "Serve with pita bread."
+        "Drain chickpeas and set aside liguid from can.",
+        "Pulse gralic clove a few times in a food processor.",
+        "Proccess rest on ingredients sans olive oil for 5 mins.",
+        "Slowly add olive oil while proccessing."
     ]
 }

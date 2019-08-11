@@ -1,6 +1,5 @@
 module.exports = {
     default: [
-        'sass',
         'webpack',
         'watch'
     ],
@@ -16,7 +15,6 @@ module.exports = {
     build: [
         'clean',
         'imagemin',
-        'sass',
         'webpack',
         'babel',
         'copy'

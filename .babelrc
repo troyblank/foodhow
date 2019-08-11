@@ -1,0 +1,10 @@
+{
+    "presets": [
+        ["@babel/preset-env", { "targets": "> 0.5% in US" } ],
+        "@babel/preset-react",
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-transform-modules-commonjs"
+    ]
+}

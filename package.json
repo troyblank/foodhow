@@ -6,7 +6,9 @@
     "build": "next build && next export",
     "serve": "npm run build && cd out && serve -p 8080",
     "start": "grunt --environment development build && node dist/server/app",
-    "test": "grunt test",
+    "test": "npm run lint",
+    "lint": "npm run sasslint",
+    "sasslint": "sass-lint -c ./node_modules/@troyblank/sasslint-config-troyblank/.sass-lint.yml ./src/**/*.scss -v -q",
     "deploy": "grunt --environment production deploy"
   },
   "dependencies": {
@@ -31,10 +33,10 @@
   },
   "devDependencies": {
     "serve": "11.1.0",
+    "@troyblank/sasslint-config-troyblank": "1.0.0",
 
     "@troyblank/eslint-config-troyblank": "0.5.0",
     "@troyblank/mocha-base-troyblank": "0.2.0",
-    "@troyblank/sasslint-config-troyblank": "0.3.0",
     "babel-core": "6.10.4",
     "babel-loader": "6.2.4",
     "babel-preset-es2015": "6.9.0",
@@ -51,7 +53,6 @@
     "grunt-eslint": "18.1.0",
     "grunt-mocha-istanbul": "5.0.1",
     "grunt-notify": "0.4.5",
-    "grunt-sass-lint": "0.2.0",
     "grunt-shell": "0.6.4",
     "grunt-ssh": "~0.12.9",
     "load-grunt-config": "0.19.2",

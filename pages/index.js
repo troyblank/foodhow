@@ -1,5 +1,5 @@
 import React from 'react';
-import { Head, Navigation } from '../components';
+import { Head, Navigation } from '../src/components';
 
 export default () => (
     <React.Fragment>

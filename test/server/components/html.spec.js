@@ -20,7 +20,6 @@ describe('Html', () => {
     it('should render html', () => {
         const wrapper = shallow(<Html assets={assets} />);
 
-        /* eslint-disable no-underscore-dangle */
         assert.isTrue(wrapper.contains(
           <html lang={'en-us'}>
             <head>
@@ -31,28 +30,27 @@ describe('Html', () => {
               <link href={'/styles/styles.css'} rel={'stylesheet'} media={'all'} />
               <link href={'/styles/print.css'} rel={'stylesheet'} media={'print'} />
               {
-                Object.keys(assets.styles).map((style, i) =>
-                  <link href={assets.styles[style]} key={i} rel="stylesheet" />
-                )
+                Object.keys(assets.styles).map((style) => (
+                  <link href={assets.styles[style]} key={style} rel={'stylesheet'} />
+                ))
               }
             </head>
             <body>
               <nav>
                 <div className={'nav-wrapper'}>
-                  <a href={'/'} className={'home'}></a>
-                  <a href={'/guide'} className={'guide'}></a>
-                  <a href={'/shoppinglist'} className={'list'}></a>
+                  <a href={'/'} className={'home'} />
+                  <a href={'/guide'} className={'guide'} />
+                  <a href={'/shoppinglist'} className={'list'} />
                 </div>
               </nav>
-              <section id={'shopping-list-react'}></section>
+              <section id={'shopping-list-react'} />
               {
-                Object.keys(assets.javascript).map((javascript, i) =>
-                  <script key={i} src={`/scripts/${assets.javascript[javascript]}`}></script>
-                )
+                Object.keys(assets.javascript).map((javascript) => (
+                  <script key={javascript} src={`/scripts/${assets.javascript[javascript]}`} />
+                ))
               }
             </body>
           </html>
         ));
-        /* eslint-enable no-underscore-dangle */
     });
 });

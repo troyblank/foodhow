@@ -1,14 +1,14 @@
 import { assert } from 'chai';
 import Chance from 'chance';
 import { addIngredient,
-        addIngredientType,
-        toggleIngredient,
-        toggleIngredientType,
-        removeIngredient,
-        removeIngredientType,
-        removeCheckedIngredients,
-        removeCheckedIngredientsType
-        } from '../../../src/client/js/actions/index';
+    addIngredientType,
+    toggleIngredient,
+    toggleIngredientType,
+    removeIngredient,
+    removeIngredientType,
+    removeCheckedIngredients,
+    removeCheckedIngredientsType
+} from '../../../src/client/js/actions/index';
 
 describe('Ingredients Actions', () => {
     const chance = new Chance();

@@ -9,7 +9,7 @@ const defaultState = {
 
 const enhancers = compose(
     /* istanbul ignore next */
-    window.devToolsExtension ? window.devToolsExtension() : d => d
+    window.devToolsExtension ? window.devToolsExtension() : (d) => d
 );
 
 const store = createStore(reducer, defaultState, enhancers);

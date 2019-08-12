@@ -1,11 +1,11 @@
+import React from 'react';
+import ReactDOM from 'react-dom/server';
+import Html from './components/html';
+
 const express = require('express');
 const nunjucks = require('nunjucks');
 const fs = require('fs');
 const walk = require('walk');
-
-import React from 'react';
-import ReactDOM from 'react-dom/server';
-import Html from './components/html';
 
 nunjucks.configure(`${__dirname}/templates`, {
     autoescape: false
@@ -49,12 +49,12 @@ const server = {
     // VIEWS
     //---------------------------------------------------------------------------------------------
     recipeListing(req, res) {
-        const files = server.files;
+        const { files } = server;
         const links = [];
         let i = 0;
         let name;
 
-        for (i; i < files.length; i++) {
+        for (i; i < files.length; i += 1) {
             name = server.files[i];
             links.push({
                 name: name.replace(/_/g, ' '),
@@ -84,9 +84,7 @@ const server = {
     shoppingList(req, res) {
         res.send(
             `<!doctype html>
-            ${ReactDOM.renderToString((
-              <Html assets={webpackIsomoprhicTools.assets()} />
-            ))}`
+            ${ReactDOM.renderToString((<Html assets={webpackIsomoprhicTools.assets()} />))}`
         );
     },
 

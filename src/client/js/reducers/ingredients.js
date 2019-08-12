@@ -15,20 +15,20 @@ export default function ingredients(state = [], action) {
             }
         ];
     case toggleIngredientType:
-        toggleIndex = state.findIndex(ingredient => ingredient.id === action.id);
+        toggleIndex = state.findIndex((ingredient) => ingredient.id === action.id);
         return [
             ...state.slice(0, toggleIndex),
             { ...state[toggleIndex], checked: !state[toggleIndex].checked },
             ...state.slice(toggleIndex + 1)
         ];
     case removeIngredientType:
-        removeIndex = state.findIndex(ingredient => ingredient.name === action.name && ingredient.recipe === action.recipe);
+        removeIndex = state.findIndex((ingredient) => ingredient.name === action.name && ingredient.recipe === action.recipe);
         return [
             ...state.slice(0, removeIndex),
             ...state.slice(removeIndex + 1)
         ];
     case removeCheckedIngredientsType:
-        return [...state].filter(ingredient => !ingredient.checked);
+        return [...state].filter((ingredient) => !ingredient.checked);
     default:
         return state;
     }

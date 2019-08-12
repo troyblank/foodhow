@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "build": "next build && next export",
-    "serve": "npm run build && cd out && serve -p 8080",
+    "serve": "npm run build && cd out && serve -p 8888",
     "start": "grunt --environment development build && node dist/server/app",
     "test": "npm run lint",
     "lint": "npm run eslint && npm run sasslint",

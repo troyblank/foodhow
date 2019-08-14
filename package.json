@@ -15,6 +15,9 @@
   "nyc": {
     "temp-directory": "./coverage/.nyc_output"
   },
+  "nyc": {
+    "temp-directory": "./coverage/.nyc_output"
+  },
   "dependencies": {
     "@babel/core": "7.5.5",
     "@babel/plugin-proposal-class-properties": "7.5.5",
@@ -37,9 +40,6 @@
     "react-redux": "7.1.0",
     "redux": "4.0.4",
     "redux-thunk": "2.3.0",
-    "sass-loader": "7.2.0",
-    "webpack": "4.39.1",
-    "jquery": "2.2.4",
     "nunjucks": "1.0.1"
   },
   "devDependencies": {

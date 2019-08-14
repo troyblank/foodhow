@@ -3,10 +3,6 @@ module.exports = {
         'webpack',
         'watch'
     ],
-    test: [
-        'unit'
-    ],
-    unit: 'mocha_istanbul',
     build: [
         'clean',
         'imagemin',

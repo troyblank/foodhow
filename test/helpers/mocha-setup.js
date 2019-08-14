@@ -1,19 +1,25 @@
-import { jsdom } from 'jsdom';
+import { JSDOM } from 'jsdom';
+import Adapter from 'enzyme-adapter-react-16';
+import { configure } from 'enzyme';
 import LocalStorage from 'node-localstorage';
 import styles from './style-fakes';
 
+// REACT
+configure({ adapter: new Adapter() });
+
 // JSDOM
-const doc = jsdom('<!doctype html><html><body></body></html>');
-const win = doc.defaultView;
+const { window } = new JSDOM('<!doctype html><html><body></body></html>');
+const { document } = window;
 
-global.document = doc;
-global.window = win;
+global.document = document;
+global.window = window;
 
-Object.keys(win).forEach((k) => {
-    if (Object.prototype.hasOwnProperty.call(!win, k)) return;
+Object.keys(global.window).forEach((k) => {
+    const secureKeys = ['localStorage', 'sessionStorage'];
+
+    if (!{}.hasOwnProperty.call(global.window, k)) return;
     if (k in global) return;
-
-    global[k] = window[k];
+    if (!secureKeys.includes(k)) global[k] = window[k];
 });
 
 global.navigator = {
@@ -22,7 +28,6 @@ global.navigator = {
 
 // LOCALSTORAGE
 global.localStorage = new LocalStorage.LocalStorage('./scratch');
-global.window.localStorage = global.localStorage;
 
 // STYLES
 function css(module) {

@@ -15,6 +15,9 @@
   "nyc": {
     "temp-directory": "./coverage/.nyc_output"
   },
+  "nyc": {
+    "temp-directory": "./coverage/.nyc_output"
+  },
   "dependencies": {
     "@babel/core": "7.5.5",
     "@babel/plugin-proposal-class-properties": "7.5.5",

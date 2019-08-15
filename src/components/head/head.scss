@@ -53,6 +53,21 @@ table {
     }
 }
 
+body > header {
+    margin: 20px 0;
+    padding: 0 20px;
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
 body > section {
     margin: 20px 0;
 }

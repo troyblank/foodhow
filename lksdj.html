@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <style>#mp { font-family: verdana }</style>
+        <script>
+        function myFunction() {
+            var my_var = document.styleSheets[0].rules[0];
+            var n = my_var.selectorText;;
+
+            alert(n)
+        }
+        </script>
+    </head>
+    <body>
+        <input type="button" onClick="myFunction()" />
+    </body>
+</html>

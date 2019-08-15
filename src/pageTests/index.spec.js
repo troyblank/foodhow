@@ -9,10 +9,10 @@ describe('Page - Index', () => {
         const wrapper = shallow(<IndexPage />);
 
         assert.isTrue(wrapper.contains(
-          <>
+          <x>
             <Head />
             <Navigation />
-          </>
+          </x>
         ));
     });
 });

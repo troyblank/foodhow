@@ -1,0 +1,22 @@
+%clearfix {
+    zoom: 1;
+
+    &:before {
+        display: block;
+        width: 0;
+        height: 0;
+        content: '\0020';
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    &:after {
+        display: block;
+        width: 0;
+        height: 0;
+        clear: both;
+        content: '\0020';
+        overflow: hidden;
+        visibility: hidden;
+    }
+}

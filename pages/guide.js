@@ -1,9 +1,12 @@
 import React from 'react';
+import { Head, Navigation, Guide } from '../src/components';
 
-export default function Guide() {
+export default function GuidePage() {
     return (
-      <div>
-        <p>This is the guide.</p>
-      </div>
+      <>
+        <Head />
+        <Navigation />
+        <Guide />
+      </>
     );
 }

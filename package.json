@@ -45,7 +45,19 @@
     "coveralls": "3.0.6",
     "eslint": "6.1.0",
     "sass-lint": "1.13.1",
-    "serve": "11.1.0"
+    "serve": "11.1.0",
+    "grunt": "~0.4.1",
+    "grunt-babel": "6.0.0",
+    "grunt-cli": "1.2.0",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-imagemin": "1.0.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-notify": "0.4.5",
+    "grunt-shell": "0.6.4",
+    "grunt-ssh": "~0.12.9",
+    "load-grunt-config": "0.19.2",
+    "matchdep": "~0.1.1"
   },
   "author": "Troy Blank",
   "license": "BSD"

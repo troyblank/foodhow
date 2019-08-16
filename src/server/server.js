@@ -5,7 +5,6 @@ import Html from './components/html';
 const express = require('express');
 const nunjucks = require('nunjucks');
 const fs = require('fs');
-const walk = require('walk');
 
 nunjucks.configure(`${__dirname}/templates`, {
     autoescape: false
@@ -17,32 +16,10 @@ const server = {
 
     initialize() {
         server.urlConfs();
-        server.updateFileList();
     },
 
     startWebServer() {
         server.app.listen(8000);
-        /* eslint-disable no-console */
-        console.log('Listening on port 8000');
-        /* eslint-enable no-console */
-    },
-
-    //---------------------------------------------------------------------------------------------
-    // FILE HANDLING
-    //---------------------------------------------------------------------------------------------
-    updateFileList() {
-        const walker = walk.walk(`${__dirname}/recipes`, {
-            followLinks: false
-        });
-
-        walker.on('file', (root, stat, next) => {
-            server.files.push(stat.name.replace(/.json/g, ''));
-            next();
-        });
-
-        walker.on('end', () => {
-            server.startWebServer();
-        });
     },
 
     //---------------------------------------------------------------------------------------------
@@ -77,10 +54,6 @@ const server = {
         });
     },
 
-    guide(req, res) {
-        res.send(nunjucks.render('guide.html'));
-    },
-
     shoppingList(req, res) {
         res.send(
             `<!doctype html>
@@ -92,9 +65,6 @@ const server = {
     // URL CONFS
     //---------------------------------------------------------------------------------------------
     urlConfs() {
-        server.app.get('/', server.recipeListing);
-        server.app.get('/recipes/*', server.recipeDetail);
-        server.app.get('/guide', server.guide);
         server.app.get('/shoppinglist', server.shoppingList);
 
         server.app.use(express.static(`${__dirname}/public/static`));

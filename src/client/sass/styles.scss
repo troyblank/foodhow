@@ -1,16 +1,4 @@
 body > section {
-    &.search {
-        & > div {
-            width: 300px;
-            margin: 0 auto;
-        }
-
-        input {
-            width: 300px;
-            text-align: center;
-        }
-    }
-
     &.recipe {
         header {
             margin-bottom: 30px;

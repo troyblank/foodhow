@@ -13,18 +13,21 @@
         height: 50px;
         float: right;
         border: 3px solid $color-brown-50;
-        background: url('/icons/icon_home.svg') $color-orange no-repeat;
         background-position: 50%;
         background-size: 50%;
-
-        &.guide {
-            background-image: url('/icons/icon_guide.svg');
-        }
-
-        &.list {
-            background-image: url('/icons/icon_list.svg');
-        }
     }
+}
+
+.navigation__home {
+    background: url('/static/icons/icon_home.svg') $color-orange no-repeat;
+}
+
+.navigation__guide {
+    background: url('/static/icons/icon_guide.svg') $color-orange no-repeat;
+}
+
+.navigation__list {
+    background: url('/static/icons/icon_list.svg') $color-orange no-repeat;
 }
 
 .navigation__wrapper {

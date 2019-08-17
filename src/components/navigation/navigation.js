@@ -7,13 +7,13 @@ export default function Navigation() {
       <nav className={'navigation'}>
         <div className={'navigation__wrapper'}>
           <Link href={'/'}>
-            <a>Home</a>
+            <a className={'navigation__home'} />
           </Link>
           <Link href={'/guide'} prefetch={true}>
-            <a>Guide</a>
+            <a className={'navigation__guide'} />
           </Link>
           <Link href={'/shoppinglist'} prefetch={true}>
-            <a>hopping List</a>
+            <a className={'navigation__list'} />
           </Link>
         </div>
       </nav>

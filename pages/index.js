@@ -1,5 +1,9 @@
+import React from 'react';
+import { Head, Navigation } from '../components';
+
 export default () => (
-    <div>
-        <p>Hello World</p>
-    </div>
+    <React.Fragment>
+        <Head />
+        <Navigation />
+    </React.Fragment>
 );

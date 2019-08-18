@@ -27,3 +27,6 @@ global.navigator = {
 
 // LOCALSTORAGE
 global.localStorage = new LocalStorage.LocalStorage('./scratch');
+
+// FETCH
+global.fetch = () => new Promise(resolve => resolve(true));

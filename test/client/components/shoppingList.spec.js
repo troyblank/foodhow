@@ -12,7 +12,7 @@ import {
 import styles from '../../helpers/style-fakes';
 import ShoppingList from '../../../src/client/js/components/shoppingList/shoppingList';
 
-describe('Shopping List', () => {
+describe('LEGACY - Shopping List', () => {
     let ingredients = [];
     const chance = new Chance();
     const nameA = chance.word();

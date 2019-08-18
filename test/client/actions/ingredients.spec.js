@@ -10,7 +10,7 @@ import { addIngredient,
     removeCheckedIngredientsType
 } from '../../../src/client/js/actions/index';
 
-describe('Ingredients Actions', () => {
+describe('LEGACY - Ingredients Actions', () => {
     const chance = new Chance();
     const id = chance.natural();
     const checked = chance.bool();

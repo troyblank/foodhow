@@ -1,5 +1,5 @@
-import { cloneDeep } from 'lodash';
-import { ADD_INGREDIENT_TO_LIST } from '../recipe/actions';
+import { xorBy } from 'lodash';
+import { TOGGLE_INGREDIENT_ON_LIST } from '../ingredient/actions';
 
 export const initialState = {
     shoppingList: []
@@ -8,13 +8,10 @@ export const initialState = {
 export default (state = initialState, action) => {
     const nextState = { ...state };
     const { shoppingList: oldShoppingList } = state;
-    const shoppingList = cloneDeep(oldShoppingList);
 
     switch (action.type) {
-    case ADD_INGREDIENT_TO_LIST:
-        shoppingList.push(action.ingredient);
-
-        nextState.shoppingList = shoppingList;
+    case TOGGLE_INGREDIENT_ON_LIST:
+        nextState.shoppingList = xorBy(oldShoppingList, [action.ingredient], 'id');
         break;
     default:
         return state;

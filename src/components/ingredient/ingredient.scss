@@ -1,0 +1,17 @@
+@import '../../../node_modules/@troyblank/food-how-components/assets/sass/base/base';
+
+.ingredient {
+    button {
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+}
+
+.ingredient--active {
+    list-style-image: url('/static/icons/icon_shopping_cart.svg');
+
+    button {
+        color: $color-orange;
+    }
+}

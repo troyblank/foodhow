@@ -3,6 +3,7 @@ import { assert } from 'chai';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 import Recipe from './recipe';
+import { Ingredient } from '..';
 
 describe('Recipe', () => {
     const chance = new Chance();
@@ -17,19 +18,28 @@ describe('Recipe', () => {
         ingredients,
         directions
     };
+    const shoppingList = [];
+    const shoppingListStore = { shoppingList };
+    const dispatch = chance.word();
 
     global.fetch = () => new Promise((resolve) => resolve(
         { json: () => new Promise((rresolve) => rresolve(recipe)) }
     ));
 
     it('should render', () => {
-        const wrapper = shallow(<Recipe fileName={fileName} />);
+        const wrapper = shallow(<Recipe fileName={fileName} shoppingList={shoppingListStore} />);
 
         assert.equal(wrapper.type(), null);
     });
 
     it('should render a recipe after fetching recipe json', () => {
-        const wrapper = shallow(<Recipe fileName={fileName} />);
+        const wrapper = shallow(
+          <Recipe
+            fileName={fileName}
+            shoppingList={shoppingListStore}
+            dispatch={dispatch}
+          />
+        );
 
         wrapper.setState({ recipe });
 
@@ -41,10 +51,25 @@ describe('Recipe', () => {
             </header>
             <section>
               <h2>Ingredients</h2>
-              <ul className={'recipe__ingredients'}>
-                <li dangerouslySetInnerHTML={{ __html: ingredients[0] }} />
-                <li dangerouslySetInnerHTML={{ __html: ingredients[1] }} />
-                <li dangerouslySetInnerHTML={{ __html: ingredients[2] }} />
+              <ul>
+                <Ingredient
+                  fileName={fileName}
+                  text={ingredients[0]}
+                  shoppingList={shoppingList}
+                  dispatch={dispatch}
+                />
+                <Ingredient
+                  fileName={fileName}
+                  text={ingredients[1]}
+                  shoppingList={shoppingList}
+                  dispatch={dispatch}
+                />
+                <Ingredient
+                  fileName={fileName}
+                  text={ingredients[2]}
+                  shoppingList={shoppingList}
+                  dispatch={dispatch}
+                />
               </ul>
             </section>
             <section>

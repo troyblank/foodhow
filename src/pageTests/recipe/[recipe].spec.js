@@ -5,7 +5,8 @@ import { Provider } from 'react-redux';
 import { RouterContext } from 'next-server/dist/lib/router-context';
 import Chance from 'chance';
 import RecipePage from '../../../pages/recipe/[recipe]';
-import { Head, Navigation, Recipe } from '../../components';
+import { Recipe } from '../../components/connections';
+import { Head, Navigation } from '../../components';
 
 describe('Page - [Recipe]', () => {
     const chance = new Chance();
@@ -23,10 +24,11 @@ describe('Page - [Recipe]', () => {
 
     it('should render with the recipe query', () => {
         const recipe = chance.word();
+        const shoppingList = chance.word();
         const mockRouter = { query: { recipe } };
         // istanbul ignore next
         const mockStore = {
-            getState: () => ({ recipe }),
+            getState: () => ({ shoppingList }),
             subscribe: () => {},
             dispatch: () => {}
         };

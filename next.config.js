@@ -11,6 +11,7 @@ module.exports = withSass({
     exportPathMap: () => ({
         '/': { page: '/' },
         '/guide': { page: '/guide' },
+        '/shoppingList': { page: '/shoppingList' },
         ...recipePaths
     })
 });

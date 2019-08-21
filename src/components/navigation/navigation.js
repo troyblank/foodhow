@@ -12,7 +12,7 @@ export default function Navigation() {
           <Link href={'/guide'} prefetch={true}>
             <a className={'navigation__guide'} />
           </Link>
-          <Link href={'/shoppinglist'} prefetch={true}>
+          <Link href={'/shoppingList'} prefetch={true}>
             <a className={'navigation__list'} />
           </Link>
         </div>

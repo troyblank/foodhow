@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import '../../../node_modules/@troyblank/food-how-components/dist/components.scss';
 import './head.scss';
 
 export default function HeadComponent() {

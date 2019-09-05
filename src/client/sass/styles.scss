@@ -61,7 +61,6 @@ input:focus {
 //--------------------------------------------------------------------------------------------------
 $cream: rgb(233, 221, 208);
 $brown: rgb(87, 63, 50); // same as $color-brown;
-$brown-50: rgba(87, 63, 50, .5); // same as $color-brown-50;
 $orange: rgb(177, 141, 74);  // same as $color-orange
 
 //--------------------------------------------------------------------------------------------------
@@ -125,40 +124,6 @@ body > header {
         max-width: 600px;
         margin: 0 auto;
         text-align: center;
-    }
-}
-
-body > nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: $brown-50;
-
-    .nav-wrapper {
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding-right: 20px;
-    }
-
-    a {
-        display: block;
-        width: 50px;
-        height: 50px;
-        float: right;
-        border: 3px solid $brown;
-        background: url('/icons/icon_home.svg') $orange no-repeat;
-        background-position: 50%;
-        background-size: 50%;
-
-        &.guide {
-            background-image: url('/icons/icon_guide.svg');
-        }
-
-        &.list {
-            background-image: url('/icons/icon_list.svg');
-        }
     }
 }
 

@@ -8,7 +8,6 @@ module.exports = {
         'unit'
     ],
     lint: [
-        'sasslint',
         'eslint'
     ],
     unit: 'mocha_istanbul',

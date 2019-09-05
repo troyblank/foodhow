@@ -40,7 +40,7 @@ const baseUI = {
         }
 
         function isIngredientInList(ingredients, recipe, title) {
-            if (ingredients.find(ingredient => ingredient.name === title && ingredient.recipe === recipe)) {
+            if (ingredients.find((ingredient) => ingredient.name === title && ingredient.recipe === recipe)) {
                 return true;
             }
 
@@ -48,7 +48,7 @@ const baseUI = {
         }
 
         function stageSetIngredientList() {
-            const ingredients = store.getState().ingredients;
+            const { ingredients } = store.getState();
             const recipe = $('.recipe header h1').html();
 
             $('.ingredients li').each((i, ele) => {
@@ -86,7 +86,7 @@ const baseUI = {
             const re = new RegExp(val, 'gi');
             const evalist = cleared ? list : shortList;
 
-            for (const prop of Object.keys(evalist)) {
+            Object.keys(evalist).forEach((prop) => {
                 if (null === prop.match(re)) {
                     $(evalist[prop]).hide();
                     delete shortList[prop];
@@ -95,7 +95,7 @@ const baseUI = {
                     $(evalist[prop]).show();
                     cleared = false;
                 }
-            }
+            });
         }
 
         function generateSearchList() {

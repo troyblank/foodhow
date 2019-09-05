@@ -1,6 +1,10 @@
 {
     "extends": "@troyblank/eslint-config-troyblank/configs/react.js",
 
+    "rules": {
+        "import/no-extraneous-dependencies": 0
+    },
+
     "globals": {
         "after": true,
         "beforeEach": true,

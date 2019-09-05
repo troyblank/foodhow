@@ -4,11 +4,7 @@ module.exports = {
         'watch'
     ],
     test: [
-        'lint',
         'unit'
-    ],
-    lint: [
-        'eslint'
     ],
     unit: 'mocha_istanbul',
     build: [

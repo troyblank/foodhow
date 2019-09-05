@@ -10,7 +10,7 @@ global.document = doc;
 global.window = win;
 
 Object.keys(win).forEach((k) => {
-    if (!win.hasOwnProperty(k)) return;
+    if (Object.prototype.hasOwnProperty.call(!win, k)) return;
     if (k in global) return;
 
     global[k] = window[k];

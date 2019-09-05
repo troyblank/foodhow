@@ -21,7 +21,7 @@ const EventDispatcher = {
                 EventDispatcher.eventDispatcher[type].splice(i, 1);
                 return;
             }
-            i--;
+            i -= 1;
         }
     },
 
@@ -30,7 +30,7 @@ const EventDispatcher = {
 
         if (EventDispatcher.eventDispatcher[type] !== undefined) {
             const callList = EventDispatcher.eventDispatcher[type].slice(0);
-            for (i; i < callList.length; i++) {
+            for (i; i < callList.length; i += 1) {
                 callList[i].apply(this, [data]);
             }
         }

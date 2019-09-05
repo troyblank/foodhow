@@ -1,16 +1,16 @@
 import React from 'react';
 import Chance from 'chance';
-import styles from '../../helpers/style-fakes';
 import sinon from 'sinon';
 import { assert } from 'chai';
 import { shallow, mount } from 'enzyme';
-import ShoppingList from '../../../src/client/js/components/shoppingList/shoppingList';
 import {
     Button,
     GetShoppingList,
     GotShoppingList,
-    NoResultMessage }
-    from '@troyblank/food-how-components';
+    NoResultMessage
+} from '@troyblank/food-how-components';
+import styles from '../../helpers/style-fakes';
+import ShoppingList from '../../../src/client/js/components/shoppingList/shoppingList';
 
 describe('Shopping List', () => {
     let ingredients = [];
@@ -34,7 +34,7 @@ describe('Shopping List', () => {
 
     it('should render a no results message', () => {
         const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
-        const ingredientClickHand = wrapper.instance().ingredientClickHand;
+        const { ingredientClickHand } = wrapper.instance();
 
         assert.isTrue(wrapper.contains(
           <section className={styles['shopping-list']}>
@@ -51,7 +51,7 @@ describe('Shopping List', () => {
             { name: nameB, checked: false }
         ];
         const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
-        const ingredientClickHand = wrapper.instance().ingredientClickHand;
+        const { ingredientClickHand } = wrapper.instance();
 
         assert.isTrue(wrapper.contains(
           <section className={styles['shopping-list']}>
@@ -67,8 +67,8 @@ describe('Shopping List', () => {
             { name: nameB, checked: true }
         ];
         const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
-        const ingredientClickHand = wrapper.instance().ingredientClickHand;
-        const clearCheckedHand = wrapper.instance().clearCheckedHand;
+        const { ingredientClickHand } = wrapper.instance();
+        const { clearCheckedHand } = wrapper.instance();
 
         assert.isTrue(wrapper.contains(
           <section className={styles['shopping-list']}>
@@ -88,8 +88,8 @@ describe('Shopping List', () => {
         const getIngredients = ingredients.filter((ingredient) => !ingredient.checked);
         const gotIngredients = ingredients.filter((ingredient) => ingredient.checked);
         const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
-        const ingredientClickHand = wrapper.instance().ingredientClickHand;
-        const clearCheckedHand = wrapper.instance().clearCheckedHand;
+        const { ingredientClickHand } = wrapper.instance();
+        const { clearCheckedHand } = wrapper.instance();
 
         assert.isTrue(wrapper.contains(
           <section className={styles['shopping-list']}>
@@ -142,7 +142,7 @@ describe('Shopping List', () => {
         ];
 
         const wrapper = shallow(<ShoppingList ingredients={ingredients} />);
-        const ingredientClickHand = wrapper.instance().ingredientClickHand;
+        const { ingredientClickHand } = wrapper.instance();
 
         wrapper.setProps({ ingredients: [] });
 

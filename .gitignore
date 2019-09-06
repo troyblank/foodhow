@@ -5,6 +5,11 @@
 node_modules
 npm-debug.log
 
+# NEXT #
+########
+.next
+out
+
 # SASS #
 ########
 .sass-cache

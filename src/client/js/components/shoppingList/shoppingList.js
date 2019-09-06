@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import styles from './shoppingList.scss';
 import {
     Button,
     GetShoppingList,
     GotShoppingList,
-    NoResultMessage }
-    from '@troyblank/food-how-components';
+    NoResultMessage
+} from '@troyblank/food-how-components';
+import styles from './shoppingList.scss';
 
 let showNoResult, showClearButton, getIngredients, gotIngredients, noResultHeadline, noResultMessage;
 
@@ -27,18 +27,24 @@ export default class ShoppingList extends Component {
     }
 
     ingredientClickHand(id) {
-        this.props.toggleIngredient(id);
+        const { toggleIngredient } = this.props;
+
+        toggleIngredient(id);
     }
 
     clearCheckedHand() {
-        this.props.removeCheckedIngredients();
+        const { removeCheckedIngredients } = this.props;
+
+        removeCheckedIngredients();
     }
 
     render() {
-        getIngredients = this.props.ingredients.filter((ingredient) => !ingredient.checked);
-        gotIngredients = this.props.ingredients.filter((ingredient) => ingredient.checked);
+        const { ingredients } = this.props;
+
+        getIngredients = ingredients.filter((ingredient) => !ingredient.checked);
+        gotIngredients = ingredients.filter((ingredient) => ingredient.checked);
         showClearButton = 0 !== gotIngredients.length;
-        showNoResult = 0 === this.props.ingredients.length;
+        showNoResult = 0 === ingredients.length;
 
         return (
           <section className={styles['shopping-list']}>

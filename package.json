@@ -9,6 +9,7 @@
     "test": "npm run lint",
     "lint": "npm run eslint && npm run sasslint",
     "eslint": "eslint 'src/**/*.js' && eslint 'recipes/**/*.json' && eslint 'test/**/*.js'",
+    "eslintFix": "eslint --fix 'src/**/*.js' && eslint --fix 'recipes/**/*.json' && eslint --fix 'test/**/*.js'",
     "sasslint": "sass-lint -c ./node_modules/@troyblank/sasslint-config-troyblank/.sass-lint.yml ./src/**/*.scss -v -q",
     "deploy": "grunt --environment production deploy"
   },

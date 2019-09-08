@@ -5,7 +5,7 @@
   "scripts": {
     "build": "next build && next export",
     "start": "npm run build && cd out && serve -p 8888",
-    "clean": "rm -r .nextjs && rm -r out",
+    "clean": "rm -rf .next && rm -rf out",
     "test": "npm run unit && npm run lint",
     "unit": "nyc --reporter=text-summary --reporter=lcov --reporter=cobertura mocha --require isomorphic-fetch --exit \"./{pages,src,test}/**/*.spec.js\"",
     "lint": "npm run eslint && npm run sasslint",

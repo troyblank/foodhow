@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
-import { GetShoppingList, GotShoppingList } from '@troyblank/food-how-components';
-import { toggleIngredientCheckMark } from './actions';
+import { Button, GetShoppingList, GotShoppingList } from '@troyblank/food-how-components';
+import { toggleIngredientCheckMark, clearCheckedIngredients } from './actions';
+import './shoppingList.scss';
 
 export default class ShoppingList extends PureComponent {
     getDividedIngredientLists() {
@@ -25,12 +26,20 @@ export default class ShoppingList extends PureComponent {
         dispatch(toggleIngredientCheckMark(id));
     }
 
+    onClear = () => {
+        const { dispatch } = this.props;
+
+        dispatch(clearCheckedIngredients());
+    }
+
     render() {
         const { checked, notChecked } = this.getDividedIngredientLists();
+        const hasCheckedIngredients = 0 < checked.length;
 
         return (
           <section className={'shopping-list'}>
             <GetShoppingList list={notChecked} ingredientClickHand={this.onIngredientClick} />
+            {hasCheckedIngredients && <Button text="Clear checked" buttonClickHand={this.onClear} /> }
             <GotShoppingList list={checked} ingredientClickHand={this.onIngredientClick} />
           </section>
         );

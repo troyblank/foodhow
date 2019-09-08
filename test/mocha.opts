@@ -1,2 +1,2 @@
+-r @babel/register
 -r ./test/helpers/mocha-setup.js
---compilers js:babel-register

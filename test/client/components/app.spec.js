@@ -1,4 +1,3 @@
-
 import { assert } from 'chai';
 import { App, mapStateToProps, mapDispachToProps } from '../../../src/client/js/components/app';
 

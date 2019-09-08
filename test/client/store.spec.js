@@ -10,8 +10,9 @@ describe('Store', () => {
     const recipe = chance.word();
 
     after(() => {
-        // eslint-disable-next-line no-underscore-dangle
+        /* eslint-disable no-underscore-dangle */
         localStorage._deleteLocation();
+        /* eslint-enable no-underscore-dangle */
     });
 
     it('should be able to dispatch and store an ingredient', () => {

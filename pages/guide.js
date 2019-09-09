@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default () => (
-    <div>
+export default function Guide() {
+    return (
+      <div>
         <p>This is the guide.</p>
-    </div>
-);
+      </div>
+    );
+}

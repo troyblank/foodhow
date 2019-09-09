@@ -7,10 +7,10 @@
     "serve": "npm run build && cd out && serve -p 8888",
     "start": "grunt --environment development build && node dist/server/app",
     "test": "npm run unit && npm run lint",
-    "unit": "nyc --reporter=text-summary --reporter=lcov --reporter=cobertura mocha --exit \"test/**/*.spec.js\"",
+    "unit": "nyc --reporter=text-summary --reporter=lcov --reporter=cobertura mocha --exit \"./{pages,src,test}/**/*.spec.js\"",
     "lint": "npm run eslint && npm run sasslint",
-    "eslint": "eslint 'src/**/*.js' && eslint 'recipes/**/*.json' && eslint 'test/**/*.js'",
-    "eslintFix": "eslint --fix 'src/**/*.js' && eslint --fix 'recipes/**/*.json' && eslint --fix 'test/**/*.js'",
+    "eslint": "eslint './{pages,recipes,src,test}/**/*.js'",
+    "eslintFix": "eslint --fix './{pages,recipes,src,test}/**/*.js'",
     "sasslint": "sass-lint -c ./node_modules/@troyblank/sasslint-config-troyblank/.sass-lint.yml ./src/**/*.scss -v -q",
     "deploy": "grunt --environment production deploy"
   },

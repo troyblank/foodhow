@@ -1,0 +1,16 @@
+@mixin breakpoint($point) {
+
+    @if $point == TABLET {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    } @else if $point == MOBILE {
+        @media only screen and (max-width: 600px) {
+            @content;
+        }
+    } @else if $point == MOBILE_LANDSCAPE {
+        @media only screen and (max-width: 600px) and (orientation: landscape) {
+            @content;
+        }
+    }
+}

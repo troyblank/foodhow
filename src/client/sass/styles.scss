@@ -1,135 +1,12 @@
-@import '../../../node_modules/normalize.css/normalize';
-@import '../../../node_modules/@troyblank/food-how-components/assets/sass/global';
-@import './silents/containers';
-
-//--------------------------------------------------------------------------------------------------
-// RESETS
-//--------------------------------------------------------------------------------------------------
-
-input:focus {
-    outline: none;
-}
-
-//--------------------------------------------------------------------------------------------------
-// MIXINS
-//--------------------------------------------------------------------------------------------------
-@mixin breakpoint($point) {
-
-    @if $point == TABLET {
-        @media only screen and (max-width: 768px) {
-            @content;
-        }
-    } @else if $point == MOBILE {
-        @media only screen and (max-width: 600px) {
-            @content;
-        }
-    } @else if $point == MOBILE_LANDSCAPE {
-        @media only screen and (max-width: 600px) and (orientation: landscape) {
-            @content;
-        }
-    }
-}
-
-//--------------------------------------------------------------------------------------------------
-// UTILS
-//--------------------------------------------------------------------------------------------------
-%clearfix {
-    zoom: 1;
-
-    &:before {
-        display: block;
-        width: 0;
-        height: 0;
-        content: '\0020';
-        overflow: hidden;
-        visibility: hidden;
-    }
-
-    &:after {
-        display: block;
-        width: 0;
-        height: 0;
-        clear: both;
-        content: '\0020';
-        overflow: hidden;
-        visibility: hidden;
-    }
-}
-
 //--------------------------------------------------------------------------------------------------
 // COLORS
 //--------------------------------------------------------------------------------------------------
-$cream: rgb(233, 221, 208);
-$brown: rgb(87, 63, 50); // same as $color-brown;
 $orange: rgb(177, 141, 74);  // same as $color-orange
 
 //--------------------------------------------------------------------------------------------------
 // CSS
 //--------------------------------------------------------------------------------------------------
-h1 {
-    @extend %heading-primary;
-}
-
-h2 {
-    max-width: 600px;
-    margin: 0 0 10px 5px;
-    padding-bottom: 5px;
-    border-bottom: 3px solid $brown;
-    font-family: 'Bitter', serif;
-    font-size: 1.5rem;
-}
-
-h3 {
-    margin: 0;
-    font-family: 'Bitter', serif;
-    font-size: .75rem;
-}
-
-table {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto 30px;
-    border-right: 1px solid $orange;
-    border-left: 1px solid $orange;
-    border-collapse: collapse;
-
-    tr {
-        border-bottom: 1px solid $orange;
-    }
-
-    th {
-        padding: 5px;
-        background: $brown;
-        color: $cream;
-        font-size: .8em;
-        text-align: left;
-        text-transform: uppercase;
-    }
-
-    td {
-        padding: 5px;
-        font-size: .8em;
-    }
-}
-
-body > header {
-    margin: 20px 0;
-    padding: 0 20px;
-
-    h1 {
-        text-align: center;
-    }
-
-    p {
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-
 body > section {
-    margin: 20px 0;
-
     &.search {
         & > div {
             width: 300px;
@@ -190,15 +67,6 @@ body > section {
 
         .ingredients li {
             cursor: pointer;
-        }
-    }
-
-    &.guide {
-        @extend %page-wrap;
-
-        h1 {
-            font-size: 2rem;
-            text-align: center;
         }
     }
 }

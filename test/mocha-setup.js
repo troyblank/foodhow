@@ -2,7 +2,6 @@ import { JSDOM } from 'jsdom';
 import Adapter from 'enzyme-adapter-react-16';
 import { configure } from 'enzyme';
 import LocalStorage from 'node-localstorage';
-import styles from './style-fakes';
 
 // REACT
 configure({ adapter: new Adapter() });
@@ -29,13 +28,8 @@ global.navigator = {
 // LOCALSTORAGE
 global.localStorage = new LocalStorage.LocalStorage('./scratch');
 
-// STYLES
-function css(module) {
-    const fake = module;
+// FETCH
+global.fetch = () => new Promise(resolve => resolve(true));
 
-    fake.exports = styles;
-
-    return fake;
-}
-
-require.extensions['.scss'] = css;
+// IGNORE STYLES
+require.extensions['.scss'] = () => null;

@@ -9,11 +9,11 @@ describe('Page - Guide', () => {
         const wrapper = shallow(<GuidePage />);
 
         assert.isTrue(wrapper.contains(
-          <>
+          <x>
             <Head />
             <Navigation />
             <Guide />
-          </>
+          </x>
         ));
     });
 });

@@ -1,0 +1,33 @@
+@import '../../../node_modules/@troyblank/food-how-components/assets/sass/base/base';
+@import '../../sass/base';
+
+.recipe-list__header {
+    margin: 20px 0;
+    padding: 0 20px;
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.recipe-list__nodes {
+    @extend %clearfix;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    a {
+        display: block;
+        margin: 10px;
+        padding: 10px;
+        float: left;
+        border: 1px dashed $color-orange;
+        border-radius: 10px;
+        color: $color-orange;
+    }
+}

@@ -1,8 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/server';
-import Html from './components/html';
-
-const express = require('express');
 const nunjucks = require('nunjucks');
 const fs = require('fs');
 
@@ -11,16 +6,7 @@ nunjucks.configure(`${__dirname}/templates`, {
 });
 
 const server = {
-    app: express(),
     files: [],
-
-    initialize() {
-        server.urlConfs();
-    },
-
-    startWebServer() {
-        server.app.listen(8000);
-    },
 
     //---------------------------------------------------------------------------------------------
     // VIEWS
@@ -52,22 +38,6 @@ const server = {
                 res.send(nunjucks.render('recipe.html', JSON.parse(data)));
             }
         });
-    },
-
-    shoppingList(req, res) {
-        res.send(
-            `<!doctype html>
-            ${ReactDOM.renderToString((<Html assets={webpackIsomoprhicTools.assets()} />))}`
-        );
-    },
-
-    //---------------------------------------------------------------------------------------------
-    // URL CONFS
-    //---------------------------------------------------------------------------------------------
-    urlConfs() {
-        server.app.get('/shoppinglist', server.shoppingList);
-
-        server.app.use(express.static(`${__dirname}/public/static`));
     }
 };
 

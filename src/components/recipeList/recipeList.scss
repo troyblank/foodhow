@@ -16,6 +16,17 @@
     }
 }
 
+.recipe-list__search {
+    margin: 20px 0;
+
+    input {
+        display: block;;
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
 .recipe-list__nodes {
     @extend %clearfix;
     max-width: 1000px;

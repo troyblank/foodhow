@@ -1,11 +1,9 @@
 import $ from 'jquery';
-import EventDispatcher from '../lib/EventDispatcher';
 import store from '../store';
 import { addIngredient as addIngredientAction, removeIngredient as removeIngredientAction } from '../actions/index';
 
 const baseUI = {
     initialize() {
-        baseUI.listSearch();
         baseUI.groceryList();
     },
 
@@ -68,86 +66,6 @@ const baseUI = {
         if (0 < $('section.recipe').length) {
             initialize();
         }
-    },
-    //-----------------------------------------------------------------------------------------
-    // LIST SEARCH
-    //-----------------------------------------------------------------------------------------
-    listSearch() {
-        const list = {};
-        let shortList = {}; // used on iterations of list to improve performance
-        let cleared = true;
-
-        function clearShortList() {
-            cleared = true;
-            shortList = {};
-        }
-
-        function filterList(val) {
-            const re = new RegExp(val, 'gi');
-            const evalist = cleared ? list : shortList;
-
-            Object.keys(evalist).forEach((prop) => {
-                if (null === prop.match(re)) {
-                    $(evalist[prop]).hide();
-                    delete shortList[prop];
-                } else {
-                    shortList[prop] = list[prop];
-                    $(evalist[prop]).show();
-                    cleared = false;
-                }
-            });
-        }
-
-        function generateSearchList() {
-            $('section.list a').each((i, ele) => {
-                list[$(ele).html()] = ele;
-            });
-        }
-
-        //-----------------------------------------------------------------------------------------
-        // HANDLERS
-        //-----------------------------------------------------------------------------------------
-        function inputChangeHand() {
-            const val = $(this).val();
-            if (0 < val.length) {
-                filterList(val);
-            } else {
-                clearShortList();
-                $('section.list > a').show();
-            }
-        }
-
-        function keypressHand(e) {
-            const code = e.keyCode || e.which;
-            if (13 === code) {
-                $(this).blur();
-            } else if (8 === code) {
-                // backspace - partial search clear need to reevaluate search.
-                EventDispatcher.dispatchEvent(EventDispatcher.ON_SEARCH_CLEAR);
-            }
-        }
-
-        function searchClearHand() {
-            clearShortList();
-        }
-
-        //-----------------------------------------------------------------------------------------
-
-        function addListeners() {
-            $('input[name=search]').on('input', inputChangeHand);
-            $('input[name=search]').on('keydown', keypressHand);
-
-            EventDispatcher.addEventListener(EventDispatcher.ON_SEARCH_CLEAR, searchClearHand);
-        }
-
-        function initialize() {
-            $('input[name=search]').val('');
-
-            generateSearchList();
-            addListeners();
-        }
-
-        initialize();
     }
 };
 

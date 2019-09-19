@@ -1,17 +1,17 @@
 import React from 'react';
 import { get } from 'lodash';
 import { useRouter } from 'next/router';
-import { Head, Navigation } from '../../src/components';
+import { Head, Navigation, Recipe } from '../../src/components';
 
-export default function Recipe() {
+export default function RecipePage() {
     const router = useRouter();
     const { recipe } = get(router, 'query', {});
 
     return (
-      <>
+      <x>
         <Head />
         <Navigation />
-        <div>hi i am a recipe: { recipe }</div>
-      </>
+        { recipe && <Recipe fileName={recipe} /> }
+      </x>
     );
 }

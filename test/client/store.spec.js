@@ -3,7 +3,7 @@ import Chance from 'chance';
 import store from '../../src/client/js/store';
 import { addIngredient, toggleIngredient, removeIngredient } from '../../src/client/js/actions/index';
 
-describe('Store', () => {
+describe('LEGACY - Store', () => {
     const chance = new Chance();
     const id = chance.natural();
     const name = chance.word();

@@ -24,17 +24,6 @@
             max-width: 550px;
             margin-bottom: 10px;
             line-height: 1.5rem;
-
-            &.active {
-                color: $color-orange;
-                list-style-image: url('/static/icons/icon_shopping_cart.svg');
-            }
         }
-    }
-}
-
-.recipe__ingredients {
-    li {
-        cursor: pointer;
     }
 }

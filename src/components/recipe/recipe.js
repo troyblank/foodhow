@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import dompurify from 'dompurify';
+import { Ingredient } from '..';
 import './recipe.scss';
 
 export default class Recipe extends PureComponent {
@@ -22,6 +23,8 @@ export default class Recipe extends PureComponent {
     }
 
     render() {
+        const { fileName, shoppingList: shoppingListStore, dispatch } = this.props;
+        const { shoppingList } = shoppingListStore;
         const { recipe } = this.state;
 
         if (!recipe) return null;
@@ -36,11 +39,14 @@ export default class Recipe extends PureComponent {
             </header>
             <section>
               <h2>Ingredients</h2>
-              <ul className={'recipe__ingredients'}>
+              <ul>
                 { ingredients.map((i) => (
-                  <li
+                  <Ingredient
+                    fileName={fileName}
+                    text={i}
+                    shoppingList={shoppingList}
+                    dispatch={dispatch}
                     key={i}
-                    dangerouslySetInnerHTML={{ __html: dompurify.sanitize(i) }}
                   />
                 ))}
               </ul>

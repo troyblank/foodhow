@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import Chance from 'chance';
-import { GetShoppingList, GotShoppingList } from '@troyblank/food-how-components';
+import { Button, GetShoppingList, GotShoppingList } from '@troyblank/food-how-components';
 import ShoppingList from './shoppingList';
 
 describe('Shopping List', () => {
@@ -31,6 +31,7 @@ describe('Shopping List', () => {
         assert.isTrue(wrapper.contains(
           <section className={'shopping-list'}>
             <GetShoppingList list={[shoppingList[1], shoppingList[2]]} ingredientClickHand={instance.onIngredientClick} />
+            <Button text="Clear checked" buttonClickHand={instance.onClear} />
             <GotShoppingList list={[shoppingList[0]]} ingredientClickHand={instance.onIngredientClick} />
           </section>
         ));
@@ -63,6 +64,22 @@ describe('Shopping List', () => {
         const someIngredient = wrapper.find('.shopping-list li').at(chance.natural({ min: 0, max: 2 }));
 
         someIngredient.simulate('click', id);
+
+        assert.isTrue(dispatch.calledOnce);
+    });
+
+    it('should handle clearing checked ingredients', () => {
+        const dispatch = sinon.spy();
+        const shoppingList = [
+            { text: chance.word(), id: chance.word() },
+            { text: chance.word(), checked: true, id: chance.word() },
+            { text: chance.word(), checked: false, id: chance.word() }
+        ];
+        const shoppingListStore = { shoppingList };
+        const wrapper = mount(<ShoppingList shoppingList={shoppingListStore} dispatch={dispatch} />);
+        const clearButton = wrapper.find('.shopping-list button');
+
+        clearButton.simulate('click');
 
         assert.isTrue(dispatch.calledOnce);
     });

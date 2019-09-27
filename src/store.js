@@ -8,7 +8,8 @@ const enhancers = compose(
     applyMiddleware(thunk)
 );
 
-const shoppingListLocalStore = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem(foodHowShoppingList)) : [];
+const shoppingListLocalStore = typeof localStorage !== 'undefined' ? (JSON.parse(localStorage.getItem(foodHowShoppingList)) || []) : [];
+
 const defaultState = { shoppingList: { shoppingList: shoppingListLocalStore } };
 
 const store = createStore(reducers, defaultState, enhancers);

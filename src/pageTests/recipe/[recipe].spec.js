@@ -2,7 +2,7 @@ import React from 'react';
 import { assert } from 'chai';
 import { shallow, mount } from 'enzyme';
 import { Provider } from 'react-redux';
-import { RouterContext } from 'next-server/dist/lib/router-context';
+import { RouterContext } from 'next/dist/next-server/lib/router-context';
 import Chance from 'chance';
 import RecipePage from '../../../pages/recipe/[recipe]';
 import { Recipe } from '../../components/connections';

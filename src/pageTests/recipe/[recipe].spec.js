@@ -24,11 +24,11 @@ describe('Page - [Recipe]', () => {
 
     it('should render with the recipe query', () => {
         const recipe = chance.word();
-        const shoppingList = chance.word();
+        const shoppingListStore = chance.word();
         const mockRouter = { query: { recipe } };
         // istanbul ignore next
         const mockStore = {
-            getState: () => ({ shoppingList }),
+            getState: () => ({ shoppingListStore }),
             subscribe: () => {},
             dispatch: () => {}
         };

@@ -27,7 +27,7 @@ describe('Recipe', () => {
     ));
 
     it('should render', () => {
-        const wrapper = shallow(<Recipe fileName={fileName} shoppingList={shoppingListStore} />);
+        const wrapper = shallow(<Recipe fileName={fileName} shoppingListStore={shoppingListStore} />);
 
         assert.equal(wrapper.type(), null);
     });
@@ -36,7 +36,7 @@ describe('Recipe', () => {
         const wrapper = shallow(
           <Recipe
             fileName={fileName}
-            shoppingList={shoppingListStore}
+            shoppingListStore={shoppingListStore}
             dispatch={dispatch}
           />
         );

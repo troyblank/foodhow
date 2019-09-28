@@ -34,6 +34,7 @@
     "nunjucks": "1.0.1"
   },
   "devDependencies": {
+    "@babel/register": "7.6.2",
     "@troyblank/eslint-config-troyblank": "1.1.0",
     "@troyblank/mocha-base-troyblank": "1.0.0",
     "@troyblank/sasslint-config-troyblank": "1.0.0",

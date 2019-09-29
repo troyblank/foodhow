@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import dompurify from 'dompurify';
 import { Ingredient } from '..';
-import './recipe.scss';
 
 export default class Recipe extends PureComponent {
     state = {

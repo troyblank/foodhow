@@ -7,10 +7,10 @@
     "start": "npm run build && cd out && serve -p 8888",
     "clean": "rm -rf .next && rm -rf out",
     "test": "npm run unit && npm run lint",
-    "unit": "nyc --reporter=text-summary --reporter=lcov --reporter=cobertura mocha --require isomorphic-fetch --exit \"./{pages,src,test}/**/*.spec.js\"",
+    "unit": "nyc --reporter=text-summary --reporter=lcov --reporter=cobertura mocha --require isomorphic-fetch --exit \"./src/**/*.spec.js\"",
     "lint": "npm run eslint && npm run sasslint",
-    "eslint": "eslint './{pages,recipes,src,test}/**/*.js'",
-    "eslintFix": "eslint --fix './{pages,recipes,src,test}/**/*.js'",
+    "eslint": "eslint './{pages,recipes,src}/**/*.js'",
+    "eslintFix": "eslint --fix './{pages,recipes,src}/**/*.js'",
     "sasslint": "sass-lint -c ./node_modules/@troyblank/sasslint-config-troyblank/.sass-lint.yml ./src/**/*.scss -v -q"
   },
   "nyc": {

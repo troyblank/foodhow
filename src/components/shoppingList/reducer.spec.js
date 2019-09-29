@@ -6,9 +6,10 @@ import { TOGGLE_INGREDIENT_CHECK_MARK, CLEAR_CHECKED_INGREDIENTS } from './actio
 
 describe('Shopping List Reducer', () => {
     const chance = new Chance();
+    const { noResultsMessage } = initialState;
 
     it('should return initial state', () => {
-        assert.deepEqual(reducer(undefined, {}), { shoppingList: [] });
+        assert.deepEqual(reducer(undefined, {}), { shoppingList: [], noResultsMessage });
     });
 
     it('should handle toggline ingredients', () => {
@@ -31,7 +32,8 @@ describe('Shopping List Reducer', () => {
         });
 
         const expectedReduction = {
-            shoppingList: [ingredient1]
+            shoppingList: [ingredient1],
+            noResultsMessage
         };
 
         assert.deepEqual(reduction, expectedReduction);
@@ -49,7 +51,13 @@ describe('Shopping List Reducer', () => {
         const unCheckedList = [{ id: chance.word() }, { id: chance.word() }];
         const checkedList = [{ id: chance.word(), checked: true }, { id: chance.word(), checked: true }, { id: chance.word(), checked: true }];
         const shoppingList = [...unCheckedList, ...checkedList];
-        const expectedReturnState = { shoppingList: unCheckedList };
+        const expectedReturnState = {
+            shoppingList: unCheckedList,
+            noResultsMessage: {
+                headline: 'Done!',
+                body: 'Oh, so proud of you!'
+            }
+        };
 
         assert.deepEqual(reducer({ shoppingList }, { type: CLEAR_CHECKED_INGREDIENTS }), expectedReturnState);
     });

@@ -3,19 +3,24 @@ import { assert } from 'chai';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import Chance from 'chance';
-import { Button, GetShoppingList, GotShoppingList } from '@troyblank/food-how-components';
+import { Button, GetShoppingList, GotShoppingList, NoResultMessage } from '@troyblank/food-how-components';
 import ShoppingList from './shoppingList';
 
 describe('Shopping List', () => {
     const chance = new Chance();
+    const noResultsMessage = { headline: chance.word(), body: chance.word() };
 
     it('should render', () => {
-        const shoppingListStore = {};
+        const shoppingListStore = { noResultsMessage };
         const wrapper = shallow(<ShoppingList shoppingList={shoppingListStore} />);
         const instance = wrapper.instance();
+        const { headline, body } = noResultsMessage;
 
         assert.isTrue(wrapper.contains(
           <section className={'shopping-list'}>
+            <div className={'shopping-list__no-result-message'}>
+              <NoResultMessage headline={headline} message={body} />
+            </div>
             <GetShoppingList list={[]} ingredientClickHand={instance.onIngredientClick} />
             <GotShoppingList list={[]} ingredientClickHand={instance.onIngredientClick} />
           </section>

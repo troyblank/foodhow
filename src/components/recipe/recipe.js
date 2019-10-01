@@ -23,7 +23,7 @@ export default class Recipe extends PureComponent {
     }
 
     render() {
-        const { fileName, shoppingList: shoppingListStore, dispatch } = this.props;
+        const { fileName, shoppingListStore, dispatch } = this.props;
         const { shoppingList } = shoppingListStore;
         const { recipe } = this.state;
 

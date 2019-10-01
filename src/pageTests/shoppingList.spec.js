@@ -11,10 +11,10 @@ describe('Page - Shopping List', () => {
     const chance = new Chance();
 
     it('should render', () => {
-        const shoppingList = chance.word();
+        const shoppingListStore = chance.word();
         // istanbul ignore next
         const mockStore = {
-            getState: () => ({ shoppingList }),
+            getState: () => ({ shoppingListStore }),
             subscribe: () => {},
             dispatch: () => {}
         };

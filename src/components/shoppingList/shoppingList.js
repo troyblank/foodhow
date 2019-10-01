@@ -5,7 +5,7 @@ import './shoppingList.scss';
 
 export default class ShoppingList extends PureComponent {
     getDividedIngredientLists() {
-        const { shoppingList: shoppingListStore } = this.props;
+        const { shoppingListStore } = this.props;
         const { shoppingList = [] } = shoppingListStore;
         const checked = [];
         const notChecked = [];
@@ -33,7 +33,7 @@ export default class ShoppingList extends PureComponent {
     }
 
     render() {
-        const { shoppingList: shoppingListStore } = this.props;
+        const { shoppingListStore } = this.props;
         const { shoppingList = [], noResultsMessage = {} } = shoppingListStore;
         const { headline = '', body = '' } = noResultsMessage;
         const { checked, notChecked } = this.getDividedIngredientLists();

@@ -2,7 +2,7 @@ import React from 'react';
 import { assert } from 'chai';
 import { shallow, mount } from 'enzyme';
 import { Provider } from 'react-redux';
-import { RouterContext } from 'next-server/dist/lib/router-context';
+import { RouterContext } from 'next/dist/next-server/lib/router-context';
 import Chance from 'chance';
 import RecipePage from '../../../pages/recipe/[recipe]';
 import { Recipe } from '../../components/connections';
@@ -24,11 +24,11 @@ describe('Page - [Recipe]', () => {
 
     it('should render with the recipe query', () => {
         const recipe = chance.word();
-        const shoppingList = chance.word();
+        const shoppingListStore = chance.word();
         const mockRouter = { query: { recipe } };
         // istanbul ignore next
         const mockStore = {
-            getState: () => ({ shoppingList }),
+            getState: () => ({ shoppingListStore }),
             subscribe: () => {},
             dispatch: () => {}
         };

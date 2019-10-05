@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Button, GetShoppingList, GotShoppingList, NoResultMessage } from '@troyblank/food-how-components';
 import { toggleIngredientCheckMark, clearCheckedIngredients } from './actions';
-import './shoppingList.scss';
 
 export default class ShoppingList extends PureComponent {
     getDividedIngredientLists() {

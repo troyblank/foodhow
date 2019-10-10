@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "build": "next build && next export",
+    "build": "next build && next export && npm run copy",
+    "copy": "cp _redirects out/_redirects",
     "start": "npm run build && cd out && serve -p 8888",
     "clean": "rm -rf .next && rm -rf out",
     "test": "npm run unit && npm run lint",

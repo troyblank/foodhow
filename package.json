@@ -10,7 +10,7 @@
     "test": "npm run unit && npm run lint",
     "unit": "nyc --reporter=text-summary --reporter=lcov --reporter=cobertura mocha --require isomorphic-fetch --exit \"./src/**/*.spec.js\"",
     "lint": "npm run eslint && npm run sasslint",
-    "eslint": "eslint './{pages,recipes,src}/**/*.js'",
+    "eslint": "eslint './{pages,static,src}/**/*.{js,json}'",
     "eslintFix": "eslint --fix './{pages,recipes,src}/**/*.js'",
     "sasslint": "sass-lint -c ./node_modules/@troyblank/sasslint-config-troyblank/.sass-lint.yml ./src/**/*.scss -v -q"
   },

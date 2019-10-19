@@ -26,9 +26,5 @@ out
 ehthumbs.db
 Thumbs.db
 
-dist
 coverage
-ssh/config.json
-ssh/id_rsa
-scratch
 webpack-assets.json

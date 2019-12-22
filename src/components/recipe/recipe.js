@@ -1,6 +1,19 @@
 import React, { PureComponent } from 'react';
 import dompurify from 'dompurify';
-import { Ingredient } from '..';
+import { isArray } from 'lodash';
+import IngredientList from '../ingredientList/ingredientList';
+
+export function objectifyIngredients(polymorphicIngredients) {
+    // ingredients can be an array or object:
+    // this converts all to an object for easy parsing.
+    let ingredients = polymorphicIngredients;
+
+    if (isArray(ingredients)) {
+        ingredients = { '': [...ingredients] };
+    }
+
+    return ingredients;
+}
 
 export default class Recipe extends PureComponent {
     state = {
@@ -22,13 +35,14 @@ export default class Recipe extends PureComponent {
     }
 
     render() {
-        const { fileName, shoppingListStore, dispatch } = this.props;
-        const { shoppingList } = shoppingListStore;
+        const { fileName } = this.props;
         const { recipe } = this.state;
 
         if (!recipe) return null;
 
-        const { title, meta, ingredients, directions } = recipe;
+        const { title, meta, ingredients: polymorphicIngredients, directions } = recipe;
+        const ingredients = objectifyIngredients(polymorphicIngredients);
+        const ingredientTitles = Object.keys(ingredients);
 
         return (
           <section className={'recipe'}>
@@ -38,17 +52,14 @@ export default class Recipe extends PureComponent {
             </header>
             <section>
               <h2>Ingredients</h2>
-              <ul>
-                { ingredients.map((i) => (
-                  <Ingredient
-                    fileName={fileName}
-                    text={i}
-                    shoppingList={shoppingList}
-                    dispatch={dispatch}
-                    key={i}
-                  />
-                ))}
-              </ul>
+              { ingredientTitles.map((ingredientTitle) => (
+                <IngredientList
+                  title={ingredientTitle}
+                  ingredients={ingredients[ingredientTitle]}
+                  fileName={fileName}
+                  key={ingredientTitle}
+                />
+              ))}
             </section>
             <section>
               <h2>Directions</h2>

@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 import Recipe from './recipe';
-import { Ingredient } from '..';
+import IngredientList from '../ingredientList/ingredientList';
 
 describe('Recipe', () => {
     const chance = new Chance();
@@ -11,6 +11,10 @@ describe('Recipe', () => {
     const title = chance.word();
     const meta = chance.word();
     const ingredients = [chance.word(), chance.word(), chance.word()];
+    const multiStepIngredients = {
+        [chance.word()]: [chance.word(), chance.word(), chance.word()],
+        [chance.word()]: [chance.word(), chance.word(), chance.word()]
+    };
     const directions = [chance.word(), chance.word(), chance.word()];
     const recipe = {
         title,
@@ -51,26 +55,12 @@ describe('Recipe', () => {
             </header>
             <section>
               <h2>Ingredients</h2>
-              <ul>
-                <Ingredient
-                  fileName={fileName}
-                  text={ingredients[0]}
-                  shoppingList={shoppingList}
-                  dispatch={dispatch}
-                />
-                <Ingredient
-                  fileName={fileName}
-                  text={ingredients[1]}
-                  shoppingList={shoppingList}
-                  dispatch={dispatch}
-                />
-                <Ingredient
-                  fileName={fileName}
-                  text={ingredients[2]}
-                  shoppingList={shoppingList}
-                  dispatch={dispatch}
-                />
-              </ul>
+              <IngredientList
+                title={''}
+                ingredients={ingredients}
+                fileName={fileName}
+                key={''}
+              />
             </section>
             <section>
               <h2>Directions</h2>
@@ -80,6 +70,38 @@ describe('Recipe', () => {
                 <li dangerouslySetInnerHTML={{ __html: directions[2] }} />
               </ol>
             </section>
+          </section>
+        ));
+    });
+
+    it('should render a recipe after fetching recipe with an ingredient object', () => {
+        const multiStepIngredientsRecipe = { ...recipe, ingredients: multiStepIngredients };
+        const titles = Object.keys(multiStepIngredients);
+        const wrapper = shallow(
+          <Recipe
+            fileName={fileName}
+            shoppingListStore={shoppingListStore}
+            dispatch={dispatch}
+          />
+        );
+
+        wrapper.setState({ recipe: multiStepIngredientsRecipe });
+
+        assert.isTrue(wrapper.contains(
+          <section>
+            <h2>Ingredients</h2>
+            <IngredientList
+              title={titles[0]}
+              ingredients={multiStepIngredients[titles[0]]}
+              fileName={fileName}
+              key={titles[0]}
+            />
+            <IngredientList
+              title={titles[1]}
+              ingredients={multiStepIngredients[titles[1]]}
+              fileName={fileName}
+              key={titles[1]}
+            />
           </section>
         ));
     });

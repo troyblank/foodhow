@@ -51,7 +51,7 @@ describe('Recipe', () => {
           <section className={'recipe'}>
             <header>
               <h1>{ title }</h1>
-              <h3>{meta}</h3>
+              <h3 dangerouslySetInnerHTML={{ __html: meta }} />
             </header>
             <section>
               <h2>Ingredients</h2>

@@ -48,7 +48,7 @@ export default class Recipe extends PureComponent {
           <section className={'recipe'}>
             <header>
               <h1>{ title }</h1>
-              { true && <h3>{meta}</h3> }
+              { meta && <h3 dangerouslySetInnerHTML={{ __html: dompurify.sanitize(meta) }} /> }
             </header>
             <section>
               <h2>Ingredients</h2>

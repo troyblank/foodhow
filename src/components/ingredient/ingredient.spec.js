@@ -1,14 +1,17 @@
 import React from 'react';
+import Link from 'next/link';
 import { assert } from 'chai';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import Chance from 'chance';
-import Ingredient from './ingredient';
+import Ingredient, { extractLink } from './ingredient';
 import { TOGGLE_INGREDIENT_ON_LIST } from './actions';
 
 describe('Ingredient', () => {
     const chance = new Chance();
     const text = chance.word();
+    const url = `/${chance.word()}/${chance.word()}`;
+    const link = `[${text}](${url})`;
     const fileName = chance.word();
 
     it('should render', () => {
@@ -23,6 +26,20 @@ describe('Ingredient', () => {
               dangerouslySetInnerHTML={{ __html: text }}
               onClick={instance.onToggle}
             />
+          </li>
+        ));
+    });
+
+    it('should render a link', () => {
+        const wrapper = shallow(<Ingredient text={link} shoppingList={[]} />);
+
+        assert.isTrue(wrapper.contains(
+          <li
+            className={'ingredient ingredient--is-link'}
+          >
+            <Link href={url}>
+              <a>{text}</a>
+            </Link>
           </li>
         ));
     });
@@ -51,5 +68,19 @@ describe('Ingredient', () => {
 
         assert.isTrue(dispatch.calledOnce);
         assert.equal(dispatch.args[0][0].type, TOGGLE_INGREDIENT_ON_LIST);
+    });
+
+    it('should be able to extract a link from raw text that is in the proper format', () => {
+        const { full, label, url: extractedURL } = extractLink(link);
+
+        assert.equal(full, link);
+        assert.equal(label, text);
+        assert.equal(url, extractedURL);
+    });
+
+    it('should note be able to extract a link from raw text that is not in the proper format', () => {
+        const badLink = extractLink(text);
+
+        assert.equal(badLink, null);
     });
 });

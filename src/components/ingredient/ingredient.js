@@ -1,8 +1,22 @@
 import React, { PureComponent } from 'react';
+import Link from 'next/link';
 import dompurify from 'dompurify';
 import classnames from 'classnames';
 import { toggleIngredientOnList } from './actions';
 import './ingredient.scss';
+
+export const extractLink = (text) => {
+    const regex = /^\[([\w\s\d]+)\]\(((?:\/|https?:\/\/)[\w\d./?=#]+)\)$/;
+    const match = text.match(regex);
+
+    if (match) {
+        const [full, label, url] = match;
+
+        return { full, label, url };
+    }
+
+    return null;
+};
 
 export default class Ingredient extends PureComponent {
     getID() {
@@ -28,17 +42,24 @@ export default class Ingredient extends PureComponent {
 
     render() {
         const { text } = this.props;
+        const link = extractLink(text);
 
         return (
           <li
             className={classnames('ingredient', {
-              'ingredient--active': this.isInShoppingList()
+              'ingredient--active': this.isInShoppingList(),
+              'ingredient--is-link': Boolean(link)
             })}
           >
-            <button
-              dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }}
-              onClick={this.onToggle}
-            />
+            { !link &&
+              <button
+                dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }}
+                onClick={this.onToggle}
+              />}
+            { link &&
+              <Link href={link.url}>
+                <a>{link.label}</a>
+              </Link>}
           </li>
         );
     }

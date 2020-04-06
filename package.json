@@ -19,13 +19,13 @@
     "temp-directory": "./coverage/.nyc_output"
   },
   "dependencies": {
-    "@babel/plugin-proposal-export-default-from": "7.5.2",
+    "@babel/plugin-proposal-export-default-from": "7.8.3",
     "@troyblank/food-how-components": "0.5.1",
     "@zeit/next-sass": "1.0.1",
     "classnames": "2.2.6",
     "dompurify": "1.0.11",
     "lodash": "4.17.15",
-    "next": "9.3.3",
+    "next": "9.3.4",
     "node-sass": "4.12.0",
     "normalize.css": "8.0.1",
     "react": "16.9.0",
@@ -35,12 +35,12 @@
     "redux-thunk": "2.3.0"
   },
   "devDependencies": {
-    "@babel/register": "7.6.2",
-    "@troyblank/eslint-config-troyblank": "1.1.0",
+    "@babel/register": "7.9.0",
+    "@troyblank/eslint-config-troyblank": "1.4.0",
     "@troyblank/mocha-base-troyblank": "1.0.0",
     "@troyblank/sasslint-config-troyblank": "1.0.0",
     "coveralls": "3.0.6",
-    "eslint": "6.1.0",
+    "eslint": "6.8.0",
     "isomorphic-fetch": "2.2.1",
     "sass-lint": "1.13.1",
     "serve": "11.2.0"

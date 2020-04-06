@@ -7,7 +7,7 @@ export class IngredientListComponent extends PureComponent {
         const { shoppingList, dispatch, title, ingredients, fileName } = this.props;
 
         return (
-          <>
+          <React.Fragment>
             { title && <h3 className={'ingredient__title'}>{title}</h3> }
             <ul>
               { ingredients.map((i) => (
@@ -20,7 +20,7 @@ export class IngredientListComponent extends PureComponent {
                 />
             ))}
             </ul>
-          </>
+          </React.Fragment>
         );
     }
 }

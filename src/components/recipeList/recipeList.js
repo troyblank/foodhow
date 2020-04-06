@@ -4,8 +4,12 @@ import { get } from 'lodash';
 import './recipeList.scss';
 
 export default class RecipeList extends PureComponent {
-    state = {
-        recipes: this.props.recipes || []
+    constructor(props) {
+        super(props);
+
+        const { recipes } = this.props;
+
+        this.state = { recipes: recipes || [] };
     }
 
     filterList(value) {

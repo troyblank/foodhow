@@ -26,7 +26,7 @@ describe('IngredientList', () => {
         );
 
         assert.isTrue(wrapper.contains(
-          <>
+          <React.Fragment>
             <h3 className={'ingredient__title'}>{title}</h3>
             <ul>
               <Ingredient
@@ -51,7 +51,7 @@ describe('IngredientList', () => {
                 key={ingredients[2]}
               />
             </ul>
-          </>
+          </React.Fragment>
         ));
     });
 

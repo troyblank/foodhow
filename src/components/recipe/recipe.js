@@ -16,8 +16,10 @@ export function objectifyIngredients(polymorphicIngredients) {
 }
 
 export default class Recipe extends PureComponent {
-    state = {
-        recipe: null
+    constructor(props) {
+        super(props);
+
+        this.state = { recipe: null };
     }
 
     componentDidMount() {

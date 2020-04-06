@@ -2,7 +2,10 @@
     "extends": "@troyblank/eslint-config-troyblank/configs/react.js",
 
     "rules": {
-        "import/no-extraneous-dependencies": 0
+        "import/no-extraneous-dependencies": 0,
+        // TODO: Remove when is https://github.com/babel/babel-eslint/issues/530 fixed
+        "template-curly-spacing": "off",
+        "indent": "off"
     },
 
     "globals": {

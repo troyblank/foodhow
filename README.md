@@ -32,7 +32,7 @@ To add a recipe simply make a new json file in ```static/recipes``` that follows
         "ingredients": [
             "(1 link to another recipe)[/some/link]",
             "1 meat",
-            "1 cup fruit",
+            "1 cup fruit (processed)",
             "&frac12; tsp spice"
         ],
         "directions": [
@@ -44,3 +44,22 @@ To add a recipe simply make a new json file in ```static/recipes``` that follows
 Then add the new recipe to the list in ```static/recipes.js```
 
 When adding recipes it's important to note that underscores will be used in lieu of spaces in file names. For example "Some_Food.json" will show up as "Some Food" to the user.
+
+### Additional recipe formats
+
+Ingredient groups:
+
+    {
+        ...
+       "ingredients": {
+            "Brine": [
+                "1 15lb turkey",
+                "1 gallon vegetable stock"
+            ],
+            "Stuffing": [
+                "4 sprigs rosemary",
+                "6 leaves sage"
+            ]
+        },
+        ...
+    }

@@ -26,5 +26,6 @@ out
 ehthumbs.db
 Thumbs.db
 
+.history
 coverage
 webpack-assets.json

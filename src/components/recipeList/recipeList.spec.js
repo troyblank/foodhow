@@ -22,6 +22,7 @@ describe('Recipe List', () => {
             </header>
             <section className={'recipe-list__search'}>
               <input
+                autoComplete={'off'}
                 type={'text'}
                 name={'search'}
                 placeholder={'Search'}

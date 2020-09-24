@@ -37,6 +37,7 @@ export default class RecipeList extends PureComponent {
             </header>
             <section className={'recipe-list__search'}>
               <input
+                autoComplete={'off'}
                 type={'text'}
                 name={'search'}
                 placeholder={'Search'}

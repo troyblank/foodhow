@@ -4,7 +4,7 @@
     "ingredients": [
         "1 large brisket",
         "17 oz liquid smoke",
-        "3 TBSP worchestershire sauce",
+        "3 TBSP Worcestershire sauce",
         "3 TBSP steak sauce",
         "1 TBSP hot sauce",
         "2 cups red wine vinegar",
@@ -17,8 +17,8 @@
 
     ],
     "directions": [
-        "Mix all ingredients in a dutch oven with brisket.",
-        "Bake at 200° for 12 hours, turning the brisket midway through.",
-        "Remove fat and slice."
+        { "text": "Mix all ingredients in a Dutch oven with brisket." },
+        { "text": "Bake at 200° for 12 hours, turning the brisket midway through." },
+        { "text": "Remove fat and slice." }
     ]
 }

@@ -7,7 +7,7 @@
         "1 cup sugar"
     ],
     "directions": [
-        "Combine all but cranberries and bring to a simmer.",
-        "Reduce by &frac12;rds and having a jam consistency."
+        { "text": "Combine all but cranberries and bring to a simmer." },
+        { "text": "Reduce by &frac12;rds and having a jam consistency." }
     ]
 }

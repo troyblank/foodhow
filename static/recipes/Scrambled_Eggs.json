@@ -9,11 +9,11 @@
         "Pepper"
     ],
     "directions": [
-        "In bowl combine eggs with milk using a fork.",
-        "In a skillet melt butter over medium low heat.",
-        "Stir in a pinch of salt with egg mixture and pour into pan.",
-        "Stir slowly with spatula, as soon as curds start forming set heat to high.",
-        "Stop stirring and fold the eggs over themselves until all moisture is gone.",
-        "Season with salt and pepper."
+        { "text": "In bowl combine eggs with milk using a fork." },
+        { "text": "In a skillet melt butter over medium low heat." },
+        { "text": "Stir in a pinch of salt with egg mixture and pour into pan." },
+        { "text": "Stir slowly with spatula, as soon as curds start forming set heat to high." },
+        { "text": "Stop stirring and fold the eggs over themselves until all moisture is gone." },
+        { "text": "Season with salt and pepper." }
     ]
 }

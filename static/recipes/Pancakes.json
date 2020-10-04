@@ -13,11 +13,11 @@
         "1 tsp vanilla extract (x3)"
     ],
     "directions": [
-        "To make mix; combine flour, sugar, baking power, baking soda, and salt in a container and shake.",
-        "Whisk egg whites, vanilla extract and buttermilk togthere in a small bowl.",
-        "Whisk egg yolks with melted butter.",
-        "Pour all liquids rendered on top of 2 cups of mix, and whisk togthere.",
-        "Keeping a griddle buttered cook at a tad below medium heat, flipping once one side has standing bubbles.",
-        "Freeze leftovers by sandwhiching them between towels for a couple hours then transfer to a freezer bag"
+        { "text": "To make mix; combine flour, sugar, baking power, baking soda, and salt in a container and shake." },
+        { "text": "Whisk egg whites, vanilla extract and buttermilk together in a small bowl." },
+        { "text": "Whisk egg yolks with melted butter." },
+        { "text": "Pour all liquids rendered on top of 2 cups of mix, and whisk together." },
+        { "text": "Keeping a griddle buttered cook at a tad below medium heat, flipping once one side has standing bubbles." },
+        { "text": "Freeze leftovers by sandwiching them between towels for a couple hours then transfer to a freezer bag" }
     ]
 }

@@ -11,8 +11,8 @@
 
     ],
     "directions": [
-        "Cut potatoes in fourths and boil for 12 mins.",
-        "Add oil and butter to a pan over medium high heat and brown potatoes in pan for 8 mins.",
-        "Mix in thyme, salt, and pepper."
+        { "text": "Cut potatoes in fourths and boil for 12 mins." },
+        { "text": "Add oil and butter to a pan over medium high heat and brown potatoes in pan for 8 mins." },
+        { "text": "Mix in thyme, salt, and pepper." }
     ]
 }

@@ -2,8 +2,8 @@
     "title": "Bourbon Slush",
     "meta": "",
     "ingredients": [
-        "6 oz can consentrated orange juice",
-        "1 large can consentrated lemonade",
+        "6 oz can concentrated orange juice",
+        "1 large can concentrated lemonade",
         "9 oz of bourbon",
         "36 oz water",
         "2 tea bags",
@@ -11,7 +11,7 @@
         "1 cup boiling water"
     ],
     "directions": [
-        "Stir tea bags, sugar and boiling water togthere till disolved, remove tea bags.",
-        "Mix in all other ingredients, freeze for 48 hours and stir every couple of hours."
+        { "text": "Stir tea bags, sugar and boiling water together till dissolved, remove tea bags." },
+        { "text": "Mix in all other ingredients, freeze for 48 hours and stir every couple of hours." }
     ]
 }

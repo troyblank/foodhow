@@ -17,8 +17,8 @@
         "1 TBSP salt"
     ],
     "directions": [
-        "Chop up onion and garlic.",
-        "Put everything in a covered dutch oven on high and cook for 3 hours.",
-        "Pull all the meat from bone and shred with forks, pour some of mixture over meat."
+        { "text": "Chop up onion and garlic." },
+        { "text": "Put everything in a covered dutch oven on high and cook for 3 hours." },
+        { "text": "Pull all the meat from bone and shred with forks, pour some of mixture over meat." }
     ]
 }

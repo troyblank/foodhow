@@ -8,10 +8,10 @@
         "1 cup of honey"
     ],
     "directions": [
-        "Combine all but cranberries and bring to boil over medium heat.",
-        "Reduce to medium-low and simmer for 5 mins.",
-        "Add cranberries and cook for 15 mins stirring occasionally.",
-        "Remove from head and let cool for 5 mins.",
-        "Place sauce in plastic container and let chill in refrigerator overnight."
+        { "text": "Combine all but cranberries and bring to boil over medium heat." },
+        { "text": "Reduce to medium-low and simmer for 5 mins." },
+        { "text": "Add cranberries and cook for 15 mins stirring occasionally." },
+        { "text": "Remove from head and let cool for 5 mins." },
+        { "text": "Place sauce in plastic container and let chill in refrigerator overnight." }
     ]
 }

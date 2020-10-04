@@ -13,14 +13,14 @@
 
     ],
     "directions": [
-        "Make 3 tsp zest, 1 tsp juice, 2 TBSP juice, out of lemons.",
-        "Heat oven to 325°.",
-        "Whisk flour, baking powder, poppy seeds, and salt togthere in a small bowl.",
-        "In med bowl, whisk  &frac23; cup of sugar, melted buttter, egg, lemon zest and 1 tsp lemon juice.",
-        "Slowly mix in flour mixture until most of lumps are gone.",
-        "Add to greased small loaf pan, cook for 35 mins.",
-        "Let cake cool in pan for 10 mins.",
-        "Combine &frac12; cup sugar and 2 TBSP lemon juice, microwave for 1 mins stirring at a mid point",
-        "Brush top and sides of cake with this glaze."
+        { "text": "Make 3 tsp zest, 1 tsp juice, 2 TBSP juice, out of lemons." },
+        { "text": "Heat oven to 325°." },
+        { "text": "Whisk flour, baking powder, poppy seeds, and salt together in a small bowl." },
+        { "text": "In med bowl, whisk  &frac23; cup of sugar, melted butter, egg, lemon zest and 1 tsp lemon juice." },
+        { "text": "Slowly mix in flour mixture until most of lumps are gone." },
+        { "text": "Add to greased small loaf pan, cook for 35 mins." },
+        { "text": "Let cake cool in pan for 10 mins." },
+        { "text": "Combine &frac12; cup sugar and 2 TBSP lemon juice, microwave for 1 mins stirring at a mid point" },
+        { "text": "Brush top and sides of cake with this glaze." }
     ]
 }

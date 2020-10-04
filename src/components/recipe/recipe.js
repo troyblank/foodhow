@@ -69,7 +69,7 @@ export default class Recipe extends PureComponent {
                 { directions.map((d) => (
                   <li
                     key={d}
-                    dangerouslySetInnerHTML={{ __html: dompurify.sanitize(d) }}
+                    dangerouslySetInnerHTML={{ __html: dompurify.sanitize(d?.text) }}
                   />
                 ))}
               </ol>

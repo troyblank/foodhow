@@ -12,6 +12,6 @@
         "2 tsp pepper"
     ],
     "directions": [
-        "Blend all ingredients together."
+        { "text": "Blend all ingredients together." }
     ]
 }

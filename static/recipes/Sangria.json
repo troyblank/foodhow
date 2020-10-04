@@ -16,7 +16,7 @@
         "1 bottle of shiraz red wine"
     ],
     "directions": [
-        "Chop up fruit and mix ingredients together in a pitcher.",
-        "Marinate overnight."
+        { "text": "Chop up fruit and mix ingredients together in a pitcher." },
+        { "text": "Marinate overnight." }
     ]
 }

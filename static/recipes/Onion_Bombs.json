@@ -10,12 +10,12 @@
         "&frac12; tsp black pepper"
     ],
     "directions": [
-        "Preheat smoker to 225°.",
-        "Create an angled deep well at the top of the onions with a knife.",
-        "Save the onion tops, cut them as needed to fit the stuffing.",
-        "Press the divided butter into each of the wells and top with a bouillon cube.",
-        "Mix parmesan and pepper in a small bowl and divide into onion wells.",
-        "Put onion tops back and wrap onions with foil leaving ventilation at the top.",
-        "Smoke onions for 2 hours."
+        { "text": "Preheat smoker to 225°." },
+        { "text": "Create an angled deep well at the top of the onions with a knife." },
+        { "text": "Save the onion tops, cut them as needed to fit the stuffing." },
+        { "text": "Press the divided butter into each of the wells and top with a bouillon cube." },
+        { "text": "Mix parmesan and pepper in a small bowl and divide into onion wells." },
+        { "text": "Put onion tops back and wrap onions with foil leaving ventilation at the top." },
+        { "text": "Smoke onions for 2 hours." }
     ]
 }

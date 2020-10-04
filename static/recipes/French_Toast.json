@@ -12,9 +12,9 @@
         "&frac12; tsp salt"
     ],
     "directions": [
-        "In a wide bowl mix eggs, milk, vanilla, sugar, salt and half the cinnamon.",
-        "Add butter to frying pan on med high heat.",
-        "Dip bread in mixture and cook both sides in pan.",
-        "Sprinkle rest of cinnamon on bread while cooking."
+        { "text": "In a wide bowl mix eggs, milk, vanilla, sugar, salt and half the cinnamon." },
+        { "text": "Add butter to frying pan on med high heat." },
+        { "text": "Dip bread in mixture and cook both sides in pan." },
+        { "text": "Sprinkle rest of cinnamon on bread while cooking." }
     ]
 }

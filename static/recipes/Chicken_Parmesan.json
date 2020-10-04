@@ -17,14 +17,13 @@
         "&frac12; tsp sea salt"
     ],
     "directions": [
-        "Cook pasta and cover with spaghetti sauce, set aside.",
-        "Cut the chicken in half lengthwise and pound each piece until it's about a &frac12;\" thick.",
-        "In a medium bowl whisk egg into milk.",
-        "In a big bowl mix bread crumbs, all spices, and grated Parmesan cheese.",
-        "Dip chicken into milk, then into spice bowl. Then dip it back into milk and spices once more.",
-        "Heat olive oil in a large skillet and brown chicken for 2&frac12; mins each side.",
-        "Lay chicken on top of pasta in a dish, while laying a slice of mozzarella cheese on top of each piece.",
-        "Bake for 20 mins at 400°."
-
+        { "text": "Cook pasta and cover with spaghetti sauce, set aside." },
+        { "text": "Cut the chicken in half lengthwise and pound each piece until it's about a &frac12;\" thick." },
+        { "text": "In a medium bowl whisk egg into milk." },
+        { "text": "In a big bowl mix bread crumbs, all spices, and grated Parmesan cheese." },
+        { "text": "Dip chicken into milk, then into spice bowl. Then dip it back into milk and spices once more." },
+        { "text": "Heat olive oil in a large skillet and brown chicken for 2&frac12; mins each side." },
+        { "text": "Lay chicken on top of pasta in a dish, while laying a slice of mozzarella cheese on top of each piece." },
+        { "text": "Bake for 20 mins at 400°." }
     ]
 }

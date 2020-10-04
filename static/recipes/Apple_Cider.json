@@ -8,6 +8,6 @@
         "&frac18; tsp nutmeg"
     ],
     "directions": [
-        "Heat up cider and combine ingredients"
+        { "text": "Heat up cider and combine ingredients" }
     ]
 }

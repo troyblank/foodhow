@@ -6,9 +6,9 @@
         "2 cups sugar"
     ],
     "directions": [
-        "Strain 2 cups lemon juice, refrigerate overnight.",
-        "Boil 2 cups water with sugar with medium high heat stirring for 10 mins making simple syrup.",
-        "Transfer simple syrup to an ice batch and stir until well chilled. Refrigerate until ready to use.",
-        "Mix lemon juice and 1 &frac12; cup simple syrup in an ice cream maker for 12 mins, and let freeze overnight."
+        { "text": "Strain 2 cups lemon juice, refrigerate overnight." },
+        { "text": "Boil 2 cups water with sugar with medium high heat stirring for 10 mins making simple syrup." },
+        { "text": "Transfer simple syrup to an ice batch and stir until well chilled. Refrigerate until ready to use." },
+        { "text": "Mix lemon juice and 1 &frac12; cup simple syrup in an ice cream maker for 12 mins, and let freeze overnight." }
     ]
 }

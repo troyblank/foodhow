@@ -14,20 +14,20 @@
             "2 oz of sun dried tomatoes",
             "&frac34; cup of tomato sauce",
             "&frac34; cup of tomato paste",
-            "4 tsp Penzy's pizza seasoning",
+            "4 tsp pizza seasoning",
             "Pizza toppings of your choice"
         ]
     },
     "directions": [
-        "In a small bowl mix yeast with honey and beer.",
-        "In a medium bowl put salt, and half of the flour.",
-        "When yest bowl is foamy add to flour bowl, knead and add flour or water until a good consistency is reached.",
-        "Place dough in a greased medium bowl and put in fridge for 6 hours.",
-        "When ready to cook put mozzarella in the freezer for 15 mins then grate.",
-        "Wrap grated cheese in towels and let rest for 15 mins.",
-        "Process tomato sauce, tomato paste, pizza seasoning and sun dried tomatoes.",
-        "Spread half of dough into a disc pull up crust ridges place on a pizza tray covered in cornmeal.",
-        "Spread on tomato sauce, place on toppings and then the mozzarella.",
-        "Cook for 16 minutes at 425&deg; in oven."
+        { "text": "In a small bowl mix yeast with honey and beer." },
+        { "text": "In a medium bowl put salt, and half of the flour." },
+        { "text": "When yest bowl is foamy add to flour bowl, knead and add flour or water until a good consistency is reached." },
+        { "text": "Place dough in a greased medium bowl and put in fridge for 6 hours." },
+        { "text": "When ready to cook put mozzarella in the freezer for 15 mins then grate." },
+        { "text": "Wrap grated cheese in towels and let rest for 15 mins." },
+        { "text": "Process tomato sauce, tomato paste, pizza seasoning and sun dried tomatoes." },
+        { "text": "Spread half of dough into a disc pull up crust ridges place on a pizza tray covered in cornmeal." },
+        { "text": "Spread on tomato sauce, place on toppings and then the mozzarella." },
+        { "text": "Cook for 16 minutes at 425&deg; in oven." }
     ]
 }

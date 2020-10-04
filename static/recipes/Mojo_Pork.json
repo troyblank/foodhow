@@ -26,13 +26,13 @@
         ]
     },
     "directions": [
-        "Mix all sauce ingredients in a bowl.",
-        "In another bowl mix all rub ingredients.",
-        "Rub the rub on the pork.",
-        "Inject the sauce into the pork and refrigerate overnight.",
-        "Smoke meat at 225° with wood chips until meat reaches 200°.",
-        "Drizzle the meat with honey and orange zest.",
-        "Wrap meat in foil and put in a cooler for 40 mins.",
-        "Serve meat with sauted onions and avocado."
+        { "text": "Mix all sauce ingredients in a bowl." },
+        { "text": "In another bowl mix all rub ingredients." },
+        { "text": "Rub the rub on the pork." },
+        { "text": "Inject the sauce into the pork and refrigerate overnight." },
+        { "text": "Smoke meat at 225° with wood chips until meat reaches 200°." },
+        { "text": "Drizzle the meat with honey and orange zest." },
+        { "text": "Wrap meat in foil and put in a cooler for 40 mins." },
+        { "text": "Serve meat with sauted onions and avocado." }
     ]
 }

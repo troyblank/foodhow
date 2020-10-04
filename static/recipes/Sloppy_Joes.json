@@ -13,8 +13,8 @@
         "1 tbsp cumin"
     ],
     "directions": [
-        "Cook hamburger and drain fat.",
-        "Process vegetables into tiny bits.",
-        "Cook hamburger with all ingredients and 1 cup water on med heat for 10 minutes."
+        { "text": "Cook hamburger and drain fat." },
+        { "text": "Process vegetables into tiny bits." },
+        { "text": "Cook hamburger with all ingredients and 1 cup water on med heat for 10 minutes." }
     ]
 }

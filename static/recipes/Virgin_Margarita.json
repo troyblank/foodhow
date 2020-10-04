@@ -11,8 +11,8 @@
         "1 cup ice"
     ],
     "directions": [
-        "Pour salt onto a small plate, rub rim of a glass with a lime wedge and coat with salt.",
-        "Mix 10 oz water with rest of ingredients minus lime in a blender.",
-        "Serve in salted glass, garnish with lime wedge."
+        { "text": "Pour salt onto a small plate, rub rim of a glass with a lime wedge and coat with salt." },
+        { "text": "Mix 10 oz water with rest of ingredients minus lime in a blender." },
+        { "text": "Serve in salted glass, garnish with lime wedge." }
     ]
 }

@@ -8,9 +8,9 @@
         "&frac12; cup sugar"
     ],
     "directions": [
-        "Cut figs in half long way.",
-        "Whisk wine, sugar and 2 TBSP of vinegar in a bowl.",
-        "Cook mixture with figs in medium high skillet for 10 mins.",
-        "Add rest of vinegar and cool for 3 mins."
+        { "text": "Cut figs in half long way." },
+        { "text": "Whisk wine, sugar and 2 TBSP of vinegar in a bowl." },
+        { "text": "Cook mixture with figs in medium high skillet for 10 mins." },
+        { "text": "Add rest of vinegar and cool for 3 mins." }
     ]
 }

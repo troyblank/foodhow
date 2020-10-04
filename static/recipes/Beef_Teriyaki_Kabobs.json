@@ -1,10 +1,10 @@
 {
-    "title": "Beef Teriaki Kabobs",
+    "title": "Beef Teriyaki Kabobs",
     "meta": "3 hour marinate",
     "ingredients": [
         "4 small red onions",
         "1 red bell pepper",
-        "1 yellow bell peper",
+        "1 yellow bell pepper",
         "8 oz mushrooms",
         "2 zucchini",
         "6 garlic gloves",
@@ -14,15 +14,15 @@
         "&frac12; cup rice vinegar",
         "&frac14; cup molasses",
         "&frac12; cup peanut oil",
-        "1 TBSP toasted seame oil",
+        "1 TBSP toasted sesame oil",
         "1 tsp chili oil",
         "1 tsp mustard powder"
     ],
     "directions": [
-        "Cut up onions, peppers, mushrooms, zucchini, and beef into bite size pieces.",
-        "Mince garlic and gigner.",
-        "In a sealable container mix all ingredients by shaking, refrigerate for 3 hours.",
-        "Thread pieces onto skewers.",
-        "Grill over direct heat for 3 minutes per side"
+        { "text": "Cut up onions, peppers, mushrooms, zucchini, and beef into bite size pieces." },
+        { "text": "Mince garlic and ginger." },
+        { "text": "In a sealable container mix all ingredients by shaking, refrigerate for 3 hours." },
+        { "text": "Thread pieces onto skewers." },
+        { "text": "Grill over direct heat for 3 minutes per side" }
     ]
 }

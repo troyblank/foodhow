@@ -16,14 +16,14 @@
         "&frac34; tsp salt"
     ],
     "directions": [
-        "Shift flour, baking powder, and salt together then combine with 2 TBSP butter set aside.",
-        "Mix 3 TBSP flour mixture, 1 cup sugar and 1 tsp cinnamon in a saucepan.",
-        "Add cider and lemon juice and cook over medium heat and stir until it boils.",
-        "Let boil while stirring for 1 min, remove from heat.",
-        "Stir in butter and set aside sauce.",
-        "Mix milk, egg, vegetable oil, rest of flour mixture, 2 TBSP sugar and 1 tsp cinnamon in a mixer.",
-        "Slowly mix in apple to batter.",
-        "Using a waffle iron, grease and pour &frac14; cup of batter at a time for each waffle made.",
-        "Cover waffles with sauce."
+        { "text": "Shift flour, baking powder, and salt together then combine with 2 TBSP butter set aside." },
+        { "text": "Mix 3 TBSP flour mixture, 1 cup sugar and 1 tsp cinnamon in a saucepan." },
+        { "text": "Add cider and lemon juice and cook over medium heat and stir until it boils." },
+        { "text": "Let boil while stirring for 1 min, remove from heat." },
+        { "text": "Stir in butter and set aside sauce." },
+        { "text": "Mix milk, egg, vegetable oil, rest of flour mixture, 2 TBSP sugar and 1 tsp cinnamon in a mixer." },
+        { "text": "Slowly mix in apple to batter." },
+        { "text": "Using a waffle iron, grease and pour &frac14; cup of batter at a time for each waffle made." },
+        { "text": "Cover waffles with sauce." }
     ]
 }

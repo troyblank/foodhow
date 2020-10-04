@@ -19,17 +19,17 @@
         "pepper"
     ],
     "directions": [
-        "Wrap tortillas in foil and set in 275&deg; oven.",
-        "Add 2&frac12; cups chicken broth, oregano, and diced white onion into med skillet.",
-        "Bring to a bubble and add diced chicken and cover with lid for 10 mins.",
-        "Set chicken to cool, while tenderizing it with a hammer.",
-        "In a sauce pan; combine tomato puree, cayenne, cinnamon, and 2 tsp cumin and warm on oven burner.",
-        "In bowl add 1/2 cup chicken broth, tomato paste, 2 tsp chili powder, 1 tsp cumin, and season with salt and pepper.",
-        "Combine this bowl with chicken.",
-        "Take tortillas out and switch over to broiler on high.",
-        "Pour a little of the sauce into the bottom of a casserole backing dish.",
-        "Roll chicken into tortillas and place them in the dish.",
-        "Pour remaining sauce over enchiladas, then toss diced green onions and pile with cheese.",
-        "Broil for 5 mins."
+        { "text": "Wrap tortillas in foil and set in 275&deg; oven." },
+        { "text": "Add 2&frac12; cups chicken broth, oregano, and diced white onion into med skillet." },
+        { "text": "Bring to a bubble and add diced chicken and cover with lid for 10 mins." },
+        { "text": "Set chicken to cool, while tenderizing it with a hammer." },
+        { "text": "In a sauce pan; combine tomato puree, cayenne, cinnamon, and 2 tsp cumin and warm on oven burner." },
+        { "text": "In bowl add 1/2 cup chicken broth, tomato paste, 2 tsp chili powder, 1 tsp cumin, and season with salt and pepper." },
+        { "text": "Combine this bowl with chicken." },
+        { "text": "Take tortillas out and switch over to broiler on high." },
+        { "text": "Pour a little of the sauce into the bottom of a casserole backing dish." },
+        { "text": "Roll chicken into tortillas and place them in the dish." },
+        { "text": "Pour remaining sauce over enchiladas, then toss diced green onions and pile with cheese." },
+        { "text": "Broil for 5 mins." }
     ]
 }

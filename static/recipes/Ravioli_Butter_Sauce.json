@@ -10,9 +10,9 @@
         "pepper"
     ],
     "directions": [
-        "Melt butter in a small saucepan.",
-        "Over medium heat add garlic, sage, dash of salt and dash of pepper.",
-        "Saute for 2 mins.",
-        "After applying sauce sprinkle cheese on top."
+        { "text": "Melt butter in a small saucepan." },
+        { "text": "Over medium heat add garlic, sage, dash of salt and dash of pepper." },
+        { "text": "Saute for 2 mins." },
+        { "text": "After applying sauce sprinkle cheese on top." }
     ]
 }

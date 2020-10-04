@@ -1,0 +1,35 @@
+{
+    "title": "Biscuits",
+    "meta": "",
+    "ingredients": {
+        "Base": [
+            "2 cups flour",
+            "1 TBSP baking powder",
+            "&frac14; tsp baking soda",
+            "1 &frac12; tsp salt",
+            "8 TBSP butter (cut into small pieces)",
+            "2 TBSP butter (melted)",
+            "1 cup buttermilk"
+        ],
+        "Cheddar Filling (optional)": [
+            "4 oz. cheddar cheese (grated)",
+            "&frac14 cup scallions (sliced)"
+        ],
+        "Parmesan Filling (optional)": [
+            "2 oz. parmesan (grated)",
+            "1 cup bacon (cooked and crumbled)"
+        ]
+    },
+    "directions": [
+        { "text": "Process the flour, baking powder, baking soda, and salt for a few seconds." },
+        { "text": "Add butter pieces and pulse the processor until it is crumbly."},
+        { "text": "Add buttermilk and flour mixture to a bowl and fold the together."},
+        { "text": "Knead the mixture on a flat surface, adding flour as necessary until it just starts to roughly have a dough consistency."},
+        { "text": "Roll the dough out in a 12\" square, fold into thirds width wise and then into thirds length wise."},
+        { "text": "Roll dough out in a 12\" square and spread cheddar or parmesan ingredients on top (optional)."},
+        { "text": "Repeat the last roll and fold step one more time."},
+        { "text": "Roll into a 12 inch square and then cut 4\" rounds."},
+        { "text": "Brush tops with melted butter and cook for 15 mins at 425°."},
+        { "text": "Let cool for 5 mins before serving."}
+    ]
+}

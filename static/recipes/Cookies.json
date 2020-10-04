@@ -14,14 +14,14 @@
         "1 tsp salt"
     ],
     "directions": [
-        "Heat oven to 375°.",
-        "Sift togthere flour, salt, and baking soda in a mixing bowl.",
-        "Stir the egg, milk and vanilla in another bowl.",
-        "Mix the butter in a mixer starting on low speed for a couple minutes.",
-        "Add both sugars slowly and increase the speed to medium until butter is fluffy.",
-        "Reduce speed to low and add the egg mixture slowly, increase speed to medium until combined",
-        "Slowly add the chocolate or peanut butter chips.",
-        "Scoop cookies onto parchment, 6 cookies per sheet and bake on a backing sheet for 10 mins a sheet.",
-        "Once cooked immediately place on a drying rack and eventually store in an air tight container"
+        { "text": "Heat oven to 375°." },
+        { "text": "Sift together flour, salt, and baking soda in a mixing bowl." },
+        { "text": "Stir the egg, milk and vanilla in another bowl." },
+        { "text": "Mix the butter in a mixer starting on low speed for a couple minutes." },
+        { "text": "Add both sugars slowly and increase the speed to medium until butter is fluffy." },
+        { "text": "Reduce speed to low and add the egg mixture slowly, increase speed to medium until combined" },
+        { "text": "Slowly add the chocolate or peanut butter chips." },
+        { "text": "Scoop cookies onto parchment, 6 cookies per sheet and bake on a backing sheet for 10 mins a sheet." },
+        { "text": "Once cooked immediately place on a drying rack and eventually store in an air tight container" }
     ]
 }

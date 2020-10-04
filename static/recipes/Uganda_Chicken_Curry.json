@@ -7,7 +7,7 @@
         "2 garlic gloves",
         "2 carrots",
         "1 blade of fresh lemon grass",
-        "2 lbs chicken breats",
+        "2 lbs chicken breast",
         "2 TBSP olive oil",
         "1 tsp cornstarch",
         "1 8oz tomato sauce",
@@ -24,19 +24,19 @@
         "&frac12; tsp cayenne pepper"
     ],
     "directions": [
-        "Cut chicken into tiny bits and place into a large bowl.",
-        "Squeeze lemon juice over chicken.",
-        "Sprinkle chicken with ginger and 2 tsp salt, cover and place in fridge for 20 mins.",
-        "In a small bowl mix thyme, curry, turmeric, garam masala, cumin, black pepper, white pepper, cayenne pepper, and &frac12; tsp salt.",
-        "Chop up onions into tiny bits.",
-        "Heat oven to 300°, and heat oil in a large skillet over medium-high heat.",
-        "Cook onions in the skillet.",
-        "Reduce heat to low and add garlic.",
-        "Mix the cornstarch with 1 cup water and tomato sauce.",
-        "Add tomato mixutre to the skillet along with the spice bowl.",
-        "Let simmer for 20 mins over a medium-low heat.",
-        "Place chicken in a casserole dish and rub with coconut butter/oil, crushed lemon grass, and diced carrots.",
-        "Pour the curry sauce over the chicken and bake for 30 mins.",
-        "Reduce oven to 250°, stir casserole and cook for another 45 mins."
+        { "text": "Cut chicken into tiny bits and place into a large bowl." },
+        { "text": "Squeeze lemon juice over chicken." },
+        { "text": "Sprinkle chicken with ginger and 2 tsp salt, cover and place in fridge for 20 mins." },
+        { "text": "In a small bowl mix thyme, curry, turmeric, garam masala, cumin, black pepper, white pepper, cayenne pepper, and &frac12; tsp salt." },
+        { "text": "Chop up onions into tiny bits." },
+        { "text": "Heat oven to 300°, and heat oil in a large skillet over medium-high heat." },
+        { "text": "Cook onions in the skillet." },
+        { "text": "Reduce heat to low and add garlic." },
+        { "text": "Mix the cornstarch with 1 cup water and tomato sauce." },
+        { "text": "Add tomato mixture to the skillet along with the spice bowl." },
+        { "text": "Let simmer for 20 mins over a medium-low heat." },
+        { "text": "Place chicken in a casserole dish and rub with coconut butter/oil, crushed lemon grass, and diced carrots." },
+        { "text": "Pour the curry sauce over the chicken and bake for 30 mins." },
+        { "text": "Reduce oven to 250°, stir casserole and cook for another 45 mins." }
     ]
 }

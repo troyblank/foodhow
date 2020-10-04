@@ -10,12 +10,12 @@
         "2 tsp salt"
     ],
     "directions": [
-        "Toast fennel seeds over medium heat for 5 mins and grind.",
-        "Cut pork into small pieces and mix with all spices.",
-        "Refrigirate for 1 hour.",
-        "Grind with a fine blade and stuff meat into casing.",
-        "Make twists every hand length, fold in parchment and refrigirate for 3 hours.",
-        "Boil in &frac14;\" water in lidded pot for 10 mins.",
-        "Remove lid from pot and brown each side of sausage for 2 mins."
+        { "text": "Toast fennel seeds over medium heat for 5 mins and grind." },
+        { "text": "Cut pork into small pieces and mix with all spices." },
+        { "text": "Refrigerate for 1 hour." },
+        { "text": "Grind with a fine blade and stuff meat into casing." },
+        { "text": "Make twists every hand length, fold in parchment and refrigerate for 3 hours." },
+        { "text": "Boil in &frac14;\" water in lidded pot for 10 mins." },
+        { "text": "Remove lid from pot and brown each side of sausage for 2 mins." }
     ]
 }

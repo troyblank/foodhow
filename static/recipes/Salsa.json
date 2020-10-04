@@ -11,7 +11,7 @@
         "1 tsp salt"
     ],
     "directions": [
-        "Chop up produce, and in batches process to desired consistency.",
-        "Put all ingredients in a sauce pot, boil, then reduce heat to low for 15 mins."
+        { "text": "Chop up produce, and in batches process to desired consistency." },
+        { "text": "Put all ingredients in a sauce pot, boil, then reduce heat to low for 15 mins." }
     ]
 }

@@ -12,9 +12,9 @@
         "2 tsp salt"
     ],
     "directions": [
-        "heat oil in a giant sauce pan and maintain at 375°.",
-        "Cut onion in rings and toss in &frac14 cup of flour.",
-        "Mix rest on ingredients togthere into a batter.",
-        "Dip onions in batter and fry one or two at a time in oil for 2 mins each flipping mid way through."
+        { "text": "heat oil in a giant sauce pan and maintain at 375°." },
+        { "text": "Cut onion in rings and toss in &frac14 cup of flour." },
+        { "text": "Mix rest on ingredients together into a batter." },
+        { "text": "Dip onions in batter and fry one or two at a time in oil for 2 mins each flipping mid way through." }
     ]
 }

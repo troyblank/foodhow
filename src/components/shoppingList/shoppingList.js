@@ -39,6 +39,9 @@ export default class ShoppingList extends PureComponent {
         const hasCheckedIngredients = 0 < checked.length;
         const hasNoIngredients = 0 === shoppingList.length;
 
+        console.log('+++++++++++++++++++++++++++++');
+        console.log(notChecked);
+
         return (
           <section className={'shopping-list'}>
             {hasNoIngredients && (

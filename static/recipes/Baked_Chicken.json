@@ -9,8 +9,8 @@
         "Salt"
     ],
     "directions": [
-        "Cut up chicken and place in a baking dish.",
-        "Apply liberal amounts of spices and oil.",
-        "Cook at 350° for one hour basting with oil every 10 mins."
+        { "text": "Cut up chicken and place in a baking dish." },
+        { "text": "Apply liberal amounts of spices and oil." },
+        { "text": "Cook at 350° for one hour basting with oil every 10 mins." }
     ]
 }

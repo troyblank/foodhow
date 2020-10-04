@@ -8,7 +8,7 @@
         "2 cups frozen cherries"
     ],
     "directions": [
-        "Cook oatmeal and peel and chop up apple.",
-        "Blend ingredients togthere."
+        { "text": "Cook oatmeal and peel and chop up apple." },
+        { "text": "Blend ingredients together." }
     ]
 }

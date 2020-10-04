@@ -7,9 +7,9 @@
         "1 TBSP olive oil"
     ],
     "directions": [
-        "Remove green steams and shred, dice one of the garlic gloves, crush the rest and set aside.",
-        "Cover bottom of a deep skillet with olive oil, and get hot under medium heat.",
-        "Sautee the crushed garlic for 5 mins then remove garlic.",
-        "Add greens then diced garlic and sautee until wilted."
+        { "text": "Remove green steams and shred, dice one of the garlic gloves, crush the rest and set aside." },
+        { "text": "Cover bottom of a deep skillet with olive oil, and get hot under medium heat." },
+        { "text": "Sautee the crushed garlic for 5 mins then remove garlic." },
+        { "text": "Add greens then diced garlic and sautéed until wilted." }
     ]
 }

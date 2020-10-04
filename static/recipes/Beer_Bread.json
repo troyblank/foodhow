@@ -11,8 +11,8 @@
         "2 tsp Italian herbs (spice mix)"
     ],
     "directions": [
-        "Mix ingredients.",
-        "Pam loaf pan and pour ingredients in.",
-        "Cook 350° for 1 hour."
+        { "text": "Mix ingredients." },
+        { "text": "Pam loaf pan and pour ingredients in." },
+        { "text": "Cook 350° for 1 hour." }
     ]
 }

@@ -11,8 +11,8 @@
         "2 tsp salt"
     ],
     "directions": [
-        "Cook hazelnuts on medium high in a skillet for 5 mins.",
-        "Remove most of hazelnut skins by rubbing inside of a towel.",
-        "Mix all ingredients using a food processor until roughly smooth"
+        { "text": "Cook hazelnuts on medium high in a skillet for 5 mins." },
+        { "text": "Remove most of hazelnut skins by rubbing inside of a towel." },
+        { "text": "Mix all ingredients using a food processor until roughly smooth" }
     ]
 }

@@ -14,6 +14,6 @@
         "&frac12; tsp pepper"
     ],
     "directions": [
-        "Combine all ingredients, cover and refrigerate for at least a half hour."
+        { "text": "Combine all ingredients, cover and refrigerate for at least a half hour." }
     ]
 }

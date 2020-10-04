@@ -15,14 +15,14 @@
         "&frac14; tsp salt"
     ],
     "directions": [
-        "Cut chicken breast into 4 cutlets.",
-        "Coat chicken with flour, marjoram, pepper, and salt mixture, set aside remaining mixture.",
-        "Add half of the butter to a large deep pan over medium high heat.",
-        "Saute the mushrooms and onions for 10 mins then set aside.",
-        "Add rest of butter to the pan and lower heat to medium.",
-        "Brown each side of the chicken, adding mushrooms and onions after first flip",
-        "Add the chicken broth and wine, reduce heat to low and cover for 5 mins",
-        "Add remaing flour mixture to thicken the sauce.",
-        "Sprinkle parsley on top of chicken before serving."
+        { "text": "Cut chicken breast into 4 cutlets." },
+        { "text": "Coat chicken with flour, marjoram, pepper, and salt mixture, set aside remaining mixture." },
+        { "text": "Add half of the butter to a large deep pan over medium high heat." },
+        { "text": "Saute the mushrooms and onions for 10 mins then set aside." },
+        { "text": "Add rest of butter to the pan and lower heat to medium." },
+        { "text": "Brown each side of the chicken, adding mushrooms and onions after first flip" },
+        { "text": "Add the chicken broth and wine, reduce heat to low and cover for 5 mins" },
+        { "text": "Add remaining flour mixture to thicken the sauce." },
+        { "text": "Sprinkle parsley on top of chicken before serving." }
     ]
 }

@@ -1,5 +1,5 @@
 {
-    "title": "Kethcup Relish",
+    "title": "Ketchup Relish",
     "meta": "",
     "ingredients": [
         "1 yellow onion",
@@ -13,9 +13,9 @@
         "&frac34; cup baby dill pickles"
     ],
     "directions": [
-        "Process, &frac12; cup onion, pepper, garlic, tomatoes, vinegar, molasses, and black pepper until smooth.",
-        "Pour mixture into a saucepot and cook at medium low heat for 25 mins, stirring occasionally.",
-        "Pour into a covered container and refigerate for 1 hour.",
-        "Pulse mixture, &frac14; cup onion, pickles, and mustard until desired smoothness."
+        { "text": "Process, &frac12; cup onion, pepper, garlic, tomatoes, vinegar, molasses, and black pepper until smooth." },
+        { "text": "Pour mixture into a sauce pot and cook at medium low heat for 25 mins, stirring occasionally." },
+        { "text": "Pour into a covered container and refrigerate for 1 hour." },
+        { "text": "Pulse mixture, &frac14; cup onion, pickles, and mustard until desired smoothness." }
     ]
 }

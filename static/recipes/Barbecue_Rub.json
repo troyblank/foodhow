@@ -2,7 +2,7 @@
     "title": "Barbecue Rub",
     "meta": "",
     "ingredients": [
-        "&frac14; cup turbinado sugar",
+        "&frac14; cup Turbinado Sugar",
         "1 TBSP brown sugar",
         "&frac14; cup paprika",
         "3 TBSP Cajun seasoning",
@@ -11,6 +11,6 @@
         "1 &frac12; tsp cumin"
     ],
     "directions": [
-        "Whisk all ingredients together."
+        { "text": "Whisk all ingredients together." }
     ]
 }

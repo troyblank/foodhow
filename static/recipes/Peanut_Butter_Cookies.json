@@ -13,12 +13,12 @@
         "&frac12; tsp salt"
     ],
     "directions": [
-        "Preheat oven to 350.",
-        "Cream together butter, sugar, and peanut butter with a mixer.",
-        "Beat the eggs with vanilla and add to mixer.",
-        "Slowly add flour, baking soda, salt and peanut butter chips.",
-        "Roll into walnut sized balls and place on greased cookie sheets.",
-        "Using a fork press each ball in two directions, dipping fork in water to prevent sticking.",
-        "Cook for 13.5 mins, cool on wire rack."
+        { "text": "Preheat oven to 350." },
+        { "text": "Cream together butter, sugar, and peanut butter with a mixer." },
+        { "text": "Beat the eggs with vanilla and add to mixer." },
+        { "text": "Slowly add flour, baking soda, salt and peanut butter chips." },
+        { "text": "Roll into walnut sized balls and place on greased cookie sheets." },
+        { "text": "Using a fork press each ball in two directions, dipping fork in water to prevent sticking." },
+        { "text": "Cook for 13.5 mins, cool on wire rack." }
     ]
 }

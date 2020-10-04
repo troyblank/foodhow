@@ -19,14 +19,14 @@
 
     ],
     "directions": [
-        "Bake chicken at 350° for 1 hour.",
-        "Melt ghee in a dutch oven and sautee onion over medium-high heat until golden brown.",
-        "Add ginger, garlic, and jalapeño and cook for 1 min.",
-        "Add puree and spices and cook for 3 mins.",
-        "Reduce heat to low and add butter and stir till melted.",
-        "Remove pot from heat and mix in oil and cover.",
-        "After letting chicken cool, cut into bite sized pieces throw into sauce.",
-        "Cook covered at 350° for 15 mins, remove lid and bake for an additional 7 mins.",
-        "Sprinkle with clinatro."
+        { "text": "Bake chicken at 350° for 1 hour." },
+        { "text": "Melt ghee in a Dutch oven and sautee onion over medium-high heat until golden brown." },
+        { "text": "Add ginger, garlic, and jalapeño and cook for 1 min." },
+        { "text": "Add puree and spices and cook for 3 mins." },
+        { "text": "Reduce heat to low and add butter and stir till melted." },
+        { "text": "Remove pot from heat and mix in oil and cover." },
+        { "text": "After letting chicken cool, cut into bite sized pieces throw into sauce." },
+        { "text": "Cook covered at 350° for 15 mins, remove lid and bake for an additional 7 mins." },
+        { "text": "Sprinkle with cilantro." }
     ]
 }

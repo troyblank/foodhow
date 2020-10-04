@@ -14,12 +14,12 @@
         "1 tsp salt"
     ],
     "directions": [
-        "Mince onions and garlic. Slice sausage.",
-        "In an oven-safe skillet fry sausage and yellow onions with olive oil over medium heat for 4 minutes, stirring regularly.",
-        "Add garlic and fry for 30 seconds.",
-        "Add broth, Ro-Tel, uncooked pasta, salt and pepper and bring to a boil.",
-        "Reduce heat to medium low and simmer for 15 mins.",
-        "Remove from heat and stir in half of the cheese.",
-        "Sprinkle remaining cheese and green onions on top and broil in the oven for 2 mins."
+        { "text": "Mince onions and garlic. Slice sausage." },
+        { "text": "In an oven-safe skillet fry sausage and yellow onions with olive oil over medium heat for 4 minutes, stirring regularly." },
+        { "text": "Add garlic and fry for 30 seconds." },
+        { "text": "Add broth, Ro-Tel, uncooked pasta, salt and pepper and bring to a boil." },
+        { "text": "Reduce heat to medium low and simmer for 15 mins." },
+        { "text": "Remove from heat and stir in half of the cheese." },
+        { "text": "Sprinkle remaining cheese and green onions on top and broil in the oven for 2 mins." }
     ]
 }

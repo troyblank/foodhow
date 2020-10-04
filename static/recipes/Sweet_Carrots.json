@@ -10,10 +10,10 @@
         "4 tsp minced chives"
     ],
     "directions": [
-        "Place peeled and diced carrots in a steamer basket",
-        "Boil water in a medium pot, then steam carrots for 23 mins",
-        "Place carrots in skillet and cook on medium heat",
-        "Toss in butter, salt, sugar, and lime juice till coated",
-        "Dump carrots in a bowl and top with chives"
+        { "text": "Place peeled and diced carrots in a steamer basket." },
+        { "text": "Boil water in a medium pot, then steam carrots for 23 mins." },
+        { "text": "Place carrots in skillet and cook on medium heat." },
+        { "text": "Toss in butter, salt, sugar, and lime juice till coated." },
+        { "text": "Dump carrots in a bowl and top with chives." }
     ]
 }

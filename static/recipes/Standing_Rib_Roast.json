@@ -7,12 +7,12 @@
         "1 TBSP salt"
     ],
     "directions": [
-        "Put meat in a container with small holes and let dry in frige for 3 days.",
-        "Rub meat with salt and then oil.",
-        "Set oven to 250°, cook meat until center reaches 118° (About 5 hours).",
-        "Let meat sit until the temperature of the meat stops to rise.",
-        "Set oven to 500°.",
-        "Cook for an additional 10 mins.",
-        "Remove ribs and extra fat."
+        { "text": "Put meat in a container with small holes and let dry in fridge for 3 days." },
+        { "text": "Rub meat with salt and then oil." },
+        { "text": "Set oven to 250°, cook meat until center reaches 118° (About 5 hours)." },
+        { "text": "Let meat sit until the temperature of the meat stops to rise." },
+        { "text": "Set oven to 500°." },
+        { "text": "Cook for an additional 10 mins." },
+        { "text": "Remove ribs and extra fat." }
     ]
 }

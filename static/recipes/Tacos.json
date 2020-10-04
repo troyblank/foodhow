@@ -12,12 +12,12 @@
         "2 TBSP taco seasoning"
     ],
     "directions": [
-        "Boil breasts for 5 mins then cover with oil.",
-        "Cook breasts on grill, 7 mins per side.",
-        "Chop up the onion and pepper into tiny bits place in bowls.",
-        "Grate the cheese and place into bowl.",
-        "Cut up chicken into tiny bits and mix with taco seasoning.",
-        "Heat tortillas in microwave for 15 seconds.",
-        "Serve with sliced limes."
+        { "text": "Boil breasts for 5 mins then cover with oil." },
+        { "text": "Cook breasts on grill, 7 mins per side." },
+        { "text": "Chop up the onion and pepper into tiny bits place in bowls." },
+        { "text": "Grate the cheese and place into bowl." },
+        { "text": "Cut up chicken into tiny bits and mix with taco seasoning." },
+        { "text": "Heat tortillas in microwave for 15 seconds." },
+        { "text": "Serve with sliced limes." }
     ]
 }

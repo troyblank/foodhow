@@ -9,9 +9,9 @@
         "1&frac12; tsp salt"
     ],
     "directions": [
-        "Mix eggs, oil, and salt into middle of flour.",
-        "Knead until a good consistency.",
-        "Let stand at room temperature covered by a towel for 20 mins.",
-        "Boil pasta for 3 mins"
+        { "text": "Mix eggs, oil, and salt into middle of flour." },
+        { "text": "Knead until a good consistency." },
+        { "text": "Let stand at room temperature covered by a towel for 20 mins." },
+        { "text": "Boil pasta for 3 mins" }
     ]
 }

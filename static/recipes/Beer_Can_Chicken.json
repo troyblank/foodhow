@@ -14,14 +14,14 @@
         "1 tsp onion powder"
     ],
     "directions": [
-        "In a small bowl whisk together the butter, vinegar, &frac14; cup cajun seasoning, garlic powder, and onion powder.",
-        "Use a meat injecting syringe to inject bowl contents into various spots of the chicken.",
-        "Rub the chicken all over with a &frac12; cup olive oil and a generous layer of cajon seasoning.",
-        "Discard half of the beer and put the can in the chicken's cavity and set it upright.",
-        "Heat smoker to 250°.",
-        "Make a mop by the pouring cider and &frac12; cup olive oil into a spray bottle.",
-        "Smoke chicken for about 3 hours until it raches 165°",
-        "Add applewood chips every 30 mins up to an hour.",
-        "Spray chicken with the mop every 30 minutes."
+        { "text": "In a small bowl whisk together the butter, vinegar, &frac14; cup cajun seasoning, garlic powder, and onion powder." },
+        { "text": "Use a meat injecting syringe to inject bowl contents into various spots of the chicken." },
+        { "text": "Rub the chicken all over with a &frac12; cup olive oil and a generous layer of cajon seasoning." },
+        { "text": "Discard half of the beer and put the can in the chicken's cavity and set it upright." },
+        { "text": "Heat smoker to 250°." },
+        { "text": "Make a mop by the pouring cider and &frac12; cup olive oil into a spray bottle." },
+        { "text": "Smoke chicken for about 3 hours until it reaches 165°" },
+        { "text": "Add Applewood chips every 30 mins up to an hour." },
+        { "text": "Spray chicken with the mop every 30 minutes." }
     ]
 }

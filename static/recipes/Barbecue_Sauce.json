@@ -11,12 +11,12 @@
         "2 TBSP dijon mustard",
         "2 TBSP Worcestershire sauce",
         "1 TBSP garlic powder",
-        "1 TBSP onion poweder",
+        "1 TBSP onion powder",
         "1 tsp salt",
         "1 tsp pepper"
     ],
     "directions": [
-        "Put all ingredients in a pot.",
-        "Simmer on med-high for 25 mins."
+        { "text": "Put all ingredients in a pot." },
+        { "text": "Simmer on med-high for 25 mins." }
     ]
 }

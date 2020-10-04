@@ -6,7 +6,7 @@ import { toggleIngredientOnList } from './actions';
 import './ingredient.scss';
 
 export const extractLink = (text) => {
-    const regex = /^\[([\w\s\d]+)\]\(((?:\/|https?:\/\/)[\w\d./?=#]+)\)$/;
+    const regex = /^\[([\w\s\d&;]+)\]\(((?:\/)[\w\d./?=#]+)\)$/;
     const match = text.match(regex);
 
     if (match) {
@@ -58,7 +58,7 @@ export default class Ingredient extends PureComponent {
               />}
             { link &&
               <Link href={link.url}>
-                <a>{link.label}</a>
+                <a dangerouslySetInnerHTML={{ __html: dompurify.sanitize(link.label) }} />
               </Link>}
           </li>
         );

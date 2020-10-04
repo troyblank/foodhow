@@ -17,12 +17,12 @@
         "1 cup salt"
     ],
     "directions": [
-        "In a plastic container put salt, sugar, peppercorns, and mustard powder.",
-        "Heat up vinegar in microwave for a min then add to container, swirl and sit for 7 mins.",
-        "Add 1 pound ice cubes, shake, add chops and refrigerate for 2 hours.",
-        "Mix rest of ingredients in a bowl, chopping or crumbling everything into small bits.",
-        "Cut horizontal pockets into chops, make pocket big but hole small.",
-        "Fill each chop with cornbread mixture.",
-        "Grill them on medium high heat for 6 mins per side, turning after 3 minutes."
+        { "text": "In a plastic container put salt, sugar, peppercorns, and mustard powder." },
+        { "text": "Heat up vinegar in microwave for a min then add to container, swirl and sit for 7 mins." },
+        { "text": "Add 1 pound ice cubes, shake, add chops and refrigerate for 2 hours." },
+        { "text": "Mix rest of ingredients in a bowl, chopping or crumbling everything into small bits." },
+        { "text": "Cut horizontal pockets into chops, make pocket big but hole small." },
+        { "text": "Fill each chop with cornbread mixture." },
+        { "text": "Grill them on medium high heat for 6 mins per side, turning after 3 minutes." }
     ]
 }

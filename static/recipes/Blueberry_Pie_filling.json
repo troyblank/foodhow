@@ -13,10 +13,10 @@
         "&frac12; tsp cinnamon"
     ],
     "directions": [
-        "In a skillet over med heat cook thinly sliced pears tossing for 2 mins.",
-        "Add the vinegar and toss for 30 seconds.",
-        "Add sugar, nutmeg, cinnamon and half of the butter, stir.",
-        "Add blueberries, sprinkle on flour and allow to cool to room temperature.",
-        "Use remaining diced butter and pound cake as a bed when pouring ingredients into pie."
+        { "text": "In a skillet over med heat cook thinly sliced pears tossing for 2 mins." },
+        { "text": "Add the vinegar and toss for 30 seconds." },
+        { "text": "Add sugar, nutmeg, cinnamon and half of the butter, stir." },
+        { "text": "Add blueberries, sprinkle on flour and allow to cool to room temperature." },
+        { "text": "Use remaining diced butter and pound cake as a bed when pouring ingredients into pie." }
     ]
 }

@@ -13,9 +13,9 @@
         "2 tsp salt"
     ],
     "directions": [
-        "Dice pork and fat into small pieces.",
-        "Combine all ingredients and let chill for 1 hour.",
-        "Grind with a fine blade and form into 1 inch patties.",
-        "Cook patties for 7.5 mins each side on medium low heat."
+        { "text": "Dice pork and fat into small pieces." },
+        { "text": "Combine all ingredients and let chill for 1 hour." },
+        { "text": "Grind with a fine blade and form into 1 inch patties." },
+        { "text": "Cook patties for 7.5 mins each side on medium low heat." }
     ]
 }

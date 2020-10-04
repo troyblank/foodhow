@@ -16,12 +16,12 @@
         "Salt and pepper to taste"
     ],
     "directions": [
-        "Boil pasta al dente.",
-        "Brown ground beef, then add onion and garlic, let cool.",
-        "Combine meat, mozzarella, bread crumbs, egg, parsley, salt, and pepper.",
-        "Mix spaghetti sauce with tomato sauce, use &frac14; of it to cover botton of a casserole dish.",
-        "Stuff cooked shells with the meat mixture and place in rows in the dish.",
-        "Cover shells with sauce and sprinkle with parmesan.",
-        "Bake for 23 mins at 400&deg;."
+        { "text": "Boil pasta al dente." },
+        { "text": "Brown ground beef, then add onion and garlic, let cool." },
+        { "text": "Combine meat, mozzarella, bread crumbs, egg, parsley, salt, and pepper." },
+        { "text": "Mix spaghetti sauce with tomato sauce, use &frac14; of it to cover bottom of a casserole dish." },
+        { "text": "Stuff cooked shells with the meat mixture and place in rows in the dish." },
+        { "text": "Cover shells with sauce and sprinkle with parmesan." },
+        { "text": "Bake for 23 mins at 400&deg;." }
     ]
 }

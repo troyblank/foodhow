@@ -6,10 +6,10 @@
         "4 cups sugar"
     ],
     "directions": [
-        "Process raspberries and &frac12; cup of water until smooth.",
-        "Strain out raspberries seeds, refrigerate juice overnight.",
-        "Boil 2 cups water with sugar with medium high heat stirring for 10 mins making simple syrup.",
-        "Transfer simple syrup to an ice batch and stir until well chilled. Refrigerate until ready to use.",
-        "Mix raspberry mixture and simple syrup in an ice cream maker for 12 mins, and let freeze overnight."
+        { "text": "Process raspberries and &frac12; cup of water until smooth." },
+        { "text": "Strain out raspberries seeds, refrigerate juice overnight." },
+        { "text": "Boil 2 cups water with sugar with medium high heat stirring for 10 mins making simple syrup." },
+        { "text": "Transfer simple syrup to an ice batch and stir until well chilled. Refrigerate until ready to use." },
+        { "text": "Mix raspberry mixture and simple syrup in an ice cream maker for 12 mins, and let freeze overnight." }
     ]
 }

@@ -10,10 +10,10 @@
         "1 TBSP salt"
     ],
     "directions": [
-        "Mix 8 TBSP of water and 4 TBSP of the seasoning, let stand for 10 min.",
-        "Add juice of lemon and salt.",
-        "Rub seasoning mixture on meat and grill over medium heat until fully cooked.",
-        "To make sauce combine tomato sauce with lime and 1 TBSP of seasoning.",
-        "Use sauce to baste on chicken after cooked."
+        { "text": "Mix 8 TBSP of water and 4 TBSP of the seasoning, let stand for 10 min." },
+        { "text": "Add juice of lemon and salt." },
+        { "text": "Rub seasoning mixture on meat and grill over medium heat until fully cooked." },
+        { "text": "To make sauce combine tomato sauce with lime and 1 TBSP of seasoning." },
+        { "text": "Use sauce to baste on chicken after cooked." }
     ]
 }

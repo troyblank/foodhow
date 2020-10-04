@@ -28,16 +28,16 @@
         "some brandy"
     ],
     "directions": [
-        "Get zest from lemon and orange. Chop up apricots and candied ginger.",
-        "Combine all dried fruits, candied ginger, and zests. Add rum and let sit overnight in room temperature.",
-        "Process cloves and allspice.",
-        "Place fruit mixture in a large pot, and add sugar, butter, apple juice, and spices.",
-        "Bring to a boil while stirring, then reduce to a simmer for 10 mins.",
-        "Bring pot to room temperature, then heat oven to 325°",
-        "Sift in all dry ingredients while stirring, then add to a 10\" loaf pan.",
-        "Bake for 1 hour and 15 mins. Check for doneness with a toothpick.",
-        "Spritz top of cake with brandy.",
-        "Wait for cake to completely cool before removing from pan, about an hour.",
-        "Cake can be storred for a long time, spritz with brandy every 3 days if becoming dry."
+        { "text": "Get zest from lemon and orange. Chop up apricots and candied ginger." },
+        { "text": "Combine all dried fruits, candied ginger, and zests. Add rum and let sit overnight in room temperature." },
+        { "text": "Process cloves and allspice." },
+        { "text": "Place fruit mixture in a large pot, and add sugar, butter, apple juice, and spices." },
+        { "text": "Bring to a boil while stirring, then reduce to a simmer for 10 mins." },
+        { "text": "Bring pot to room temperature, then heat oven to 325°" },
+        { "text": "Sift in all dry ingredients while stirring, then add to a 10\" loaf pan." },
+        { "text": "Bake for 1 hour and 15 mins. Check for doneness with a toothpick." },
+        { "text": "Spritz top of cake with brandy." },
+        { "text": "Wait for cake to completely cool before removing from pan, about an hour." },
+        { "text": "Cake can be stored for a long time, spritz with brandy every 3 days if becoming dry." }
     ]
 }

@@ -12,12 +12,12 @@
         "1 tsp salt"
     ],
     "directions": [
-        "Mix dry ingredients then add shortening.",
-        "Add &frac23; cup cold water gradually, mix until pie crust consistency.",
-        "Knead until smooth on a floured board.",
-        "Cover with a tea towl for 5 mins.",
-        "Roll dough out &frac18;\" thick, then cut into 3\" squares.",
-        "Fry with oil in a medium pan a few at a time turning frequently till golden brown.",
-        "Drain oil from dough, cover with cinnamon and let dry"
+        { "Text": "Mix dry ingredients then add shortening." },
+        { "text": "Add &frac23; cup cold water gradually, mix until pie crust consistency." },
+        { "text": "Knead until smooth on a floured board." },
+        { "text": "Cover with a tea towel for 5 mins." },
+        { "text": "Roll dough out &frac18;\" thick, then cut into 3\" squares." },
+        { "text": "Fry with oil in a medium pan a few at a time turning frequently till golden brown." },
+        { "text": "Drain oil from dough, cover with cinnamon and let dry." }
     ]
 }

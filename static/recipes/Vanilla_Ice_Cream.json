@@ -1,6 +1,6 @@
 {
     "title": "Vanilla Ice Cream",
-    "meta": "Kitchen Aid Mixer attachement takes 30 mins on 'stir' setting.",
+    "meta": "Kitchen Aid Mixer attachment takes 30 mins on 'stir' setting.",
     "ingredients": [
         "2 cups Half and Half",
         "1 cup whipping cream",
@@ -10,10 +10,10 @@
         "Pinch of salt"
     ],
     "directions": [
-        "Split the bean, and scrape out the seeds.",
-        "Combine all ingredients in a pan, including the full bean.",
-        "Stir over low heat until the temperature hits 170°.",
-        "Remove the bean hull and refrigerate overnight.",
-        "Mix mixture in an ice cream maker, and freeze for at least 1 hour."
+        { "text": "Split the bean, and scrape out the seeds." },
+        { "text": "Combine all ingredients in a pan, including the full bean." },
+        { "text": "Stir over low heat until the temperature hits 170°." },
+        { "text": "Remove the bean hull and refrigerate overnight." },
+        { "text": "Mix mixture in an ice cream maker, and freeze for at least 1 hour." }
     ]
 }

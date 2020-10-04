@@ -25,11 +25,11 @@
         ]
     },
     "directions": [
-        "Process all chutney ingredients with &frac12; cup of water and set aside.",
-        "Boil potatoes for 25 mins, and corn for 10 mins.",
-        "Cook tortillas for 10 mins at 375° and then break into small pieces.",
-        "Prepare &frac12; cup of the chutney with &frac13; cup of water.",
-        "In a large bowl toss chutney water mixture with all ingredients minus the sev and tortilla",
-        "Right before serving toss in the sev and tortilla."
+        { "text": "Process all chutney ingredients with &frac12; cup of water and set aside." },
+        { "text": "Boil potatoes for 25 mins, and corn for 10 mins." },
+        { "text": "Cook tortillas for 10 mins at 375° and then break into small pieces." },
+        { "text": "Prepare &frac12; cup of the chutney with &frac13; cup of water." },
+        { "text": "In a large bowl toss chutney water mixture with all ingredients minus the sev and tortilla" },
+        { "text": "Right before serving toss in the sev and tortilla." }
     ]
 }

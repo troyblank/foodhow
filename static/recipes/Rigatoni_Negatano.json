@@ -13,13 +13,13 @@
         "10 oz rigatoni pasta"
     ],
     "directions": [
-        "Cut up chicken into bite sized pieces, cook and set aside.",
-        "Cut up zucchini and mushrooms, cook and set aside.",
-        "Cook pasta and set aside.",
-        "Heat olive oil on mid heat in a big pot.",
-        "Add chicken, noodles and marinara to pot and stir.",
-        "Add zucchini, mushrooms, garlic, and basil to pot and stir.",
-        "Add mozzarella slowly to pot and stir.",
-        "Stir regularly for 15 mins."
+        { "text": "Cut up chicken into bite sized pieces, cook and set aside." },
+        { "text": "Cut up zucchini and mushrooms, cook and set aside." },
+        { "text": "Cook pasta and set aside." },
+        { "text": "Heat olive oil on mid heat in a big pot." },
+        { "text": "Add chicken, noodles and marinara to pot and stir." },
+        { "text": "Add zucchini, mushrooms, garlic, and basil to pot and stir." },
+        { "text": "Add mozzarella slowly to pot and stir." },
+        { "text": "Stir regularly for 15 mins." }
     ]
 }

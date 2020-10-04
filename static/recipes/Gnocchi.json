@@ -9,12 +9,12 @@
         "pinch of ground pepper"
     ],
     "directions": [
-        "Place potato flakes in a medium bowl, pour in 1 cup boiling water, stir till blended, let cool.",
-        "Stir in beaten egg, salt and pepper, blend in enough flour until dough consistency.",
-        "Knead dough on well floured board.",
-        "Shape dough into long bread stick shapes.",
-        "Cut into bite size pieces.",
-        "Add pieces to boiling water.",
-        "As pieces rise to top, remove and let cool."
+        { "text": "Place potato flakes in a medium bowl, pour in 1 cup boiling water, stir till blended, let cool." },
+        { "text": "Stir in beaten egg, salt and pepper, blend in enough flour until dough consistency." },
+        { "text": "Knead dough on well floured board." },
+        { "text": "Shape dough into long bread stick shapes." },
+        { "text": "Cut into bite size pieces." },
+        { "text": "Add pieces to boiling water." },
+        { "text": "As pieces rise to top, remove and let cool." }
     ]
 }

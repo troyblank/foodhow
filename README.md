@@ -36,8 +36,8 @@ To add a recipe simply make a new json file in ```static/recipes``` that follows
             "&frac12; tsp spice"
         ],
         "directions": [
-            "Mash ingredient togthere.".
-            "Eat."
+            { "text": "Mash ingredient together." },
+            { "text": "Eat." }
         ]
     }
 

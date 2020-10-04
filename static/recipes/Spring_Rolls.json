@@ -17,16 +17,16 @@
         "Soy sauce"
     ],
     "directions": [
-        "Cook chicken breast, then cut into tiny strips, set aside.",
-        "Deseed the jalapeño and cut it with onion and garlic into tiny pieces in one bowl.",
-        "Cut all other veggies sans beansprouts into tiny pieces, then place into a bowl.",
-        "Add 2 TBSP of vegetable oil into wok and fry onion, garlic and jalapeño on medium for 1 min.",
-        "Raise wok to high temperature and thrown in chicken and fry till browned.",
-        "Throw all other veggies sans beansprouts and fry for 2 mins.",
-        "Turn off heat toss in beansprouts and seasme oil and leave to cool.",
-        "Prepare a small bowl of just the egg white, and cut filo sheets into thirds.",
-        "Add a small spoon full of stir fry to a sheet, while tucking the sides in roll the dough up and use egg white to seal.",
-        "Seperate rolls with parchment paper to chill in fridge for 15 mins.",
-        "Add rest of vegetable oil to wok on high, fry each roll 30 seconds for each side in batches."
+        { "text": "Cook chicken breast, then cut into tiny strips, set aside." },
+        { "text": "De-seed the jalapeño and cut it with onion and garlic into tiny pieces in one bowl." },
+        { "text": "Cut all other veggies sans beansprouts into tiny pieces, then place into a bowl." },
+        { "text": "Add 2 TBSP of vegetable oil into wok and fry onion, garlic and jalapeño on medium for 1 min." },
+        { "text": "Raise wok to high temperature and thrown in chicken and fry till browned." },
+        { "text": "Throw all other veggies sans beansprouts and fry for 2 mins." },
+        { "text": "Turn off heat toss in beansprouts and sesame oil and leave to cool." },
+        { "text": "Prepare a small bowl of just the egg white, and cut filo sheets into thirds." },
+        { "text": "Add a small spoon full of stir fry to a sheet, while tucking the sides in roll the dough up and use egg white to seal." },
+        { "text": "Separate rolls with parchment paper to chill in fridge for 15 mins." },
+        { "text": "Add rest of vegetable oil to wok on high, fry each roll 30 seconds for each side in batches." }
     ]
 }

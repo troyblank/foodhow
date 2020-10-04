@@ -15,9 +15,9 @@
         ]
     },
     "directions": [
-        "Mix all dough ingredients with a blender cutting butter in slowly.",
-        "Grease a 9 x 9 pan with butter and press half the dough into the bottom.",
-        "Spread filling in the middle and gently top with rest of dough.",
-        "Bake at 400° for 26 mins."
+        { "text": "Mix all dough ingredients with a blender cutting butter in slowly." },
+        { "text": "Grease a 9 x 9 pan with butter and press half the dough into the bottom." },
+        { "text": "Spread filling in the middle and gently top with rest of dough." },
+        { "text": "Bake at 400° for 26 mins." }
     ]
 }

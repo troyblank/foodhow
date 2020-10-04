@@ -13,12 +13,12 @@
         "&frac12; tsp black pepper"
     ],
     "directions": [
-        "Dice the carrorts, onion, and garlic.",
-        "In a pot at medium low heat add oil, garlic, and onions cook for 5 mins.",
-        "Add salt, pepper, curry paste, chopped carrots, and chicken broth.",
-        "Bring to a boil, then reduce to a medium low heat and cook for 25 mins.",
-        "Remove from the heat and add coconut milk and cool to room temperature.",
-        "Puree the mixture in a pitcher until smooth.",
-        "Heat up soup and serve."
+        { "text": "Dice the carrots, onion, and garlic." },
+        { "text": "In a pot at medium low heat add oil, garlic, and onions cook for 5 mins." },
+        { "text": "Add salt, pepper, curry paste, chopped carrots, and chicken broth." },
+        { "text": "Bring to a boil, then reduce to a medium low heat and cook for 25 mins." },
+        { "text": "Remove from the heat and add coconut milk and cool to room temperature." },
+        { "text": "Puree the mixture in a pitcher until smooth." },
+        { "text": "Heat up soup and serve." }
     ]
 }

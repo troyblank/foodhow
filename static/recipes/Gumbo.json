@@ -13,10 +13,10 @@
         "2 tsp thyme"
     ],
     "directions": [
-        "Chop meats and vegetables into tiny bits, set aside.",
-        "Heat oil over medium heat in a medium pot and slowly add flour for 15 mins.",
-        "Put broth in pot, boil then kill heat and cover to keep warm.",
-        "In a dutch over over medium high heat cook vegetables for 3 mins, sausages for 5 mins and then chicken for 5 mins.",
-        "Combine all ingredients to dutch oven and cook for 3 mins."
+        { "text": "Chop meats and vegetables into tiny bits, set aside." },
+        { "text": "Heat oil over medium heat in a medium pot and slowly add flour for 15 mins." },
+        { "text": "Put broth in pot, boil then kill heat and cover to keep warm." },
+        { "text": "In a Dutch oven over medium high heat cook vegetables for 3 mins, sausages for 5 mins and then chicken for 5 mins." },
+        { "text": "Combine all ingredients to Dutch oven and cook for 3 mins." }
     ]
 }

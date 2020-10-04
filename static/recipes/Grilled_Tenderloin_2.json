@@ -15,10 +15,10 @@
         "&frac12; tsp black pepper;"
     ],
     "directions": [
-        "Rinse and pat dry tenderloins. Juice oranges and limes.",
-        "Combine juice and all other ingredients and place in a zip lock bag.",
-        "refrigerate overnight.",
-        "Pat tenderloins dry, cover in olive oil and grill for 8mins per side.",
-        "Cover with foil, let rest for 5 mins, slice and serve."
+        { "text": "Rinse and pat dry tenderloins. Juice oranges and limes." },
+        { "text": "Combine juice and all other ingredients and place in a zip lock bag." },
+        { "text": "refrigerate overnight." },
+        { "text": "Pat tenderloins dry, cover in olive oil and grill for 8mins per side." },
+        { "text": "Cover with foil, let rest for 5 mins, slice and serve." }
     ]
 }

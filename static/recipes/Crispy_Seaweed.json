@@ -9,11 +9,11 @@
         "&frac14; tsp salt"
     ],
     "directions": [
-        "Wash greens and cut out stems.",
-        "Roll greens together and cut into thin strips.",
-        "Sugar and salt should be processed to a fine powder.",
-        "In a wok heat oil to 350°.",
-        "Deep fry greens in batches 1 min at a time and set on paper towel.",
-        "Sprinkle on sugar mixture and top with almonds."
+        { "text": "Wash greens and cut out stems." },
+        { "text": "Roll greens together and cut into thin strips." },
+        { "text": "Sugar and salt should be processed to a fine powder." },
+        { "text": "In a wok heat oil to 350°." },
+        { "text": "Deep fry greens in batches 1 min at a time and set on paper towel." },
+        { "text": "Sprinkle on sugar mixture and top with almonds." }
     ]
 }

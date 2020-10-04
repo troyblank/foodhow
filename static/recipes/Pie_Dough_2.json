@@ -8,8 +8,8 @@
         "5 TBSP milk"
     ],
     "directions": [
-        "Mix flour and butter with hands until butter is pea sized crumbles.",
-        "Add 3 TBSP milk and kneed, adding more milk to desired consistency.",
-        "Shape the dough into a disc and refrigerate for at least 20 mins in a plastic container."
+        { "text": "Mix flour and butter with hands until butter is pea sized crumbles." },
+        { "text": "Add 3 TBSP milk and kneed, adding more milk to desired consistency." },
+        { "text": "Shape the dough into a disc and refrigerate for at least 20 mins in a plastic container." }
     ]
 }

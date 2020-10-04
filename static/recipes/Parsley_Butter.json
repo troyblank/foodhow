@@ -3,10 +3,10 @@
     "meta": "Goes great on potatoes or steak.",
     "ingredients": [
         "4 TBSP butter",
-        "2 TSBP parsley",
-        "1 TSBP garlic powder"
+        "2 TBSP parsley",
+        "1 TBSP garlic powder"
     ],
     "directions": [
-        "Put all ingredients in a bowl and mash together."
+        { "text": "Put all ingredients in a bowl and mash together." }
     ]
 }

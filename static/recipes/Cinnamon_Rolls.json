@@ -16,18 +16,18 @@
         "2 TBSP ground cinnamon"
     ],
     "directions": [
-        "Mix, 1 cup milk, yeast, white sugar, salt, egg, and 3 TBSP butter using a dough hook on low speed.",
-        "Slowly add flour till incorporated then increase the speed to medium.",
-        "Add flour or water until dough is a good consistency.",
-        "Let dough rise in a lightly greased bowl covered with a towl for 1 hour.",
-        "Roll dough into a 12\"x18\" square.",
-        "In a small bowl whisk the brown sugar and cinnamon.",
-        "Brush dough with &frac12; cup melted butter and spread cinnamon mixture evenly on top.",
-        "Grease a 9\"x13\" pan.",
-        "Slice dough into long 1 inch segments rolling them up as they are cut and placing in pan.",
-        "Let rolls sit and rise for 30 mins more.",
-        "Bake rolls at 325° for 30 mins.",
-        "To make glaze, mix &frac34; cup milk with whipped cream, powdered sugar and pudding mix until thick.",
-        "Cover rolls with glaze."
+        { "text": "Mix, 1 cup milk, yeast, white sugar, salt, egg, and 3 TBSP butter using a dough hook on low speed." },
+        { "text": "Slowly add flour till incorporated then increase the speed to medium." },
+        { "text": "Add flour or water until dough is a good consistency." },
+        { "text": "Let dough rise in a lightly greased bowl covered with a towel for 1 hour." },
+        { "text": "Roll dough into a 12\"x18\" square." },
+        { "text": "In a small bowl whisk the brown sugar and cinnamon." },
+        { "text": "Brush dough with &frac12; cup melted butter and spread cinnamon mixture evenly on top." },
+        { "text": "Grease a 9\"x13\" pan." },
+        { "text": "Slice dough into long 1 inch segments rolling them up as they are cut and placing in pan." },
+        { "text": "Let rolls sit and rise for 30 mins more." },
+        { "text": "Bake rolls at 325° for 30 mins." },
+        { "text": "To make glaze, mix &frac34; cup milk with whipped cream, powdered sugar and pudding mix until thick." },
+        { "text": "Cover rolls with glaze." }
     ]
 }

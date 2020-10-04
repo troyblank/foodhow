@@ -7,6 +7,6 @@
         "1 oz grenadine"
     ],
     "directions": [
-        "Mix ingredients togthere in a cocktail shaker."
+        { "text": "Mix ingredients together in a cocktail shaker." }
     ]
 }

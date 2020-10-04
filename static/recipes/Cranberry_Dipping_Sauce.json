@@ -11,7 +11,7 @@
         "&frac12; tsp salt"
     ],
     "directions": [
-        "Combine all ingredients and simmer for 45 mins.",
-        "Let cool and smooth out in a food processor."
+        { "text": "Combine all ingredients and simmer for 45 mins." },
+        { "text": "Let cool and smooth out in a food processor." }
     ]
 }

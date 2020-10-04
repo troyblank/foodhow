@@ -7,11 +7,11 @@
         "steak seasoning"
     ],
     "directions": [
-        "Heat Oven to 500&deg; with iron skillet inside.",
-        "Let steaks come to room temperature, rub with spices then coat with oil.",
-        "Cook each side of the steaks on a high stove top burner for 30 sec a side.",
-        "Flip steaks and place them in oven and cook them 2 min a side.",
-        "If steaks do not meet 130&deg; internaly keep cooking them until they do at 2 min intervals.",
-        "Let steaks cool down under foil for 3 min after temperature is reached."
+        { "text": "Heat Oven to 500&deg; with iron skillet inside." },
+        { "text": "Let steaks come to room temperature, rub with spices then coat with oil." },
+        { "text": "Cook each side of the steaks on a high stove top burner for 30 sec a side." },
+        { "text": "Flip steaks and place them in oven and cook them 2 min a side." },
+        { "text": "If steaks do not meet 130&deg; internally keep cooking them until they do at 2 min intervals." },
+        { "text": "Let steaks cool down under foil for 3 min after temperature is reached." }
     ]
 }

@@ -12,14 +12,14 @@
         "&frac14; cup salt"
     ],
     "directions": [
-        "Cover butt with mustard and then the rub.",
-        "Refrigrate overnight.",
-        "Let meat stand at room temperature for 1 hour.",
-        "coat outside with ancho chili powder.",
-        "Combine apple juice, vinegar and salt and inject into meat.",
-        "Smoke at 200° with hickory wood smoke for 11 hours.",
-        "Double wrap the meat with foil.",
-        "Smoke at 275° until meat reaches 195° (about 5 hours).",
-        "Let meat rest for 1 hour and then shred it."
+        { "text": "Cover butt with mustard and then the rub." },
+        { "text": "Refrigerate overnight." },
+        { "text": "Let meat stand at room temperature for 1 hour." },
+        { "text": "coat outside with ancho chili powder." },
+        { "text": "Combine apple juice, vinegar and salt and inject into meat." },
+        { "text": "Smoke at 200° with hickory wood smoke for 11 hours." },
+        { "text": "Double wrap the meat with foil." },
+        { "text": "Smoke at 275° until meat reaches 195° (about 5 hours)." },
+        { "text": "Let meat rest for 1 hour and then shred it." }
     ]
 }

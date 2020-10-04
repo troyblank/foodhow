@@ -1,5 +1,5 @@
 {
-    "title": "Potatoe And Egg",
+    "title": "Potato And Egg",
     "meta": "",
     "ingredients": [
         "1 lb potatoes",
@@ -12,10 +12,10 @@
         "pinch of pepper"
     ],
     "directions": [
-        "Coarsley grate potatoes and pat dry with a kitchen towel.",
-        "Heat 2 TBSP oil in a wok and fry potatoes for 10 mins, transfer to paper towels.",
-        "Chop bacon into small pieces and cook in wok till crisp.",
-        "Combine bacon, potatoes, rosemary, and nutmeg, set aside.",
-        "Using 1 TBSP oil fry eggs and place on top of potatoe composition."
+        { "text": "Coarsely grate potatoes and pat dry with a kitchen towel." },
+        { "text": "Heat 2 TBSP oil in a wok and fry potatoes for 10 mins, transfer to paper towels." },
+        { "text": "Chop bacon into small pieces and cook in wok till crisp." },
+        { "text": "Combine bacon, potatoes, rosemary, and nutmeg, set aside." },
+        { "text": "Using 1 TBSP oil fry eggs and place on top of potato composition." }
     ]
 }

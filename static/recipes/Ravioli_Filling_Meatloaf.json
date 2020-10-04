@@ -17,8 +17,8 @@
         "&frac34; tsp kosher salt"
     ],
     "directions": [
-        "Process croutons and spices togthere.",
-        "Process all vegtables to small bits, do not puree.",
-        "Add all ingredients to bowl and work in without squeezing."
+        { "text": "Process croutons and spices together." },
+        { "text": "Process all vegetables to small bits, do not puree." },
+        { "text": "Add all ingredients to bowl and work in without squeezing." }
     ]
 }

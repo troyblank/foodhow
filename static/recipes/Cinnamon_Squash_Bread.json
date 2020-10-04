@@ -14,12 +14,12 @@
         "1 tsp salt"
     ],
     "directions": [
-        "Grate squash down to 2 cups worth.",
-        "Blend eggs while adding oil, sugar, squash and vanilla until smooth.",
-        "Shift togthere the flour, baking powder, cinnamon and salt.",
-        "Blend the flour mixture into the wet mixture.",
-        "Chop nuts up and fold into mixture.",
-        "Grease two 8.5 x 4.5\" loaf pans and pour mixture evenly between the two.",
-        "Bake at 325 ° for 55 minutes."
+        { "text": "Grate squash down to 2 cups worth." },
+        { "text": "Blend eggs while adding oil, sugar, squash and vanilla until smooth." },
+        { "text": "Shift together the flour, baking powder, cinnamon and salt." },
+        { "text": "Blend the flour mixture into the wet mixture." },
+        { "text": "Chop nuts up and fold into mixture." },
+        { "text": "Grease two 8.5 x 4.5\" loaf pans and pour mixture evenly between the two." },
+        { "text": "Bake at 325 ° for 55 minutes." }
     ]
 }

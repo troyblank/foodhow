@@ -12,13 +12,13 @@
         "&frac14; tsp salt"
     ],
     "directions": [
-        "In a baking dish rub lamb with garlic, thyme, salt, pepper and 2 TBSP olive oil.",
-        "Let lamb rest for 30 mins.",
-        "Proccess pistachios until a crust consistency, and spread out on a large plate.",
-        "Preheat oven to 400°, and heat a large skillet with medium high heat and 1 TBSP oil.",
-        "Brown both sides of the lamb for 5 mins each sides.",
-        "Rub meat with mustard and roll both sides in nuts.",
-        "Roast meat in oven for about 15 mins till lamb is 140°.",
-        "Let meat rest for 10 mins before cutting the individual chops."
+        { "text": "In a baking dish rub lamb with garlic, thyme, salt, pepper and 2 TBSP olive oil." },
+        { "text": "Let lamb rest for 30 mins." },
+        { "text": "Process pistachios until a crust consistency, and spread out on a large plate." },
+        { "text": "Preheat oven to 400°, and heat a large skillet with medium high heat and 1 TBSP oil." },
+        { "text": "Brown both sides of the lamb for 5 mins each sides." },
+        { "text": "Rub meat with mustard and roll both sides in nuts." },
+        { "text": "Roast meat in oven for about 15 mins till lamb is 140°." },
+        { "text": "Let meat rest for 10 mins before cutting the individual chops." }
     ]
 }

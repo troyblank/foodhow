@@ -6,14 +6,14 @@
         "1 TBSP fresh lemon juice",
         "1 TBSP balsamic vinegar",
         "4 TBSP olive oil",
-        "&frac14; cup seasame seeds toasted",
+        "&frac14; cup sesame seeds toasted",
         "&frac18; tsp black pepper",
         "&frac14; tsp salt"
     ],
     "directions": [
-        "In a food processor pulse seasame seeds a few times.",
-        "Add a pinch of salt and 1 TBSP olive oil slowly while processing for about 20 seconds.",
-        "Cut garlic into small pieces and add to processor with vingegar, lemon juice, salt and pepper.",
-        "Process for 30 seconds while slowly adding 3 TBSP olive oil."
+        { "text": "In a food processor pulse sesame seeds a few times." },
+        { "text": "Add a pinch of salt and 1 TBSP olive oil slowly while processing for about 20 seconds." },
+        { "text": "Cut garlic into small pieces and add to processor with vinegar, lemon juice, salt and pepper." },
+        { "text": "Process for 30 seconds while slowly adding 3 TBSP olive oil." }
     ]
 }

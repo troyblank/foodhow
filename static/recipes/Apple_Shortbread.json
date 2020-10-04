@@ -14,14 +14,14 @@
         "&frac14; tsp salt"
     ],
     "directions": [
-        "Preheat oven to 400°.",
-        "Mix flour, 2 sticks butter sliced, baking powder, salt, and &frac14; tsp nutmeg with hands till pea sized.",
-        "Press dough into a 9x13 pan and poke with a fork several times, cook for 15 mins.",
-        "Make 6 cups of sliced peeled apples",
-        "Mix apples with &frac12; cup sugar, 3 tsp cinnamon and &frac12; tsp nutmeg.",
-        "After dough is cooked reduce oven to 350°",
-        "To make topping, mix oats, wheat flour, 1 stick softened butter, 1 cup sugar and 2 tsp cinnamon by hand.",
-        "Spread apples on top of shortbread and then topping on top of apples.",
-        "Cook for 40 mins."
+        { "text": "Preheat oven to 400°." },
+        { "text": "Mix flour, 2 sticks butter sliced, baking powder, salt, and &frac14; tsp nutmeg with hands till pea sized." },
+        { "text": "Press dough into a 9x13 pan and poke with a fork several times, cook for 15 mins." },
+        { "text": "Make 6 cups of sliced peeled apples" },
+        { "text": "Mix apples with &frac12; cup sugar, 3 tsp cinnamon and &frac12; tsp nutmeg." },
+        { "text": "After dough is cooked reduce oven to 350°" },
+        { "text": "To make topping, mix oats, wheat flour, 1 stick softened butter, 1 cup sugar and 2 tsp cinnamon by hand." },
+        { "text": "Spread apples on top of shortbread and then topping on top of apples." },
+        { "text": "Cook for 40 mins." }
     ]
 }

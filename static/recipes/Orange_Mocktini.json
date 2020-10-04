@@ -7,8 +7,8 @@
         "2 tsp grenadine"
     ],
     "directions": [
-        "Make 1 oz lime juice from limes.",
-        "Mix lime juice, orange juice and grenadine togthere.",
-        "Optionally add a maraschino cherry if you are classy."
+        { "text": "Make 1 oz lime juice from limes." },
+        { "text": "Mix lime juice, orange juice and grenadine together." },
+        { "text": "Optionally add a maraschino cherry if you are classy." }
     ]
 }

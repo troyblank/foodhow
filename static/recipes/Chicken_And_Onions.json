@@ -12,9 +12,9 @@
         "1 cup beer"
     ],
     "directions": [
-        "Marinate chicken for at least 30 mins with beer, oil, lemon juice, 4 tsp lemon pepper and ground pepper.",
-        "Cut onions into fourths lay on two foil sheets add butter and sprinkle 1 tsp lemon pepper on top.",
-        "Fold the foil over and poke holes in the top.",
-        "Cook everything on a grill, 20 mins for onions and 5 mins for each chicken side."
+        { "text": "Marinate chicken for at least 30 mins with beer, oil, lemon juice, 4 tsp lemon pepper and ground pepper." },
+        { "text": "Cut onions into fourths lay on two foil sheets add butter and sprinkle 1 tsp lemon pepper on top." },
+        { "text": "Fold the foil over and poke holes in the top." },
+        { "text": "Cook everything on a grill, 20 mins for onions and 5 mins for each chicken side." }
     ]
 }

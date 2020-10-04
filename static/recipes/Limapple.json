@@ -7,6 +7,6 @@
         "1 tsp grenadine"
     ],
     "directions": [
-        "Stir togthere ingredients."
+        { "text": "Stir together ingredients." }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "Hummus",
-    "meta": "Can refrgerate for 3 days. Liquid from can is experimental",
+    "meta": "Can refrigerate for 3 days. Liquid from can is experimental",
     "ingredients": [
         "1 garlic clove",
         "1 lemon worth of juice",
@@ -14,9 +14,9 @@
         "1 tsp salt"
     ],
     "directions": [
-        "Drain chickpeas and set aside liguid from can.",
-        "Pulse gralic clove a few times in a food processor.",
-        "Proccess rest on ingredients sans olive oil for 5 mins.",
-        "Slowly add olive oil while proccessing."
+        { "text": "Drain chickpeas and set aside liquid from can." },
+        { "text": "Pulse garlic clove a few times in a food processor." },
+        { "text": "Process rest on ingredients sans olive oil for 5 mins." },
+        { "text": "Slowly add olive oil while processing." }
     ]
 }

@@ -12,12 +12,12 @@
         "&frac34; tsp black pepper"
     ],
     "directions": [
-        "Whisk together 3 whole eggs, one egg yolk, milk, salt, and pepper.",
-        "Let sit for at least 15 mins.",
-        "Mix in the ham, mushrooms, shallot and &frac23;rds of the butter.",
-        "Melt the remaining butter in an 8\" skillet over low heat.",
-        "Add egg mixture and scrap slowly and constantly, occasionally lifting to allow liquids under solids.",
-        "When egg mixture is firm, cover and remove from heat for 1 min.",
-        "Flip the egg in half onto itself."
+        { "text": "Whisk together 3 whole eggs, one egg yolk, milk, salt, and pepper." },
+        { "text": "Let sit for at least 15 mins." },
+        { "text": "Mix in the ham, mushrooms, shallot and &frac23;rds of the butter." },
+        { "text": "Melt the remaining butter in an 8\" skillet over low heat." },
+        { "text": "Add egg mixture and scrap slowly and constantly, occasionally lifting to allow liquids under solids." },
+        { "text": "When egg mixture is firm, cover and remove from heat for 1 min." },
+        { "text": "Flip the egg in half onto itself." }
     ]
 }

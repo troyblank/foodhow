@@ -10,11 +10,11 @@
         "1 tsp red pepper flakes"
     ],
     "directions": [
-        "Heat smoker to 225°.",
-        "Coat tenderloins with olive oil.",
-        "Mix sugar and spices togthere and rub on tenderloins.",
-        "Cook tenderloins for about 2 hours until meat is 145°.",
-        "Add applewood chips every 30 mins up to an hour.",
-        "Let tenderloins rest for 10 mins."
+        { "text": "Heat smoker to 225°." },
+        { "text": "Coat tenderloins with olive oil." },
+        { "text": "Mix sugar and spices together and rub on tenderloins." },
+        { "text": "Cook tenderloins for about 2 hours until meat is 145°." },
+        { "text": "Add applewood chips every 30 mins up to an hour." },
+        { "text": "Let tenderloins rest for 10 mins." }
     ]
 }

@@ -13,11 +13,11 @@
         "butter cooking spray"
     ],
     "directions": [
-        "Combine butter, salt and milk in a sauce pan and bring to low boil.",
-        "As soon as it boils transfer to a mixer and set on low.",
-        "Slowly add flour, then cheese, eggs, sugar and oil.",
-        "Mix on medium for 2 minutes.",
-        "Spray down 1 mini muffing tins with cooking spray and spoon in batter.",
-        "Bake for 20 mins on 350°."
+        { "text": "Combine butter, salt and milk in a sauce pan and bring to low boil." },
+        { "text": "As soon as it boils transfer to a mixer and set on low." },
+        { "text": "Slowly add flour, then cheese, eggs, sugar and oil." },
+        { "text": "Mix on medium for 2 minutes." },
+        { "text": "Spray down 1 mini muffing tins with cooking spray and spoon in batter." },
+        { "text": "Bake for 20 mins on 350°." }
     ]
 }

@@ -11,11 +11,11 @@
         "&frac14; tsp pepper"
     ],
     "directions": [
-        "Cut off top of garlic head exposing all gloves, brush with 1 TB oil and wrap in foil.",
-        "Cook garlic at 350° for 50 mins.",
-        "In a bowl add 1 TB oil, all spices, and cooked garlic and mash to a paste.",
-        "Slice each potatoe into fourths and spread garlic paste all over them.",
-        "Assemble potatoes back togthere, cover each in 2 tsp oil, sprinkle with salt and pepper.",
-        "Wrap potatoes in foil and cook for 1 hour at 425°."
+        { "text": "Cut off top of garlic head exposing all gloves, brush with 1 TB oil and wrap in foil." },
+        { "text": "Cook garlic at 350° for 50 mins." },
+        { "text": "In a bowl add 1 TB oil, all spices, and cooked garlic and mash to a paste." },
+        { "text": "Slice each potato into fourths and spread garlic paste all over them." },
+        { "text": "Assemble potatoes back together, cover each in 2 tsp oil, sprinkle with salt and pepper." },
+        { "text": "Wrap potatoes in foil and cook for 1 hour at 425°." }
     ]
 }

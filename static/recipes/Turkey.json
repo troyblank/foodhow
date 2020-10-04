@@ -22,15 +22,15 @@
         ]
     },
     "directions": [
-        "Combine all brine ingredients except turkey and water to a stockpot and bring to boil while stirring.",
-        "Cool to room temperature and refrigerate.",
-        "Add brine, water, and turkey to a giant covered bucket and set in a cool area for 6 hours.",
-        "Turn turkey over at the 3 hour mark.",
-        "Rinse turkey of brine, pat dry with paper towels and place on a roasting rack.",
-        "In a glass bowl combine apple, onion, cinnamon stick and a cup of water and microwave for 5 mins.",
-        "Coat turkey with oil and shove all stuffing ingredients inside it's cavity",
-        "Roast at 500° on the loweset rack in an oven for 30 mins.",
-        "Cover turkey breast with foil and cook at 350° until the turkey reaches 160°.",
-        "Let turkey rest still covered for 15 mins."
+        { "text": "Combine all brine ingredients except turkey and water to a stockpot and bring to boil while stirring." },
+        { "text": "Cool to room temperature and refrigerate." },
+        { "text": "Add brine, water, and turkey to a giant covered bucket and set in a cool area for 6 hours." },
+        { "text": "Turn turkey over at the 3 hour mark." },
+        { "text": "Rinse turkey of brine, pat dry with paper towels and place on a roasting rack." },
+        { "text": "In a glass bowl combine apple, onion, cinnamon stick and a cup of water and microwave for 5 mins." },
+        { "text": "Coat turkey with oil and shove all stuffing ingredients inside it's cavity." },
+        { "text": "Roast at 500° on the lowest rack in an oven for 30 mins." },
+        { "text": "Cover turkey breast with foil and cook at 350° until the turkey reaches 160°." },
+        { "text": "Let turkey rest still covered for 15 mins." }
     ]
 }

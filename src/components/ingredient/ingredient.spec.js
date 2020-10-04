@@ -38,7 +38,7 @@ describe('Ingredient', () => {
             className={'ingredient ingredient--is-link'}
           >
             <Link href={url}>
-              <a>{text}</a>
+              <a dangerouslySetInnerHTML={{ __html: text }} />
             </Link>
           </li>
         ));

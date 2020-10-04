@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import dompurify from 'dompurify';
 import { isArray } from 'lodash';
 import IngredientList from '../ingredientList/ingredientList';
+import Directions from '../directions';
 
 export function objectifyIngredients(polymorphicIngredients) {
     // ingredients can be an array or object:
@@ -65,14 +66,7 @@ export default class Recipe extends PureComponent {
             </section>
             <section>
               <h2>Directions</h2>
-              <ol>
-                { directions.map((d) => (
-                  <li
-                    key={d}
-                    dangerouslySetInnerHTML={{ __html: dompurify.sanitize(d?.text) }}
-                  />
-                ))}
-              </ol>
+              <Directions steps={directions} />
             </section>
           </section>
         );

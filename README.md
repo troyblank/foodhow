@@ -37,6 +37,7 @@ To add a recipe simply make a new json file in ```static/recipes``` that follows
         ],
         "directions": [
             { "text": "Mash ingredient together." },
+            { "text": "Maybe throw in hot sauce (optional).", type: "optional" },
             { "text": "Eat." }
         ]
     }
@@ -63,3 +64,20 @@ Ingredient groups:
         },
         ...
     }
+
+## Types
+
+### Recipe type
+| property | description | type
+|---|---|---|
+| title | Title of recipe | string
+| meta | Subtext for recipe | string
+| ingredients | List of ingredients | [string] \| object
+| directions | List of directions | [direction]
+
+### Direction type
+
+| property | description | type  | values
+|---|---|---|---|
+| text | The step instructions | string |
+| type | Puts emphasis on how the step is displayed | string | `"normal"` (default), or "`optional"` |

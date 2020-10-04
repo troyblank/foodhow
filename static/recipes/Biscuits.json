@@ -26,7 +26,7 @@
         { "text": "Add buttermilk and flour mixture to a bowl and fold the together."},
         { "text": "Knead the mixture on a flat surface, adding flour as necessary until it just starts to roughly have a dough consistency."},
         { "text": "Roll the dough out in a 12\" square, fold into thirds width wise and then into thirds length wise."},
-        { "text": "Roll dough out in a 12\" square and spread cheddar or parmesan ingredients on top (optional)."},
+        { "text": "Roll dough out in a 12\" square and spread cheddar or parmesan ingredients on top (optional).", "type": "optional"},
         { "text": "Repeat the last roll and fold step one more time."},
         { "text": "Roll into a 12 inch square and then cut 4\" rounds."},
         { "text": "Brush tops with melted butter and cook for 15 mins at 425°."},

@@ -1,0 +1,14 @@
+{
+    "title": "Guacamole",
+    "meta": "",
+    "ingredients": [
+        "3 avocados",
+        "&frac12; white onion (minced)",
+        "&frac14; cup lime juice",
+        "1 tsp salt"
+    ],
+    "directions": [
+        { "text": "Peel and pit ripe avocados." },
+        { "text": "Mash avocado with other ingredients." }
+    ]
+}

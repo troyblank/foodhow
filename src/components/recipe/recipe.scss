@@ -25,5 +25,18 @@
             margin-bottom: 10px;
             line-height: 1.5rem;
         }
+
+        & > ol {
+            margin: 0 0 0 15px;
+            list-style-type: upper-alpha;
+        }
     }
+}
+
+.direction-optional {
+    margin: 10px 0;
+    padding: 10px 0;
+    border-top: 1px dashed;
+    border-bottom: 1px dashed;
+    opacity: .80;
 }

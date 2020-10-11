@@ -3,13 +3,12 @@
     "meta": "",
     "ingredients": {
         "Base": [
+            "1 &frac14; cups heavy cream",
             "2 cups flour",
             "1 TBSP baking powder",
-            "&frac14; tsp baking soda",
-            "1 &frac12; tsp salt",
-            "8 TBSP butter (cut into small pieces)",
-            "2 TBSP butter (melted)",
-            "1 cup buttermilk"
+            "&frac34; tsp salt",
+            "4 TBSP butter (melted)",
+            "2 TBSP butter (melted)"
         ],
         "Cheddar Filling (optional)": [
             "4 oz. cheddar cheese (grated)",
@@ -21,15 +20,12 @@
         ]
     },
     "directions": [
-        { "text": "Process the flour, baking powder, baking soda, and salt for a few seconds." },
-        { "text": "Add butter pieces and pulse the processor until it is crumbly."},
-        { "text": "Add buttermilk and flour mixture to a bowl and fold the together."},
-        { "text": "Knead the mixture on a flat surface, adding flour as necessary until it just starts to roughly have a dough consistency."},
-        { "text": "Roll the dough out in a 12\" square, fold into thirds width wise and then into thirds length wise."},
-        { "text": "Roll dough out in a 12\" square and spread cheddar or parmesan ingredients on top (optional).", "type": "optional"},
-        { "text": "Repeat the last roll and fold step one more time."},
-        { "text": "Roll into a 12 inch square and then cut 4\" rounds."},
-        { "text": "Brush tops with melted butter and cook for 15 mins at 425°."},
+        { "text": "Whisk the flour, baking powder, and salt in a large bowl." },
+        { "text": "Add 4 TBSP butter and the cream and mix until a dough consistency." },
+        { "text": "Add cheddar or parmesan ingredients and incorporate into the dough.", "type": "optional"},
+        { "text": "Knead dough and roll out into an 8\" square." },
+        { "text": "Cut biscuits in 3\" rounds and place ona  parchment lined baking sheet." },
+        { "text": "Brush tops with 2 TBSP melted butter and cook for 15 mins at 425°."},
         { "text": "Let cool for 5 mins before serving."}
     ]
 }

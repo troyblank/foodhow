@@ -1,0 +1,22 @@
+{
+    "title": "Scones",
+    "meta": "",
+    "ingredients": [
+        "1 &frac14; cups heavy cream",
+        "2 cups flour",
+        "1 TBSP baking powder",
+        "3 TBSP sugar",
+        "&frac34; tsp salt",
+        "4 TBSP butter (melted)",
+        "2 TBSP butter (melted)",
+        "&frac12; cup currants"
+    ],
+    "directions": [
+        { "text": "Whisk the flour, baking powder, sugar, and salt in a large bowl." },
+        { "text": "Add 4 TBSP butter, the cream and currants and mix until a dough consistency." },
+        { "text": "Knead dough and roll out into an 8″ square." },
+        { "text": "Cut biscuits in 3″ rounds and place ona  parchment lined baking sheet." },
+        { "text": "Brush tops with 2 TBSP melted butter and cook for 15 mins at 425°."},
+        { "text": "Let cool for 5 mins before serving."}
+    ]
+}

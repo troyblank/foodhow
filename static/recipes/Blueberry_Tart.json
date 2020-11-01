@@ -1,0 +1,24 @@
+{
+    "title": "Blueberry Tart",
+    "meta": "",
+    "ingredients": {
+        "Dough": [
+            "2 cups flour",
+            "3 tsp baking powder",
+            "6 TBSP butter",
+            "&frac14; cup sugar",
+            "&frac12; tsp salt"
+        ],
+        "Topping": [
+            "21 ox blueberry pie filling",
+            "&frac12; cup dried cranberries",
+            "1 tsp orange zest"
+        ]
+    },
+    "directions": [
+        { "text": "Mix all dough ingredients while slowly adding small bits of the butter one at a time." },
+        { "text": "When mix is crumbly press firmly on bottom of a 9″ spring form pan." },
+        { "text": "Bake at 375° for 13.5 mins then let cool for at least 30 mins." },
+        { "text": "Mix topping ingredients then spread over crust." }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "title": "Pancakes 2",
+    "ingredients": [
+        "2 cups all purpose flour",
+        "2 TBSP sugar",
+        "2 tsp baking powder",
+        "2 eggs",
+        "1 cup buttermilk",
+        "1 &frac12; cup whole milk",
+        "4 TBSP butter (melted)",
+        "3 TBSP vegetable oil",
+        "&frac12; tsp salt"
+    ],
+    "directions": [
+        { "text": "In a large bowl combine flour, sugar, baking powder and salt." },
+        { "text": "In another medium bowl whisk eggs, all milks, and melted butter until blended." },
+        { "text": "Add the egg mixture to the flour bowl and whisk till combined." },
+        { "text": "Using a cast iron skillet heat 1 TBSP of oil over medium heat." },
+        { "text": "Add &frac14 cup of the batter at a time, flipping once one side has standing bubbles, removing when pancake is golden brow." },
+        { "text": "Keep the griddle oiled between pancakes, and repeat the cooking process until batter is depleted." }
+    ]
+}

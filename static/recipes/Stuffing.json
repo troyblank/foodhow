@@ -1,0 +1,31 @@
+{
+    "title": "Stuffing",
+    "meta": "",
+    "ingredients": [
+        "&frac12; large yellow onion (minced)",
+        "2 celery stalks (minced)",
+        "1 garlic clove (grated)",
+        "1 loaf of Italian bread (cut into &frac34;″ cubes)",
+        "&frac18; cup fresh sage (minced)",
+        "&frac18; cup fresh parsley (minced)",
+        "2 cups low sodium chicken stock",
+        "&frac34; lb sage sausage",
+        "4 TBSP butter",
+        "1 &frac12; eggs (maybe just 1?)",
+        "pinch of salt",
+        "pinch of black pepper"
+    ],
+    "directions": [
+        { "text": "Spread bread over two baking sheets and cook at 275° for 50 mins, stir and rotate two times." },
+        { "text": "In a dutch oven over medium-high heat melt the butter for 2 mins." },
+        { "text": "Add sausage to cook and break up into fine pieces for 8 mins." },
+        { "text": "Add onion, celery, garlic and sage and cook for 10 mins." },
+        { "text": "Remove from heat and add half of the stock." },
+        { "text": "In a medium bowl whisk to combine the egg(s), 3 TBSP of the parsley and rest of the stock." },
+        { "text": "While stirring add egg mixture to to dutch oven, then fold in the bread." },
+        { "text": "Butter a 9x13 baking dish, add the stuffing to the dish." },
+        { "text": "Wrap the dish tight with foil, and cook at 150° for 45 mins." },
+        { "text": "Remove foil and cook for an additional 10 mins." },
+        { "text": "Sprinkle top with the salt, pepper and the rest of the parsley." }
+    ]
+}

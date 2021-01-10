@@ -1,0 +1,24 @@
+{
+    "title": "Rack of Lamb 2",
+    "meta": "",
+    "ingredients": [
+        "1.5 lb frenched lamb rack",
+        "&frac23; cup bread crumbs",
+        "2 TBSP Dijon mustard",
+        "4 TBSP butter (melted)",
+        "1 TBSP fresh rosemary (chopped)",
+        "1 TBSP fresh parsley (chopped)",
+        "salt",
+        "pepper"
+    ],
+    "directions": [
+        { "text": "In a bowl mix bread crumbs, rosemary, parsley and butter." },
+        { "text": "Season lamb with salt and pepper." },
+        { "text": "Rest two pieces of the lamb against each other in a cast iron skillet with bones up." },
+        { "text": "Wrap the top bones with some foil and broil at 550° for 10 mins." },
+        { "text": "Coat lamb with mustard and then coat with bread crumb mixture." },
+        { "text": "Roast in oven at 325° until lamb registers 145°." },
+        { "text": "Tent lamb with foil and let rest for 4 mins." },
+        { "text": "Cut between the rib bones and serve." }
+    ]
+}

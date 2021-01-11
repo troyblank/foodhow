@@ -1,0 +1,26 @@
+{
+    "title": "Vegetable Stock",
+    "meta": "",
+    "ingredients": [
+        "2 large onions (chopped)",
+        "2 large carrots (peeled and chopped)",
+        "4 stalks celery (chopped)",
+        "1 large leek (trimmed)",
+        "8oz mushrooms (chopped)",
+        "2 granny smith apples (quartered)",
+        "1 oz unflavored gelatin",
+        "2 bay leaves",
+        "2 tsp whole black peppercorns",
+        "1 tsp fennel seeds",
+        "1 tsp coriander seeds",
+        "6 sprigs fresh parsley"
+    ],
+    "directions": [
+        { "text": "Stir 4 cups of water with gelatin and let it sit for 10 mins." },
+        { "text": "Add all ingredients into a dutch oven and add enough cold water to cover." },
+        { "text": "Add gelatin water to the dutch oven." },
+        { "text": "Bring to a simmer for 1 hour." },
+        { "text": "Discard all large bits and strain the stock with a fine strainer and cheese cloth."},
+        { "text": "Simmer strained stock for another 20 mins."}
+    ]
+}

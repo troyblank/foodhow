@@ -1,0 +1,24 @@
+{
+    "title": "Madeira Sauce",
+    "meta": "Works well poured over pork",
+    "ingredients": [
+        "&frac34; cup Madeira",
+        "8 oz white mushrooms (quartered)",
+        "1 shallot (minced)",
+        "1 garlic clove (minced)",
+        "1 TBSP sage (minced)",
+        "1 TBSP vegetable oil",
+        "3 TBSP butter",
+        "&frac18; tsp red pepper flakes",
+        "1 tsp salt",
+        "1 tsp black pepper"
+    ],
+    "directions": [
+        { "text": "Heat oil in a large skillet over medium-high heat." },
+        { "text": "Saute mushrooms and shallot for about 5 mins." },
+        { "text": "Add garlic and red pepper and saute for 30 seconds." },
+        { "text": "Off heat add Madeira and if you are also cooking meat add any left over meat juice." },
+        { "text": "Return to heat and cook for 5 mins." },
+        { "text": "Off heat whisk in butter, sage, salt and pepper." }
+    ]
+}

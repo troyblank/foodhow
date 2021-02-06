@@ -1,0 +1,25 @@
+{
+    "title": "Tempura Vegetables",
+    "meta": "",
+    "ingredients": [
+        "&frac12; eggplant",
+        "1 zucchini",
+        "1 carrot",
+        "&frac12; yellow onion",
+        "1 egg",
+        "1 cup flour",
+        "32oz vegetable oil",
+        "black pepper",
+        "salt"
+    ],
+    "directions": [
+        { "text": "Cut and separate all vegetables into long thin strips." },
+        { "text": "Put zucchini and eggplant strips in a colander coat with salt and let rest for 30 mins." },
+        { "text": "Rinse zucchini and eggplant with cold water." },
+        { "text": "Mix all vegetables together and season with salt and pepper." },
+        { "text": "Mix &frac12; cup of ice water with the egg and sift in flour." },
+        { "text": "Mix batter mixture while keeping it lumpy then mix in vegetables to coat evenly." },
+        { "text": "In a deep pot heat oil to 350°." },
+        { "text": "In batches fry small clumps of vegetables for 3 mins at a time." }
+    ]
+}

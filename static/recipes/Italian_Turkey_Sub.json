@@ -1,0 +1,28 @@
+{
+    "title": "Italian Turkey Sub",
+    "meta": "",
+    "ingredients": [
+        "1 &frac12; lb sliced turkey",
+        "6 garlic cloves",
+        "1 cup mushrooms",
+        "6 6′ sub rolls",
+        "12 oz mozzarella",
+        "1 cup basil pesto",
+        "3 TBSP olive oil",
+        "2 14.5 oz cans of diced tomatoes (drained)",
+        "&frac18; tsp red pepper flakes",
+        "1 tsp salt",
+        "1 tsp pepper"
+    ],
+    "directions": [
+        { "text": "Heat oven to 500°." },
+        { "text": "Roll thin slices of mozzarella out between towels to dry out." },
+        { "text": "Heat oil in a large skillet over medium high heat." },
+        { "text": "Saute garlic and pepper flakes for 1 min." },
+        { "text": "Add tomatoes and mushrooms and cook for 12 mins." },
+        { "text": "Off heat stir in 2 TBSP of pesto and the salt and pepper." },
+        { "text": "Spread pesto on the inside of each roll." },
+        { "text": "Then pack all ingredients into the sandwiches." },
+        { "text": "cook on a greased sheet in the oven for 5 mins." }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "title": "Butter Chicken",
+    "meta": "Marinate overnight. Maplewood NJ Tandoori Chef II Style.",
+    "ingredients": {
+		"Chicken Marinade": [
+			"8 chicken thighs",
+			"4 cloves garlic (minced)",
+			"1` ginger piece (grated)",
+			"&frac12; serrano pepper (processed)",
+			"4 TBSP plain yogurt",
+			"1 tsp coriander",
+			"1 tsp cinnamon",
+			"2 tsp chili powder",
+			"1 tsp cumin",
+			"pinch of saffron",
+			"1 tsp salt"
+		],
+		"Sauce": [
+			"5 TBSP butter",
+			"&frac12;` ginger piece (grated)",
+			"six cardamon pods (processed)",
+			"4 cloves (processed)",
+			"&frac12; white onion (chopped finely)",
+            "&frac12; lemon juice",
+			"1 &frac14; cups tomato puree",
+			"2 tsp honey",
+			"1 cup heavy cream",
+            "1 TBSP fenugreek (processed)",
+            "2 tsp chili powder",
+			"2 tsp coriander",
+            "&frac12; tsp cinnamon",
+			"1 tsp tumeric",
+			"1 tsp garam masala",
+			"2 tsp cumin",
+            "1 tsp salt"
+		]
+	},
+    "directions": [
+        { "text": "Cut chicken into bite size pieces." },
+		{ "text": "Mix all marinade ingredients with chicken and let marinate overnight." },
+		{ "text": "Add chicken to kabob skewers." },
+		{ "text": "Broil chicken at 550° for 20 mins turning mid way through." },
+		{ "text": "Saute half of the butter with the ginger, cardamon and cloves for 1 min over medium heat." },
+        { "text": "Add the rest of the sauce ingredients and cook for 10 mins." },
+        { "text": "Combine chicken with sauce." }
+    ]
+}

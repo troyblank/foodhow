@@ -1,0 +1,36 @@
+{
+    "title": "Chicken Saltimbocca",
+    "meta": "",
+    "ingredients": [
+        "&frac14; cup vermouth",
+        "2 tsp fresh sage (minced)",
+        "4 fresh sage leaves",
+        "2 tsp fresh parsley (minced)",
+        "1 small shallot (minced)",
+        "1 tsp lemon juice",
+        "4 slices of prosciutto",
+        "4 chicken cutlets",
+        "&frac14; cup flour",
+        "&frac12; tsp flour",
+        "2 TBSP olive oil",
+        "&frac13; cup chicken broth",
+        "1 TBSP butter",
+        "salt",
+        "pepper"
+    ],
+    "directions": [
+        { "text": "Pat chicken dry and season it with pepper." },
+        { "text": "Dredge cutlets through flour in a shallow dish." },
+        { "text": "Sprinkle 2 tsp of minced sage on top of cutlets and then press a slice of prosciutto on each." },
+        { "text": "Heat oil in a large walled pan and fry 4 large sage leaves for 15 seconds over medium high heat." },
+        { "text": "Set leaves on a paper towel to dry off." },
+        { "text": "Fry cutlets prosciutto side down for 2 mins then flip and fry again for 1 min." },
+        { "text": "Transfer cutlets to a plate and cover with aluminum foil." },
+        { "text": "Reduce heat to medium and cook shallot for 2 mins." },
+        { "text": "Add &frac12; tsp flour and cook for 1 min while stirring constantly." },
+        { "text": "Add broth and vermouth, bring to a simmer and let reduce for 4 mins." },
+        { "text": "Return cutlets to pan for 30 secs and transfer to serving plates." },
+        { "text": "Off heat whisk in butter, parsley, lemon juice, a pinch of salt, and a pinch of pepper." },
+        { "text": "Pour sauce over chicken, then top each with a fried sage leaf." }
+    ]
+}

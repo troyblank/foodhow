@@ -30,7 +30,7 @@ To add a recipe simply make a new json file in ```static/recipes``` that follows
         "title": "Some Food",
         "meta": "This is a really good food.",
         "ingredients": [
-            "(1 link to another recipe)[/some/link]",
+            "[1 link to another recipe](/some/link)",
             "1 meat",
             "1 cup fruit (processed)",
             "&frac12; tsp spice"

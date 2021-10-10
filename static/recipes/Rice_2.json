@@ -1,0 +1,17 @@
+{
+    "title": "Rice 2",
+    "meta": "",
+    "ingredients": [
+        "&frac34; cup long-grain rice (rinsed)",
+        "1 tsp vegetable oil",
+        "&frac14; tsp salt"
+    ],
+    "directions": [
+        { "text": "Heat oil in saucepan over medium heat." },
+        { "text": "Stir in rice and cook for 2 mins." },
+        { "text": "Add salt and 1 &frac14; cups of water then bring to a boil." },
+        { "text": "Reduce heat to as low as possible, cover for 20 mins." },
+        { "text": "Remove from heat, remove lid, and put a dish towel over the pan." },
+        { "text": "Let sit for 10 mins and then fluff with a fork." }
+    ]
+}

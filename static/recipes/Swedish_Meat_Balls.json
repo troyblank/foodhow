@@ -1,0 +1,31 @@
+{
+    "title": "Stuffing",
+    "meta": "Grandma's",
+    "ingredients": {
+        "Meat": [
+            "1 lb ground beef",
+            "&frac12; lb ground pork",
+            "1 onion",
+            "&frac12; carrot (grated)",
+            "1 egg",
+            "4 slices of bread",
+            "&frac12; tsp allspice",
+            "&frac12; tsp pepper",
+            "1 tsp salt",
+            "&frac12; tsp ground sage"
+        ],
+        "Rest": [
+            "16 oz mushrooms (chopped)",
+            "1 TBSP canola oil",
+            "1 tsp bouillon"
+        ]
+    },
+    "directions": [
+        { "text": "Using a deep pan fry mushrooms up an set aside." },
+        { "text": "Mix all 'Meat' ingredients and form into balls." },
+        { "text": "With oil brown balls over high heat in a pan and remove." },
+        { "text": "Add 1 cup of water to pan and cook for 1 min." },
+        { "text": "Add bouillon and balls back and then simmer for 1 hour." },
+        { "text": "Add mushrooms." }
+    ]
+}

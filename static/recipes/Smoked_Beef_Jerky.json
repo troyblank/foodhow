@@ -1,0 +1,23 @@
+{
+    "title": "Smoked Beef Jerky",
+    "meta": "6 hour marination. Keeps refrigerated for up to a month",
+    "ingredients": [
+        "hickory wood chips",
+        "2 lb flank steak (pounded to &frac12;″)",
+        "&frac12; cup soy sauce",
+        "&frac12; cup apple cider vinegar",
+        "&frac14; cup worcestershire sauce",
+        "2 TBSP dry minced onion",
+        "1 TBSP honey",
+        "1 tsp liquid smoke",
+        "2 tsp black pepper",
+        "1 tsp red pepper flakes"
+    ],
+    "directions": [
+        { "text": "Cut meat across the grain into small strips." },
+        { "text": "In a shallow dish mix all ingredients but wood chips and add meat." },
+        { "text": "Refrigerate for 6 hours." },
+        { "text": "Pat meat dry with paper towels and sprinkle with some additional black pepper." },
+        { "text": "Smoke meat with hickory chips at 180° for 4&frac12; hours." }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "title": "Chili Con Carne",
+    "meta": "Overnight chill.",
+    "ingredients": {
+        "Chili": [
+            "[&frac14 cup Chile Paste](/recipe/Chile_Paste)",
+            "4 lbs boneless beef chuck (Cut in to 2″ pieces and trimmed of fat)",
+            "1 large onion (finely diced)",
+            "4 garlic cloves (minced)",
+            "2 TBSP vegetable oil",
+            "8 cups chicken stock",
+            "2&frac12; TBSP polenta",
+            "1 TBSP cumin",
+            "&frac12; tsp cinnamon",
+            "&frac14; tsp allspice",
+            "2 tsp oregano",
+            "salt",
+            "pepper"
+        ],
+        "Garnishes": [
+            "monterey jack cheese (shredded)",
+            "Scallions (diced)",
+            "Thick tortilla chips"
+        ]
+    },
+    "directions": [
+        { "text": "Season half of the meat with salt and pepper." },
+        { "text": "In a dutch oven over high heat add oil and brown only seasoned meat for 6 mins and set meat aside." },
+        { "text": "Reduce heat to medium-high and add onion and cook for 6 mins." },
+        { "text": "Add garlic, cumin, cinnamon, all spice, and oregano and cook for 1 min." },
+        { "text": "Add all meat, chile paste and chicken stock and bring to a boil over hight heat." },
+        { "text": "Simmer with lid barely ajar for 2 hours and 45 mins, stirring occasionally." },
+        { "text": "Add polenta and then season with salt and pepper." },
+        { "text": "For best results let cool overnight in fridge and serve with garnishes." }
+    ]
+}

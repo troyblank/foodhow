@@ -1,0 +1,30 @@
+{
+    "title": "Mushroom Crostini",
+    "meta": "",
+    "ingredients": {
+        "Crostini": [
+            "1 french baguette (cut into &frac12;″ slices)",
+            "&frac12; cup olive oil",
+            "2 TBSP herbes de provence"
+        ],
+        "Topping": [
+            "1 lb mushrooms (chopped at &frac12;″ pieces)",
+            "1 tsp fresh thyme",
+            "1 tsp fresh rosemary (chopped)",
+            "&frac14; cup parsley (chopped)",
+            "&frac14; cup olive oil",
+            "1 TBSP worcestershire sauce",
+            "a pinch of salt",
+            "a pinch of black pepper",
+            "6 oz goat cheese or mozzarella cheese"
+        ]
+    },
+    "directions": [
+        { "text": "Place bread slices on a baking sheet, brush with olive oil and sprinkle on herbes de provence." },
+        { "text": "Cook for 13 mins at 375° then set aside." },
+        { "text": "Heat an iron skillet in the oven at 450°." },
+        { "text": "Throw in mushrooms, thyme, rosemary and olive oil and roast in the oven for 14 mins." },
+        { "text": "Season mushrooms with worcestershire, salt, pepper, and parsley." },
+        { "text": "Spread on cheese on bread and then top with mushrooms." }
+    ]
+}

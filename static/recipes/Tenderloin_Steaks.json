@@ -1,0 +1,20 @@
+{
+    "title": "Tenderloin Steaks",
+    "meta": "",
+    "ingredients": [
+        "2lb center-cut beef tenderloin roast",
+        "1 TBSP canola oil",
+        "1 TBSP butter",
+        "black pepper",
+        "salt"
+    ],
+    "directions": [
+        { "text": "Season tenderloin liberally on all sides with salt and pepper." },
+        { "text": "Place on a wire rack set on a baking sheet." },
+        { "text": "Cook at 275° until meat registers 100°." },
+        { "text": "Slice meat into 2 inch steaks and season cut portions with salt and pepper." },
+        { "text": "Heat the oil and butter in a 12\" cast-iron skillet on high heat." },
+        { "text": "Cook each side of the steaks for 1 min." },
+        { "text": "Tent steaks with foil and let rest for 5 mins." }
+    ]
+}

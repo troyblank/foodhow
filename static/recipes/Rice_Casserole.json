@@ -1,0 +1,18 @@
+{
+    "title": "Rice Casserole",
+    "meta": "Grandma's",
+    "ingredients": [
+        "16 oz mushrooms",
+        "1 yellow onion",
+        "11 TBSP butter",
+        "21 oz consommé",
+        "1 TBSP soy sauce",
+        "1 &frac14; cups rice"
+    ],
+    "directions": [
+        { "text": "Dice onion and saute with 1 TBSP butter." },
+        { "text": "Dice mushrooms and saute with 2 TBSP butter." },
+        { "text": "Put everything in a covered casserole dish." },
+        { "text": "Cook at 325° for 1 hour. stirring mid way through." }
+    ]
+}

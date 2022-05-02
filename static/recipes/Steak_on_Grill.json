@@ -1,0 +1,18 @@
+{
+    "title": "Steak on the Grill",
+    "meta": "",
+    "ingredients": [
+        "1&frac12; lb 2″ thick bone in rib-eye",
+        "black pepper",
+        "salt"
+    ],
+    "directions": [
+        { "text": "Season the steak liberally with salt and pepper." },
+        { "text": "Let steak rest for 45 mins at room temperature or up to 3 days loosely covered in fridge." },
+        { "text": "Fill grill with burning charcoal and push to one side." },
+        { "text": "Put steak on the cool side, cover and flip every 3 mins until it reaches 115&deg;." },
+        { "text": "Leave cover off grill and let steak rest for 2 mins." },
+        { "text": "Put steak on hot side uncovered and flip every 3 mins until it reaches 125&deg." },
+        { "text": "Allow steak to rest until it peeks in temperature and goes back down to 128&deg;" }
+    ]
+}

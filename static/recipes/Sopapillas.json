@@ -12,7 +12,7 @@
         "1 tsp salt"
     ],
     "directions": [
-        { "Text": "Mix dry ingredients then add shortening." },
+        { "text": "Mix dry ingredients then add shortening." },
         { "text": "Add &frac23; cup cold water gradually, mix until pie crust consistency." },
         { "text": "Knead until smooth on a floured board." },
         { "text": "Cover with a tea towel for 5 mins." },

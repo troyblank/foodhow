@@ -1,0 +1,22 @@
+{
+    "title": "Grilled Short Ribs",
+    "meta": "",
+    "ingredients": [
+        "4 lbs flanken style short ribs",
+        "3 garlic cloves (minced)",
+        "1 small shallot (minced)",
+        "&frac12; cup olive oil",
+        "2 TBSP fresh oregano (minced)",
+        "&frac14; tsp red pepper flakes",
+        "salt",
+        "black pepper"
+    ],
+    "directions": [
+        { "text": "Combine all but ribs, salt, and pepper in a bowl." },
+        { "text": "Salt and pepper the ribs and coat with bowl contents." },
+        { "text": "Marinate in a zipper-lock bag in fridge for 24 hours, turning occasionally." },
+        { "text": "Wipe marinade off ribs." },
+        { "text": "Grill while turning frequently until meat registers 125°." },
+        { "text": "Tent with foil for 5 mins." }
+    ]
+}

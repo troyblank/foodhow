@@ -1,0 +1,20 @@
+{
+    "title": "Chicken Cutlets",
+    "meta": "",
+    "ingredients": [
+        "2 boneless chicken breasts",
+        "&frac12; cup flour",
+        "1&frac12; TBSP vegetable oil",
+        "salt",
+        "black pepper"
+    ],
+    "directions": [
+        { "text": "Cut chicken in half long wise and then pound inside a plastic bag until &frac14;” thick." },
+        { "text": "Season chicken with salt and pepper." },
+        { "text": "Cover chicken with flour." },
+        { "text": "Heat half of the oil in a skillet on high." },
+        { "text": "Cook half of the chicken for 2&frac12; mins on one side and 30 secs on the other." },
+        { "text": "Tent the cooked chicken with foil and cook the other half of the chicken the same way." },
+        { "text": "Let rest for 5 mins." }
+    ]
+}

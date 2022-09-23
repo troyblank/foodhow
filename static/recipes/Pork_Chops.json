@@ -1,0 +1,19 @@
+{
+    "title": "Pork Chops",
+    "meta": "",
+    "ingredients":  [
+        "2 1” thick 8oz bone-in pork chops",
+        "1 TBSP thyme (minced)",
+        "1 TBSP vegetable oil",
+        "1 TBSP butter",
+        "salt",
+        "black pepper"
+    ],
+    "directions": [
+        { "text": "Pat chops dry and season with salt and pepper." },
+        { "text": "Heat oil in a cast-iron pan over high heat." },
+        { "text": "Cook chops flipping every minute for about 5 mins." },
+        { "text": "Add butter and thyme and cook until chops reach 135&deg;." },
+        { "text": "Allow to rest for 5 mins." }
+    ]
+}

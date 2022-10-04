@@ -6,8 +6,8 @@
         "1 large carrot (peeled and chopped)",
         "2 stalks celery (chopped)",
         "6 sprigs fresh parsley",
-        "2 lb chicken wing and back carcasses",
-        "2 lb chicken legs",
+        "2 lb chicken wing",
+        "2 chicken carcasses",
         "1 oz unflavored gelatin",
         "2 bay leaves",
         "2 tsp whole black peppercorns",
@@ -16,11 +16,9 @@
     ],
     "directions": [
         { "text": "Stir 4 cups of water with gelatin and let it sit for 10 mins." },
-        { "text": "Chop up chicken carcasses into reasonable bits." },
         { "text": "Add all ingredients into a dutch oven and add enough cold water to cover." },
         { "text": "Add gelatin water to the dutch oven." },
         { "text": "Bring to a simmer for 45 mins while skimming off any scum." },
-        { "text": "Fish out chicken legs and later remove meat for use in another culinary ventures." },
         { "text": "Discard all large bits and fine strain the stock returning the result to a simmer for 10 mins." },
         { "text": "Allow to rest for 15mins and then skim off all scum." }
     ]

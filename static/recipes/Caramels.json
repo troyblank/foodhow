@@ -1,0 +1,21 @@
+{
+    "title": "Caramels",
+    "meta": "Grandma's",
+    "ingredients": [
+        "2 cups half and half",
+        "1 cup butter",
+        "2 cups sugar",
+        "1 &frac34; cups light corn syrup",
+        "1 tsp vanilla extract"
+    ],
+    "directions": [
+        { "text": "Butter up a 9x9 pan and place a buttered parchment paper inside." },
+        { "text": "In a saucepan mix 1 cup of half and half with the sugar and syrup." },
+        { "text": "Stiring constantly bring the mixuture to a boil on high heat." },
+        { "text": "Slowly add the other cup of half and half." },
+        { "text": "Stiring constantly cook for 5 mins." },
+        { "text": "Stiring constantly reduce heat to medium high and cook until 242°." },
+        { "text": "Remove from heat stir in vanilla and pour into the buttered pan." },
+        { "text": "Let cool for 3 hours then cut into squares." }
+    ]
+}

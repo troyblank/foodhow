@@ -1,0 +1,21 @@
+{
+    "title": "Sweet Potato Pesto",
+    "meta": "Works well with half a chicken breast and rigatoni",
+    "ingredients": [
+        "1 large sweet potato",
+        "&frac14; cup cashews",
+        "&frac12; lime (juiced)",
+        "3 garlic gloves",
+        "&frac34; cup olive oil",
+        "1 TBSP bread crumbs",
+        "2 TBSP parmesan",
+        "3 sage leaves",
+        "1 tsp dried basil",
+        "1 tsp marjoram"
+    ],
+    "directions": [
+        { "text": "Cook the sweet potato at 450° for 20 mins." },
+        { "text": "Cut the sweet potato into small pieces." },
+        { "text": "Process all ingredients into a fine pesto." }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "title": "Pan Pizza",
+    "meta": "",
+    "ingredients":{
+        "Dough": [
+            "1 cup beer",
+            "2&frac12; cups bread flour",
+            "1 package dry active yeast",
+            "1 tsp sugar",
+            "2 tsp olive oil",
+            "1 tsp salt"
+        ],
+        "Sauce": [
+            "24oz marinara sauce",
+            "2 tsp oregano",
+            "1 tsp red chili flakes",
+            "1 tsp garlic powder"
+        ],
+        "Toppings": [
+            "8oz pepperoni",
+            "8oz monterey jack",
+            "4oz mozzarella"
+        ]
+    },
+    "directions": [
+        { "text": "Add the beer, yeast and sugar in a mixer bowl and rest for 10 mins." },
+        { "text": "Add the rest of the doug ingredients and mix with a dough hook until dough like." },
+        { "text": "Grease a 9x13″ pan with olive oil and with oily fingers stretch the dough roughly towards the edges." },
+        { "text": "Let dough sit for 1 hour and 15 mins." },
+        { "text": "Simmer all sauce ingredients for 15 mins on medium low." },
+        { "text": "Slice the pepperoni." },
+        { "text": "Cut cheese into small cubes." },
+        { "text": "Push dough up the walls of the pan about a &frac12;″." },
+        { "text": "Add most of the ingredients on dough then place cheese on top." },
+        { "text": "Spread sauce over the cheese and some left over ingredients on top of the sauce." },
+        { "text": "Heat at 500° for 15 mins." },
+        { "text": "Cool for 5 mins and cut on a cutting board." }
+    ]
+}

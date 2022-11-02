@@ -1,0 +1,19 @@
+{
+    "title": "Corn Bread",
+    "meta": "Grandma's",
+    "ingredients": [
+        "1 cup yellow corn meal",
+        "1 cup flour",
+        "&frac34; cup sugar",
+        "4 tsp baking powder",
+        "&frac12; tsp salt",
+        "1 egg",
+        "1 cup milk",
+        "&frac14 cup shortening"
+    ],
+    "directions": [
+        { "text": "Sift together all dry ingredients." },
+        { "text": "Mix in wet ingredients until smooth." },
+        { "text": "Bake in a greased 9″x9″ pan at 425° for 22&frac12; mins." }
+    ]
+}

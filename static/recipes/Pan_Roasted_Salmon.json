@@ -1,0 +1,33 @@
+{
+    "title": "Pan Roasted Salmon",
+    "meta": "",
+    "ingredients": [
+        "2 Salmon fillets with skin",
+        "2 TBSP vegetable oil",
+        "salt",
+        "pepper"
+    ],
+    "directions": [
+        {
+            "text": "Dry fillets with a paper towel and season both sides with salt and pepper."
+        },
+        {
+            "text": "Heat oil on medium heat in a pan until shimmering."
+        },
+        {
+            "text": "Add fish skin side down and reduce heat to medium-low."
+        },
+        {
+            "text": "Press on backs of fillets for 1 min."
+        },
+        {
+            "text": "Cook for 5 mins."
+        },
+        {
+            "text": "Flip fish and cook until 125°."
+        },
+        {
+            "text": "Let rest for 5 mins."
+        }
+    ]
+}

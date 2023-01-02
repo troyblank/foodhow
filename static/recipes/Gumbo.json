@@ -2,21 +2,31 @@
     "title": "Gumbo",
     "meta": "Serve with rice.",
     "ingredients": [
-        "4 chicken breasts",
+        "1 rotisserie chicken",
         "4 andouille sausages",
         "1 onion",
         "1 red bell pepper",
         "1 celery stalk",
         "&frac14 cup vegetable oil",
         "6 TBSP flour",
-        "2&frac12; cups chicken broth",
+        "[2&frac12; cups Chicken Stock](/recipe/Chicken_Stock)",
         "2 tsp thyme"
     ],
     "directions": [
-        { "text": "Chop meats and vegetables into tiny bits, set aside." },
-        { "text": "Heat oil over medium heat in a medium pot and slowly add flour for 15 mins." },
-        { "text": "Put broth in pot, boil then kill heat and cover to keep warm." },
-        { "text": "In a Dutch oven over medium high heat cook vegetables for 3 mins, sausages for 5 mins and then chicken for 5 mins." },
-        { "text": "Combine all ingredients to Dutch oven and cook for 3 mins." }
+        {
+            "text": "Chop meats and vegetables into tiny bits, set aside."
+        },
+        {
+            "text": "Heat oil over medium heat in a medium pot and slowly add flour for 15 mins."
+        },
+        {
+            "text": "Put broth in pot, boil then kill heat and cover to keep warm."
+        },
+        {
+            "text": "In a Dutch oven over medium high heat cook vegetables for 3 mins, sausages for 5 mins and then chicken for 5 mins."
+        },
+        {
+            "text": "Combine all ingredients to Dutch oven and cook for 3 mins."
+        }
     ]
 }

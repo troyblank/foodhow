@@ -1,6 +1,6 @@
 {
     "title": "Chicken Stock",
-    "meta": "",
+    "meta": "Rotisserie chickens work well for carcasses",
     "ingredients": [
         "1 large onion (chopped)",
         "1 large carrot (peeled and chopped)",
@@ -15,11 +15,23 @@
         "1 tsp coriander seeds"
     ],
     "directions": [
-        { "text": "Stir 4 cups of water with gelatin and let it sit for 10 mins." },
-        { "text": "Add all ingredients into a dutch oven and add enough cold water to cover." },
-        { "text": "Add gelatin water to the dutch oven." },
-        { "text": "Bring to a simmer for 45 mins while skimming off any scum." },
-        { "text": "Discard all large bits and fine strain the stock returning the result to a simmer for 10 mins." },
-        { "text": "Allow to rest for 15mins and then skim off all scum." }
+        {
+            "text": "Stir 4 cups of water with gelatin and let it sit for 10 mins."
+        },
+        {
+            "text": "Add gelatin water to the dutch oven."
+        },
+        {
+            "text": "Add all ingredients into a dutch oven and add enough cold water to cover."
+        },
+        {
+            "text": "Bring to a simmer for 45 mins while skimming off any scum."
+        },
+        {
+            "text": "Discard all large bits and fine strain the stock returning the result to a simmer for 10 mins."
+        },
+        {
+            "text": "Allow to rest for 15mins and then skim off all scum."
+        }
     ]
 }

@@ -1,0 +1,49 @@
+{
+    "title": "Sous Vide Steaks",
+    "meta": "Cooked with a cooler",
+    "ingredients": [
+        "2 bone-in 2″ thick rib-eye steaks",
+        "2 TBSP canola oil",
+        "4 TBSP butter",
+        "1 medium shallot (sliced)",
+        "4 coves garlic (crushed)",
+        "4 sprigs of thyme",
+        "salt",
+        "black pepper"
+    ],
+    "directions": [
+        {
+            "text": "Pat steaks dry and cover in salt and pepper."
+        },
+        {
+            "text": "Preheat a cooler with 145° water."
+        },
+        {
+            "text": "Place steaks in zip-top bags and seal tight while submerging to remove most air."
+        },
+        {
+            "text": "Cook for 1 to 3 hours, add more hot water if it drops below 133°."
+        },
+        {
+            "text": "Pat steaks dry."
+        },
+        {
+            "text": "Heat oil in a cast-iron skillet over high heat."
+        },
+        {
+            "text": "Cook steaks in skillet for 30 seconds, flip then cook for 1 minute while torching."
+        },
+        {
+            "text": "Flip again for another minute and torch the other side, then quickly cook the edges."
+        },
+        {
+            "text": "Let rest on a wire rack and rest for 5 minutes."
+        },
+        {
+            "text": "After the rest cook the shallot, garlic and herb for 30 seconds on high."
+        },
+        {
+            "text": "Pour the hot pan drippings over the steaks."
+        }
+    ]
+}

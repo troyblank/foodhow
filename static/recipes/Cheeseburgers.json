@@ -1,0 +1,20 @@
+{
+    "title": "Cheeseburgers",
+    "meta": "",
+    "ingredients": [
+        "1 &frac12; lbs ground beef",
+        "2 TBSP vegetable oil",
+        "4 slices of swiss cheese",
+        "4 hamburger buns (toasted)",
+        "salt",
+        "pepper"
+    ],
+    "directions": [
+        { "text": "Divide meat into four patties and season with salt and pepper." },
+        { "text": "Sous-vide in bags at 125° for 30 mins to 3 hours." },
+        { "text": "Pat patties dry and season with salt and pepper again." },
+        { "text": "Sear each side with vegetable oil in a pan for 45 secs on each side." },
+        { "text": "Be sure to add cheese on top after the first flip." },
+        { "text": "Serve with bun and any desired condiments." }
+    ]
+}

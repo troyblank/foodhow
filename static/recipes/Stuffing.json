@@ -2,18 +2,18 @@
     "title": "Stuffing",
     "meta": "",
     "ingredients": [
-        "&frac12; large yellow onion (minced)",
-        "2 celery stalks (minced)",
-        "1 garlic clove (grated)",
-        "1 loaf of Italian bread (cut into &frac34;″ cubes)",
-        "&frac18; cup fresh sage (minced)",
-        "&frac18; cup fresh parsley (minced)",
-        "3 cups low sodium chicken stock",
-        "1 lb sage sausage",
-        "4 TBSP butter",
+        "1; large yellow onion (minced)",
+        "4 celery stalks (minced)",
+        "2 garlic cloves (grated)",
+        "2 loaves of Italian bread (cut into &frac34;″ cubes)",
+        "&frac14; cup fresh sage (minced)",
+        "&frac14; cup fresh parsley (minced)",
+        "[1 quart Chicken Stock](/recipe/Chicken_Stock)",
+        "1 &frac12; lb sage sausage",
+        "8 TBSP butter",
         "3 eggs",
-        "pinch of salt",
-        "pinch of black pepper"
+        "1 tsp salt",
+        "1 tsp black pepper"
     ],
     "directions": [
         { "text": "Spread bread over two baking sheets and cook at 275° for 50 mins, stir and rotate two times." },
@@ -23,7 +23,7 @@
         { "text": "Remove from heat and add half of the stock." },
         { "text": "In a medium bowl whisk to combine the egg(s), 3 TBSP of the parsley and rest of the stock." },
         { "text": "While stirring add egg mixture to to dutch oven, then fold in the bread." },
-        { "text": "Butter a 9x13 baking dish, add the stuffing to the dish." },
+        { "text": "Butter two 9x13 baking dishes, add the stuffing to the dish." },
         { "text": "Wrap the dish tight with foil, and cook at 350° for 45 mins." },
         { "text": "Remove foil and cook for an additional 10 mins." },
         { "text": "Sprinkle top with the salt, pepper and the rest of the parsley." }

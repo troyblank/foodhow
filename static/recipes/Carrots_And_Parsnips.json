@@ -1,0 +1,22 @@
+{
+    "title": "Carrots and Parsnips",
+    "meta": "",
+    "ingredients": [
+        "4 carrots (peeled and sliced &frac12; inch thick)",
+        "2 parsnips (peeled and sliced &frac12; inch thick)",
+        "1 TBSP fresh parsley (minced)",
+        "1 TBSP vegetable oil",
+        "&frac14; tsp sugar",
+        "&frac12; tsp salt",
+        "salt",
+        "pepper"
+    ],
+    "directions": [
+        { "text": "Whisk &frac34; cups of warm water with the sugar and salt." },
+        { "text": "Heat oil in a large skillet over medium heat until shimmering." },
+        { "text": "Add carrots and sugar water, cover and stir occasionally for 8 mins." },
+        { "text": "Uncover, add parsnips, and increase heat to high." },
+        { "text": "Stir occasionally for 16 mins." },
+        { "text": "Stir in parsley and season with salt and pepper." }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "title": "Za'atar",
+    "meta": "Great on hummus",
+    "ingredients": [
+        "2 TBSP cumin seeds",
+        "1 tsp salt",
+        "2 TBSP sesame seeds",
+        "2 TBSP dried oregano",
+        "2 tsp sumac"
+    ],
+    "directions": [
+        { "text": "Rost cumin seeds over low heat for about 6 mins." },
+        { "text": "Grind salt with cumin until fine." },
+        { "text": "Roast sesame seeds over low heat for about 6 mins." },
+        { "text": "Mix all ingredients together." }
+    ]
+}

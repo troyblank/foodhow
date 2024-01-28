@@ -1,0 +1,20 @@
+{
+    "title": "Bacon Wrapped Dates",
+    "meta": "",
+    "ingredients": [
+        "12 strips bacon (cut in half)",
+        "24 Medjool dates (pitted)",
+        "&frac13; cup porter beer",
+        "&frac12; cup maple syrup",
+        "2oz goat cheese"
+    ],
+    "directions": [
+        { "text": "Boil porter and syrup for 8 mins until thickened." },
+        { "text": "Fill the center of each date with goat cheese." },
+        { "text": "Wrap each date in bacon." },
+        { "text": "Brush the top side of the dates with half the syrup."},
+        { "text": "Bake at 400° for 8 mins." },
+        { "text": "Flip the dates over and brush the rest of the syrup over the dates."},
+        { "text": "Bake again for 8 mins." }
+    ]
+}

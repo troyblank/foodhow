@@ -12,15 +12,15 @@ Food how is a recipe book and shopping list that deploys as static files. For mo
 ## Setup
 First thing you want to do is install all node packages run:
 
-    npm install
+    yarn install
 
 In order to build and run the project run:
 
-    npm start
+    yarn start
     
 ## Test
 
-    npm test
+    yarn test
 
 ## Adding recipes
 

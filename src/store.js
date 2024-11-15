@@ -10,7 +10,7 @@ const enhancers = compose(
 const store = createStore(reducers, enhancers);
 
 store.subscribe(() => {
-    const { shoppingListStore } = store.getState();
+    const { shoppingList: shoppingListStore } = store.getState();
     const { shoppingList } = shoppingListStore;
 
     localStorage.setItem(foodHowShoppingList, JSON.stringify(shoppingList));

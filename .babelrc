@@ -1,4 +1,0 @@
-{
-    "presets": [["next/babel", { "preset-env": { "targets": "> 0.5% in US" } }]],
-    "plugins": ["@babel/plugin-proposal-export-default-from"]
-}

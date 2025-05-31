@@ -1,0 +1,40 @@
+{
+    "title": "Chicken in Cashew Saffron Gravy",
+    "meta": "Serve over rice.",
+    "ingredients": {
+        "Masala Paste": [
+            "4 cups chopped tomatoes",
+            "1 serrano peppers",
+            "1\" piece of gingerroot (peeled)",
+            "5 cloves garlic",
+            "&frac12; cup cilantro (chopped)",
+            "1&frac12; cups crispy fried onions",
+            "&frac12; cup cashews",
+            "3 TBSP vegetable oil",
+            "1 tsp saffron",
+            "2 tsp cayenne pepper"
+        ],
+        "Chicken": [
+            "12 bone-in chicken thighs",
+            "1 cup cilantro (chopped)",
+            "2 tsp salt",
+            "1 tsp garam masala",
+            "1 tsp cardamon powder"
+        ]
+    },
+    "directions": [
+        { "text": "Soak saffron in &frac12; cup of very hot water." },
+        { "text": "Process all paste ingredients minus vegetable oil and saffron with &frac12; cup water until a cake batter consistency." },
+        { "text": "In a large saucepan, heat oil over medium heat, pour in paste." },
+        { "text": "Cook for 5&frac12; mins, Stir occasionally." },
+        { "text": "Rinse chicken and pat dry, arrange in a single layer in another shallow pan." },
+        { "text": "Add salt, and spoon masala on top." },
+        { "text": "Cook for 8 mins, then turn and cook for 4 more mins." },
+        { "text": "Stir to mix well, reduce heat to low and cook covered for 20 mins." },
+        { "text": "Add saffron water, garam masala, and cardamon powder." },
+        { "text": "Cover and cook, stirring occasionally for 22&frac12; mins." },
+        { "text": "While cooking add water if sauce is getting too thick." },
+        { "text": "Remove from heat and stir in &frac3/4; cups of the cilantro." },
+        { "text": "Add remaining cilantro to the top of the dish." }
+    ]
+}

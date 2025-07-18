@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Bitter:700|Raleway:500');
-
 @import '../../node_modules/normalize.css/normalize';
 @import '../../node_modules/@troyblank/food-how-components/assets/sass/global';
 @import '../../node_modules/@troyblank/food-how-components/assets/sass/base/base';
-@import '../../node_modules/@troyblank/food-how-components/dist/components.scss';
+@import '../../node_modules/@troyblank/food-how-components/dist/components';
 
 @import './mixins/breakpoint';
 @import './silents/clearfix';

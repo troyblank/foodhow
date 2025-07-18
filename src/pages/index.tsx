@@ -1,7 +1,6 @@
 // @ts-nocheck // remove when removing reducers
 import React, { useEffect, type FunctionComponent } from 'react'
 // import { GetServerSidePropsContext } from 'next'
-// import { type User } from '../types'
 // import { AuthProvider } from '../contexts'
 import { recipes } from '../../static/recipes.json';
 import { Head, Navigation, RecipeList } from '../components'

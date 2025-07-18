@@ -1,18 +1,18 @@
-import globals from 'globals'
+const globals = require('globals');
 
 module.exports = {
-    env: {
-      jest: true,
-    },
-    extends: [
-        "@troyblank/eslint-config-troyblank/configs/es6.js",
-        "@troyblank/eslint-config-troyblank/configs/react.js"
-    ],
-    languageOptions: {
-        globas: {
-            ...globals.browser,
-            ...globals.node,
-            ...globals.jest,
-        }
-    }
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+  },
+  extends: [
+    '@troyblank/eslint-config-troyblank/configs/es6.js',
+    '@troyblank/eslint-config-troyblank/configs/react.js',
+  ],
+  globals: {
+    ...globals.browser,
+    ...globals.node,
+    ...globals.jest,
+  },
 };

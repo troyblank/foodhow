@@ -1,5 +1,5 @@
 import { cloneDeep, xorBy } from 'lodash';
-import { TOGGLE_INGREDIENT_ON_LIST } from '../ingredient/actions.js';
+import { TOGGLE_INGREDIENT_ON_LIST } from '../ingredient/actions';
 import { TOGGLE_INGREDIENT_CHECK_MARK, CLEAR_CHECKED_INGREDIENTS } from './actions';
 
 export const foodHowShoppingList = 'FOOD_HOW_SHOPPING_LIST';

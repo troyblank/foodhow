@@ -2,7 +2,7 @@ import { render, waitFor } from '@testing-library/react'
 import Chance from 'chance';
 import { useRouter } from 'next/router';
 import React from 'react';
-import RecipePage from './[recipe]';
+import RecipePage from '../../pages/recipe/[recipe]';
 
 jest.mock('next/router', () => ({
     useRouter: jest.fn().mockReturnValue({

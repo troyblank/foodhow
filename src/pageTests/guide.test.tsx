@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
 import React from 'react';
 
-import HomePage from './index';
+import GuidePage from '../pages/guide';
 
-describe('Page - Index', () => {
+describe('Page - Guide', () => {
     it('should render', () => {
-        const { container } = render(<HomePage />);
+        const { container } = render(<GuidePage />);
 
         expect(container).toBeInTheDocument();
     });

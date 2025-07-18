@@ -8,6 +8,7 @@ export const Head: FunctionComponent = () => {
         <meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
 
         <title>Food How</title>
+        <link href={'https://fonts.googleapis.com/css?family=Bitter:700|Raleway:500'} rel={'stylesheet'} />
         {/* Bookmark icons */}
         <link rel={'shortcut icon'} href={'/static/icons/favicon.png'} type={'image/png'} />
         {/* For third-generation iPad with high-resolution Retina display */}

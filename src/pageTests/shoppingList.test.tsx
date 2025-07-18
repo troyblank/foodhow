@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import React from 'react';
 
-import ShoppingListPage from './shoppingList';
+import ShoppingListPage from '../pages/shoppingList';
 
 jest.mock('react-redux', () => ({
     useDispatch: jest.fn(),

@@ -1,12 +1,11 @@
 module.exports = {
-	eslint: {
-		ignoreDuringBuilds: true,
-	},
+    eslint: {
+        ignoreDuringBuilds: true
+    },
     exportPathMap: () => ({
         '/': { page: '/' },
         '/guide': { page: '/guide' },
-        '/shoppingList': { page: '/shoppingList' },
+        '/shoppingList': { page: '/shoppingList' }
     }),
-    output: 'export',
-    reactStrictMode: true,
-}
+    reactStrictMode: true
+};

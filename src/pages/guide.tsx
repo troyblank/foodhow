@@ -1,14 +1,20 @@
-import React, { type FunctionComponent } from 'react';
+import React, { Fragment, type FunctionComponent } from 'react';
+import { type GetServerSidePropsContext } from 'next';
+import { type User } from '../types';
+import { AuthProvider } from '../contexts';
+import { getServerSidePropsOrRedirect } from '../utils';
 import { Head, Navigation, Guide } from '../components';
 
-export const GuidePage: FunctionComponent = () => {
-    return (
-      <>
-        <Head />
-        <Navigation />
-        <Guide />
-      </>
-    );
-}
+export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => getServerSidePropsOrRedirect(serverSideContext);
 
-export default GuidePage
+export const GuidePage: FunctionComponent = ({ user }: { user: User }) => (
+  <AuthProvider user={user}>
+    <Fragment>
+      <Head />
+      <Navigation />
+      <Guide />
+    </Fragment>
+  </AuthProvider>
+);
+
+export default GuidePage;

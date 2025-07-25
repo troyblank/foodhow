@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react'
+import { render } from '@testing-library/react';
 import Chance from 'chance';
 import { IngredientList } from '.';
 
@@ -13,13 +13,13 @@ jest.mock('react-redux', () => ({
 describe('IngredientList', () => {
     const chance = new Chance();
     const title = chance.word();
-    const ingredients = [chance.word(), chance.word(), chance.word()];
+    const ingredients = [chance.word({ syllables: 3 }), chance.word({ syllables: 2 }), chance.word({ syllables: 4 })];
 
     it('should render', () => {
         const { getByText } = render(<IngredientList
-            fileName={chance.word()}
-            title={title}
-            ingredients={ingredients}
+          fileName={chance.word()}
+          title={title}
+          ingredients={ingredients}
         />);
 
         expect(getByText(title)).toBeInTheDocument();
@@ -30,9 +30,9 @@ describe('IngredientList', () => {
 
     it('should render without a title', () => {
         const { queryByRole } = render(<IngredientList
-            fileName={chance.word()}
-            title={null}
-            ingredients={ingredients}
+          fileName={chance.word()}
+          title={null}
+          ingredients={ingredients}
         />);
 
         expect(queryByRole('heading', { level: 3 })).not.toBeInTheDocument();

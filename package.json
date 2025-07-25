@@ -6,8 +6,7 @@
   "scripts": {
     "start": "yarn clean && yarn watch",
     "watch": "next dev",
-    "build": "next build && yarn copy",
-    "copy": "cp _redirects out/_redirects",
+    "build": "next build",
     "preview": "build && cd out && serve -p 8888",
     "clean": "rm -rf dist && rm -rf coverage",
     "test": "yarn unit && yarn lint",
@@ -20,6 +19,9 @@
   "dependencies": {
     "@troyblank/food-how-components": "0.5.1",
     "@zeit/next-sass": "1.0.1",
+    "aws-amplify": "6.15.3",
+    "@aws-amplify/auth": "6.13.3",
+    "@aws-amplify/adapter-nextjs": "1.6.6",
     "classnames": "2.2.6",
     "dompurify": "2.0.14",
     "lodash": "4.17.19",

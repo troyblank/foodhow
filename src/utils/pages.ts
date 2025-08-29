@@ -2,7 +2,20 @@ import { type GetServerSidePropsContext } from 'next';
 import { type User } from '../types';
 import { getUserFromAmplify, SIGN_IN_PATH } from '.';
 
-export const getServerSidePropsOrRedirect: (serverSideContext: GetServerSidePropsContext) => Promise<{ props: { user: User | null } } | null> = async (serverSideContext: GetServerSidePropsContext) => {
+
+export const getServerSidePropsWithoutAuthRedirect: (serverSideContext: GetServerSidePropsContext) => Promise<{ props: { user: User | null } } | null> = async (serverSideContext: GetServerSidePropsContext) => {
+    let user: User | null = null;
+
+    try {
+        user = await getUserFromAmplify(serverSideContext);
+    } finally {
+        // Do nothing
+    }
+
+    return { props: { user } };
+};
+
+export const getServerSidePropsWithUnauthRedirect: (serverSideContext: GetServerSidePropsContext) => Promise<{ props: { user: User | null } } | null> = async (serverSideContext: GetServerSidePropsContext) => {
     let user: User | null = null;
 
     const respondWithUnauthenticated = (): null => {

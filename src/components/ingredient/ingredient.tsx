@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import dompurify from 'dompurify';
 import classnames from 'classnames';
+import { useAuth } from '../../contexts';
 import { toggleIngredientOnList } from './actions';
 
-export const extractLink = ( text: string ): { full: string, label: string, url: string } | null => {
+export const extractLink = (text: string): { full: string, label: string, url: string } | null => {
     const regex = /^\[([\w\s\d&;]+)\]\(((?:\/)[\w\d./?=#]+)\)$/;
     const match = text.match(regex);
 
@@ -25,13 +26,15 @@ type IngredientProps = {
 
 export const Ingredient: FunctionComponent<IngredientProps> = ({
     fileName,
-    text,
+    text
 }) => {
+    const { user } = useAuth();
     const dispatch = useDispatch();
-    const shoppingListStore = useSelector(({ shoppingList }) => shoppingList );
+    const shoppingListStore = useSelector(({ shoppingList }) => shoppingList);
     const { shoppingList = [] } = shoppingListStore;
-    const [ isInList, setIsInList ] = useState(false);
+    const [isInList, setIsInList] = useState(false);
     const link = extractLink(text);
+    const canAddToList = !link && user;
 
     const getId = () => `${fileName}|${text}`;
 
@@ -41,7 +44,7 @@ export const Ingredient: FunctionComponent<IngredientProps> = ({
 
         dispatch(toggleIngredientOnList(ingredient));
         setIsInList(!isInList);
-    }
+    };
 
     useEffect(() => {
         const id = getId();
@@ -50,24 +53,24 @@ export const Ingredient: FunctionComponent<IngredientProps> = ({
     }, []);
 
     return (
-        <li
-            className={classnames('ingredient', {
+      <li
+        className={classnames('ingredient', {
             'ingredient--active': isInList,
             'ingredient--is-link': Boolean(link)
             })}
-            data-testid={'ingredient'}
-        >
-            { !link &&
-              <button
-                dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }}
-                onClick={onToggle}
-              />
-            }
-            { link &&
-              <Link href={link.url}>
-                {link.label}
-              </Link>
-            }
-        </li>
+        data-testid={'ingredient'}
+      >
+        { canAddToList && !link &&
+          <button
+            dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }}
+            onClick={onToggle}
+          />}
+        { !canAddToList && !link &&
+          <span dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }} />}
+        { link &&
+          <Link href={link.url}>
+            {link.label}
+          </Link>}
+      </li>
     );
-}
+};

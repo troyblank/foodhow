@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { type GetServerSidePropsContext } from 'next';
 import React from 'react';
 
-import { getServerSidePropsOrRedirect } from '../utils';
+import { getServerSidePropsWithUnauthRedirect } from '../utils';
 import ShoppingListPage, { getServerSideProps } from '../pages/shoppingList';
 
 jest.mock('react-redux', () => ({
@@ -13,7 +13,7 @@ jest.mock('react-redux', () => ({
 }));
 
 jest.mock('../utils', () => ({
-    getServerSidePropsOrRedirect: jest.fn()
+    getServerSidePropsWithUnauthRedirect: jest.fn()
 }));
 
 describe('Page - Shopping List', () => {
@@ -23,7 +23,7 @@ describe('Page - Shopping List', () => {
         expect(container).toBeInTheDocument();
     });
 
-    it('should call getServerSidePropsOrRedirect with context', async () => {
+    it('should call getServerSidePropsWithUnauthRedirect with context', async () => {
         const context: Partial<GetServerSidePropsContext> = {
             req: {} as any,
             res: {} as any,
@@ -31,13 +31,13 @@ describe('Page - Shopping List', () => {
             query: {}
         } as GetServerSidePropsContext;
 
-        jest.mocked(getServerSidePropsOrRedirect).mockResolvedValue({
+        jest.mocked(getServerSidePropsWithUnauthRedirect).mockResolvedValue({
             props: { user: { name: 'Troy' } } as any
         });
 
         const result = await getServerSideProps(context as GetServerSidePropsContext);
 
-        expect(getServerSidePropsOrRedirect).toHaveBeenCalledWith(context);
+        expect(getServerSidePropsWithUnauthRedirect).toHaveBeenCalledWith(context);
         expect(result).toEqual({
             props: { user: { name: 'Troy' } }
         });

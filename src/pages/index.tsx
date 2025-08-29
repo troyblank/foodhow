@@ -3,7 +3,7 @@ import React, { Fragment, type FunctionComponent } from 'react';
 import { type GetServerSidePropsContext } from 'next';
 import { type User } from '../types';
 import { AuthProvider } from '../contexts';
-import { recipes } from '../../static/recipes.json';
+import { recipes } from '../../public/recipes.json';
 import { Head, Navigation, RecipeList } from '../components';
 import { getServerSidePropsWithoutAuthRedirect } from '../utils';
 

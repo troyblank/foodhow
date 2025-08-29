@@ -1,3 +1,3 @@
-import { recipes } from '../../static/recipes.json';
+import { recipes } from '../../public/recipes.json';
 
-export const getRecipes = (): string[] => recipes
+export const getRecipes = (): string[] => recipes;

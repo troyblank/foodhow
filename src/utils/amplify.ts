@@ -29,16 +29,21 @@ type AuthSession = {
 }
 
 export const extractUserInformationFromAmplifyServerContext = async (amplifyContextSpecification: AmplifyServer.ContextSpec): Promise<User> => {
-    const { username }: GetCurrentUserOutput = await getCurrentUser(amplifyContextSpecification);
-    const { tokens }: AuthSession = await fetchAuthSession(amplifyContextSpecification);
-    const attributes: FetchUserAttributesOutput = await fetchUserAttributes(amplifyContextSpecification);
-    const jwtToken: string = String(tokens.idToken.toString());
+    try {
+        const { username }: GetCurrentUserOutput = await getCurrentUser(amplifyContextSpecification);
+        const { tokens }: AuthSession = await fetchAuthSession(amplifyContextSpecification);
+        const attributes: FetchUserAttributesOutput = await fetchUserAttributes(amplifyContextSpecification);
+        const jwtToken: string = String(tokens.idToken.toString());
 
-    return {
-        fullName: `${attributes.given_name} ${attributes.family_name}`,
-        jwtToken,
-        username
-    };
+        return {
+            fullName: `${attributes.given_name} ${attributes.family_name}`,
+            jwtToken,
+            username
+        };
+    } catch (error) {
+        // User is not authenticated
+        return null;
+    }
 };
 
 export const { runWithAmplifyServerContext } = createServerRunner({

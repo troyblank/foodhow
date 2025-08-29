@@ -3,9 +3,9 @@ import { type GetServerSidePropsContext } from 'next';
 import { type User } from '../types';
 import { AuthProvider } from '../contexts';
 import { Head, Navigation, ShoppingList } from '../components';
-import { getServerSidePropsOrRedirect } from '../utils';
+import { getServerSidePropsWithUnauthRedirect } from '../utils';
 
-export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => getServerSidePropsOrRedirect(serverSideContext);
+export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => getServerSidePropsWithUnauthRedirect(serverSideContext);
 
 export const ShoppingListPage: FunctionComponent = ({ user }: { user: User }) => (
   <AuthProvider user={user}>

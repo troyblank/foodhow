@@ -40,4 +40,10 @@ describe('Amplify Utils', () => {
 
         expect(await extractUserInformationFromAmplifyServerContext({} as any)).toStrictEqual(expectedUser);
     });
+
+    it('should return null if there is no user information in the amplify server context', async () => {
+        jest.mocked(getCurrentUser).mockRejectedValue(new Error('User not found'));
+
+        expect(await extractUserInformationFromAmplifyServerContext({} as any)).toBeNull();
+    });
 });

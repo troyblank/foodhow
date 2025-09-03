@@ -1,5 +1,5 @@
 .recipe {
-    margin: 20px 0;
+    padding: 20px 10px;
 
     header {
         margin-bottom: 30px;
@@ -25,8 +25,9 @@
         }
 
         & > ol {
-            margin: 0 0 0 15px;
-            list-style-type: upper-alpha;
+            padding-bottom: 10px;
+            margin: 0 0 10px 0;
+            border-bottom: 1px solid;
         }
     }
 }

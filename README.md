@@ -52,7 +52,24 @@ Ingredient groups:
 
     {
         ...
-       "ingredients": {
+        "directions": [
+            [
+                { "text": "Mash ingredient together." },
+                { "text": "Put in a fridge for 24 hours." },
+            ]m
+            { "text": "Maybe throw in hot sauce (optional).", type: "optional" },
+            { "text": "Eat." }
+        ]
+        ...
+    }
+
+### Additional direction formats (experimental - need to make this more like ingredients in the future)
+
+Direction groups:
+
+    {
+        ...
+       "directions": {
             "Brine": [
                 "1 15lb turkey",
                 "1 gallon vegetable stock"
@@ -63,7 +80,7 @@ Ingredient groups:
             ]
         },
         ...
-    }
+    }   
 
 ## Types
 

@@ -1,0 +1,45 @@
+{
+    "title": "Thin Crust Pizza",
+    "meta": "",
+    "ingredients": {
+        "dough": [
+            "1&frac12; cups bread flour",
+            "1 tsp sugar",
+            "&frac14; tsp active dry yeast",
+            "&frac34; tsp salt",
+            "&frac23; cup ice water"
+        ],
+        "sauce": [
+            "&frac12; cup canned whole tomatoes (drained)",
+            "1 tsp olive oil",
+            "1 garlic clove (minced)",
+            "&frac18; tsp red wine vinegar",
+            "&frac14; tsp dried oregano",
+            "&frac18; tsp salt",
+            "&frac18; tsp pepper"
+        ],
+        "toppings": [
+            "&frac14; cup Parmesan (grated)",
+            "4 oz low moisture mozzarella (shredded)"
+        ]
+    },
+    "directions": [
+        [
+            { "text": "Process flour, sugar, and yeast for 2 secs." },
+            { "text": "With Processor running slowly add water." },
+            { "text": "Let dough sit for 10 mins." },
+            { "text": "Add oil and salt to the dough and process." },
+            { "text": "Knead the dough on a floured surface until a good consistency." },
+            { "text": "Shape the dough into a tight ball and place it in a lightly oiled bowl." },
+            { "text": "Cover and refrigerate for at least 24 hours before using." }
+        ],
+        [
+            { "text": "To make the sauce process all ingredients until smooth." }
+        ],
+        { "text": "Put dough on a lightly oiled surface, cover loosely with lightly greased plastic and let sit for 1 hour." },
+        { "text": "Put oven rack close to the top and heat oven to 500°." },
+        { "text": "Coat dough with flour and flatten it to an 12\" disk with raised edges." },
+        { "text": "Spread sauce over dough, sprinkle with parmesan then mozzarella." },
+        { "text": "Bake for 11 mins, rotating the pizza halfway through." }
+    ]
+}

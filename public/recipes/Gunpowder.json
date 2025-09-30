@@ -1,0 +1,26 @@
+{
+    "title": "Gunpowder",
+    "meta": "",
+    "ingredients": [
+        "1 oz split yellow lentils",
+        "1 oz black split gram lentils",
+        "1 oz coconut flakes",
+        "1 TBSP black sesame seeds",
+        "2 TBSP Curry leaves",
+        "3 dried red chilies",
+        "1 TBSP tamarind powder",
+        "&frac14; tsp asafetida",
+        "2 tsp sugar"
+    ],
+    "directions": [
+        { "text": "Toast the lentils over low heat for 8&frac12; mins, stirring continuously." },
+        { "text": "Transfer to a bowl." },
+        { "text": "Toast the coconut for 3&frac12; mins." },
+        { "text": "Add sesame seeds, curry leaves, and chilies." },
+        { "text": "Stir in the tamarind and asafetida and toast for 1 min longer." },
+        { "text": "Turn off heat, and add sugar, stir till melted." },
+        { "text": "Scrape pot into lentils an let cool." },
+        { "text": "Grind into a coarse powder, spread on a tray and let dry for 1 hour." }
+
+    ]
+}

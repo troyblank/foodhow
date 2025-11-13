@@ -1,0 +1,30 @@
+.list-item-box {
+    flex: 1;
+    position: relative;
+    width: 500px;
+    padding: 10px 5px 10px 10px;
+    background: var(--color-orange);
+    color: var(--color-cream);
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    outline: none;
+}
+
+.list-item-box:focus-visible {
+    outline: 2px solid var(--color-brown);
+    outline-offset:2px;
+}
+
+.list-item-box__item-name {
+    flex: 1;
+}
+
+.list-item-box__checkbox {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}

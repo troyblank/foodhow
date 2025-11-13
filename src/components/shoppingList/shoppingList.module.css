@@ -1,0 +1,27 @@
+.shopping-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.shopping-list__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.shopping-list__clear-button {
+    margin: 0;
+}
+
+.shopping-list__no-result-message {
+    margin: 20px auto
+}

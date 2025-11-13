@@ -16,6 +16,10 @@ out
 .sass-cache
 *.css.map
 
+# TYPESCRIPT #
+##############
+*.tsbuildinfo
+
 # OS generated files #
 ######################
 .DS_Store

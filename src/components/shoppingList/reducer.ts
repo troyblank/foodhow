@@ -1,6 +1,6 @@
 import { cloneDeep, xorBy } from 'lodash';
 import { TOGGLE_INGREDIENT_ON_LIST } from '../ingredient/actions';
-import { TOGGLE_INGREDIENT_CHECK_MARK, CLEAR_CHECKED_INGREDIENTS } from './actions';
+import { TOGGLE_INGREDIENT_CHECK_MARK } from './actions';
 
 export const foodHowShoppingList = 'FOOD_HOW_SHOPPING_LIST';
 
@@ -26,16 +26,6 @@ export default (state = initialState, action) => {
 
         shoppingList[index].checked = !shoppingList[index].checked;
         nextState.shoppingList = shoppingList;
-        break;
-    }
-    case CLEAR_CHECKED_INGREDIENTS: {
-        const shoppingList = oldShoppingList.filter((i) => !i.checked);
-
-        nextState.shoppingList = shoppingList;
-        nextState.noResultsMessage = {
-            headline: 'Done!',
-            body: 'Oh, so proud of you!'
-        };
         break;
     }
     default:

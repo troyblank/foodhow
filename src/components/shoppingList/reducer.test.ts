@@ -1,14 +1,14 @@
 import Chance from 'chance';
 import reducer, { initialState } from './reducer';
 import { TOGGLE_INGREDIENT_ON_LIST } from '../ingredient/actions';
-import { TOGGLE_INGREDIENT_CHECK_MARK, CLEAR_CHECKED_INGREDIENTS } from './actions';
+import { TOGGLE_INGREDIENT_CHECK_MARK } from './actions';
 
 describe('Shopping List Reducer', () => {
     const chance = new Chance();
     const { noResultsMessage } = initialState;
 
     it('Should return initial state.', () => {
-        expect(reducer(undefined, {})).toEqual( {shoppingList: [], noResultsMessage })
+        expect(reducer(undefined, {})).toEqual({ shoppingList: [], noResultsMessage });
     });
 
     it('Should handle toggling ingredients.', () => {
@@ -44,20 +44,5 @@ describe('Shopping List Reducer', () => {
         const expectedReturnState = { shoppingList: [{ id, checked: true }, { id: shoppingList[1].id }, { id: shoppingList[2].id }] };
 
         expect(reducer({ shoppingList } as any, { type: TOGGLE_INGREDIENT_CHECK_MARK, ingredientID: id })).toEqual(expectedReturnState);
-    });
-
-    it('Should handle clearing all ingredients.', () => {
-        const unCheckedList = [{ id: chance.word() }, { id: chance.word() }];
-        const checkedList = [{ id: chance.word(), checked: true }, { id: chance.word(), checked: true }, { id: chance.word(), checked: true }];
-        const shoppingList = [...unCheckedList, ...checkedList];
-        const expectedReturnState = {
-            shoppingList: unCheckedList,
-            noResultsMessage: {
-                headline: 'Done!',
-                body: 'Oh, so proud of you!'
-            }
-        };
-
-        expect(reducer({ shoppingList } as any, { type: CLEAR_CHECKED_INGREDIENTS })).toEqual(expectedReturnState);
     });
 });

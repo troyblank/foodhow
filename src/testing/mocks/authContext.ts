@@ -1,4 +1,3 @@
-/* istanbul ignore file */
 import { mockUser } from './user';
 import { type AuthContextType } from '../../types';
 

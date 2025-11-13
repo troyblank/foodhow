@@ -2,6 +2,7 @@ import { render } from '@testing-library/react';
 import { type GetServerSidePropsContext } from 'next';
 import React from 'react';
 
+import { TestWrapper } from '../testing';
 import { getServerSidePropsWithUnauthRedirect } from '../utils';
 import ShoppingListPage, { getServerSideProps } from '../pages/shoppingList';
 
@@ -18,7 +19,7 @@ jest.mock('../utils', () => ({
 
 describe('Page - Shopping List', () => {
     it('should render', () => {
-        const { container } = render(<ShoppingListPage />);
+        const { container } = render(<ShoppingListPage />, { wrapper: TestWrapper });
 
         expect(container).toBeInTheDocument();
     });

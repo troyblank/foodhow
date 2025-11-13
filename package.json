@@ -17,6 +17,7 @@
     "sasslint": "sass-lint -c ./node_modules/@troyblank/sasslint-config-troyblank/.sass-lint.yml ./src/**/*.scss -v -q"
   },
   "dependencies": {
+    "@tanstack/react-query": "5.90.5",
     "@troyblank/food-how-components": "0.5.1",
     "@zeit/next-sass": "1.0.1",
     "aws-amplify": "6.15.3",

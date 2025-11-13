@@ -1,9 +1,7 @@
 import Chance from 'chance';
 import {
     TOGGLE_INGREDIENT_CHECK_MARK,
-    CLEAR_CHECKED_INGREDIENTS,
-    toggleIngredientCheckMark,
-    clearCheckedIngredients
+    toggleIngredientCheckMark
 } from './actions';
 
 describe('Shopping List Actions', () => {
@@ -13,13 +11,6 @@ describe('Shopping List Actions', () => {
         const ingredientID = chance.word();
         const action = toggleIngredientCheckMark(ingredientID);
 
-        expect( action ).toEqual( { type: TOGGLE_INGREDIENT_CHECK_MARK, ingredientID } );
-    });
-
-    it('Should be able to generate an clear checked ingredients action.', () => {
-        const action = clearCheckedIngredients();
-
-        expect( action ).toEqual( { type: CLEAR_CHECKED_INGREDIENTS } );;
+        expect(action).toEqual({ type: TOGGLE_INGREDIENT_CHECK_MARK, ingredientID });
     });
 });
-

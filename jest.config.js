@@ -2,6 +2,7 @@ const transformWhitelistPackages = [];
 
 module.exports = {
     collectCoverage: true,
+    coveragePathIgnorePatterns: ['/src/testing/'],
     coverageReporters: ['lcov', 'text-summary'],
     coverageThreshold: {
         global: {

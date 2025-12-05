@@ -6,11 +6,15 @@ import React from 'react';
 import { TestWrapper, mockShoppingListItem, mockUser } from '../../testing';
 import { ShoppingList } from './shoppingList';
 import * as shoppingListModule from './shoppingList';
-import { useShoppingList } from '../../data';
+import { useShoppingList, useDeleteShoppingListItems } from '../../data';
 import { useAuth } from '../../contexts';
 
 jest.mock('../../data', () => ({
-    useShoppingList: jest.fn()
+    useShoppingList: jest.fn(),
+    useDeleteShoppingListItems: jest.fn(() => ({
+        mutate: jest.fn(),
+        isPending: false
+    }))
 }));
 
 jest.mock('../../contexts', () => ({
@@ -103,8 +107,8 @@ describe('Shopping List', () => {
         const { getByText } = render(<ShoppingList />, { wrapper: TestWrapper });
 
         await waitFor(() => {
-            expect(getByText('figure out title')).toBeInTheDocument();
-            expect(getByText('no things or oh so proud')).toBeInTheDocument();
+            expect(getByText('Nothing to shop for')).toBeInTheDocument();
+            expect(getByText('Add items using the button below, or clicking on ingredients from a recipe.')).toBeInTheDocument();
         });
     });
 
@@ -157,7 +161,7 @@ describe('Shopping List', () => {
 
     it('Should handle deleting checked items.', async () => {
         const user = userEvent.setup();
-        const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+        const mockMutate = jest.fn();
         const checkedItemId = chance.natural();
         const uncheckedItemId = chance.natural();
         const shoppingList = [
@@ -178,6 +182,11 @@ describe('Shopping List', () => {
             error: null
         } as any);
 
+        jest.mocked(useDeleteShoppingListItems).mockReturnValue({
+            mutate: mockMutate,
+            isPending: false
+        } as any);
+
         const { getByText, queryByText, findByText } = render(<ShoppingList />, { wrapper: TestWrapper });
         const checkedItemName = shoppingList.find((item) => item.id === checkedItemId)!.name;
 
@@ -195,8 +204,61 @@ describe('Shopping List', () => {
 
         await user.click(deleteButton);
 
-        expect(consoleSpy).toHaveBeenCalledWith('Clear items not implemented yet!');
-        consoleSpy.mockRestore();
+        // Confirm modal should appear
+        const confirmButton = await findByText('Confirm');
+
+        await user.click(confirmButton);
+
+        expect(mockMutate).toHaveBeenCalledWith([checkedItemId]);
+    });
+
+    it('Should close modal and not delete when cancel is clicked.', async () => {
+        const user = userEvent.setup();
+        const mockMutate = jest.fn();
+        const checkedItemId = chance.natural();
+        const shoppingList = [
+            mockShoppingListItem({ name: chance.word(), id: checkedItemId })
+        ];
+
+        jest.mocked(useAuth).mockReturnValue({
+            user: mockUser(),
+            attemptToSignIn: jest.fn()
+        });
+
+        jest.mocked(useShoppingList).mockReturnValue({
+            isLoading: false,
+            isError: false,
+            data: shoppingList,
+            error: null
+        } as any);
+
+        jest.mocked(useDeleteShoppingListItems).mockReturnValue({
+            mutate: mockMutate,
+            isPending: false
+        } as any);
+
+        const { getByText, findByText, queryByText } = render(<ShoppingList />, { wrapper: TestWrapper });
+        const checkedItemName = shoppingList.find((item) => item.id === checkedItemId)!.name;
+
+        await waitFor(() => {
+            expect(getByText(checkedItemName)).toBeInTheDocument();
+        });
+
+        await user.click(getByText(checkedItemName));
+
+        const deleteButton = await findByText('Delete Checked');
+
+        await user.click(deleteButton);
+
+        const cancelButton = await findByText('Cancel');
+
+        await user.click(cancelButton);
+
+        await waitFor(() => {
+            expect(queryByText('Cancel')).not.toBeInTheDocument();
+        });
+
+        expect(mockMutate).not.toHaveBeenCalled();
     });
 
     it('Should throw error when localStorage.setItem fails.', async () => {

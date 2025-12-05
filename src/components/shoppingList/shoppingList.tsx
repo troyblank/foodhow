@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Button, NoResultMessage } from '@troyblank/food-how-components';
 import { useAuth } from '../../contexts';
-import { useShoppingList } from '../../data';
+import { useShoppingList, useDeleteShoppingListItems } from '../../data';
+import { Button, Modal, HeaderMessage, Spinner } from '..';
 import { ShoppingListItem } from './shoppingListItem';
 import styles from './shoppingList.module.css';
 
@@ -15,8 +15,11 @@ export const throwLocalStorageError = (): never => {
 export const ShoppingList = () => {
     const { user } = useAuth();
     const { isLoading, data: shoppingList } = useShoppingList(user);
+    const { mutate: deleteShoppingListItems, isPending: isDeletingCheckedItems } = useDeleteShoppingListItems(user);
     const [checkedItemIds, setCheckedItemIds] = useState<Set<number>>(new Set());
+    const [isShowingConfirmModal, setIsShowingConfirmModal] = useState(false);
     const isInitialized = useRef(false);
+
 
     // Loads checked items from localStorage once shopping list data is available
     useEffect(() => {
@@ -68,9 +71,9 @@ export const ShoppingList = () => {
         });
     };
 
-    const onClear = () => {
-        // eslint-disable-next-line no-console
-        console.log('Clear items not implemented yet!');
+    const onDeleteCheckedItems = () => {
+        setIsShowingConfirmModal(false);
+        deleteShoppingListItems(Array.from(checkedItemIds));
     };
 
     const { uncheckedItems, checkedItems } = useMemo(() => {
@@ -92,7 +95,11 @@ export const ShoppingList = () => {
     }, [shoppingList, checkedItemIds]);
 
     if (isLoading) {
-        return <div>Loading...</div>;
+        return (
+          <div className={styles['shopping-list__loading']}>
+            <Spinner size={'large'} color={'brown'} />
+          </div>
+        );
     }
 
     const isEmpty = 0 === shoppingList.length;
@@ -102,7 +109,7 @@ export const ShoppingList = () => {
       <section className={styles['shopping-list']}>
         {isEmpty && (
           <div className={styles['shopping-list__no-result-message']}>
-            <NoResultMessage headline={'figure out title'} message={'no things or oh so proud'} />
+            <HeaderMessage headline={'Nothing to shop for'} message={'Add items using the button below, or clicking on ingredients from a recipe.'} />
           </div>
         )}
         <ul className={styles['shopping-list__items']}>
@@ -116,14 +123,16 @@ export const ShoppingList = () => {
             ))}
         </ul>
         { isAnyItemsChecked && (
-        <Button
-          className={styles['shopping-list__clear-button']}
-          text={'Delete Checked'}
-          buttonClickHand={onClear}
-        />
+        <div className={styles['shopping-list__clear-button']}>
+          <Button
+            text={'Delete Checked'}
+            buttonClickHand={() => setIsShowingConfirmModal(true)}
+            isPending={isDeletingCheckedItems}
+          />
+        </div>
         )}
         {checkedItems.length > 0 && (
-          <ul className={styles['shopping-list']}>
+          <ul className={styles['shopping-list__items']}>
             {checkedItems.map((item) => (
               <ShoppingListItem
                 key={item.id}
@@ -134,6 +143,12 @@ export const ShoppingList = () => {
             ))}
           </ul>
         )}
+        <Modal
+          message={'Are you sure you want to delete the checked items?'}
+          isShowing={isShowingConfirmModal}
+          onConfirm={() => onDeleteCheckedItems()}
+          onCancel={() => setIsShowingConfirmModal(false)}
+        />
       </section>
     );
 };

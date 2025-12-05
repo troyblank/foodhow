@@ -11,3 +11,12 @@ export const getShoppingList = async (user: User): Promise<ShoppingList> => {
 
     return data.shoppingList;
 };
+
+export const deleteShoppingListItems = async (user: User, itemIds: number[]): Promise<void> => {
+    const { jwtToken } = user;
+    await getAndValidateResponseData(await fetch(`${getAPIURL()}/deleteShoppingListItems`, {
+        method: 'DELETE',
+        headers: getHeaders(jwtToken),
+        body: JSON.stringify(itemIds)
+    }));
+};

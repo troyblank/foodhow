@@ -1,6 +1,8 @@
 import React, { useCallback, useState, ChangeEvent, type FunctionComponent } from 'react';
 import Link from 'next/link';
 import { getRecipes } from '../../data';
+import { HeaderMessage } from '..';
+import styles from './recipeList.module.css';
 
 export const RecipeList: FunctionComponent = () => {
     const recipes = useCallback(() => getRecipes(), [])();
@@ -20,27 +22,27 @@ export const RecipeList: FunctionComponent = () => {
     };
 
     return (
-        <>
-        <header className={'recipe-list__header'}>
-            <h1>Food How</h1>
-            <p>Food How is a place on how to make food. You will find recipes on this site that are used to make foods that are probably pretty good to eat.</p>
-          </header>
+      <div className={styles['recipe-list']}>
+        <HeaderMessage
+          headline={'Food How'}
+          message={'Food How is a place on how to make food. You will find recipes on this site that are used to make foods that are probably pretty good to eat.'}
+        />
         <section className={'recipe-list__search'}>
-            <input
+          <input
             autoComplete={'off'}
             type={'text'}
             name={'search'}
             placeholder={'Search'}
             onChange={onSearch}
           />
-          </section>
+        </section>
         <section className={'recipe-list__nodes'}>
-            { filteredRecipes.map((recipe) => (
+          { filteredRecipes.map((recipe) => (
             <Link href={'/recipe/[recipe]'} as={`/recipe/${recipe.replace(/ /g, '_')}`} key={recipe}>
-                {recipe}
-              </Link>
+              {recipe}
+            </Link>
             ))}
-          </section>
-      </>
+        </section>
+      </div>
     );
 };

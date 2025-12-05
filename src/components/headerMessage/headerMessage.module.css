@@ -1,0 +1,19 @@
+.header-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-message__headline {
+    margin: 0 0 15px;
+    font-family: 'Bitter', serif;
+    font-size: 3rem;
+    line-height: 3.25rem;
+}
+
+.header-message__text {
+    max-width: 600px;
+    margin: 0;
+}
+

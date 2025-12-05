@@ -1,0 +1,18 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 42px;
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--color-brown) no-repeat;
+    color: var(--color-cream);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.button--pending {
+    cursor: not-allowed;
+    opacity: 0.8;
+}

@@ -19,12 +19,16 @@ export const SHOPPING_ITEM_STORE = [
 export type ShoppingItemType = typeof SHOPPING_ITEM_TYPE[number];
 export type ShoppingItemStore = typeof SHOPPING_ITEM_STORE[number];
 
-export type ShoppingListItem = {
-    id: number,
+export type NewShoppingListItem = {
     amount: number,
     name: string,
-    type: ShoppingItemType,
+    recipe?: string,
     store: ShoppingItemStore,
+    type: ShoppingItemType,
+}
+
+export type ShoppingListItem = NewShoppingListItem & {
+    id: number,
 }
 
 export type ShoppingList = ShoppingListItem[]

@@ -1,0 +1,34 @@
+.ingredient {
+    position: relative;
+}
+
+.ingredient button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.ingredient--active {
+    list-style-image: url('/icons/icon_shopping_cart.svg');
+}
+
+.ingredient--active button {
+    color: var(--color-orange);
+}
+
+.ingredient--is-link {
+    margin-left: -17px;
+    list-style-type: none;
+}
+
+.ingredient--pending {
+    list-style-type: none;
+}
+
+.spinner {
+    position: absolute;
+    left: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+

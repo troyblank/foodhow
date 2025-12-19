@@ -1,12 +1,22 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react';
 import Chance from 'chance';
-import { Recipe } from './';
+import { Recipe } from '.';
 
-jest.mock('react-redux', () => ({
-    useDispatch: jest.fn(),
-    useSelector: jest.fn().mockImplementation(() => ({
-        shoppingList: []
+jest.mock('../../contexts', () => ({
+    useAuth: jest.fn().mockImplementation(() => ({
+        user: null
+    }))
+}));
+
+jest.mock('../../data', () => ({
+    useShoppingList: jest.fn().mockImplementation(() => ({
+        data: [],
+        isLoading: false
+    })),
+    useCreateShoppingListItem: jest.fn().mockImplementation(() => ({
+        mutateAsync: jest.fn(),
+        isPending: false
     }))
 }));
 
@@ -28,25 +38,23 @@ describe('Recipe', () => {
     };
 
     beforeEach(() => {
-        global.fetch = jest.fn(() =>
-            Promise.resolve({
-                json: () => Promise.resolve(recipe),
-                ok: true,
-                status: 200,
-                headers: new Headers(),
-            } as Response)
-        );
+        global.fetch = jest.fn(() => Promise.resolve({
+            json: () => Promise.resolve(recipe),
+            ok: true,
+            status: 200,
+            headers: new Headers()
+        } as Response));
     });
 
-    it('Should render.', async() => {
+    it('Should render.', async () => {
         const { getByText } = render(<Recipe fileName={chance.word()} />);
 
-        await waitFor(() =>{
-            expect(getByText(title)).toBeInTheDocument()
-    });
+        await waitFor(() => {
+            expect(getByText(title)).toBeInTheDocument();
+        });
     });
 
-    it('Should render all ingredients and directions.', async() => {
+    it('Should render all ingredients and directions.', async () => {
         const { getByText } = render(<Recipe fileName={chance.word()} />);
 
         await waitFor(() => {
@@ -59,7 +67,7 @@ describe('Recipe', () => {
         });
     });
 
-    it('Should render a recipe that has nested ingredients.', async() => {
+    it('Should render a recipe that has nested ingredients.', async () => {
         const nestedIngredientA = chance.word({ syllable: 2 });
         const nestedIngredientB = chance.word({ syllable: 3 });
         const nestedIngredientC = chance.word({ syllable: 4 });
@@ -70,17 +78,15 @@ describe('Recipe', () => {
             [chance.word()]: [nestedIngredientC, nestedIngredientD]
         };
 
-        global.fetch = jest.fn(() =>
-            Promise.resolve({
-                json: () => Promise.resolve({
-                    ...recipe,
-                    ingredients: multiStepIngredients
-                }),
-                ok: true,
-                status: 200,
-                headers: new Headers(),
-            } as Response)
-        );
+        global.fetch = jest.fn(() => Promise.resolve({
+            json: () => Promise.resolve({
+                ...recipe,
+                ingredients: multiStepIngredients
+            }),
+            ok: true,
+            status: 200,
+            headers: new Headers()
+        } as Response));
 
         const { getByText } = render(<Recipe fileName={chance.word()} />);
 

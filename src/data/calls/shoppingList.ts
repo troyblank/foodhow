@@ -14,7 +14,7 @@ export const getShoppingList = async (user: User): Promise<ShoppingList> => {
 
 export const createShoppingListItem = async (user: User, newShoppingListItem: NewShoppingListItem): Promise<void> => {
     const { jwtToken } = user;
-    await getAndValidateResponseData(await fetch(`${getAPIURL()}/createShoppingListItems`, {
+    await getAndValidateResponseData(await fetch(`${getAPIURL()}/createShoppingListItem`, {
         method: 'POST',
         headers: getHeaders(jwtToken),
         body: JSON.stringify(newShoppingListItem)

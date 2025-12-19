@@ -1,7 +1,8 @@
 import Chance from 'chance';
 import { mockShoppingList, mockUser } from '../../testing';
 import { getAndValidateResponseData } from '../../utils/apiCommunication';
-import { deleteShoppingListItems, getShoppingList } from './shoppingList';
+import { createShoppingListItem, deleteShoppingListItems, getShoppingList } from './shoppingList';
+import { SHOPPING_ITEM_STORE, SHOPPING_ITEM_TYPE, type NewShoppingListItem } from '../../types';
 
 jest.mock('../../utils/apiCommunication');
 
@@ -14,6 +15,19 @@ describe('Balance', () => {
         jest.mocked(getAndValidateResponseData).mockResolvedValue({ data: { shoppingList } });
 
         expect(await getShoppingList(mockUser())).toEqual(shoppingList);
+    });
+
+    it('Should be able to create a shopping list item.', async () => {
+        const newItem: NewShoppingListItem = {
+            amount: chance.natural(),
+            name: chance.word(),
+            type: chance.pickone(SHOPPING_ITEM_TYPE),
+            store: chance.pickone(SHOPPING_ITEM_STORE)
+        };
+
+        jest.mocked(getAndValidateResponseData).mockResolvedValue({ data: {} });
+
+        await expect(createShoppingListItem(mockUser(), newItem)).resolves.toBeUndefined();
     });
 
     it('Should be able to delete shopping list items.', async () => {

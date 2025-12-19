@@ -6,13 +6,6 @@ import { TestWrapper } from '../testing';
 import { getServerSidePropsWithUnauthRedirect } from '../utils';
 import ShoppingListPage, { getServerSideProps } from '../pages/shoppingList';
 
-jest.mock('react-redux', () => ({
-    useDispatch: jest.fn(),
-    useSelector: jest.fn().mockImplementation(() => ({
-        shoppingList: []
-    }))
-}));
-
 jest.mock('../utils', () => ({
     getServerSidePropsWithUnauthRedirect: jest.fn()
 }));

@@ -1,5 +1,5 @@
 import React, { type FunctionComponent } from 'react';
-import { Ingredient } from '../'
+import { Ingredient } from '..';
 
 type IngredientListProps = {
     title: string,
@@ -10,21 +10,18 @@ type IngredientListProps = {
 export const IngredientList: FunctionComponent<IngredientListProps> = ({
     fileName,
     ingredients,
-    title,
-}) => {
-    return (
-        <>
-            { title && <h3 className={'ingredient__title'}>{title}</h3> }
-            <ul>
-                { ingredients.map((ingredient) => (
-                    <Ingredient
-                        fileName={fileName}
-                        text={ingredient}
-                        key={ingredient}
-                    />
+    title
+}) => (
+    <>
+        { title && <h3 className={'ingredient__title'}>{title}</h3> }
+    <ul>
+        { ingredients.map((ingredient) => (
+        <Ingredient
+            ingredientName={ingredient}
+            key={ingredient}
+            recipeName={fileName}
+          />
                 ))}
-            </ul>
-        </>
-    )
-
-}
+      </ul>
+  </>
+);

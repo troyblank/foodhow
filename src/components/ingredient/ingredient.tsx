@@ -1,10 +1,10 @@
-import React, { useEffect, useState, type FunctionComponent } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { type FunctionComponent } from 'react';
 import Link from 'next/link';
 import dompurify from 'dompurify';
-import classnames from 'classnames';
 import { useAuth } from '../../contexts';
-import { toggleIngredientOnList } from './actions';
+import { useCreateShoppingListItem, useShoppingList } from '../../data';
+import { Spinner } from '..';
+import styles from './ingredient.module.css';
 
 export const extractLink = (text: string): { full: string, label: string, url: string } | null => {
     const regex = /^\[([\w\s\d&;]+)\]\(((?:\/)[\w\d./?=#]+)\)$/;
@@ -20,53 +20,56 @@ export const extractLink = (text: string): { full: string, label: string, url: s
 };
 
 type IngredientProps = {
-    fileName: string
-    text: string,
+    recipeName: string
+    ingredientName: string,
 }
 
 export const Ingredient: FunctionComponent<IngredientProps> = ({
-    fileName,
-    text
+    recipeName,
+    ingredientName
 }) => {
     const { user } = useAuth();
-    const dispatch = useDispatch();
-    const shoppingListStore = useSelector(({ shoppingList }) => shoppingList);
-    const { shoppingList = [] } = shoppingListStore;
-    const [isInList, setIsInList] = useState(false);
-    const link = extractLink(text);
+    const { data: shoppingList = [], isLoading } = useShoppingList(user);
+    const { mutateAsync: createShoppingListItem, isPending: isSaving } = useCreateShoppingListItem(user);
+    const isPending = isLoading || isSaving;
+    const link = extractLink(ingredientName); // A link looks like [1 link to another recipe](/some/link)
     const canAddToList = !link && user;
 
-    const getId = () => `${fileName}|${text}`;
+    const isInList = shoppingList.some(
+        (item) => item.name === ingredientName && item.recipe === recipeName
+    );
 
     const onToggle = () => {
-        const id = getId();
-        const ingredient = { id, text };
-
-        dispatch(toggleIngredientOnList(ingredient));
-        setIsInList(!isInList);
+        createShoppingListItem({
+            amount: 1,
+            name: ingredientName,
+            recipe: recipeName,
+            type: 'frozen', // hard code for now
+            store: 'Unspecified' // hard code for now
+        });
     };
 
-    useEffect(() => {
-        const id = getId();
-
-        setIsInList(Boolean(shoppingList.find((i) => id === i.id)));
-    }, []);
+    const className = [
+        styles.ingredient,
+        isInList ? styles['ingredient--active'] : '',
+        link ? styles['ingredient--is-link'] : '',
+        isPending ? styles['ingredient--pending'] : ''
+    ].filter(Boolean).join(' ');
 
     return (
       <li
-        className={classnames('ingredient', {
-            'ingredient--active': isInList,
-            'ingredient--is-link': Boolean(link)
-            })}
+        className={className}
         data-testid={'ingredient'}
       >
+        {isPending && <span className={styles.spinner}><Spinner size={'small'} color={'brown'} /></span>}
         { canAddToList && !link &&
           <button
-            dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }}
+            dangerouslySetInnerHTML={{ __html: dompurify.sanitize(ingredientName) }}
             onClick={onToggle}
+            disabled={isInList || isPending}
           />}
         { !canAddToList && !link &&
-          <span dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }} />}
+          <span dangerouslySetInnerHTML={{ __html: dompurify.sanitize(ingredientName) }} />}
         { link &&
           <Link href={link.url}>
             {link.label}

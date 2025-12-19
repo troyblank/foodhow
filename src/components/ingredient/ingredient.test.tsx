@@ -1,101 +1,121 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Chance from 'chance';
-import { mockAuthContext } from '../../testing';
+import { mockAuthContext, mockShoppingListItem, TestWrapper } from '../../testing';
 import { useAuth } from '../../contexts';
+import { useCreateShoppingListItem, useShoppingList } from '../../data';
 import { extractLink, Ingredient } from './ingredient';
 
-jest.mock('react-redux', () => ({
-    useDispatch: jest.fn(),
-    useSelector: jest.fn().mockImplementation(() => ({
-        shoppingList: []
-    }))
-}));
 jest.mock('../../contexts', () => ({
     useAuth: jest.fn().mockImplementation(() => ({
         user: null
     }))
 }));
 
+jest.mock('../../data', () => ({
+    useShoppingList: jest.fn().mockImplementation(() => ({
+        data: [],
+        isLoading: false
+    })),
+    useCreateShoppingListItem: jest.fn().mockImplementation(() => ({
+        mutateAsync: jest.fn(),
+        isPending: false
+    }))
+}));
+
 describe('Ingredient', () => {
     const chance = new Chance();
-    const text = chance.word();
+    const ingredientName = chance.word();
+    const recipeName = chance.word();
     const url = `/${chance.word()}/${chance.word()}`;
-    const link = `[${text}](${url})`;
-    const fileName = chance.word();
+    const link = `[${ingredientName}](${url})`;
 
     beforeEach(() => {
         jest.clearAllMocks();
     });
 
     it('Should render.', () => {
-        const { getByText } = render(<Ingredient text={text} fileName={''} />);
+        const { getByText } = render(<Ingredient ingredientName={ingredientName} recipeName={recipeName} />, { wrapper: TestWrapper });
 
-        expect(getByText(text)).toBeInTheDocument();
+        expect(getByText(ingredientName)).toBeInTheDocument();
     });
 
     it('Should render a link.', () => {
-        const { getByText } = render(<Ingredient text={link} fileName={''} />);
-        const linkInDom = getByText(text);
+        const { getByText } = render(<Ingredient ingredientName={link} recipeName={recipeName} />, { wrapper: TestWrapper });
+        const linkInDom = getByText(ingredientName);
 
         expect(linkInDom).toHaveAttribute('href', url);
     });
 
     it('Should be able to determine if an ingredient is in the shopping list.', async () => {
-        jest.mocked(useSelector).mockImplementation((selector) => selector({
-            shoppingList: {
-                shoppingList: [{ id: `${fileName}|${text}` }]
-            }
-        }));
+        const shoppingListItem = mockShoppingListItem({
+            name: ingredientName,
+            recipe: recipeName
+        });
 
-        const { getByTestId } = render(<Ingredient text={text} fileName={fileName} />);
+        jest.mocked(useShoppingList).mockReturnValue({
+            data: [shoppingListItem],
+            isLoading: false
+        } as any);
+        jest.mocked(useAuth).mockReturnValue(mockAuthContext());
 
-        await waitFor(() => expect(getByTestId('ingredient')).toHaveAttribute('class', 'ingredient ingredient--active'));
+        const { getByTestId } = render(<Ingredient ingredientName={ingredientName} recipeName={recipeName} />, { wrapper: TestWrapper });
+
+        await waitFor(() => expect(getByTestId('ingredient').className).toContain('ingredient--active'));
     });
 
     it('Should not be able to toggle an ingredient if the user is not signed in.', async () => {
-        const dispatch = jest.fn();
+        jest.mocked(useAuth).mockReturnValue({
+            user: null,
+            attemptToSignIn: jest.fn()
+        });
+        jest.mocked(useShoppingList).mockReturnValue({
+            data: [],
+            isLoading: false
+        } as any);
 
-        jest.mocked(useDispatch).mockReturnValue(dispatch);
-        jest.mocked(useSelector).mockImplementation((selector) => selector({
-            shoppingList: {}
-        }));
+        const { getByText } = render(<Ingredient ingredientName={ingredientName} recipeName={recipeName} />, { wrapper: TestWrapper });
 
-        const { getByText } = render(<Ingredient text={text} fileName={fileName} />);
-
-        expect(getByText(text)).not.toHaveAttribute('role', 'button');
+        expect(getByText(ingredientName).tagName).toBe('SPAN');
     });
 
     it('Should be able to toggle an ingredient if the user is signed in.', async () => {
-        const dispatch = jest.fn();
+        const mutateAsync = jest.fn().mockResolvedValue(undefined);
 
-        jest.mocked(useDispatch).mockReturnValue(dispatch);
-        jest.mocked(useSelector).mockImplementation((selector) => selector({
-            shoppingList: {}
-        }));
+        jest.mocked(useShoppingList).mockReturnValue({
+            data: [],
+            isLoading: false
+        } as any);
+        jest.mocked(useCreateShoppingListItem).mockReturnValue({
+            mutateAsync,
+            isPending: false
+        } as any);
         jest.mocked(useAuth).mockReturnValue(mockAuthContext());
 
-        const { getByTestId, getByText } = render(<Ingredient text={text} fileName={fileName} />);
+        const { getByText } = render(<Ingredient ingredientName={ingredientName} recipeName={recipeName} />, { wrapper: TestWrapper });
 
-        await userEvent.click(getByText(text));
+        await userEvent.click(getByText(ingredientName));
 
-        expect(dispatch).toHaveBeenCalled();
-
-        await waitFor(() => expect(getByTestId('ingredient')).toHaveAttribute('class', 'ingredient ingredient--active'));
+        expect(mutateAsync).toHaveBeenCalledWith({
+            amount: 1,
+            name: ingredientName,
+            recipe: recipeName,
+            type: 'frozen',
+            store: 'Unspecified'
+        });
     });
 
     it('Should be able to extract a link from raw text that is in the proper format.', () => {
         const { full, label, url: extractedURL } = extractLink(link);
 
         expect(full).toBe(link);
-        expect(label).toBe(text);
+        expect(label).toBe(ingredientName);
         expect(extractedURL).toBe(url);
     });
 
     it('Should not be able to extract a link from raw text that is not in the proper format.', () => {
-        const badLink = extractLink(text);
+        const badLink = extractLink(ingredientName);
 
         expect(badLink).toBeNull();
     });

@@ -1,4 +1,5 @@
 import React from 'react';
+import dompurify from 'dompurify';
 import { type ShoppingListItem as ShoppingListItemType } from '../../../types';
 import styles from './shoppingListItem.module.css';
 
@@ -45,7 +46,7 @@ export const ShoppingListItem = ({ item, checked, onToggle }: ShoppingListItemPr
           tabIndex={-1}
           aria-label={`Mark ${name} as ${checked ? 'unchecked' : 'checked'}`}
         />
-        <span className={styles['list-item-box__item-name']}>{name}</span>
+        <span className={styles['list-item-box__item-name']} dangerouslySetInnerHTML={{ __html: dompurify.sanitize(name) }} />
       </li>
     );
 };

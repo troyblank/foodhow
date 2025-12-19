@@ -1,14 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import Chance from 'chance';
+import { TestWrapper } from '../../testing';
 import { IngredientList } from '.';
-
-jest.mock('react-redux', () => ({
-    useDispatch: jest.fn(),
-    useSelector: jest.fn().mockImplementation(() => ({
-        shoppingList: []
-    }))
-}));
 
 describe('IngredientList', () => {
     const chance = new Chance();
@@ -20,7 +14,7 @@ describe('IngredientList', () => {
           fileName={chance.word()}
           title={title}
           ingredients={ingredients}
-        />);
+        />, { wrapper: TestWrapper });
 
         expect(getByText(title)).toBeInTheDocument();
         expect(getByText(ingredients[0])).toBeInTheDocument();
@@ -33,7 +27,7 @@ describe('IngredientList', () => {
           fileName={chance.word()}
           title={null}
           ingredients={ingredients}
-        />);
+        />, { wrapper: TestWrapper });
 
         expect(queryByRole('heading', { level: 3 })).not.toBeInTheDocument();
     });

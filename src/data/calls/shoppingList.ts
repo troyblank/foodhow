@@ -1,5 +1,5 @@
 
-import { type ShoppingList, type User } from '../../types';
+import { type NewShoppingListItem, type ShoppingList, type User } from '../../types';
 import { getAPIURL, getAndValidateResponseData, getHeaders } from '../../utils/apiCommunication';
 
 export const getShoppingList = async (user: User): Promise<ShoppingList> => {
@@ -10,6 +10,15 @@ export const getShoppingList = async (user: User): Promise<ShoppingList> => {
     }));
 
     return data.shoppingList;
+};
+
+export const createShoppingListItem = async (user: User, newShoppingListItem: NewShoppingListItem): Promise<void> => {
+    const { jwtToken } = user;
+    await getAndValidateResponseData(await fetch(`${getAPIURL()}/createShoppingListItems`, {
+        method: 'POST',
+        headers: getHeaders(jwtToken),
+        body: JSON.stringify(newShoppingListItem)
+    }));
 };
 
 export const deleteShoppingListItems = async (user: User, itemIds: number[]): Promise<void> => {

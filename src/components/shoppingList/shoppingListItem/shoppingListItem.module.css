@@ -1,7 +1,8 @@
 .list-item-box {
     flex: 1;
     position: relative;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     padding: 10px 5px 10px 10px;
     background: var(--color-orange);
     color: var(--color-cream);
@@ -11,6 +12,7 @@
     align-items: center;
     gap: 10px;
     outline: none;
+    box-sizing: border-box;
 }
 
 .list-item-box:focus-visible {

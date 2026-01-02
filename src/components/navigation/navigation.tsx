@@ -1,4 +1,4 @@
-import React, { Fragment, type FunctionComponent } from 'react';
+import React, { type FunctionComponent } from 'react';
 import Link from 'next/link';
 import { useAuth } from '../../contexts';
 

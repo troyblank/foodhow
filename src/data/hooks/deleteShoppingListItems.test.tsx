@@ -42,7 +42,7 @@ describe('useDeleteShoppingListItems', () => {
 
     it('Should update cache with remaining items on success.', () => {
         const user = mockUser();
-        const shoppingList = mockShoppingList();
+        const shoppingList = mockShoppingList(3);
         const itemIdsToDelete = [shoppingList[0].id, shoppingList[1].id];
 
         const setQueryData = jest.fn();

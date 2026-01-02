@@ -68,14 +68,14 @@ describe('Recipe', () => {
     });
 
     it('Should render a recipe that has nested ingredients.', async () => {
-        const nestedIngredientA = chance.word({ syllable: 2 });
-        const nestedIngredientB = chance.word({ syllable: 3 });
-        const nestedIngredientC = chance.word({ syllable: 4 });
-        const nestedIngredientD = chance.word({ syllable: 5 });
+        const nestedIngredientA = chance.word({ syllables: 5 });
+        const nestedIngredientB = chance.word({ syllables: 5 });
+        const nestedIngredientC = chance.word({ syllables: 5 });
+        const nestedIngredientD = chance.word({ syllables: 5 });
 
         const multiStepIngredients = {
-            [chance.word()]: [nestedIngredientA, nestedIngredientB],
-            [chance.word()]: [nestedIngredientC, nestedIngredientD]
+            [chance.word({ syllables: 4 })]: [nestedIngredientA, nestedIngredientB],
+            [chance.word({ syllables: 4 })]: [nestedIngredientC, nestedIngredientD]
         };
 
         global.fetch = jest.fn(() => Promise.resolve({

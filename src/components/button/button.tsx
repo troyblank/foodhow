@@ -6,22 +6,25 @@ type ButtonProps = {
     text: string;
     buttonClickHand: () => void;
     isPending?: boolean;
+    disabled?: boolean;
 };
 
-export const Button: FunctionComponent<ButtonProps> = ({ text, buttonClickHand, isPending = false }) => {
+export const Button: FunctionComponent<ButtonProps> = ({ text, buttonClickHand, isPending = false, disabled = false }) => {
+    const isDisabled = isPending || disabled;
+
     function onClick() {
-        if (!isPending) {
+        if (!isDisabled) {
             buttonClickHand();
         }
     }
 
     return (
       <button
-        className={`${styles.button} ${isPending ? styles['button--pending'] : ''}`}
+        className={`${styles.button} ${isDisabled ? styles['button--disabled'] : ''}`}
         onClick={onClick}
         aria-label={isPending ? 'Pending...' : text}
         aria-busy={isPending}
-        disabled={isPending}
+        disabled={isDisabled}
         type={'button'}
       >
         {isPending ? (

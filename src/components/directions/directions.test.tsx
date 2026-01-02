@@ -1,9 +1,9 @@
 import React from 'react';
-import { render  } from '@testing-library/react'
+import { render } from '@testing-library/react';
 import Chance from 'chance';
 import { Directions } from './directions';
 
-describe( 'Directions', () => {
+describe('Directions', () => {
     const chance = new Chance();
     const directions = [
         { text: chance.word() },
@@ -25,6 +25,6 @@ describe( 'Directions', () => {
             } else {
                 expect(getByText(direction.text)).toBeInTheDocument();
             }
-        })
+        });
     });
 });

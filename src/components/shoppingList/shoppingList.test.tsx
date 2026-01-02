@@ -14,6 +14,10 @@ jest.mock('../../data', () => ({
     useDeleteShoppingListItems: jest.fn(() => ({
         mutate: jest.fn(),
         isPending: false
+    })),
+    useCreateShoppingListItem: jest.fn(() => ({
+        mutateAsync: jest.fn(),
+        isPending: false
     }))
 }));
 
@@ -305,5 +309,55 @@ describe('Shopping List', () => {
 
         setItemSpy.mockRestore();
         throwErrorSpy.mockRestore();
+    });
+
+    it('Should show add item form when floating button is clicked.', async () => {
+        const user = userEvent.setup();
+
+        jest.mocked(useAuth).mockReturnValue({
+            user: mockUser(),
+            attemptToSignIn: jest.fn()
+        });
+
+        jest.mocked(useShoppingList).mockReturnValue({
+            isLoading: false,
+            isError: false,
+            data: [],
+            error: null
+        } as any);
+
+        const { getByLabelText, findByText } = render(<ShoppingList />, { wrapper: TestWrapper });
+
+        await user.click(getByLabelText('Add item'));
+
+        expect(await findByText('Add a new item')).toBeInTheDocument();
+    });
+
+    it('Should close add item form when cancel is clicked.', async () => {
+        const user = userEvent.setup();
+
+        jest.mocked(useAuth).mockReturnValue({
+            user: mockUser(),
+            attemptToSignIn: jest.fn()
+        });
+
+        jest.mocked(useShoppingList).mockReturnValue({
+            isLoading: false,
+            isError: false,
+            data: [],
+            error: null
+        } as any);
+
+        const { getByLabelText, findByText, queryByText } = render(<ShoppingList />, { wrapper: TestWrapper });
+
+        await user.click(getByLabelText('Add item'));
+
+        const cancelButton = await findByText('Cancel');
+
+        await user.click(cancelButton);
+
+        await waitFor(() => {
+            expect(queryByText('Add a new item')).not.toBeInTheDocument();
+        });
     });
 });

@@ -1,4 +1,4 @@
-import React, { type FunctionComponent } from 'react';
+import React, { type FunctionComponent, type ReactNode } from 'react';
 import { Button } from '..';
 import styles from './modal.module.css';
 
@@ -7,13 +7,19 @@ type ModalProps = {
     isShowing: boolean;
     onConfirm: () => void;
     onCancel: () => void;
+    children?: ReactNode;
+    isConfirmDisabled?: boolean;
+    isPending?: boolean;
 };
 
 export const Modal: FunctionComponent<ModalProps> = ({
     message,
     isShowing,
     onConfirm,
-    onCancel
+    onCancel,
+    children,
+    isConfirmDisabled = false,
+    isPending = false
 }) => isShowing && (
   <div className={styles.overlay} onClick={onCancel}>
     <div
@@ -23,9 +29,10 @@ export const Modal: FunctionComponent<ModalProps> = ({
       aria-modal={'true'}
     >
       <p className={styles.message}>{message}</p>
+      {children}
       <div className={styles.actions}>
-        <Button text={'Cancel'} buttonClickHand={onCancel} />
-        <Button text={'Confirm'} buttonClickHand={onConfirm} />
+        <Button text={'Cancel'} buttonClickHand={onCancel} disabled={isPending} />
+        <Button text={'Confirm'} buttonClickHand={onConfirm} disabled={isConfirmDisabled} isPending={isPending} />
       </div>
     </div>
   </div>

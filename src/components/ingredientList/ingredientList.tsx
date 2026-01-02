@@ -1,4 +1,4 @@
-import React, { type FunctionComponent } from 'react';
+import React, { Fragment, type FunctionComponent } from 'react';
 import { Ingredient } from '..';
 
 type IngredientListProps = {
@@ -12,16 +12,16 @@ export const IngredientList: FunctionComponent<IngredientListProps> = ({
     ingredients,
     title
 }) => (
-    <>
-        { title && <h3 className={'ingredient__title'}>{title}</h3> }
+  <Fragment>
+    { title && <h3 className={'ingredient__title'}>{title}</h3> }
     <ul>
-        { ingredients.map((ingredient) => (
+      { ingredients.map((ingredient) => (
         <Ingredient
-            ingredientName={ingredient}
-            key={ingredient}
-            recipeName={fileName}
-          />
-                ))}
-      </ul>
-  </>
+          ingredientName={ingredient}
+          key={ingredient}
+          recipeName={fileName}
+        />
+      ))}
+    </ul>
+  </Fragment>
 );

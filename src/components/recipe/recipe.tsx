@@ -25,8 +25,8 @@ export const Recipe: FunctionComponent<RecipeProps> = ({ fileName }) => {
     useEffect(() => {
         fetch(`/recipes/${fileName.toLowerCase()}.json`)
             .then((response) => response.json())
-            .then((recipe) => {
-                setRecipe(recipe);
+            .then((fetchedRecipe) => {
+                setRecipe(fetchedRecipe);
             });
     }, []);
 
@@ -44,12 +44,12 @@ export const Recipe: FunctionComponent<RecipeProps> = ({ fileName }) => {
         </header>
         <section>
           <h2>Ingredients</h2>
-          { ingredientTitles.map((title) => (
+          { ingredientTitles.map((ingredientTitle) => (
             <IngredientList
-              title={title}
-              ingredients={ingredients[title]}
+              title={ingredientTitle}
+              ingredients={ingredients[ingredientTitle]}
               fileName={fileName}
-              key={title}
+              key={ingredientTitle}
             />
                ))}
         </section>

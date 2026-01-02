@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Chance from 'chance';
 import { mockUser } from '../../testing';
 import { useAuth } from '../../contexts';
 import { Navigation } from '.';
@@ -10,8 +9,6 @@ jest.mock('../../contexts', () => ({
 }));
 
 describe('Navigation', () => {
-    const chance = new Chance();
-
     it('should render', () => {
         jest.mocked(useAuth).mockReturnValue({ user: mockUser() } as any);
 

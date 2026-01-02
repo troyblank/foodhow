@@ -1,11 +1,11 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react';
 import Chance from 'chance';
 import { getRecipes } from '../../data';
-import { RecipeList } from './';
+import { RecipeList } from '.';
 
 jest.mock('../../data', () => ({
-    getRecipes: jest.fn(),
+    getRecipes: jest.fn()
 }));
 
 describe('Recipe List', () => {
@@ -38,4 +38,4 @@ describe('Recipe List', () => {
         expect(getByText('beef')).toBeInTheDocument();
         expect(queryByText('fish')).not.toBeInTheDocument();
     });
-  });
+});

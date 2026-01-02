@@ -1,6 +1,8 @@
 const globals = require('globals');
 
 module.exports = {
+    parser: '@typescript-eslint/parser',
+    plugins: ['@typescript-eslint'],
     env: {
         browser: true,
         node: true,
@@ -17,7 +19,14 @@ module.exports = {
         ...globals.jest
     },
     rules: {
+        '@typescript-eslint/no-unused-vars': ['error', {
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '^_'
+        }],
         'import/extensions': 'off',
+        'import/no-extraneous-dependencies': ['error', {
+            devDependencies: ['**/*.test.ts', '**/*.test.tsx', '**/testing/**']
+        }],
         'import/prefer-default-export': 'off',
         'react/require-default-props': 'off'
     },

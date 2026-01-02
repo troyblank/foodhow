@@ -1,5 +1,4 @@
 import { render, waitFor } from '@testing-library/react';
-import Chance from 'chance';
 import { type GetServerSidePropsContext } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -19,8 +18,6 @@ jest.mock('../../utils', () => ({
 }));
 
 describe('Page - [Recipe]', () => {
-    const chance = new Chance();
-
     beforeEach(() => {
         global.fetch = jest.fn(() => Promise.resolve({
             json: () => Promise.resolve({}),

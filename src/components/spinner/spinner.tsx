@@ -7,7 +7,7 @@ type SpinnerProps = {
 };
 
 export const Spinner: FunctionComponent<SpinnerProps> = ({ size = 'medium', color = 'cream' }) => {
-    const className = `${styles.spinner} ${styles[`spinner--${size}`]} ${styles[`spinner--${color}`]}`;
+	const className = `${styles.spinner} ${styles[`spinner--${size}`]} ${styles[`spinner--${color}`]}`;
 
-    return <span className={className} aria-label={'Loading'} />;
+	return <span className={className} aria-label={'Loading'} />;
 };

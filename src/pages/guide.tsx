@@ -8,13 +8,13 @@ import { Head, Navigation, Guide } from '../components';
 export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => getServerSidePropsWithoutAuthRedirect(serverSideContext);
 
 export const GuidePage: FunctionComponent = ({ user }: { user: User }) => (
-  <AuthProvider user={user}>
-    <Fragment>
-      <Head />
-      <Navigation />
-      <Guide />
-    </Fragment>
-  </AuthProvider>
+	<AuthProvider user={user}>
+		<Fragment>
+			<Head />
+			<Navigation />
+			<Guide />
+		</Fragment>
+	</AuthProvider>
 );
 
 export default GuidePage;

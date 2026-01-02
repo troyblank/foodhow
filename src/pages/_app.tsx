@@ -7,9 +7,9 @@ import '../styles/theme.css';
 import '../sass/index.scss';
 
 export const App = ({ Component, pageProps }: AppProps) => (
-  <QueryClientProvider client={queryClient}>
-    <Component {...pageProps} />
-  </QueryClientProvider>
+	<QueryClientProvider client={queryClient}>
+		<Component {...pageProps} />
+	</QueryClientProvider>
 );
 
 export default App;

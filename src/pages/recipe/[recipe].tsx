@@ -9,20 +9,20 @@ import { Head, Navigation, Recipe } from '../../components';
 export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => getServerSidePropsWithoutAuthRedirect(serverSideContext);
 
 export const RecipePage: FunctionComponent = ({ user }: { user: User }) => {
-    const router = useRouter();
-    const { recipe } = router.query;
+	const router = useRouter();
+	const { recipe } = router.query;
 
-    if (!recipe) return null;
+	if (!recipe) return null;
 
-    return (
-      <AuthProvider user={user}>
-        <Fragment>
-          <Head />
-          <Navigation />
-          <Recipe fileName={recipe as string} />
-        </Fragment>
-      </AuthProvider>
-    );
+	return (
+		<AuthProvider user={user}>
+			<Fragment>
+				<Head />
+				<Navigation />
+				<Recipe fileName={recipe as string} />
+			</Fragment>
+		</AuthProvider>
+	);
 };
 
 export default RecipePage;

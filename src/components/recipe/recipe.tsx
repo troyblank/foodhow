@@ -4,15 +4,15 @@ import { isArray } from 'lodash';
 import { Directions, IngredientList } from '..';
 
 export function objectifyIngredients(polymorphicIngredients) {
-    // ingredients can be an array or object:
-    // this converts all to an object for easy parsing.
-    let ingredients = polymorphicIngredients;
+	// ingredients can be an array or object:
+	// this converts all to an object for easy parsing.
+	let ingredients = polymorphicIngredients;
 
-    if (isArray(ingredients)) {
-        ingredients = { '': [...ingredients] };
-    }
+	if (isArray(ingredients)) {
+		ingredients = { '': [...ingredients] };
+	}
 
-    return ingredients;
+	return ingredients;
 }
 
 type RecipeProps = {
@@ -20,43 +20,43 @@ type RecipeProps = {
 }
 
 export const Recipe: FunctionComponent<RecipeProps> = ({ fileName }) => {
-    const [recipe, setRecipe] = useState(null);
+	const [recipe, setRecipe] = useState(null);
 
-    useEffect(() => {
-        fetch(`/recipes/${fileName.toLowerCase()}.json`)
-            .then((response) => response.json())
-            .then((fetchedRecipe) => {
-                setRecipe(fetchedRecipe);
-            });
-    }, []);
+	useEffect(() => {
+		fetch(`/recipes/${fileName.toLowerCase()}.json`)
+			.then((response) => response.json())
+			.then((fetchedRecipe) => {
+				setRecipe(fetchedRecipe);
+			});
+	}, []);
 
-    if (!recipe) return null;
+	if (!recipe) return null;
 
-    const { title, meta, ingredients: polymorphicIngredients, directions } = recipe;
-    const ingredients = objectifyIngredients(polymorphicIngredients);
-    const ingredientTitles = Object.keys(ingredients);
+	const { title, meta, ingredients: polymorphicIngredients, directions } = recipe;
+	const ingredients = objectifyIngredients(polymorphicIngredients);
+	const ingredientTitles = Object.keys(ingredients);
 
-    return (
-      <section className={'recipe'}>
-        <header>
-          <h1>{ title }</h1>
-          { meta && <h3 dangerouslySetInnerHTML={{ __html: dompurify.sanitize(meta) }} /> }
-        </header>
-        <section>
-          <h2>Ingredients</h2>
-          { ingredientTitles.map((ingredientTitle) => (
-            <IngredientList
-              title={ingredientTitle}
-              ingredients={ingredients[ingredientTitle]}
-              fileName={fileName}
-              key={ingredientTitle}
-            />
-               ))}
-        </section>
-        <section>
-          <h2>Directions</h2>
-          <Directions steps={directions} />
-        </section>
-      </section>
-    );
+	return (
+		<section className={'recipe'}>
+			<header>
+				<h1>{ title }</h1>
+				{ meta && <h3 dangerouslySetInnerHTML={{ __html: dompurify.sanitize(meta) }} /> }
+			</header>
+			<section>
+				<h2>Ingredients</h2>
+				{ ingredientTitles.map((ingredientTitle) => (
+					<IngredientList
+						title={ingredientTitle}
+						ingredients={ingredients[ingredientTitle]}
+						fileName={fileName}
+						key={ingredientTitle}
+					/>
+				))}
+			</section>
+			<section>
+				<h2>Directions</h2>
+				<Directions steps={directions} />
+			</section>
+		</section>
+	);
 };

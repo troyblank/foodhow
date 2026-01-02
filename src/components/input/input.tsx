@@ -11,21 +11,21 @@ type InputProps = {
 };
 
 export const Input = ({
-    value,
-    onChange,
-    type = 'text',
-    id,
-    name,
-    autoFocus = false
+	value,
+	onChange,
+	type = 'text',
+	id,
+	name,
+	autoFocus = false
 }: InputProps) => (
-  <input
-    className={styles.input}
-    type={type}
-    value={value}
-    onChange={({ target }) => onChange(target.value)}
-    id={id}
-    name={name}
-    data-1p-ignore={true}
-    autoFocus={autoFocus}
-  />
+	<input
+		className={styles.input}
+		type={type}
+		value={value}
+		onChange={({ target }) => onChange(target.value)}
+		id={id}
+		name={name}
+		data-1p-ignore={true}
+		autoFocus={autoFocus}
+	/>
 );

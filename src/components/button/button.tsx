@@ -10,28 +10,28 @@ type ButtonProps = {
 };
 
 export const Button: FunctionComponent<ButtonProps> = ({ text, buttonClickHand, isPending = false, disabled = false }) => {
-    const isDisabled = isPending || disabled;
+	const isDisabled = isPending || disabled;
 
-    function onClick() {
-        if (!isDisabled) {
-            buttonClickHand();
-        }
-    }
+	function onClick() {
+		if (!isDisabled) {
+			buttonClickHand();
+		}
+	}
 
-    return (
-      <button
-        className={`${styles.button} ${isDisabled ? styles['button--disabled'] : ''}`}
-        onClick={onClick}
-        aria-label={isPending ? 'Pending...' : text}
-        aria-busy={isPending}
-        disabled={isDisabled}
-        type={'button'}
-      >
-        {isPending ? (
-          <Spinner size={'small'} />
-        ) : (
-          text
-        )}
-      </button>
-    );
+	return (
+		<button
+			className={`${styles.button} ${isDisabled ? styles['button--disabled'] : ''}`}
+			onClick={onClick}
+			aria-label={isPending ? 'Pending...' : text}
+			aria-busy={isPending}
+			disabled={isDisabled}
+			type={'button'}
+		>
+			{isPending ? (
+				<Spinner size={'small'} />
+			) : (
+				text
+			)}
+		</button>
+	);
 };

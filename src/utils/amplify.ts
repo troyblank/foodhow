@@ -4,9 +4,9 @@ import { AmplifyServer } from 'aws-amplify/adapter-core';
 import { type FetchUserAttributesOutput, type GetCurrentUserOutput } from '@aws-amplify/auth';
 import { createServerRunner } from '@aws-amplify/adapter-nextjs';
 import {
-    fetchAuthSession,
-    fetchUserAttributes,
-    getCurrentUser
+	fetchAuthSession,
+	fetchUserAttributes,
+	getCurrentUser
 } from 'aws-amplify/auth/server';
 import { amplifyConfig } from '../../config';
 import { type User } from '../types';
@@ -29,37 +29,37 @@ type AuthSession = {
 }
 
 export const extractUserInformationFromAmplifyServerContext = async (amplifyContextSpecification: AmplifyServer.ContextSpec): Promise<User> => {
-    try {
-        const { username }: GetCurrentUserOutput = await getCurrentUser(amplifyContextSpecification);
-        const { tokens }: AuthSession = await fetchAuthSession(amplifyContextSpecification);
-        const attributes: FetchUserAttributesOutput = await fetchUserAttributes(amplifyContextSpecification);
-        const jwtToken: string = String(tokens.idToken.toString());
+	try {
+		const { username }: GetCurrentUserOutput = await getCurrentUser(amplifyContextSpecification);
+		const { tokens }: AuthSession = await fetchAuthSession(amplifyContextSpecification);
+		const attributes: FetchUserAttributesOutput = await fetchUserAttributes(amplifyContextSpecification);
+		const jwtToken: string = String(tokens.idToken.toString());
 
-        return {
-            fullName: `${attributes.given_name} ${attributes.family_name}`,
-            jwtToken,
-            username
-        };
-    } catch (error) {
-        // User is not authenticated
-        return null;
-    }
+		return {
+			fullName: `${attributes.given_name} ${attributes.family_name}`,
+			jwtToken,
+			username
+		};
+	} catch (error) {
+		// User is not authenticated
+		return null;
+	}
 };
 
 export const { runWithAmplifyServerContext } = createServerRunner({
-    config: amplifyConfig
+	config: amplifyConfig
 });
 
 export const getUserFromAmplify = async (serverSideContext: GetServerSidePropsContext): Promise<User | null> => {
-    const { req: request, res: response } = serverSideContext;
-    let user: User | null = null;
+	const { req: request, res: response } = serverSideContext;
+	let user: User | null = null;
 
-    await runWithAmplifyServerContext({
-        nextServerContext: { request, response },
-        operation: /* istanbul ignore next */ async (amplifyContextSpecification: AmplifyServer.ContextSpec) => {
-            user = await extractUserInformationFromAmplifyServerContext(amplifyContextSpecification);
-        }
-    });
+	await runWithAmplifyServerContext({
+		nextServerContext: { request, response },
+		operation: /* istanbul ignore next */ async (amplifyContextSpecification: AmplifyServer.ContextSpec) => {
+			user = await extractUserInformationFromAmplifyServerContext(amplifyContextSpecification);
+		}
+	});
 
-    return user;
+	return user;
 };

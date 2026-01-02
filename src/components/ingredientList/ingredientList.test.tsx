@@ -5,30 +5,30 @@ import { TestWrapper } from '../../testing';
 import { IngredientList } from '.';
 
 describe('IngredientList', () => {
-    const chance = new Chance();
-    const title = chance.word();
-    const ingredients = [chance.word({ syllables: 3 }), chance.word({ syllables: 2 }), chance.word({ syllables: 4 })];
+	const chance = new Chance();
+	const title = chance.word();
+	const ingredients = [chance.word({ syllables: 3 }), chance.word({ syllables: 2 }), chance.word({ syllables: 4 })];
 
-    it('should render', () => {
-        const { getByText } = render(<IngredientList
-          fileName={chance.word()}
-          title={title}
-          ingredients={ingredients}
-        />, { wrapper: TestWrapper });
+	it('should render', () => {
+		const { getByText } = render(<IngredientList
+			fileName={chance.word()}
+			title={title}
+			ingredients={ingredients}
+		/>, { wrapper: TestWrapper });
 
-        expect(getByText(title)).toBeInTheDocument();
-        expect(getByText(ingredients[0])).toBeInTheDocument();
-        expect(getByText(ingredients[1])).toBeInTheDocument();
-        expect(getByText(ingredients[2])).toBeInTheDocument();
-    });
+		expect(getByText(title)).toBeInTheDocument();
+		expect(getByText(ingredients[0])).toBeInTheDocument();
+		expect(getByText(ingredients[1])).toBeInTheDocument();
+		expect(getByText(ingredients[2])).toBeInTheDocument();
+	});
 
-    it('should render without a title', () => {
-        const { queryByRole } = render(<IngredientList
-          fileName={chance.word()}
-          title={null}
-          ingredients={ingredients}
-        />, { wrapper: TestWrapper });
+	it('should render without a title', () => {
+		const { queryByRole } = render(<IngredientList
+			fileName={chance.word()}
+			title={null}
+			ingredients={ingredients}
+		/>, { wrapper: TestWrapper });
 
-        expect(queryByRole('heading', { level: 3 })).not.toBeInTheDocument();
-    });
+		expect(queryByRole('heading', { level: 3 })).not.toBeInTheDocument();
+	});
 });

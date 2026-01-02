@@ -10,13 +10,13 @@ import { getServerSidePropsWithoutAuthRedirect } from '../utils';
 export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => getServerSidePropsWithoutAuthRedirect(serverSideContext);
 
 export const HomePage: FunctionComponent = ({ user }: { user: User }) => (
-  <AuthProvider user={user}>
-    <Fragment>
-      <Head />
-      <Navigation />
-      <RecipeList recipes={recipes} />
-    </Fragment>
-  </AuthProvider>
+	<AuthProvider user={user}>
+		<Fragment>
+			<Head />
+			<Navigation />
+			<RecipeList recipes={recipes} />
+		</Fragment>
+	</AuthProvider>
 );
 
 export default HomePage;

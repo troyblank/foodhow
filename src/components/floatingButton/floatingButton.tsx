@@ -7,12 +7,12 @@ type FloatingButtonProps = {
 };
 
 export const FloatingButton: FunctionComponent<FloatingButtonProps> = ({ onClick, ariaLabel }) => (
-  <button
-    className={styles['floating-button']}
-    type={'button'}
-    aria-label={ariaLabel}
-    onClick={onClick}
-  >
-    +
-  </button>
+	<button
+		className={styles['floating-button']}
+		type={'button'}
+		aria-label={ariaLabel}
+		onClick={onClick}
+	>
+		+
+	</button>
 );

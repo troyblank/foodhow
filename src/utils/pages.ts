@@ -4,35 +4,35 @@ import { getUserFromAmplify, SIGN_IN_PATH } from '.';
 
 
 export const getServerSidePropsWithoutAuthRedirect: (_context: GetServerSidePropsContext) => Promise<{ props: { user: User | null } } | null> = async (serverSideContext) => {
-    let user: User | null = null;
+	let user: User | null = null;
 
-    try {
-        user = await getUserFromAmplify(serverSideContext);
-    } finally {
-        // Do nothing
-    }
+	try {
+		user = await getUserFromAmplify(serverSideContext);
+	} finally {
+		// Do nothing
+	}
 
-    return { props: { user } };
+	return { props: { user } };
 };
 
 export const getServerSidePropsWithUnauthRedirect: (_context: GetServerSidePropsContext) => Promise<{ props: { user: User | null } } | null> = async (serverSideContext) => {
-    let user: User | null = null;
+	let user: User | null = null;
 
-    const respondWithUnauthenticated = (): null => {
-        const { res: response } = serverSideContext;
+	const respondWithUnauthenticated = (): null => {
+		const { res: response } = serverSideContext;
 
-        response.setHeader('location', SIGN_IN_PATH);
-        response.statusCode = 302;
-        response.end();
+		response.setHeader('location', SIGN_IN_PATH);
+		response.statusCode = 302;
+		response.end();
 
-        return null;
-    };
+		return null;
+	};
 
-    try {
-        user = await getUserFromAmplify(serverSideContext);
-    } catch (error) {
-        respondWithUnauthenticated();
-    }
+	try {
+		user = await getUserFromAmplify(serverSideContext);
+	} catch (error) {
+		respondWithUnauthenticated();
+	}
 
-    return { props: { user } };
+	return { props: { user } };
 };

@@ -8,10 +8,10 @@ type StepProps = {
 }
 
 export const Step: FunctionComponent<StepProps> = ({ text, type }) => (
-  <li
-    className={classnames({
-        'direction-optional': type === 'optional'
-    })}
-    dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }}
-  />
+	<li
+		className={classnames({
+			'direction-optional': type === 'optional'
+		})}
+		dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }}
+	/>
 );

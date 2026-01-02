@@ -13,27 +13,27 @@ type ModalProps = {
 };
 
 export const Modal: FunctionComponent<ModalProps> = ({
-    message,
-    isShowing,
-    onConfirm,
-    onCancel,
-    children,
-    isConfirmDisabled = false,
-    isPending = false
+	message,
+	isShowing,
+	onConfirm,
+	onCancel,
+	children,
+	isConfirmDisabled = false,
+	isPending = false
 }) => isShowing && (
-  <div className={styles.overlay} onClick={onCancel}>
-    <div
-      className={styles.modal}
-      onClick={(event) => event.stopPropagation()}
-      role={'dialog'}
-      aria-modal={'true'}
-    >
-      <p className={styles.message}>{message}</p>
-      {children}
-      <div className={styles.actions}>
-        <Button text={'Cancel'} buttonClickHand={onCancel} disabled={isPending} />
-        <Button text={'Confirm'} buttonClickHand={onConfirm} disabled={isConfirmDisabled} isPending={isPending} />
-      </div>
-    </div>
-  </div>
+	<div className={styles.overlay} onClick={onCancel}>
+		<div
+			className={styles.modal}
+			onClick={(event) => event.stopPropagation()}
+			role={'dialog'}
+			aria-modal={'true'}
+		>
+			<p className={styles.message}>{message}</p>
+			{children}
+			<div className={styles.actions}>
+				<Button text={'Cancel'} buttonClickHand={onCancel} disabled={isPending} />
+				<Button text={'Confirm'} buttonClickHand={onConfirm} disabled={isConfirmDisabled} isPending={isPending} />
+			</div>
+		</div>
+	</div>
 );

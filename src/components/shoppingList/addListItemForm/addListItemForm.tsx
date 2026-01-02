@@ -36,6 +36,13 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 
     const isNameEmpty = 0 === name.trim().length;
 
+    const onSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+        if (!isNameEmpty && !isPending) {
+            onConfirm();
+        }
+    };
+
     return (
       <Modal
         message={'Add a new item'}
@@ -45,7 +52,7 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
         isConfirmDisabled={isNameEmpty}
         isPending={isPending}
       >
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={onSubmit}>
           <label htmlFor={'add-item-name'} className={styles.label}>
             Name
           </label>
@@ -54,6 +61,7 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
             name={'name'}
             value={name}
             onChange={setName}
+            autoFocus={true}
           />
         </form>
       </Modal>

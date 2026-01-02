@@ -1,1 +1,1 @@
-export * from './ingredientList'
+export * from './ingredientList';

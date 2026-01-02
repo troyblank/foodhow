@@ -10,9 +10,8 @@ export const RecipeList: FunctionComponent = () => {
 
     const filterList = (value: string) => {
         const regex = new RegExp(value, 'i');
-        const filteredRecipes = recipes.filter((recipe) => Boolean(regex.test(recipe)));
 
-        setFilteredRecipes(filteredRecipes);
+        setFilteredRecipes(recipes.filter((recipe) => Boolean(regex.test(recipe))));
     };
 
     const onSearch = (event: ChangeEvent<HTMLInputElement>) => {

@@ -11,7 +11,7 @@ import {
 } from '../types';
 
 export const AuthContext = createContext<AuthContextType>({
-    attemptToSignIn: /* istanbul ignore next */ () => new Promise((_, reject) => reject('Auth Context not initiated')),
+    attemptToSignIn: /* istanbul ignore next */ () => new Promise((_, reject) => reject(new Error('Auth Context not initiated'))),
     user: null
 });
 
@@ -51,6 +51,7 @@ export const AuthProvider: React.FC<PropsType> = ({ user, children }) => {
 
         if (isError) {
             // alert is only because there is no ui error handling in place yet
+            // eslint-disable-next-line no-alert
             alert(errorMessage);
             throw new Error(errorMessage);
         }

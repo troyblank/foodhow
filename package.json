@@ -37,6 +37,8 @@
     "@testing-library/react": "16.1.0",
     "@testing-library/user-event": "14.6.1",
     "@troyblank/eslint-config-troyblank": "1.4.0",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
     "@types/jest": "29.5.14",
     "@types/node": "22.9.0",
     "@types/react": "18.3.12",

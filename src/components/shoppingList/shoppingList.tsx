@@ -1,8 +1,9 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useAuth } from '../../contexts';
 import { useShoppingList, useDeleteShoppingListItems } from '../../data';
-import { Button, Modal, HeaderMessage, Spinner } from '..';
+import { Button, FloatingButton, Modal, HeaderMessage, Spinner } from '..';
 import { ShoppingListItem } from './shoppingListItem';
+import { AddListItemForm } from './addListItemForm';
 import styles from './shoppingList.module.css';
 
 const STORAGE_KEY = 'shoppingListCheckedShoppingListItems';
@@ -18,6 +19,7 @@ export const ShoppingList = () => {
     const { mutate: deleteShoppingListItems, isPending: isDeletingCheckedItems } = useDeleteShoppingListItems(user);
     const [checkedItemIds, setCheckedItemIds] = useState<Set<number>>(new Set());
     const [isShowingConfirmModal, setIsShowingConfirmModal] = useState(false);
+    const [isShowingAddItemModal, setIsShowingAddItemModal] = useState(false);
     const isInitialized = useRef(false);
 
 
@@ -148,6 +150,11 @@ export const ShoppingList = () => {
           isShowing={isShowingConfirmModal}
           onConfirm={() => onDeleteCheckedItems()}
           onCancel={() => setIsShowingConfirmModal(false)}
+        />
+        <FloatingButton ariaLabel={'Add item'} onClick={() => setIsShowingAddItemModal(true)} />
+        <AddListItemForm
+          isShowing={isShowingAddItemModal}
+          onClose={() => setIsShowingAddItemModal(false)}
         />
       </section>
     );

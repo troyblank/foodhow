@@ -156,4 +156,45 @@ describe('AddListItemForm', () => {
 
         expect(getByText('Confirm')).toBeDisabled();
     });
+
+    it('should submit form when Enter is pressed', async () => {
+        const itemName = chance.word();
+        const onClose = jest.fn();
+
+        const { getByLabelText } = render(
+          <AddListItemForm isShowing={true} onClose={onClose} />,
+          { wrapper: TestWrapper }
+        );
+
+        await userEvent.type(getByLabelText('Name'), `${itemName}{Enter}`);
+
+        await waitFor(() => {
+            expect(mockMutateAsync).toHaveBeenCalledWith({
+                name: itemName,
+                amount: 1,
+                store: 'Unspecified',
+                type: 'uncommon'
+            });
+        });
+    });
+
+    it('should not submit form when Enter is pressed and name is empty', async () => {
+        const { getByLabelText } = render(
+          <AddListItemForm isShowing={true} onClose={jest.fn()} />,
+          { wrapper: TestWrapper }
+        );
+
+        await userEvent.type(getByLabelText('Name'), '{Enter}');
+
+        expect(mockMutateAsync).not.toHaveBeenCalled();
+    });
+
+    it('should auto-focus the name input when modal is shown', () => {
+        const { getByLabelText } = render(
+          <AddListItemForm isShowing={true} onClose={jest.fn()} />,
+          { wrapper: TestWrapper }
+        );
+
+        expect(getByLabelText('Name')).toHaveFocus();
+    });
 });

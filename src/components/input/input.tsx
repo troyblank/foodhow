@@ -7,6 +7,7 @@ type InputProps = {
     type?: 'text' | 'number' | 'email';
     id?: string;
     name?: string;
+    autoFocus?: boolean;
 };
 
 export const Input = ({
@@ -14,7 +15,8 @@ export const Input = ({
     onChange,
     type = 'text',
     id,
-    name
+    name,
+    autoFocus = false
 }: InputProps) => (
   <input
     className={styles.input}
@@ -24,5 +26,6 @@ export const Input = ({
     id={id}
     name={name}
     data-1p-ignore={true}
+    autoFocus={autoFocus}
   />
 );

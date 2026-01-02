@@ -7,6 +7,13 @@ export const Head: FunctionComponent = () => (
 		<meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
 
 		<title>Food How</title>
+
+		{/* Web App Manifest for Android */}
+		<link rel={'manifest'} href={'/manifest.json'} />
+		<meta name={'theme-color'} content={'#e9ddd0'} />
+		<meta name={'mobile-web-app-capable'} content={'yes'} />
+		<meta name={'apple-mobile-web-app-capable'} content={'yes'} />
+
 		<link href={'https://fonts.googleapis.com/css?family=Bitter:700|Raleway:500'} rel={'stylesheet'} />
 		{/* Bookmark icons */}
 		<link rel={'shortcut icon'} href={'/icons/favicon.png'} type={'image/png'} />

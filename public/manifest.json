@@ -1,0 +1,18 @@
+{
+	"name": "FoodHow",
+	"short_name": "FoodHow",
+	"description": "Recipes and shopping list manager.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#e9ddd0",
+	"theme_color": "#b18d4a",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/icons/logo.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		}
+	]
+}

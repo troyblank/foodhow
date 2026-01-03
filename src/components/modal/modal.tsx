@@ -21,10 +21,10 @@ export const Modal: FunctionComponent<ModalProps> = ({
 	isConfirmDisabled = false,
 	isPending = false
 }) => isShowing && (
-	<div className={styles.overlay} onClick={onCancel}>
+	<div className={styles.overlay} onMouseDown={onCancel}>
 		<div
 			className={styles.modal}
-			onClick={(event) => event.stopPropagation()}
+			onMouseDown={(event) => event.stopPropagation()}
 			role={'dialog'}
 			aria-modal={'true'}
 		>

@@ -6,6 +6,7 @@ import { AddListItemForm } from './addListItemForm';
 import { TestWrapper, mockUser } from '../../../testing';
 import { useAuth } from '../../../contexts';
 import { useCreateShoppingListItem } from '../../../data';
+import { SHOPPING_ITEM_TYPE, SHOPPING_ITEM_STORE } from '../../../types';
 
 jest.mock('../../../contexts', () => ({
 	useAuth: jest.fn()
@@ -61,7 +62,16 @@ describe('AddListItemForm', () => {
 		expect(getByLabelText('Name')).toBeInTheDocument();
 	});
 
-	it('should have confirm button disabled when name is empty', () => {
+	it('should render type select', () => {
+		const { getByLabelText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper }
+		);
+
+		expect(getByLabelText('Type')).toBeInTheDocument();
+	});
+
+	it('should have confirm button disabled when form is empty', () => {
 		const { getByText } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper }
@@ -70,7 +80,7 @@ describe('AddListItemForm', () => {
 		expect(getByText('Confirm')).toBeDisabled();
 	});
 
-	it('should enable confirm button when name has value', async () => {
+	it('should keep confirm button disabled when only name is filled', async () => {
 		const { getByLabelText, getByText } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper }
@@ -78,11 +88,35 @@ describe('AddListItemForm', () => {
 
 		await userEvent.type(getByLabelText('Name'), 'Milk');
 
+		expect(getByText('Confirm')).toBeDisabled();
+	});
+
+	it('should keep confirm button disabled when only type is selected', async () => {
+		const { getByLabelText, getByText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper }
+		);
+
+		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.produce);
+
+		expect(getByText('Confirm')).toBeDisabled();
+	});
+
+	it('should enable confirm button when name and type are filled', async () => {
+		const { getByLabelText, getByText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper }
+		);
+
+		await userEvent.type(getByLabelText('Name'), 'Milk');
+		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.perishable);
+
 		expect(getByText('Confirm')).not.toBeDisabled();
 	});
 
-	it('should call createItem with on confirm', async () => {
+	it('should call createItem with correct data on confirm', async () => {
 		const itemName = chance.word();
+		const selectedType = SHOPPING_ITEM_TYPE.produce;
 		const onClose = jest.fn();
 
 		const { getByLabelText, getByText } = render(
@@ -91,14 +125,15 @@ describe('AddListItemForm', () => {
 		);
 
 		await userEvent.type(getByLabelText('Name'), `  ${itemName}  `);
+		await userEvent.selectOptions(getByLabelText('Type'), selectedType);
 		await userEvent.click(getByText('Confirm'));
 
 		await waitFor(() => {
 			expect(mockMutateAsync).toHaveBeenCalledWith({
 				name: itemName,
 				amount: 1,
-				store: 'Unspecified',
-				type: 'uncommon'
+				store: SHOPPING_ITEM_STORE.unspecified,
+				type: selectedType
 			});
 		});
 	});
@@ -112,6 +147,7 @@ describe('AddListItemForm', () => {
 		);
 
 		await userEvent.type(getByLabelText('Name'), 'Milk');
+		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.perishable);
 		await userEvent.click(getByText('Confirm'));
 
 		await waitFor(() => {
@@ -132,7 +168,7 @@ describe('AddListItemForm', () => {
 		expect(onClose).toHaveBeenCalled();
 	});
 
-	it('should reset form after cancel', async () => {
+	it('should reset name after cancel', async () => {
 		const { getByLabelText, getByText, rerender } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper }
@@ -146,6 +182,20 @@ describe('AddListItemForm', () => {
 		expect(getByLabelText('Name')).toHaveValue('');
 	});
 
+	it('should reset type after cancel', async () => {
+		const { getByLabelText, getByText, rerender } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper }
+		);
+
+		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.meat);
+		await userEvent.click(getByText('Cancel'));
+
+		rerender(<AddListItemForm isShowing={true} onClose={jest.fn()} />);
+
+		expect(getByLabelText('Type')).toHaveValue('');
+	});
+
 	it('should keep confirm disabled when name is only whitespace', async () => {
 		const { getByLabelText, getByText } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
@@ -153,12 +203,14 @@ describe('AddListItemForm', () => {
 		);
 
 		await userEvent.type(getByLabelText('Name'), '   ');
+		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.produce);
 
 		expect(getByText('Confirm')).toBeDisabled();
 	});
 
-	it('should submit form when Enter is pressed', async () => {
+	it('should submit form when Enter is pressed and form is valid', async () => {
 		const itemName = chance.word();
+		const selectedType = SHOPPING_ITEM_TYPE.frozen;
 		const onClose = jest.fn();
 
 		const { getByLabelText } = render(
@@ -166,19 +218,20 @@ describe('AddListItemForm', () => {
 			{ wrapper: TestWrapper }
 		);
 
+		await userEvent.selectOptions(getByLabelText('Type'), selectedType);
 		await userEvent.type(getByLabelText('Name'), `${itemName}{Enter}`);
 
 		await waitFor(() => {
 			expect(mockMutateAsync).toHaveBeenCalledWith({
 				name: itemName,
 				amount: 1,
-				store: 'Unspecified',
-				type: 'uncommon'
+				store: SHOPPING_ITEM_STORE.unspecified,
+				type: selectedType
 			});
 		});
 	});
 
-	it('should not submit form when Enter is pressed and name is empty', async () => {
+	it('should not submit form when Enter is pressed and form is invalid', async () => {
 		const { getByLabelText } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper }
@@ -196,5 +249,14 @@ describe('AddListItemForm', () => {
 		);
 
 		expect(getByLabelText('Name')).toHaveFocus();
+	});
+
+	it('should have placeholder option selected by default', () => {
+		const { getByLabelText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper }
+		);
+
+		expect(getByLabelText('Type')).toHaveValue('');
 	});
 });

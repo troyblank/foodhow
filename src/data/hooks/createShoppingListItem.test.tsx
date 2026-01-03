@@ -15,8 +15,8 @@ const chance = new Chance();
 const mockNewShoppingListItem = (): NewShoppingListItem => ({
 	amount: chance.natural(),
 	name: chance.word(),
-	type: chance.pickone(SHOPPING_ITEM_TYPE),
-	store: chance.pickone(SHOPPING_ITEM_STORE)
+	type: chance.pickone(Object.values(SHOPPING_ITEM_TYPE)),
+	store: chance.pickone(Object.values(SHOPPING_ITEM_STORE))
 });
 
 describe('useCreateShoppingListItem', () => {

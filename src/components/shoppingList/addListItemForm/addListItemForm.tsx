@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { SHOPPING_ITEM_TYPE, SHOPPING_ITEM_STORE, type ShoppingItemType } from '../../../types/data/shoppingList';
 import { useAuth } from '../../../contexts';
 import { useCreateShoppingListItem } from '../../../data';
-import { Modal, Input } from '../..';
+import { Modal, Input, Select } from '../..';
 import styles from './addListItemForm.module.css';
 
 type AddListItemFormProps = {
@@ -9,21 +10,31 @@ type AddListItemFormProps = {
     onClose: () => void;
 };
 
+const shoppingItemTypeOptions = [
+	{ value: '', label: 'Select a type...' },
+	...Object.values(SHOPPING_ITEM_TYPE).map((type) => ({
+		value: type,
+		label: type
+	}))
+];
+
 export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) => {
 	const { user } = useAuth();
 	const { mutateAsync: createItem, isPending } = useCreateShoppingListItem(user);
 	const [name, setName] = useState('');
+	const [selectedType, setSelectedType] = useState<ShoppingItemType | ''>('');
 
 	const resetForm = () => {
 		setName('');
+		setSelectedType('');
 	};
 
 	const onConfirm = async () => {
 		await createItem({
 			name: name.trim(),
 			amount: 1,
-			store: 'Unspecified',
-			type: 'uncommon'
+			store: SHOPPING_ITEM_STORE.unspecified,
+			type: selectedType as ShoppingItemType
 		});
 		onClose();
 		resetForm();
@@ -35,10 +46,12 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 	};
 
 	const isNameEmpty = 0 === name.trim().length;
+	const isTypeEmpty = '' === selectedType;
+	const isFormInvalid = isNameEmpty || isTypeEmpty;
 
 	const onSubmit = (event: React.FormEvent) => {
 		event.preventDefault();
-		if (!isNameEmpty && !isPending) {
+		if (!isFormInvalid && !isPending) {
 			onConfirm();
 		}
 	};
@@ -49,7 +62,7 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 			isShowing={isShowing}
 			onConfirm={onConfirm}
 			onCancel={onCancel}
-			isConfirmDisabled={isNameEmpty}
+			isConfirmDisabled={isFormInvalid}
 			isPending={isPending}
 		>
 			<form className={styles.form} onSubmit={onSubmit}>
@@ -62,6 +75,15 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 					value={name}
 					onChange={setName}
 					autoFocus={true}
+				/>
+				<label htmlFor={'add-item-type'} className={styles.label}>
+					Type
+				</label>
+				<Select
+					id={'add-item-type'}
+					value={selectedType}
+					onChange={(value) => setSelectedType(value as ShoppingItemType | '')}
+					options={shoppingItemTypeOptions}
 				/>
 			</form>
 		</Modal>

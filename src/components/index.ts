@@ -11,6 +11,7 @@ export * from './modal';
 export * from './navigation';
 export * from './recipe';
 export * from './recipeList';
+export * from './select';
 export * from './shoppingList';
 export * from './signIn';
 export * from './spinner';

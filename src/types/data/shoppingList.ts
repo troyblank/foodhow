@@ -1,23 +1,22 @@
-export const SHOPPING_ITEM_TYPE = [
-	'meat',
-	'perishable',
-	'produce',
-	'frozen',
-	'imperishable',
-	'spice',
-	'uncommon'
-] as const;
+export const SHOPPING_ITEM_TYPE = {
+	meat: 'meat',
+	perishable: 'perishable',
+	produce: 'produce',
+	frozen: 'frozen',
+	imperishable: 'imperishable',
+	spice: 'spice',
+	uncommon: 'uncommon'
+} as const;
 
-export const SHOPPING_ITEM_STORE = [
-	'Jewel-Osco',
-	'Pete\'s',
-	'Wild Fork',
-	'Unspecified'
-] as const;
+export const SHOPPING_ITEM_STORE = {
+	jewelOsco: 'Jewel-Osco',
+	petes: 'Pete\'s',
+	wildFork: 'Wild Fork',
+	unspecified: 'Unspecified'
+} as const;
 
-
-export type ShoppingItemType = typeof SHOPPING_ITEM_TYPE[number];
-export type ShoppingItemStore = typeof SHOPPING_ITEM_STORE[number];
+export type ShoppingItemType = typeof SHOPPING_ITEM_TYPE[keyof typeof SHOPPING_ITEM_TYPE];
+export type ShoppingItemStore = typeof SHOPPING_ITEM_STORE[keyof typeof SHOPPING_ITEM_STORE];
 
 export type NewShoppingListItem = {
     amount: number,

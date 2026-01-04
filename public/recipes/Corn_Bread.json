@@ -2,14 +2,14 @@
     "title": "Corn Bread",
     "meta": "Grandma's",
     "ingredients": [
-        "1 cup yellow corn meal",
-        "1 cup flour",
-        "&frac34; cup sugar",
-        "4 tsp baking powder",
-        "&frac12; tsp salt",
-        "1 egg",
-        "1 cup milk",
-        "&frac14 cup shortening"
+        { "text": "1 cup yellow corn meal", "type": "imperishable" },
+        { "text": "1 cup flour", "type": "imperishable" },
+        { "text": "&frac34; cup sugar", "type": "imperishable" },
+        { "text": "4 tsp baking powder", "type": "imperishable" },
+        { "text": "&frac12; tsp salt", "type": "spice" },
+        { "text": "1 egg", "type": "imperishable" },
+        { "text": "1 cup milk", "type": "perishable" },
+        { "text": "&frac14 cup shortening", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Sift together all dry ingredients." },

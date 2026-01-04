@@ -2,16 +2,16 @@
     "title": "Beer Can Chicken",
     "meta": "",
     "ingredients": [
-        "1 4 lb whole chicken",
-        "Applewood chips",
-        "1 12oz can of pale ale beer",
-        "1 cup apple cider",
-        "&frac12; cup apple cider vinegar",
-        "4 TBSP butter (melted)",
-        "1 cup olive oil",
-        "1 cup cajun seasoning",
-        "1 tsp garlic powder",
-        "1 tsp onion powder"
+        { "text": "1 4 lb whole chicken", "type": "meat" },
+        { "text": "Applewood chips", "type": "uncommon" },
+        { "text": "1 12oz can of pale ale beer", "type": "imperishable" },
+        { "text": "1 cup apple cider", "type": "imperishable" },
+        { "text": "&frac12; cup apple cider vinegar", "type": "imperishable" },
+        { "text": "4 TBSP butter (melted)", "type": "perishable" },
+        { "text": "1 cup olive oil", "type": "imperishable" },
+        { "text": "1 cup cajun seasoning", "type": "spice" },
+        { "text": "1 tsp garlic powder", "type": "spice" },
+        { "text": "1 tsp onion powder", "type": "spice" }
     ],
     "directions": [
         { "text": "In a small bowl whisk together the butter, vinegar, &frac14; cup cajun seasoning, garlic powder, and onion powder." },

@@ -2,15 +2,14 @@
     "title": "Lemon Pound Cake",
     "meta": "",
     "ingredients": [
-        "2 lemons",
-        "1 cup cake flour",
-        "&frac12; tsp baking powder",
-        "1 stick butter",
-        "2 eggs",
-        "1 cup sugar",
-        "1 &frac12; TBSP poppy seeds",
-        "&frac14; tsp salt"
-
+        { "text": "2 lemons", "type": "produce" },
+        { "text": "1 cup cake flour", "type": "imperishable" },
+        { "text": "&frac12; tsp baking powder", "type": "imperishable" },
+        { "text": "1 stick butter", "type": "imperishable" },
+        { "text": "2 eggs", "type": "perishable" },
+        { "text": "1 cup sugar", "type": "imperishable" },
+        { "text": "1 &frac12; TBSP poppy seeds", "type": "spice" },
+        { "text": "&frac14; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Make 3 tsp zest, 1 tsp juice, 2 TBSP juice, out of lemons." },

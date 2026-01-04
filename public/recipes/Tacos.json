@@ -2,14 +2,14 @@
     "title": "Tacos",
     "meta": "",
     "ingredients": [
-        "2 chicken breasts",
-        "1 red pepper",
-        "1 white onion",
-        "3 limes",
-        "12 small tortillas",
-        "8oz of Monterey Jack Cheese",
-        "2 TBSP vegetable oil",
-        "2 TBSP taco seasoning"
+        { "text": "2 chicken breasts", "type": "meat" },
+        { "text": "1 red pepper", "type": "produce" },
+        { "text": "1 white onion", "type": "produce" },
+        { "text": "3 limes", "type": "produce" },
+        { "text": "12 small tortillas", "type": "imperishable" },
+        { "text": "8oz of Monterey Jack Cheese", "type": "perishable" },
+        { "text": "2 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "2 TBSP taco seasoning", "type": "spice" }
     ],
     "directions": [
         { "text": "Boil breasts for 5 mins then cover with oil." },

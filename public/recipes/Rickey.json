@@ -2,9 +2,9 @@
     "title": "Rickey",
     "meta": "drink",
     "ingredients": [
-        "4 oz lemon-lime soda",
-        "&frac12; lime juice",
-        "1 oz grenadine"
+        { "text": "4 oz lemon-lime soda", "type": "imperishable" },
+        { "text": "&frac12; lime juice", "type": "produce" },
+        { "text": "1 oz grenadine", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Mix ingredients together in a cocktail shaker." }

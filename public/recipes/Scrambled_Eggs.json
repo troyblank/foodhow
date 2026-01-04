@@ -2,11 +2,11 @@
     "title": "Scrambled Eggs",
     "meta": "",
     "ingredients": [
-        "4 eggs",
-        "4 TBSP milk",
-        "1 TBSP butter",
-        "Salt",
-        "Pepper"
+        { "text": "4 eggs", "type": "perishable" },
+        { "text": "4 TBSP milk", "type": "perishable" },
+        { "text": "1 TBSP butter", "type": "imperishable" },
+        { "text": "Salt", "type": "spice" },
+        { "text": "Pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "In bowl combine eggs with milk using a fork." },

@@ -2,17 +2,17 @@
     "title": "Chicken Marsala",
     "meta": "",
     "ingredients": [
-        "1 chicken breast",
-        "12 oz mushrooms sliced",
-        "1 bunch green onions chopped",
-        "1 cup chicken broth",
-        "&frac14; cup flour",
-        "3 TB butter",
-        "1 cup marsala wine",
-        "&frac12; tsp marjoram",
-        "&frac12; tsp parsley",
-        "&frac12; tsp pepper",
-        "&frac14; tsp salt"
+        { "text": "1 chicken breast", "type": "meat" },
+        { "text": "12 oz mushrooms sliced", "type": "produce" },
+        { "text": "1 bunch green onions chopped", "type": "produce" },
+        { "text": "1 cup chicken broth", "type": "imperishable" },
+        { "text": "&frac14; cup flour", "type": "imperishable" },
+        { "text": "3 TB butter", "type": "perishable" },
+        { "text": "1 cup marsala wine", "type": "imperishable" },
+        { "text": "&frac12; tsp marjoram", "type": "spice" },
+        { "text": "&frac12; tsp parsley", "type": "spice" },
+        { "text": "&frac12; tsp pepper", "type": "spice" },
+        { "text": "&frac14; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cut chicken breast into 4 cutlets." },

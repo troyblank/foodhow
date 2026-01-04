@@ -3,26 +3,26 @@
     "meta": "Overnight marination & 10 hour smoke",
     "ingredients": {
         "Sauce": [
-            "2 TBSP garlic (minced)",
-            "&frac12; cup orange juice",
-            "&frac14; cup lime juice",
-            "2 TBSP olive oil",
-            "1 &frac12; tsp salt",
-            "1 &frac12; tsp adobo seasoning"
+            { "text": "2 TBSP garlic (minced)", "type": "produce" },
+            { "text": "&frac12; cup orange juice", "type": "imperishable" },
+            { "text": "&frac14; cup lime juice", "type": "produce" },
+            { "text": "2 TBSP olive oil", "type": "imperishable" },
+            { "text": "1 &frac12; tsp salt", "type": "spice" },
+            { "text": "1 &frac12; tsp adobo seasoning", "type": "spice" }
         ],
         "Rub": [
-            "&frac14; orange (zested)",
-            "2 TBSP cuban seasoning",
-            "1 &frac12; tsp onion powder",
-            "1 &frac12; tsp garlic powder"
+            { "text": "&frac14; orange (zested)", "type": "produce" },
+            { "text": "2 TBSP cuban seasoning", "type": "spice" },
+            { "text": "1 &frac12; tsp onion powder", "type": "spice" },
+            { "text": "1 &frac12; tsp garlic powder", "type": "spice" }
         ],
         "Meat": [
-            "Apple Wood Chips",
-            "&frac14; orange (zested)",
-            "1 avocado (sliced)",
-            "1 red onion (sliced)",
-            "4 lb pork shoulder",
-            "2 TBSP honey"
+            { "text": "Apple Wood Chips", "type": "uncommon" },
+            { "text": "&frac14; orange (zested)", "type": "produce" },
+            { "text": "1 avocado (sliced)", "type": "produce" },
+            { "text": "1 red onion (sliced)", "type": "produce" },
+            { "text": "4 lb pork shoulder", "type": "meat" },
+            { "text": "2 TBSP honey", "type": "imperishable" }
         ]
     },
     "directions": [

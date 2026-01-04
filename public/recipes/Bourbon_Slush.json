@@ -2,13 +2,13 @@
     "title": "Bourbon Slush",
     "meta": "",
     "ingredients": [
-        "6 oz can concentrated orange juice",
-        "1 large can concentrated lemonade",
-        "9 oz of bourbon",
-        "36 oz water",
-        "2 tea bags",
-        "1 cup sugar",
-        "1 cup boiling water"
+        { "text": "6 oz can concentrated orange juice", "type": "frozen" },
+        { "text": "1 large can concentrated lemonade", "type": "frozen" },
+        { "text": "9 oz of bourbon", "type": "imperishable" },
+        { "text": "36 oz water", "type": "imperishable" },
+        { "text": "2 tea bags", "type": "imperishable" },
+        { "text": "1 cup sugar", "type": "imperishable" },
+        { "text": "1 cup boiling water", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Stir tea bags, sugar and boiling water together till dissolved, remove tea bags." },

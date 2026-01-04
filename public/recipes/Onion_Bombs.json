@@ -2,12 +2,12 @@
     "title": "Onion Bombs",
     "meta": "",
     "ingredients": [
-        "Maple wood chips",
-        "2 large Vidalia onions (peeled)",
-        "&frac14; cup butter",
-        "&frac14; cup parmesan cheese",
-        "2 chicken bouillon cubes",
-        "&frac12; tsp black pepper"
+        { "text": "Maple wood chips", "type": "uncommon" },
+        { "text": "2 large Vidalia onions (peeled)", "type": "produce" },
+        { "text": "&frac14; cup butter", "type": "imperishable" },
+        { "text": "&frac14; cup parmesan cheese", "type": "imperishable" },
+        { "text": "2 chicken bouillon cubes", "type": "imperishable" },
+        { "text": "&frac12; tsp black pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Preheat smoker to 225°." },

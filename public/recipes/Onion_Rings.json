@@ -2,14 +2,14 @@
     "title": "Onion Rings",
     "meta": "",
     "ingredients": [
-        "1 large onion",
-        "1 cup of Lager beer",
-        "2 &frac14; cups flour",
-        "3 tsp baking powder",
-        "2 TBSP butter",
-        "2 eggs",
-        "4 cups vegetable oil",
-        "2 tsp salt"
+        { "text": "1 large onion", "type": "produce" },
+        { "text": "1 cup of Lager beer", "type": "imperishable" },
+        { "text": "2 &frac14; cups flour", "type": "imperishable" },
+        { "text": "3 tsp baking powder", "type": "imperishable" },
+        { "text": "2 TBSP butter", "type": "imperishable" },
+        { "text": "2 eggs", "type": "perishable" },
+        { "text": "4 cups vegetable oil", "type": "imperishable" },
+        { "text": "2 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "heat oil in a giant sauce pan and maintain at 375°." },

@@ -3,22 +3,22 @@
     "meta": "",
     "ingredients": {
         "Brine": [
-            "1 15lb turkey",
-            "1 gallon vegetable stock",
-            "&frac12; TBSP candied ginger",
-            "&frac12 cup light brown sugar",
-            "1 TBSP black peppercorns",
-            "&frac12; TBSP allspice berries",
-            "1 cup kosher salt",
-            "1 gallon water"
+            { "text": "1 15lb turkey", "type": "meat" },
+            { "text": "1 gallon vegetable stock", "type": "imperishable" },
+            { "text": "&frac12; TBSP candied ginger", "type": "uncommon" },
+            { "text": "&frac12; cup light brown sugar", "type": "imperishable" },
+            { "text": "1 TBSP black peppercorns", "type": "spice" },
+            { "text": "&frac12; TBSP allspice berries", "type": "spice" },
+            { "text": "1 cup kosher salt", "type": "spice" },
+            { "text": "1 gallon water", "type": "imperishable" }
         ],
         "Stuffing": [
-            "canola oil",
-            "1 red apple sliced",
-            "&frac12; yellow onion sliced",
-            "1 cinnamon stick",
-            "4 sprigs rosemary",
-            "6 leaves sage"
+            { "text": "canola oil", "type": "imperishable" },
+            { "text": "1 red apple sliced", "type": "produce" },
+            { "text": "&frac12; yellow onion sliced", "type": "produce" },
+            { "text": "1 cinnamon stick", "type": "spice" },
+            { "text": "4 sprigs rosemary", "type": "produce" },
+            { "text": "6 leaves sage", "type": "produce" }
         ]
     },
     "directions": [

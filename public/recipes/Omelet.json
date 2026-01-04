@@ -2,14 +2,14 @@
     "title": "Omelet",
     "meta": "",
     "ingredients": [
-        "4 large eggs",
-        "1 tbsp milk",
-        "1 &frac12; TBSP butter (cut into small cubes)",
-        "2 slices of ham (cut into small pieces)",
-        "3 mushrooms (diced)",
-        "&frac12; a shallot (diced)",
-        "&frac12; tsp salt",
-        "&frac34; tsp black pepper"
+        { "text": "4 large eggs", "type": "perishable" },
+        { "text": "1 tbsp milk", "type": "perishable" },
+        { "text": "1 &frac12; TBSP butter (cut into small cubes)", "type": "imperishable" },
+        { "text": "2 slices of ham (cut into small pieces)", "type": "meat" },
+        { "text": "3 mushrooms (diced)", "type": "produce" },
+        { "text": "&frac12; a shallot (diced)", "type": "produce" },
+        { "text": "&frac12; tsp salt", "type": "spice" },
+        { "text": "&frac34; tsp black pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Whisk together 3 whole eggs, one egg yolk, milk, salt, and pepper." },

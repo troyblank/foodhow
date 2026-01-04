@@ -2,9 +2,9 @@
     "title": "Steak on the Grill",
     "meta": "",
     "ingredients": [
-        "1&frac12; lb 2″ thick bone in rib-eye",
-        "black pepper",
-        "salt"
+        { "text": "1&frac12; lb 2″ thick bone in rib-eye", "type": "meat" },
+        { "text": "black pepper", "type": "spice" },
+        { "text": "salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Season the steak liberally with salt and pepper." },

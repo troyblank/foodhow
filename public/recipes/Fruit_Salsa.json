@@ -2,16 +2,16 @@
     "title": "Fruit Salsa",
     "meta": "",
     "ingredients": [
-        "1 small red onion to make &frac12; cup diced",
-        "2 limes to make &frac14; cup juice",
-        "1 orange to make &frac14; cup juice",
-        "1 &frac12; cups pineapple diced",
-        "1 small red bell pepper chopped",
-        "1 garlic glove minced",
-        "1 jalapeño de-seeded and diced",
-        "&frac14; tsp chipotle pepper",
-        "&frac14; tsp salt",
-        "&frac12; tsp pepper"
+        { "text": "1 small red onion to make &frac12; cup diced", "type": "produce" },
+        { "text": "2 limes to make &frac14; cup juice", "type": "produce" },
+        { "text": "1 orange to make &frac14; cup juice", "type": "produce" },
+        { "text": "1 &frac12; cups pineapple diced", "type": "produce" },
+        { "text": "1 small red bell pepper chopped", "type": "produce" },
+        { "text": "1 garlic glove minced", "type": "produce" },
+        { "text": "1 jalapeño de-seeded and diced", "type": "produce" },
+        { "text": "&frac14; tsp chipotle pepper", "type": "imperishable" },
+        { "text": "&frac14; tsp salt", "type": "spice" },
+        { "text": "&frac12; tsp pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Combine all ingredients, cover and refrigerate for at least a half hour." }

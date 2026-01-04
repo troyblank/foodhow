@@ -2,16 +2,16 @@
     "title": "Pasta Sauce",
     "meta": "",
     "ingredients": [
-        "1 yellow onion",
-        "4 garlic gloves",
-        "&frac14; bunch of fresh basil",
-        "1 TBSP canola oil",
-        "28oz can of whole tomatoes",
-        "6 oz sun-dried tomatoes in olive oil",
-        "&frac12; cup of merlot wine",
-        "&frac12; tsp red pepper flakes",
-        "1 tsp salt",
-        "1 tsp black pepper"
+        { "text": "1 yellow onion", "type": "produce" },
+        { "text": "4 garlic gloves", "type": "produce" },
+        { "text": "&frac14; bunch of fresh basil", "type": "produce" },
+        { "text": "1 TBSP canola oil", "type": "imperishable" },
+        { "text": "28oz can of whole tomatoes", "type": "imperishable" },
+        { "text": "6 oz sun-dried tomatoes in olive oil", "type": "imperishable" },
+        { "text": "&frac12; cup of merlot wine", "type": "imperishable" },
+        { "text": "&frac12; tsp red pepper flakes", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" },
+        { "text": "1 tsp black pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Process onion, and garlic until fine." },

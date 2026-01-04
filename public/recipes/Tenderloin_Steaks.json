@@ -2,11 +2,11 @@
     "title": "Tenderloin Steaks",
     "meta": "",
     "ingredients": [
-        "2lb center-cut beef tenderloin roast",
-        "1 TBSP canola oil",
-        "1 TBSP butter",
-        "black pepper",
-        "salt"
+        { "text": "2lb center-cut beef tenderloin roast", "type": "meat" },
+        { "text": "1 TBSP canola oil", "type": "imperishable" },
+        { "text": "1 TBSP butter", "type": "imperishable" },
+        { "text": "black pepper", "type": "spice" },
+        { "text": "salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Season tenderloin liberally on all sides with salt and pepper." },

@@ -2,13 +2,13 @@
     "title": "Virgin Margarita",
     "meta": "",
     "ingredients": [
-        "1 lime",
-        "6 oz orange juice",
-        "2 oz peach juice",
-        "8 oz ginger ale",
-        "12 oz frozen limeade",
-        "4 TBSP salt",
-        "1 cup ice"
+        { "text": "1 lime", "type": "produce" },
+        { "text": "6 oz orange juice", "type": "perishable" },
+        { "text": "2 oz peach juice", "type": "perishable" },
+        { "text": "8 oz ginger ale", "type": "imperishable" },
+        { "text": "12 oz frozen limeade", "type": "frozen" },
+        { "text": "4 TBSP salt", "type": "spice" },
+        { "text": "1 cup ice", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Pour salt onto a small plate, rub rim of a glass with a lime wedge and coat with salt." },

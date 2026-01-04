@@ -2,12 +2,12 @@
     "title": "Rice Casserole",
     "meta": "Grandma's",
     "ingredients": [
-        "16 oz mushrooms",
-        "1 yellow onion",
-        "11 TBSP butter",
-        "21 oz consommé",
-        "1 TBSP soy sauce",
-        "1 &frac14; cups rice"
+        { "text": "16 oz mushrooms", "type": "produce" },
+        { "text": "1 yellow onion", "type": "produce" },
+        { "text": "11 TBSP butter", "type": "imperishable" },
+        { "text": "21 oz consommé", "type": "imperishable" },
+        { "text": "1 TBSP soy sauce", "type": "imperishable" },
+        { "text": "1 &frac14; cups rice", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Dice onion and saute with 1 TBSP butter." },

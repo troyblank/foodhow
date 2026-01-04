@@ -3,24 +3,24 @@
     "meta": "",
     "ingredients": {
         "dough": [
-            "1&frac12; cups bread flour",
-            "1 tsp sugar",
-            "&frac14; tsp active dry yeast",
-            "&frac34; tsp salt",
-            "&frac23; cup ice water"
+            { "text": "1&frac12; cups bread flour", "type": "imperishable" },
+            { "text": "1 tsp sugar", "type": "imperishable" },
+            { "text": "&frac14; tsp active dry yeast", "type": "imperishable" },
+            { "text": "&frac34; tsp salt", "type": "spice" },
+            { "text": "&frac23; cup ice water", "type": "imperishable" }
         ],
         "sauce": [
-            "&frac12; cup canned whole tomatoes (drained)",
-            "1 tsp olive oil",
-            "1 garlic clove (minced)",
-            "&frac18; tsp red wine vinegar",
-            "&frac14; tsp dried oregano",
-            "&frac18; tsp salt",
-            "&frac18; tsp pepper"
+            { "text": "&frac12; cup canned whole tomatoes (drained)", "type": "imperishable" },
+            { "text": "1 tsp olive oil", "type": "imperishable" },
+            { "text": "1 garlic clove (minced)", "type": "produce" },
+            { "text": "&frac18; tsp red wine vinegar", "type": "imperishable" },
+            { "text": "&frac14; tsp dried oregano", "type": "spice" },
+            { "text": "&frac18; tsp salt", "type": "spice" },
+            { "text": "&frac18; tsp pepper", "type": "spice" }
         ],
         "toppings": [
-            "&frac14; cup Parmesan (grated)",
-            "4 oz low moisture mozzarella (shredded)"
+            { "text": "&frac14; cup Parmesan (grated)", "type": "imperishable" },
+            { "text": "4 oz low moisture mozzarella (shredded)", "type": "perishable" }
         ]
     },
     "directions": [

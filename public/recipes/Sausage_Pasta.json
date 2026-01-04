@@ -2,16 +2,16 @@
     "title": "Sausage Pata",
     "meta": "",
     "ingredients": [
-        "1 Cup green onions",
-        "2 medium yellow onions",
-        "2 garlic cloves",
-        "1 lb smoked sausage",
-        "1 TBSP olive oil",
-        "14 oz chicken broth",
-        "10 oz can mild Ro-Tel diced tomatoes with green chilies",
-        "1 cup monterey jack cheese",
-        "8 oz penne pasta",
-        "1 tsp salt"
+        { "text": "1 Cup green onions", "type": "produce" },
+        { "text": "2 medium yellow onions", "type": "produce" },
+        { "text": "2 garlic cloves", "type": "produce" },
+        { "text": "1 lb smoked sausage", "type": "meat" },
+        { "text": "1 TBSP olive oil", "type": "imperishable" },
+        { "text": "14 oz chicken broth", "type": "imperishable" },
+        { "text": "10 oz can mild Ro-Tel diced tomatoes with green chilies", "type": "imperishable" },
+        { "text": "1 cup monterey jack cheese", "type": "perishable" },
+        { "text": "8 oz penne pasta", "type": "imperishable" },
+        { "text": "1 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Mince onions and garlic. Slice sausage." },

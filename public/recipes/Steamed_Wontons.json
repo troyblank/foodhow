@@ -2,19 +2,18 @@
     "title": "Steamed Wontons",
     "meta": "",
     "ingredients": [
-        "1 bunch napa cabbage",
-        "1 bunch green onions",
-        "1 small piece ginger root",
-        "2oz canned water chestnuts",
-        "0.5 lbs pork",
-        "36 wonton wrappers",
-        "1 TBSP cornstarch",
-        "1 TBSP light soy sauce",
-        "1 TBSP rice wine",
-        "2 tsp sesame oil",
-        "&frac12; tsp chinese five-spice powder",
-        "pinch of sugar"
-
+        { "text": "1 bunch napa cabbage", "type": "produce" },
+        { "text": "1 bunch green onions", "type": "produce" },
+        { "text": "1 small piece ginger root", "type": "produce" },
+        { "text": "2oz canned water chestnuts", "type": "imperishable" },
+        { "text": "0.5 lbs pork", "type": "meat" },
+        { "text": "36 wonton wrappers", "type": "frozen" },
+        { "text": "1 TBSP cornstarch", "type": "imperishable" },
+        { "text": "1 TBSP light soy sauce", "type": "imperishable" },
+        { "text": "1 TBSP rice wine", "type": "imperishable" },
+        { "text": "2 tsp sesame oil", "type": "imperishable" },
+        { "text": "&frac12; tsp chinese five-spice powder", "type": "spice" },
+        { "text": "pinch of sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Take two leaves of the cabbage, wash and then cut into tiny shreds." },

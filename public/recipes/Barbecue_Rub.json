@@ -2,13 +2,13 @@
     "title": "Barbecue Rub",
     "meta": "",
     "ingredients": [
-        "&frac14; cup Turbinado Sugar",
-        "1 TBSP brown sugar",
-        "&frac14; cup paprika",
-        "3 TBSP Cajun seasoning",
-        "1 &frac12; tsp chili powder",
-        "1 &frac12; tsp cayenne pepper",
-        "1 &frac12; tsp cumin"
+        { "text": "&frac14; cup Turbinado Sugar", "type": "imperishable" },
+        { "text": "1 TBSP brown sugar", "type": "imperishable" },
+        { "text": "&frac14; cup paprika", "type": "spice" },
+        { "text": "3 TBSP Cajun seasoning", "type": "spice" },
+        { "text": "1 &frac12; tsp chili powder", "type": "spice" },
+        { "text": "1 &frac12; tsp cayenne pepper", "type": "spice" },
+        { "text": "1 &frac12; tsp cumin", "type": "spice" }
     ],
     "directions": [
         { "text": "Whisk all ingredients together." }

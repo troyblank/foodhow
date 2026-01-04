@@ -2,13 +2,13 @@
     "title": "Garlic Potatoes",
     "meta": "",
     "ingredients": [
-        "2 medium sized potatoes",
-        "1 garlic",
-        "3 TB olive oil",
-        "&frac14; tsp thyme",
-        "&frac18; tsp paprika",
-        "&frac12; tsp salt",
-        "&frac14; tsp pepper"
+        { "text": "2 medium sized potatoes", "type": "produce" },
+        { "text": "1 garlic", "type": "produce" },
+        { "text": "3 TB olive oil", "type": "imperishable" },
+        { "text": "&frac14; tsp thyme", "type": "spice" },
+        { "text": "&frac18; tsp paprika", "type": "spice" },
+        { "text": "&frac12; tsp salt", "type": "spice" },
+        { "text": "&frac14; tsp pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Cut off top of garlic head exposing all gloves, brush with 1 TB oil and wrap in foil." },

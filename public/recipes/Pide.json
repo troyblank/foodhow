@@ -2,15 +2,15 @@
     "title": "Pide",
     "meta": "Great with hummus",
     "ingredients": [
-        "3 &frac13; cups flour",
-        "1 tsp yeast",
-        "1 egg yolk",
-        "1 tsp sugar",
-        "2 TBSP olive oil",
-        "1 &frac12; cups water",
-        "2 tsp sesame seeds",
-        "1 tsp kalonji seeds",
-        "&frac12; tsp salt"
+        { "text": "3 &frac13; cups flour", "type": "imperishable" },
+        { "text": "1 tsp yeast", "type": "imperishable" },
+        { "text": "1 egg yolk", "type": "perishable" },
+        { "text": "1 tsp sugar", "type": "imperishable" },
+        { "text": "2 TBSP olive oil", "type": "imperishable" },
+        { "text": "1 &frac12; cups water", "type": "imperishable" },
+        { "text": "2 tsp sesame seeds", "type": "spice" },
+        { "text": "1 tsp kalonji seeds", "type": "spice" },
+        { "text": "&frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Combine flour, yeast, sugar and salt in a large bowl." },

@@ -2,14 +2,14 @@
     "title": "Potato And Egg",
     "meta": "",
     "ingredients": [
-        "1 lb potatoes",
-        "2 tsp fresh rosemary diced finely",
-        "3 oz smoked bacon",
-        "2 eggs",
-        "3 TBSP olive oil",
-        "pinch of nutmeg",
-        "pinch of salt",
-        "pinch of pepper"
+        { "text": "1 lb potatoes", "type": "produce" },
+        { "text": "2 tsp fresh rosemary diced finely", "type": "produce" },
+        { "text": "3 oz smoked bacon", "type": "meat" },
+        { "text": "2 eggs", "type": "perishable" },
+        { "text": "3 TBSP olive oil", "type": "imperishable" },
+        { "text": "pinch of nutmeg", "type": "spice" },
+        { "text": "pinch of salt", "type": "spice" },
+        { "text": "pinch of pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Coarsely grate potatoes and pat dry with a kitchen towel." },

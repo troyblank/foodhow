@@ -2,14 +2,14 @@
     "title": "Pumpkin Brittle",
     "meta": "",
     "ingredients": [
-        "1 cup pepitas",
-        "1 cup sugar",
-        "&frac12; cup brown sugar",
-        "1 cup water",
-        "&frac13; cup light corn syrup",
-        "2 TBSP butter",
-        "&frac12; tsp baking soda",
-        "1 tsp vanilla extract"
+        { "text": "1 cup pepitas", "type": "imperishable" },
+        { "text": "1 cup sugar", "type": "imperishable" },
+        { "text": "&frac12; cup brown sugar", "type": "imperishable" },
+        { "text": "1 cup water", "type": "imperishable" },
+        { "text": "&frac13; cup light corn syrup", "type": "imperishable" },
+        { "text": "2 TBSP butter", "type": "imperishable" },
+        { "text": "&frac12; tsp baking soda", "type": "imperishable" },
+        { "text": "1 tsp vanilla extract", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Grease a large baking dish." },

@@ -2,11 +2,11 @@
     "title": "Pie Dough",
     "meta": "",
     "ingredients": [
-        "1 &frac14; cups of flour",
-        "6 TBSP butter",
-        "2 TBSP Lard",
-        "&frac18; cups frozen apple juice concentrate",
-        "&frac12; tsp salt"
+        { "text": "1 &frac14; cups of flour", "type": "imperishable" },
+        { "text": "6 TBSP butter", "type": "imperishable" },
+        { "text": "2 TBSP Lard", "type": "imperishable" },
+        { "text": "&frac18; cups frozen apple juice concentrate", "type": "frozen" },
+        { "text": "&frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cut the butter and lard into small pieces and stash them in the freezer." },

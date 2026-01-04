@@ -2,14 +2,14 @@
     "title": "Garlic Beef",
     "meta": "Serve with egg noodles",
     "ingredients": [
-        "2 TBSP dry sherry",
-        "1 lb filet mignon",
-        "1 green bell pepper sliced",
-        "4 garlic cloves diced",
-        "6 scallions sliced",
-        "4 TBSP soy sauce",
-        "2 TBSP vegetable oil",
-        "2 TBSP sesame seeds"
+        { "text": "2 TBSP dry sherry", "type": "imperishable" },
+        { "text": "1 lb filet mignon", "type": "meat" },
+        { "text": "1 green bell pepper sliced", "type": "produce" },
+        { "text": "4 garlic cloves diced", "type": "produce" },
+        { "text": "6 scallions sliced", "type": "produce" },
+        { "text": "4 TBSP soy sauce", "type": "imperishable" },
+        { "text": "2 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "2 TBSP sesame seeds", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Toast the sesame seeds in a wok on medium heat for 2 mins, set aside." },

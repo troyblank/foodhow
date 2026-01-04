@@ -2,12 +2,12 @@
     "title": "Ravioli Butter Sauce",
     "meta": "",
     "ingredients": [
-        "2 garlic cloves diced",
-        "5 sage leaves diced",
-        "4 TBSP butter",
-        "parmesan cheese",
-        "salt",
-        "pepper"
+        { "text": "2 garlic cloves diced", "type": "produce" },
+        { "text": "5 sage leaves diced", "type": "produce" },
+        { "text": "4 TBSP butter", "type": "imperishable" },
+        { "text": "parmesan cheese", "type": "imperishable" },
+        { "text": "salt", "type": "spice" },
+        { "text": "pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Melt butter in a small saucepan." },

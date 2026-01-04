@@ -2,15 +2,15 @@
     "title": "Chicken Soup",
     "meta": "",
     "ingredients": [
-        "[8 cups Chicken Stock](/recipe/Chicken_Stock)",
-        "2 green onions bunches",
-        "3 carrots",
-        "4 celery ribs",
-        "1 rotisserie chicken",
-        "12oz package frozen egg noodles",
-        "2 TBSP butter",
-        "&frac12; tsp salt",
-        "&frac12; tsp pepper"
+        { "text": "[8 cups Chicken Stock](/recipe/Chicken_Stock)" },
+        { "text": "2 green onions bunches", "type": "produce" },
+        { "text": "3 carrots", "type": "produce" },
+        { "text": "4 celery ribs", "type": "produce" },
+        { "text": "1 rotisserie chicken", "type": "perishable" },
+        { "text": "12oz package frozen egg noodles", "type": "frozen" },
+        { "text": "2 TBSP butter", "type": "imperishable" },
+        { "text": "&frac12; tsp salt", "type": "spice" },
+        { "text": "&frac12; tsp pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Peel carrots and cut all vegetables into tiny bits." },

@@ -2,16 +2,16 @@
     "title": "Linguine With Pesto",
     "meta": "",
     "ingredients": [
-        "2 cloves of garlic",
-        "1 cup fresh basil",
-        "&frac14; cup Pecorino Romano cheese (grated)",
-        "&frac14; parmesan cheese (grated)",
-        "&frac14; cup almonds",
-        "&frac14; cup olive oil",
-        "&frac12; lb linguine",
-        "2 TBSP butter",
-        "&frac14; tsp black pepper",
-        "2 tsp salt"
+        { "text": "2 cloves of garlic", "type": "produce" },
+        { "text": "1 cup fresh basil", "type": "produce" },
+        { "text": "&frac14; cup Pecorino Romano cheese (grated)", "type": "imperishable" },
+        { "text": "&frac14; parmesan cheese (grated)", "type": "imperishable" },
+        { "text": "&frac14; cup almonds", "type": "imperishable" },
+        { "text": "&frac14; cup olive oil", "type": "imperishable" },
+        { "text": "&frac12; lb linguine", "type": "imperishable" },
+        { "text": "2 TBSP butter", "type": "imperishable" },
+        { "text": "&frac14; tsp black pepper", "type": "spice" },
+        { "text": "2 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Roughly process almonds and toast in a skillet for about 3 mins." },

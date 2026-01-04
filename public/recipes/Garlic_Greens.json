@@ -2,9 +2,9 @@
     "title": "Garlic Greens",
     "meta": "",
     "ingredients": [
-        "1 bunch of greens (mustard, turnip, or collard)",
-        "6 gloves of garlic",
-        "olive oil (about &frac14; cup)"
+        { "text": "1 bunch of greens (mustard, turnip, or collard)", "type": "produce" },
+        { "text": "6 gloves of garlic", "type": "produce" },
+        { "text": "olive oil (about &frac14; cup)", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Remove green steams and shred, dice one of the garlic gloves, crush the rest and set aside." },

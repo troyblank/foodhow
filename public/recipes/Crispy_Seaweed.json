@@ -2,11 +2,11 @@
     "title": "Crispy Seaweed",
     "meta": "",
     "ingredients": [
-        "1 lb mustard greens",
-        "1 cup peanut oil",
-        "&frac14 cup sliced almonds",
-        "1 tsp sugar",
-        "&frac14; tsp salt"
+        { "text": "1 lb mustard greens", "type": "produce" },
+        { "text": "1 cup peanut oil", "type": "imperishable" },
+        { "text": "&frac14 cup sliced almonds", "type": "imperishable" },
+        { "text": "1 tsp sugar", "type": "imperishable" },
+        { "text": "&frac14; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Wash greens and cut out stems." },

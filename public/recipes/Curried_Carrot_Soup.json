@@ -2,15 +2,15 @@
     "title": "Curried Carrot Soup",
     "meta": "",
     "ingredients": [
-        "3 gloves garlic",
-        "1 yellow onion",
-        "2 cups carrots",
-        "2 tsp olive oil",
-        "4 &frac12; cups chicken broth",
-        "1 tsp red curry paste",
-        "1 cup coconut milk",
-        "&frac12; tsp salt",
-        "&frac12; tsp black pepper"
+        { "text": "3 gloves garlic", "type": "produce" },
+        { "text": "1 yellow onion", "type": "produce" },
+        { "text": "2 cups carrots", "type": "produce" },
+        { "text": "2 tsp olive oil", "type": "imperishable" },
+        { "text": "4 &frac12; cups chicken broth", "type": "imperishable" },
+        { "text": "1 tsp red curry paste", "type": "imperishable" },
+        { "text": "1 cup coconut milk", "type": "imperishable" },
+        { "text": "&frac12; tsp salt", "type": "spice" },
+        { "text": "&frac12; tsp black pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Dice the carrots, onion, and garlic." },

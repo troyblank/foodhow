@@ -2,15 +2,15 @@
     "title": "Blueberry Pie Filling",
     "meta": "",
     "ingredients": [
-        "4 Anjou pears",
-        "2 cups blueberries",
-        "6 TBSP balsamic vinegar",
-        "8 TBSP butter",
-        "2 tsp flour",
-        "3 cups pound cake",
-        "8 TBSP sugar",
-        "2 pinches nutmeg",
-        "&frac12; tsp cinnamon"
+        { "text": "4 Anjou pears", "type": "produce" },
+        { "text": "2 cups blueberries", "type": "produce" },
+        { "text": "6 TBSP balsamic vinegar", "type": "imperishable" },
+        { "text": "8 TBSP butter", "type": "perishable" },
+        { "text": "2 tsp flour", "type": "imperishable" },
+        { "text": "3 cups pound cake", "type": "imperishable" },
+        { "text": "8 TBSP sugar", "type": "imperishable" },
+        { "text": "2 pinches nutmeg", "type": "spice" },
+        { "text": "&frac12; tsp cinnamon", "type": "spice" }
     ],
     "directions": [
         { "text": "In a skillet over med heat cook thinly sliced pears tossing for 2 mins." },

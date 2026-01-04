@@ -2,9 +2,9 @@
     "title": "Rice 2",
     "meta": "",
     "ingredients": [
-        "&frac34; cup long-grain rice (rinsed)",
-        "1 tsp vegetable oil",
-        "&frac14; tsp salt"
+        { "text": "&frac34; cup long-grain rice (rinsed)", "type": "imperishable" },
+        { "text": "1 tsp vegetable oil", "type": "imperishable" },
+        { "text": "&frac14; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Heat oil in saucepan over medium heat." },

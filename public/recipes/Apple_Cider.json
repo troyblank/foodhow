@@ -2,10 +2,10 @@
     "title": "Apple Cider",
     "meta": "",
     "ingredients": [
-        "2.5 cups of Apple Cider",
-        "1 shot of liquid caramel",
-        "&frac12; tsp cinnamon",
-        "&frac18; tsp nutmeg"
+        { "text": "2.5 cups of Apple Cider", "type": "imperishable" },
+        { "text": "1 shot of liquid caramel", "type": "imperishable" },
+        { "text": "&frac12; tsp cinnamon", "type": "spice" },
+        { "text": "&frac18; tsp nutmeg", "type": "spice" }
     ],
     "directions": [
         { "text": "Heat up cider and combine ingredients" }

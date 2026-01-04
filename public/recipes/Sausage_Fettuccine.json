@@ -1,13 +1,13 @@
 {
     "title": "Sausage Fettuccine",
     "ingredients": [
-        "2 lbs raw Italian sausage",
-        "2 bunches of swiss chard",
-        "2 heads of garlic",
-        "2 lbs fettucine",
-        "1 cup grated parmesan cheese",
-        "6 TBSP olive oil",
-        "2 TBSP salt"
+        { "text": "2 lbs raw Italian sausage", "type": "meat" },
+        { "text": "2 bunches of swiss chard", "type": "produce" },
+        { "text": "2 heads of garlic", "type": "produce" },
+        { "text": "2 lbs fettucine", "type": "imperishable" },
+        { "text": "1 cup grated parmesan cheese", "type": "imperishable" },
+        { "text": "6 TBSP olive oil", "type": "imperishable" },
+        { "text": "2 TBSP salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Chop up 10 garlic gloves finely and cut chard into 1 inch pieces including stalk." },

@@ -2,11 +2,11 @@
     "title": "Pasta",
     "meta": "Makes 1 pound. Use '3' thickness on kitchen aid pasta maker.",
     "ingredients": [
-        "1 cup semolina flour",
-        "&frac12; cup white flour",
-        "2 eggs",
-        "2 TBSP Olive oil",
-        "1&frac12; tsp salt"
+        { "text": "1 cup semolina flour", "type": "imperishable" },
+        { "text": "&frac12; cup white flour", "type": "imperishable" },
+        { "text": "2 eggs", "type": "perishable" },
+        { "text": "2 TBSP Olive oil", "type": "imperishable" },
+        { "text": "1&frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Mix eggs, oil, and salt into middle of flour." },

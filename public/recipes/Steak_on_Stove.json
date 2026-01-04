@@ -2,9 +2,9 @@
     "title": "Steak on the Stove",
     "meta": "",
     "ingredients": [
-        "steak",
-        "peanut oil",
-        "steak seasoning"
+        { "text": "steak", "type": "meat" },
+        { "text": "peanut oil", "type": "imperishable" },
+        { "text": "steak seasoning", "type": "spice" }
     ],
     "directions": [
         { "text": "Heat Oven to 500&deg; with iron skillet inside." },

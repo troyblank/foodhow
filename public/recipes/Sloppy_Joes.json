@@ -2,15 +2,15 @@
     "title": "Sloppy Joes",
     "meta": "",
     "ingredients": [
-        "2 lbs hamburger",
-        "1 red pepper",
-        "1 green pepper",
-        "&frac12; white onion",
-        "18 oz tomato paste",
-        "8 buns",
-        "4 TBSP butter",
-        "&frac12; cup sloppy joe mix",
-        "1 tbsp cumin"
+        { "text": "2 lbs hamburger", "type": "meat" },
+        { "text": "1 red pepper", "type": "produce" },
+        { "text": "1 green pepper", "type": "produce" },
+        { "text": "&frac12; white onion", "type": "produce" },
+        { "text": "18 oz tomato paste", "type": "imperishable" },
+        { "text": "8 buns", "type": "perishable" },
+        { "text": "4 TBSP butter", "type": "imperishable" },
+        { "text": "&frac12; cup sloppy joe mix", "type": "imperishable" },
+        { "text": "1 tbsp cumin", "type": "spice" }
     ],
     "directions": [
         { "text": "Cook hamburger and drain fat." },

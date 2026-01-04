@@ -2,11 +2,11 @@
     "title": "Pumpkin Pie Spice",
     "meta": "",
     "ingredients": [
-        "2 TBSP cinnamon",
-        "1 TBSP ground ginger",
-        "1 &frac12; tsp nutmeg",
-        "1 &frac12; tsp allspice",
-        "&frac34; tsp cloves"
+        { "text": "2 TBSP cinnamon", "type": "spice" },
+        { "text": "1 TBSP ground ginger", "type": "spice" },
+        { "text": "1 &frac12; tsp nutmeg", "type": "spice" },
+        { "text": "1 &frac12; tsp allspice", "type": "spice" },
+        { "text": "&frac34; tsp cloves", "type": "spice" }
     ],
     "directions": [
         { "text": "Grind and whisk together all ingredients." }

@@ -2,13 +2,13 @@
     "title": "Salsa",
     "meta": "",
     "ingredients": [
-        "4 large tomatoes",
-        "1 jalapeño",
-        "1 medium onion",
-        "1 garlic glove",
-        "&frac13; cup vinegar",
-        "1 tsp liquid smoke",
-        "1 tsp salt"
+        { "text": "4 large tomatoes", "type": "produce" },
+        { "text": "1 jalapeño", "type": "produce" },
+        { "text": "1 medium onion", "type": "produce" },
+        { "text": "1 garlic glove", "type": "produce" },
+        { "text": "&frac13; cup vinegar", "type": "imperishable" },
+        { "text": "1 tsp liquid smoke", "type": "imperishable" },
+        { "text": "1 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Chop up produce, and in batches process to desired consistency." },

@@ -2,9 +2,9 @@
     "title": "Standing Rib Roast",
     "meta": "3 Day process. Feeds 10.",
     "ingredients": [
-        "1 (4 bone-in) standing rib roast from the loin end",
-        "1 cup canola oil",
-        "1 TBSP salt"
+        { "text": "1 (4 bone-in) standing rib roast from the loin end", "type": "meat" },
+        { "text": "1 cup canola oil", "type": "imperishable" },
+        { "text": "1 TBSP salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Put meat in a container with small holes and let dry in fridge for 3 days." },

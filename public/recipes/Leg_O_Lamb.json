@@ -2,15 +2,15 @@
     "title": "Leg O Lamb",
     "meta": "",
     "ingredients": [
-        "&frac12; boneless sirloin end of Leg of Lamb.",
-        "4 gloves of garlic",
-        "8 fresh mint leaves",
-        "2 springs of fresh rosemary",
-        "2 TBSP canola oil",
-        "5 TBSP dijon mustard",
-        "1 TBSP brown sugar",
-        "2 TBSP black pepper",
-        "1 TBSP salt"
+        { "text": "&frac12; boneless sirloin end of Leg of Lamb.", "type": "meat" },
+        { "text": "4 gloves of garlic", "type": "produce" },
+        { "text": "8 fresh mint leaves", "type": "produce" },
+        { "text": "2 springs of fresh rosemary", "type": "produce" },
+        { "text": "2 TBSP canola oil", "type": "imperishable" },
+        { "text": "5 TBSP dijon mustard", "type": "imperishable" },
+        { "text": "1 TBSP brown sugar", "type": "imperishable" },
+        { "text": "2 TBSP black pepper", "type": "spice" },
+        { "text": "1 TBSP salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Roughly chop garlic in food processor, add mint and repeat." },

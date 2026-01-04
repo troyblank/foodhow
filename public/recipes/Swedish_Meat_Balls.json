@@ -3,21 +3,21 @@
     "meta": "Grandma's",
     "ingredients": {
         "Meat": [
-            "1 lb ground beef",
-            "&frac12; lb ground pork",
-            "1 onion (finely diced)",
-            "&frac12; carrot (grated)",
-            "1 egg",
-            "4 slices of bread (torn to small pieces)",
-            "&frac12; tsp allspice",
-            "&frac12; tsp pepper",
-            "1 tsp salt",
-            "&frac12; tsp ground sage"
+            { "text": "1 lb ground beef", "type": "meat" },
+            { "text": "&frac12; lb ground pork", "type": "meat" },
+            { "text": "1 onion (finely diced)", "type": "produce" },
+            { "text": "&frac12; carrot (grated)", "type": "produce" },
+            { "text": "1 egg", "type": "perishable" },
+            { "text": "4 slices of bread (torn to small pieces)", "type": "perishable" },
+            { "text": "&frac12; tsp allspice", "type": "spice" },
+            { "text": "&frac12; tsp pepper", "type": "spice" },
+            { "text": "1 tsp salt", "type": "spice" },
+            { "text": "&frac12; tsp ground sage", "type": "spice" }
         ],
         "Rest": [
-            "16 oz mushrooms (chopped)",
-            "1 TBSP canola oil",
-            "1 tsp bouillon"
+            { "text": "16 oz mushrooms (chopped)", "type": "produce" },
+            { "text": "1 TBSP canola oil", "type": "imperishable" },
+            { "text": "1 tsp bouillon", "type": "imperishable" }
         ]
     },
     "directions": [

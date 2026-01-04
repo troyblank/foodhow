@@ -1,6 +1,7 @@
 import React, { type FunctionComponent } from 'react';
 import Link from 'next/link';
 import dompurify from 'dompurify';
+import type { ShoppingItemType } from '../../types';
 import { useAuth } from '../../contexts';
 import { useCreateShoppingListItem, useShoppingList } from '../../data';
 import { Spinner } from '..';
@@ -20,13 +21,15 @@ export const extractLink = (text: string): { full: string, label: string, url: s
 };
 
 type IngredientProps = {
-    recipeName: string
-    ingredientName: string,
+	recipeName: string;
+	ingredientName: string;
+	ingredientType: ShoppingItemType;
 }
 
 export const Ingredient: FunctionComponent<IngredientProps> = ({
 	recipeName,
-	ingredientName
+	ingredientName,
+	ingredientType
 }) => {
 	const { user } = useAuth();
 	const { data: shoppingList = [], isLoading } = useShoppingList(user);
@@ -44,8 +47,8 @@ export const Ingredient: FunctionComponent<IngredientProps> = ({
 			amount: 1,
 			name: ingredientName,
 			recipe: recipeName,
-			type: 'frozen', // hard code for now
-			store: 'Unspecified' // hard code for now
+			type: ingredientType,
+			store: 'Unspecified'
 		});
 	};
 

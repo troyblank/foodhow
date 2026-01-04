@@ -2,16 +2,16 @@
     "title": "Apple Shortbread",
     "meta": "",
     "ingredients": [
-        "7 Medium Apples",
-        "1 cup old fashioned oats",
-        "2 cups flour",
-        "1 cup whole wheat flour",
-        "3 sticks butter",
-        "1 frac12; cups sugar",
-        "&frac12; tsp baking powder",
-        "&frac34; tsp nutmeg",
-        "5 tsp cinnamon",
-        "&frac14; tsp salt"
+        { "text": "7 Medium Apples", "type": "produce" },
+        { "text": "1 cup old fashioned oats", "type": "imperishable" },
+        { "text": "2 cups flour", "type": "imperishable" },
+        { "text": "1 cup whole wheat flour", "type": "imperishable" },
+        { "text": "3 sticks butter", "type": "perishable" },
+        { "text": "1 frac12; cups sugar", "type": "imperishable" },
+        { "text": "&frac12; tsp baking powder", "type": "imperishable" },
+        { "text": "&frac34; tsp nutmeg", "type": "spice" },
+        { "text": "5 tsp cinnamon", "type": "spice" },
+        { "text": "&frac14; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Preheat oven to 400°." },

@@ -2,12 +2,12 @@
     "title": "Angel Food Cake",
     "meta": "",
     "ingredients": [
-        "1 cup cake flour",
-        "12 egg whites",
-        "1 tsp vanilla extract",
-        "1 &frac34; cups sugar",
-        "1 &frac12; tsp cream of tartar",
-        "&frac14; tsp salt"
+        { "text": "1 cup cake flour", "type": "imperishable" },
+        { "text": "12 egg whites", "type": "perishable" },
+        { "text": "1 tsp vanilla extract", "type": "imperishable" },
+        { "text": "1 &frac34; cups sugar", "type": "imperishable" },
+        { "text": "1 &frac12; tsp cream of tartar", "type": "spice" },
+        { "text": "&frac14; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Preheat oven to 350°." },

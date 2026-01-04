@@ -2,14 +2,14 @@
     "title": "Carrots and Parsnips",
     "meta": "",
     "ingredients": [
-        "4 carrots (peeled and sliced &frac12; inch thick)",
-        "2 parsnips (peeled and sliced &frac12; inch thick)",
-        "1 TBSP fresh parsley (minced)",
-        "1 TBSP vegetable oil",
-        "&frac14; tsp sugar",
-        "&frac12; tsp salt",
-        "salt",
-        "pepper"
+        { "text": "4 carrots (peeled and sliced &frac12; inch thick)", "type": "produce" },
+        { "text": "2 parsnips (peeled and sliced &frac12; inch thick)", "type": "produce" },
+        { "text": "1 TBSP fresh parsley (minced)", "type": "produce" },
+        { "text": "1 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "&frac14; tsp sugar", "type": "imperishable" },
+        { "text": "&frac12; tsp salt", "type": "spice" },
+        { "text": "salt", "type": "spice" },
+        { "text": "pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Whisk &frac34; cups of warm water with the sugar and salt." },

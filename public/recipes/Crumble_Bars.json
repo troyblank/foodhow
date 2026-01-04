@@ -3,15 +3,15 @@
     "meta": "",
     "ingredients": {
         "Dough": [
-            "1 cup quick oats",
-            "&frac34; cup brown sugar",
-            "2 cups flour",
-            "3 tsp baking powder",
-            "10 TBSP butter",
-            "&frac12; tsp salt"
+            { "text": "1 cup quick oats", "type": "imperishable" },
+            { "text": "&frac34; cup brown sugar", "type": "imperishable" },
+            { "text": "2 cups flour", "type": "imperishable" },
+            { "text": "3 tsp baking powder", "type": "imperishable" },
+            { "text": "10 TBSP butter", "type": "perishable" },
+            { "text": "&frac12; tsp salt", "type": "spice" }
         ],
         "filling": [
-            "18 oz strawberry preserves"
+            { "text": "18 oz strawberry preserves", "type": "imperishable" }
         ]
     },
     "directions": [

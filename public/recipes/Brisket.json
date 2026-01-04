@@ -2,13 +2,13 @@
     "title": "Brisket",
     "meta": "12 hour cook",
     "ingredients": [
-        "oak wood chips",
-        "6 lb brisket (fat trimmed)",
-        "2 cups yellow mustard",
-        "&frac12; cup salt",
-        "&frac14; cup pepper",
-        "2 TBSP paprika",
-        "2 TBSP Cajun seasoning"
+        { "text": "oak wood chips", "type": "uncommon" },
+        { "text": "6 lb brisket (fat trimmed)", "type": "meat" },
+        { "text": "2 cups yellow mustard", "type": "imperishable" },
+        { "text": "&frac12; cup salt", "type": "spice" },
+        { "text": "&frac14; cup pepper", "type": "spice" },
+        { "text": "2 TBSP paprika", "type": "spice" },
+        { "text": "2 TBSP Cajun seasoning", "type": "spice" }
     ],
     "directions": [
         { "text": "Mix all dry ingredients in a bowl." },

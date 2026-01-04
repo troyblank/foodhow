@@ -2,18 +2,18 @@
     "title": "Brisket Roast",
     "meta": "",
     "ingredients": [
-        "1 large brisket",
-        "17 oz liquid smoke",
-        "3 TBSP Worcestershire sauce",
-        "3 TBSP steak sauce",
-        "1 TBSP hot sauce",
-        "2 cups red wine vinegar",
-        "1 cup water",
-        "1 TBSP sugar",
-        "3 TBSP chili powder",
-        "1 tsp cayenne pepper",
-        "1 tsp garlic powder",
-        "1 TBSP salt"
+        { "text": "1 large brisket", "type": "meat" },
+        { "text": "17 oz liquid smoke", "type": "imperishable" },
+        { "text": "3 TBSP Worcestershire sauce", "type": "imperishable" },
+        { "text": "3 TBSP steak sauce", "type": "imperishable" },
+        { "text": "1 TBSP hot sauce", "type": "imperishable" },
+        { "text": "2 cups red wine vinegar", "type": "imperishable" },
+        { "text": "1 cup water", "type": "imperishable" },
+        { "text": "1 TBSP sugar", "type": "imperishable" },
+        { "text": "3 TBSP chili powder", "type": "spice" },
+        { "text": "1 tsp cayenne pepper", "type": "spice" },
+        { "text": "1 tsp garlic powder", "type": "spice" },
+        { "text": "1 TBSP salt", "type": "spice" }
 
     ],
     "directions": [

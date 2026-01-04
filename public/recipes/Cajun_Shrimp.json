@@ -2,12 +2,12 @@
     "title": "Cajun Shrimp",
     "meta": "Serve with french bread.",
     "ingredients": [
-        "Mesquite wood chips",
-        "2 lbs shrimp",
-        "1 cup butter - melted",
-        "&frac18; cup Cajun seasoning",
-        "2 tsp cayenne pepper",
-        "1 TBSP dried rosemary"
+        { "text": "Mesquite wood chips", "type": "uncommon" },
+        { "text": "2 lbs shrimp", "type": "meat" },
+        { "text": "1 cup butter - melted", "type": "perishable" },
+        { "text": "&frac18; cup Cajun seasoning", "type": "spice" },
+        { "text": "2 tsp cayenne pepper", "type": "spice" },
+        { "text": "1 TBSP dried rosemary", "type": "spice" }
     ],
     "directions": [
         { "text": "In a bowl toss shrimp with all ingredients." },

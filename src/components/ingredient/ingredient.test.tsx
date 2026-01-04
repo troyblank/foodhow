@@ -2,7 +2,7 @@ import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Chance from 'chance';
-import { mockAuthContext, mockShoppingListItem, TestWrapper } from '../../testing';
+import { mockAuthContext, mockShoppingItemType, mockShoppingListItem, TestWrapper } from '../../testing';
 import { useAuth } from '../../contexts';
 import { useCreateShoppingListItem, useShoppingList } from '../../data';
 import { extractLink, Ingredient } from './ingredient';
@@ -27,6 +27,7 @@ jest.mock('../../data', () => ({
 describe('Ingredient', () => {
 	const chance = new Chance();
 	const ingredientName = chance.word();
+	const ingredientType = mockShoppingItemType();
 	const recipeName = chance.word();
 	const url = `/${chance.word()}/${chance.word()}`;
 	const link = `[${ingredientName}](${url})`;
@@ -36,13 +37,13 @@ describe('Ingredient', () => {
 	});
 
 	it('Should render.', () => {
-		const { getByText } = render(<Ingredient ingredientName={ingredientName} recipeName={recipeName} />, { wrapper: TestWrapper });
+		const { getByText } = render(<Ingredient ingredientName={ingredientName} ingredientType={ingredientType} recipeName={recipeName} />, { wrapper: TestWrapper });
 
 		expect(getByText(ingredientName)).toBeInTheDocument();
 	});
 
 	it('Should render a link.', () => {
-		const { getByText } = render(<Ingredient ingredientName={link} recipeName={recipeName} />, { wrapper: TestWrapper });
+		const { getByText } = render(<Ingredient ingredientName={link} ingredientType={ingredientType} recipeName={recipeName} />, { wrapper: TestWrapper });
 		const linkInDom = getByText(ingredientName);
 
 		expect(linkInDom).toHaveAttribute('href', url);
@@ -60,7 +61,7 @@ describe('Ingredient', () => {
 		} as any);
 		jest.mocked(useAuth).mockReturnValue(mockAuthContext());
 
-		const { getByTestId } = render(<Ingredient ingredientName={ingredientName} recipeName={recipeName} />, { wrapper: TestWrapper });
+		const { getByTestId } = render(<Ingredient ingredientName={ingredientName} ingredientType={ingredientType} recipeName={recipeName} />, { wrapper: TestWrapper });
 
 		await waitFor(() => expect(getByTestId('ingredient').className).toContain('ingredient--active'));
 	});
@@ -75,7 +76,7 @@ describe('Ingredient', () => {
 			isLoading: false
 		} as any);
 
-		const { getByText } = render(<Ingredient ingredientName={ingredientName} recipeName={recipeName} />, { wrapper: TestWrapper });
+		const { getByText } = render(<Ingredient ingredientName={ingredientName} ingredientType={ingredientType} recipeName={recipeName} />, { wrapper: TestWrapper });
 
 		expect(getByText(ingredientName).tagName).toBe('SPAN');
 	});
@@ -93,7 +94,7 @@ describe('Ingredient', () => {
 		} as any);
 		jest.mocked(useAuth).mockReturnValue(mockAuthContext());
 
-		const { getByText } = render(<Ingredient ingredientName={ingredientName} recipeName={recipeName} />, { wrapper: TestWrapper });
+		const { getByText } = render(<Ingredient ingredientName={ingredientName} ingredientType={ingredientType} recipeName={recipeName} />, { wrapper: TestWrapper });
 
 		await userEvent.click(getByText(ingredientName));
 
@@ -101,7 +102,7 @@ describe('Ingredient', () => {
 			amount: 1,
 			name: ingredientName,
 			recipe: recipeName,
-			type: 'frozen',
+			type: ingredientType,
 			store: 'Unspecified'
 		});
 	});

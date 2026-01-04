@@ -2,15 +2,15 @@
     "title": "Cilantro Mint Chutney",
     "meta": "Can be stored refrigerated for 2 weeks. Great as a dipping sauce, on meat or rice.",
     "ingredients": [
-        "4 cups cilantro (loosely packed)",
-        "&frac12; cup mint leaves",
-        "&frac13; cup lime juice",
-        "2 tsp ginger (minced)",
-        "1 tsp garlic (minced)",
-        "2 tsp sugar",
-        "2 serranos chilies (chopped)",
-        "1 tsp cumin seeds",
-        "&frac12; tsp salt"
+        { "text": "4 cups cilantro (loosely packed)", "type": "produce" },
+        { "text": "&frac12; cup mint leaves", "type": "produce" },
+        { "text": "&frac13; cup lime juice", "type": "produce" },
+        { "text": "2 tsp ginger (minced)", "type": "produce" },
+        { "text": "1 tsp garlic (minced)", "type": "produce" },
+        { "text": "2 tsp sugar", "type": "imperishable" },
+        { "text": "2 serranos chilies (chopped)", "type": "produce" },
+        { "text": "1 tsp cumin seeds", "type": "spice" },
+        { "text": "&frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Add all ingredients to a blender with 3 TBSP of water." },

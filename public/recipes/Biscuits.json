@@ -3,20 +3,20 @@
     "meta": "",
     "ingredients": {
         "Base": [
-            "1 &frac14; cups heavy cream",
-            "2 cups flour",
-            "1 TBSP baking powder",
-            "&frac34; tsp salt",
-            "4 TBSP butter (melted)",
-            "2 TBSP butter (melted)"
+            { "text": "1 &frac14; cups heavy cream", "type": "perishable" },
+            { "text": "2 cups flour", "type": "imperishable" },
+            { "text": "1 TBSP baking powder", "type": "imperishable" },
+            { "text": "&frac34; tsp salt", "type": "spice" },
+            { "text": "4 TBSP butter (melted)", "type": "perishable" },
+            { "text": "2 TBSP butter (melted)", "type": "perishable" }
         ],
         "Cheddar Filling (optional)": [
-            "4 oz. cheddar cheese (grated)",
-            "&frac14 cup scallions (sliced)"
+            { "text": "4 oz. cheddar cheese (grated)", "type": "perishable" },
+            { "text": "&frac14 cup scallions (sliced)", "type": "produce" }
         ],
         "Parmesan Filling (optional)": [
-            "2 oz. parmesan (grated)",
-            "1 cup bacon (cooked and crumbled)"
+            { "text": "2 oz. parmesan (grated)", "type": "perishable" },
+            { "text": "1 cup bacon (cooked and crumbled)", "type": "meat" }
         ]
     },
     "directions": [

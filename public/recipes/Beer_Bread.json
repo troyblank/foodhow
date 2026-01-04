@@ -2,13 +2,13 @@
     "title": "Beer Bread",
     "meta": "",
     "ingredients": [
-        "3 cups flour",
-        "2 tsp baking powder",
-        "3 TBSP sugar",
-        "12 ounces beer",
-        "&frac34; tsp salt",
-        "&frac12; tsp garlic powder",
-        "2 tsp Italian herbs (spice mix)"
+        { "text": "3 cups flour", "type": "imperishable" },
+        { "text": "2 tsp baking powder", "type": "imperishable" },
+        { "text": "3 TBSP sugar", "type": "imperishable" },
+        { "text": "12 ounces beer", "type": "imperishable" },
+        { "text": "&frac34; tsp salt", "type": "spice" },
+        { "text": "&frac12; tsp garlic powder", "type": "spice" },
+        { "text": "2 tsp Italian herbs (spice mix)", "type": "spice" }
     ],
     "directions": [
         { "text": "Mix ingredients." },

@@ -1,13 +1,17 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import Chance from 'chance';
-import { TestWrapper } from '../../testing';
+import { mockShoppingItemType, TestWrapper } from '../../testing';
 import { IngredientList } from '.';
 
 describe('IngredientList', () => {
 	const chance = new Chance();
 	const title = chance.word();
-	const ingredients = [chance.word({ syllables: 3 }), chance.word({ syllables: 2 }), chance.word({ syllables: 4 })];
+	const ingredients = [
+		{ text: chance.word({ syllables: 3 }), type: mockShoppingItemType() },
+		{ text: chance.word({ syllables: 2 }), type: mockShoppingItemType() },
+		{ text: chance.word({ syllables: 4 }), type: mockShoppingItemType() }
+	];
 
 	it('should render', () => {
 		const { getByText } = render(<IngredientList
@@ -17,9 +21,9 @@ describe('IngredientList', () => {
 		/>, { wrapper: TestWrapper });
 
 		expect(getByText(title)).toBeInTheDocument();
-		expect(getByText(ingredients[0])).toBeInTheDocument();
-		expect(getByText(ingredients[1])).toBeInTheDocument();
-		expect(getByText(ingredients[2])).toBeInTheDocument();
+		expect(getByText(ingredients[0].text)).toBeInTheDocument();
+		expect(getByText(ingredients[1].text)).toBeInTheDocument();
+		expect(getByText(ingredients[2].text)).toBeInTheDocument();
 	});
 
 	it('should render without a title', () => {

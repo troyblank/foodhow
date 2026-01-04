@@ -2,15 +2,15 @@
     "title": "Breakfast Sausage",
     "meta": "",
     "ingredients": [
-        "2 lbs pork butt",
-        "&frac12 pound fat back",
-        "1 TBSP light brown sugar",
-        "1 &frac12; tsp ground sage leaves",
-        "2 tsp ground thyme leaves",
-        "&frac12; tsp nutmeg",
-        "&frac12; cayenne pepper",
-        "&frac12; red pepper flakes",
-        "2 tsp salt"
+        { "text": "2 lbs pork butt", "type": "meat" },
+        { "text": "&frac12 pound fat back", "type": "meat" },
+        { "text": "1 TBSP light brown sugar", "type": "imperishable" },
+        { "text": "1 &frac12; tsp ground sage leaves", "type": "produce" },
+        { "text": "2 tsp ground thyme leaves", "type": "produce" },
+        { "text": "&frac12; tsp nutmeg", "type": "spice" },
+        { "text": "&frac12; cayenne pepper", "type": "spice" },
+        { "text": "&frac12; red pepper flakes", "type": "spice" },
+        { "text": "2 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Dice pork and fat into small pieces." },

@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import Chance from 'chance';
+import { mockShoppingItemType } from '../../testing';
 import { Recipe } from '.';
 
 jest.mock('../../contexts', () => ({
@@ -24,7 +25,11 @@ describe('Recipe', () => {
 	const chance = new Chance();
 	const title = chance.word({ syllables: 4 });
 	const meta = chance.word({ syllables: 3 });
-	const ingredients = [chance.word(), chance.word(), chance.word()];
+	const ingredients = [
+		{ text: chance.word(), type: mockShoppingItemType() },
+		{ text: chance.word(), type: mockShoppingItemType() },
+		{ text: chance.word(), type: mockShoppingItemType() }
+	];
 	const directions = [
 		{ text: chance.word({ syllable: 3 }) },
 		{ text: chance.word({ syllable: 4 }) },
@@ -58,9 +63,9 @@ describe('Recipe', () => {
 		const { getByText } = render(<Recipe fileName={chance.word()} />);
 
 		await waitFor(() => {
-			expect(getByText(ingredients[0])).toBeInTheDocument();
-			expect(getByText(ingredients[1])).toBeInTheDocument();
-			expect(getByText(ingredients[2])).toBeInTheDocument();
+			expect(getByText(ingredients[0].text)).toBeInTheDocument();
+			expect(getByText(ingredients[1].text)).toBeInTheDocument();
+			expect(getByText(ingredients[2].text)).toBeInTheDocument();
 			expect(getByText(directions[0].text)).toBeInTheDocument();
 			expect(getByText(directions[1].text)).toBeInTheDocument();
 			expect(getByText(directions[2].text)).toBeInTheDocument();
@@ -68,10 +73,10 @@ describe('Recipe', () => {
 	});
 
 	it('Should render a recipe that has nested ingredients.', async () => {
-		const nestedIngredientA = chance.word({ syllables: 5 });
-		const nestedIngredientB = chance.word({ syllables: 5 });
-		const nestedIngredientC = chance.word({ syllables: 5 });
-		const nestedIngredientD = chance.word({ syllables: 5 });
+		const nestedIngredientA = { text: chance.word({ syllables: 5 }), type: mockShoppingItemType() };
+		const nestedIngredientB = { text: chance.word({ syllables: 5 }), type: mockShoppingItemType() };
+		const nestedIngredientC = { text: chance.word({ syllables: 5 }), type: mockShoppingItemType() };
+		const nestedIngredientD = { text: chance.word({ syllables: 5 }), type: mockShoppingItemType() };
 
 		const multiStepIngredients = {
 			[chance.word({ syllables: 4 })]: [nestedIngredientA, nestedIngredientB],
@@ -91,10 +96,10 @@ describe('Recipe', () => {
 		const { getByText } = render(<Recipe fileName={chance.word()} />);
 
 		await waitFor(() => {
-			expect(getByText(nestedIngredientA)).toBeInTheDocument();
-			expect(getByText(nestedIngredientB)).toBeInTheDocument();
-			expect(getByText(nestedIngredientC)).toBeInTheDocument();
-			expect(getByText(nestedIngredientD)).toBeInTheDocument();
+			expect(getByText(nestedIngredientA.text)).toBeInTheDocument();
+			expect(getByText(nestedIngredientB.text)).toBeInTheDocument();
+			expect(getByText(nestedIngredientC.text)).toBeInTheDocument();
+			expect(getByText(nestedIngredientD.text)).toBeInTheDocument();
 		});
 	});
 });

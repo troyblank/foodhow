@@ -2,11 +2,14 @@ import Chance from 'chance';
 import {
 	SHOPPING_ITEM_STORE,
 	SHOPPING_ITEM_TYPE,
+	type ShoppingItemType,
 	type ShoppingList,
 	type ShoppingListItem
 } from '../../types';
 
 const chance = new Chance();
+
+export const mockShoppingItemType = (): ShoppingItemType => chance.pickone(Object.values(SHOPPING_ITEM_TYPE));
 
 export const mockShoppingListItem = (overrides: Partial<ShoppingListItem> = {}): ShoppingListItem => ({
 	id: chance.natural(),

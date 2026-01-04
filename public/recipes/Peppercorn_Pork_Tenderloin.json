@@ -2,12 +2,12 @@
     "title": "Peppercorn Pork Tenderloin",
     "meta": "",
     "ingredients": [
-        "2 2 lb pork tenderloins",
-        "Applewood chips",
-        "2 TBSP olive oil",
-        "2 tsp turbinado sugar",
-        "1 TBSP peppercorns processed",
-        "1 tsp red pepper flakes"
+        { "text": "2 2 lb pork tenderloins", "type": "meat" },
+        { "text": "Applewood chips", "type": "uncommon" },
+        { "text": "2 TBSP olive oil", "type": "imperishable" },
+        { "text": "2 tsp turbinado sugar", "type": "imperishable" },
+        { "text": "1 TBSP peppercorns processed", "type": "spice" },
+        { "text": "1 tsp red pepper flakes", "type": "spice" }
     ],
     "directions": [
         { "text": "Heat smoker to 225°." },

@@ -2,15 +2,15 @@
     "title": "Pancakes",
     "meta": "Mix makes three batches, stores up to 3 months.",
     "ingredients": [
-        "6 cups all purpose flour",
-        "2 TBSP sugar",
-        "1 TBSP baking powder",
-        "1 &frac12; tsp baking soda",
-        "1 TBSP salt",
-        "2 eggs (x3)",
-        "2 cups buttermilk (x3)",
-        "4 TBSP butter (x3)",
-        "1 tsp vanilla extract (x3)"
+        { "text": "6 cups all purpose flour", "type": "imperishable" },
+        { "text": "2 TBSP sugar", "type": "imperishable" },
+        { "text": "1 TBSP baking powder", "type": "imperishable" },
+        { "text": "1 &frac12; tsp baking soda", "type": "imperishable" },
+        { "text": "1 TBSP salt", "type": "spice" },
+        { "text": "2 eggs (x3)", "type": "perishable" },
+        { "text": "2 cups buttermilk (x3)", "type": "perishable" },
+        { "text": "4 TBSP butter (x3)", "type": "imperishable" },
+        { "text": "1 tsp vanilla extract (x3)", "type": "imperishable" }
     ],
     "directions": [
         { "text": "To make mix; combine flour, sugar, baking power, baking soda, and salt in a container and shake." },

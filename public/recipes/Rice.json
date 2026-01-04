@@ -2,8 +2,8 @@
     "title": "Rice",
     "meta": "",
     "ingredients": [
-        "1 &frac12; cup water to every 1 cup rice",
-        "1 chicken bouillon cube for every 1 cup rice"
+        { "text": "1 &frac12; cup water to every 1 cup rice", "type": "imperishable" },
+        { "text": "1 chicken bouillon cube for every 1 cup rice", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Boil water with bouillon, then add rice." },

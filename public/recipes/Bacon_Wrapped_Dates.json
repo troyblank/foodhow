@@ -2,11 +2,11 @@
     "title": "Bacon Wrapped Dates",
     "meta": "",
     "ingredients": [
-        "12 strips bacon (cut in half)",
-        "24 Medjool dates (pitted)",
-        "&frac13; cup porter beer",
-        "&frac12; cup maple syrup",
-        "2oz goat cheese"
+        { "text": "12 strips bacon (cut in half)", "type": "meat" },
+        { "text": "24 Medjool dates (pitted)", "type": "produce" },
+        { "text": "&frac13; cup porter beer", "type": "imperishable" },
+        { "text": "&frac12; cup maple syrup", "type": "imperishable" },
+        { "text": "2oz goat cheese", "type": "perishable" }
     ],
     "directions": [
         { "text": "Boil porter and syrup for 8 mins until thickened." },

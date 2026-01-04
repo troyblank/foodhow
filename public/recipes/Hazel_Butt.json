@@ -2,13 +2,13 @@
     "title": "Hazel Butt",
     "meta": "",
     "ingredients": [
-        "2 cups raw hazel nuts",
-        "3&frac14; oz Honey",
-        "3&frac14; oz Vegetable oil",
-        "2 tsp vanilla extract",
-        "&frac12; cup maple syrup",
-        "2 TBSP brown sugar",
-        "2 tsp salt"
+        { "text": "2 cups raw hazel nuts", "type": "imperishable" },
+        { "text": "3&frac14; oz Honey", "type": "imperishable" },
+        { "text": "3&frac14; oz Vegetable oil", "type": "imperishable" },
+        { "text": "2 tsp vanilla extract", "type": "imperishable" },
+        { "text": "&frac12; cup maple syrup", "type": "imperishable" },
+        { "text": "2 TBSP brown sugar", "type": "imperishable" },
+        { "text": "2 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cook hazelnuts on medium high in a skillet for 5 mins." },

@@ -2,13 +2,13 @@
     "title": "Fajitas",
     "meta": "",
     "ingredients": [
-        "1 &frac12; pounds steak",
-        "2 limes",
-        "1 red onion",
-        "1 red bell pepper",
-        "1 TBSP vegetable oil",
-        "2 cups frozen corn",
-        "8 6-inch tortillas"
+        { "text": "1 &frac12; pounds steak", "type": "meat" },
+        { "text": "2 limes", "type": "produce" },
+        { "text": "1 red onion", "type": "produce" },
+        { "text": "1 red bell pepper", "type": "produce" },
+        { "text": "1 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "2 cups frozen corn", "type": "frozen" },
+        { "text": "8 6-inch tortillas", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Cut up vegetables and juice limes." },

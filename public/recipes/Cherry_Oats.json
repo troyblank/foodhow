@@ -2,10 +2,10 @@
     "title": "Cherry Oats",
     "meta": "drink",
     "ingredients": [
-        "1 apple",
-        "2 cups cranberry juice",
-        "1 cup cinnamon roll oatmeal",
-        "2 cups frozen cherries"
+        { "text": "1 apple", "type": "produce" },
+        { "text": "2 cups cranberry juice", "type": "imperishable" },
+        { "text": "1 cup cinnamon roll oatmeal", "type": "imperishable" },
+        { "text": "2 cups frozen cherries", "type": "frozen" }
     ],
     "directions": [
         { "text": "Cook oatmeal and peel and chop up apple." },

@@ -2,13 +2,12 @@
     "title": "Red Potatoes",
     "meta": "",
     "ingredients": [
-        "1 lb small red potatoes",
-        "1 TBSP olive oil",
-        "2 TBSP butter",
-        "1 TBSP fresh thyme chopped",
-        "1 TBSP salt",
-        "2 tsp pepper"
-
+        { "text": "1 lb small red potatoes", "type": "produce" },
+        { "text": "1 TBSP olive oil", "type": "imperishable" },
+        { "text": "2 TBSP butter", "type": "imperishable" },
+        { "text": "1 TBSP fresh thyme (chopped)", "type": "produce" },
+        { "text": "1 TBSP salt", "type": "spice" },
+        { "text": "2 tsp pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Cut potatoes in fourths and boil for 12 mins." },

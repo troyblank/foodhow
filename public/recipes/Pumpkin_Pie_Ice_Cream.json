@@ -2,12 +2,12 @@
     "title": "Pumpkin Pie Ice Cream",
     "meta": "",
     "ingredients": [
-        "1 &frac12; cups light cream",
-        "1 &frac12; cups heavy cream",
-        "1 &frac12; cups canned pumpkin",
-        "6 egg yolks",
-        "&frac12; tsp vanilla extract",
-        "&frac34; tsp pumpkin pie spice"
+        { "text": "1 &frac12; cups light cream", "type": "perishable" },
+        { "text": "1 &frac12; cups heavy cream", "type": "perishable" },
+        { "text": "1 &frac12; cups canned pumpkin", "type": "imperishable" },
+        { "text": "6 egg yolks", "type": "perishable" },
+        { "text": "&frac12; tsp vanilla extract", "type": "imperishable" },
+        { "text": "&frac34; tsp pumpkin pie spice", "type": "spice" }
     ],
     "directions": [
         { "text": "Scald the light cream in a medium saucepan." },

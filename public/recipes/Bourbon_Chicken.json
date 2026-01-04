@@ -2,17 +2,17 @@
     "title": "Bourbon Chicken",
     "meta": "",
     "ingredients": [
-        "1 garlic clove minced",
-        "8 skinned chicken thighs",
-        "&frac12; cup bourbon",
-        "&frac14; cup brown sugar",
-        "1 TBSP apple cider vinegar",
-        "1 tsp Worcestershire sauce",
-        "&frac34; tsp cornstarch",
-        "2 TBSP vegetable oil",
-        "&frac34; tsp Cajun seasoning",
-        "2 pinches of salt",
-        "2 pinches of pepper"
+        { "text": "1 garlic clove minced", "type": "produce" },
+        { "text": "8 skinned chicken thighs", "type": "meat" },
+        { "text": "&frac12; cup bourbon", "type": "imperishable" },
+        { "text": "&frac14; cup brown sugar", "type": "imperishable" },
+        { "text": "1 TBSP apple cider vinegar", "type": "imperishable" },
+        { "text": "1 tsp Worcestershire sauce", "type": "imperishable" },
+        { "text": "&frac34; tsp cornstarch", "type": "imperishable" },
+        { "text": "2 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "&frac34; tsp Cajun seasoning", "type": "spice" },
+        { "text": "2 pinches of salt", "type": "spice" },
+        { "text": "2 pinches of pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Heat oil in large skillet over medium heat." },

@@ -2,11 +2,11 @@
     "title": "Ham",
     "meta": "",
     "ingredients": [
-        "1 bone-in city-style hock end ham",
-        "&frac14; cup brown mustard",
-        "2 cups dark brown sugar",
-        "1 ounce bourbon",
-        "2 cups gingersnap cookies"
+        { "text": "1 bone-in city-style hock end ham", "type": "meat" },
+        { "text": "&frac14; cup brown mustard", "type": "imperishable" },
+        { "text": "2 cups dark brown sugar", "type": "imperishable" },
+        { "text": "1 ounce bourbon", "type": "imperishable" },
+        { "text": "2 cups gingersnap cookies", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Place ham face down on a towel in a roasting pan." },

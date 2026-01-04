@@ -2,14 +2,14 @@
     "title": "Pineapple Salsa",
     "meta": "",
     "ingredients": [
-        "2 cups pineapple",
-        "1 sweet onion",
-        "1 serrano pepper",
-        "4 TBSP cilantro",
-        "4 TBSP lime juice",
-        "2 TBSP coconut oil",
-        "2 tsp salt",
-        "2 tsp pepper"
+        { "text": "2 cups pineapple", "type": "produce" },
+        { "text": "1 sweet onion", "type": "produce" },
+        { "text": "1 serrano pepper", "type": "produce" },
+        { "text": "4 TBSP cilantro", "type": "produce" },
+        { "text": "4 TBSP lime juice", "type": "produce" },
+        { "text": "2 TBSP coconut oil", "type": "imperishable" },
+        { "text": "2 tsp salt", "type": "spice" },
+        { "text": "2 tsp pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Blend all ingredients together." }

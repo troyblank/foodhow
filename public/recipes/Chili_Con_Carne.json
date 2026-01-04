@@ -3,24 +3,24 @@
     "meta": "Overnight chill.",
     "ingredients": {
         "Chili": [
-            "[&frac14 cup Chile Paste](/recipe/Chile_Paste)",
-            "4 lbs boneless beef chuck (Cut in to 2″ pieces and trimmed of fat)",
-            "1 large onion (finely diced)",
-            "4 garlic cloves (minced)",
-            "2 TBSP vegetable oil",
-            "8 cups chicken stock",
-            "2&frac12; TBSP polenta",
-            "1 TBSP cumin",
-            "&frac12; tsp cinnamon",
-            "&frac14; tsp allspice",
-            "2 tsp oregano",
-            "salt",
-            "pepper"
+            { "text": "[&frac14 cup Chile Paste](/recipe/Chile_Paste)" },
+            { "text": "4 lbs boneless beef chuck (Cut in to 2″ pieces and trimmed of fat)", "type": "meat" },
+            { "text": "1 large onion (finely diced)", "type": "produce" },
+            { "text": "4 garlic cloves (minced)", "type": "produce" },
+            { "text": "2 TBSP vegetable oil", "type": "imperishable" },
+            { "text": "8 cups chicken stock", "type": "imperishable" },
+            { "text": "2&frac12; TBSP polenta", "type": "imperishable" },
+            { "text": "1 TBSP cumin", "type": "spice" },
+            { "text": "&frac12; tsp cinnamon", "type": "spice" },
+            { "text": "&frac14; tsp allspice", "type": "spice" },
+            { "text": "2 tsp oregano", "type": "spice" },
+            { "text": "salt", "type": "spice" },
+            { "text": "pepper", "type": "spice" }
         ],
         "Garnishes": [
-            "monterey jack cheese (shredded)",
-            "Scallions (diced)",
-            "Thick tortilla chips"
+            { "text": "monterey jack cheese (shredded)", "type": "perishable" },
+            { "text": "Scallions (diced)", "type": "produce" },
+            { "text": "Thick tortilla chips", "type": "imperishable" }
         ]
     },
     "directions": [

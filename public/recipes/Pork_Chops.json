@@ -2,12 +2,12 @@
     "title": "Pork Chops",
     "meta": "",
     "ingredients":  [
-        "2 1” thick 8oz bone-in pork chops",
-        "1 TBSP thyme (minced)",
-        "1 TBSP vegetable oil",
-        "1 TBSP butter",
-        "salt",
-        "black pepper"
+        { "text": "2 1\" thick 8oz bone-in pork chops", "type": "meat" },
+        { "text": "1 TBSP thyme (minced)", "type": "produce" },
+        { "text": "1 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "1 TBSP butter", "type": "imperishable" },
+        { "text": "salt", "type": "spice" },
+        { "text": "black pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Pat chops dry and season with salt and pepper." },

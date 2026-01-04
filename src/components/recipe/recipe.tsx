@@ -23,12 +23,13 @@ export const Recipe: FunctionComponent<RecipeProps> = ({ fileName }) => {
 	const [recipe, setRecipe] = useState(null);
 
 	useEffect(() => {
+		setRecipe(null);
 		fetch(`/recipes/${fileName.toLowerCase()}.json`)
 			.then((response) => response.json())
 			.then((fetchedRecipe) => {
 				setRecipe(fetchedRecipe);
 			});
-	}, []);
+	}, [fileName]);
 
 	if (!recipe) return null;
 

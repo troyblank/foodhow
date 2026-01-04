@@ -2,14 +2,14 @@
     "title": "Pulled Pork",
     "meta": "",
     "ingredients": [
-        "8lb to 10lb bone-in pork butt",
-        "Hickory wood chips",
-        "&frac12; cup yellow mustard",
-        "&frac12; cup BARBECUE RUB",
-        "2 cups apple juice",
-        "2 cups apple cider vinegar",
-        "&frac13; cup ancho chili powder",
-        "&frac14; cup salt"
+        { "text": "8lb to 10lb bone-in pork butt", "type": "meat" },
+        { "text": "Hickory wood chips", "type": "uncommon" },
+        { "text": "&frac12; cup yellow mustard", "type": "imperishable" },
+        { "text": "&frac12; cup BARBECUE RUB", "type": "spice" },
+        { "text": "2 cups apple juice", "type": "imperishable" },
+        { "text": "2 cups apple cider vinegar", "type": "imperishable" },
+        { "text": "&frac13; cup ancho chili powder", "type": "spice" },
+        { "text": "&frac14; cup salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cover butt with mustard and then the rub." },

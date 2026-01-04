@@ -2,15 +2,15 @@
     "title": "Ketchup Relish",
     "meta": "",
     "ingredients": [
-        "1 yellow onion",
-        "1 red bell pepper",
-        "1 clove of garlic",
-        "2 vine ripe tomatoes",
-        "1 TBSP apple cider vinegar",
-        "&frac12; tsp molasses",
-        "1 TBSP Dijon mustard",
-        "&frac14; tsp black pepper",
-        "&frac34; cup baby dill pickles"
+        { "text": "1 yellow onion", "type": "produce" },
+        { "text": "1 red bell pepper", "type": "produce" },
+        { "text": "1 clove of garlic", "type": "produce" },
+        { "text": "2 vine ripe tomatoes", "type": "produce" },
+        { "text": "1 TBSP apple cider vinegar", "type": "imperishable" },
+        { "text": "&frac12; tsp molasses", "type": "imperishable" },
+        { "text": "1 TBSP Dijon mustard", "type": "imperishable" },
+        { "text": "&frac14; tsp black pepper", "type": "spice" },
+        { "text": "&frac34; cup baby dill pickles", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Process, &frac12; cup onion, pepper, garlic, tomatoes, vinegar, molasses, and black pepper until smooth." },

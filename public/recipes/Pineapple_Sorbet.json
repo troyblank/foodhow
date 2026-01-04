@@ -2,9 +2,9 @@
     "title": "Pineapple Sorbet",
     "meta": "",
     "ingredients": [
-        "4 cups pineapple",
-        "1 lime",
-        "2 cups sugar"
+        { "text": "4 cups pineapple", "type": "produce" },
+        { "text": "1 lime", "type": "produce" },
+        { "text": "2 cups sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Process pineapple, 1 TBSP line juice and &frac14; cup of water until smooth." },

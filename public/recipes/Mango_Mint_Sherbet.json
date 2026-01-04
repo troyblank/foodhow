@@ -2,12 +2,12 @@
     "title": "Mango Mint Sherbet",
     "meta": "",
     "ingredients": [
-        "3 mangoes",
-        "1 lime",
-        "2 tsp mint",
-        "2 cups whole milk",
-        "&frac14; cup light corn syrup",
-        "1 cup sugar"
+        { "text": "3 mangoes", "type": "produce" },
+        { "text": "1 lime", "type": "produce" },
+        { "text": "2 tsp mint", "type": "produce" },
+        { "text": "2 cups whole milk", "type": "perishable" },
+        { "text": "&frac14; cup light corn syrup", "type": "imperishable" },
+        { "text": "1 cup sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Ripen mangoes, peel seed and chop. Juice lime." },

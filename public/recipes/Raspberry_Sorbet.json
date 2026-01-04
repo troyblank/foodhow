@@ -2,8 +2,8 @@
     "title": "Raspberry Sorbet",
     "meta": "",
     "ingredients": [
-        "48oz of raspberries",
-        "4 cups sugar"
+        { "text": "48oz of raspberries", "type": "produce" },
+        { "text": "4 cups sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Process raspberries and &frac12; cup of water until smooth." },

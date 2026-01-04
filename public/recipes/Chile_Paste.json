@@ -2,10 +2,10 @@
     "title": "Chile Paste",
     "meta": "Freeze for 1 year. Use 2 TBSP in place of 1 TBSP chili powder.",
     "ingredients": [
-        "6 ancho, pasilla, or mulato chilies",
-        "3 new mexico red, california costeño, or choricero chilies",
-        "2 cascabel, árbol, or pequin chilies",
-        "2 cups chicken stock"
+        { "text": "6 ancho, pasilla, or mulato chilies", "type": "produce" },
+        { "text": "3 new mexico red, california costeño, or choricero chilies", "type": "produce" },
+        { "text": "2 cascabel, árbol, or pequin chilies", "type": "produce" },
+        { "text": "2 cups chicken stock", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Seed and tear all chilies into roughly 1″ pieces." },

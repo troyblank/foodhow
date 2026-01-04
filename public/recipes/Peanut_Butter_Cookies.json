@@ -2,15 +2,15 @@
     "title": "Peanut Butter Cookies",
     "meta": "",
     "ingredients": [
-        "2 &frac12; cups of flour",
-        "1 &frac12; cups sugar",
-        "1 tsp baking soda",
-        "1 tsp vanilla extract",
-        "&frac23; cups creamy peanut butter",
-        "2 cups peanut butter chips",
-        "2 eggs",
-        "2 sticks butter",
-        "&frac12; tsp salt"
+        { "text": "2 &frac12; cups of flour", "type": "imperishable" },
+        { "text": "1 &frac12; cups sugar", "type": "imperishable" },
+        { "text": "1 tsp baking soda", "type": "imperishable" },
+        { "text": "1 tsp vanilla extract", "type": "imperishable" },
+        { "text": "&frac23; cups creamy peanut butter", "type": "imperishable" },
+        { "text": "2 cups peanut butter chips", "type": "imperishable" },
+        { "text": "2 eggs", "type": "perishable" },
+        { "text": "2 sticks butter", "type": "imperishable" },
+        { "text": "&frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Preheat oven to 350." },

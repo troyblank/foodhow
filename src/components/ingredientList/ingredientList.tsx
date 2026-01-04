@@ -1,10 +1,11 @@
 import React, { Fragment, type FunctionComponent } from 'react';
+import type { RecipeIngredient } from '../../types';
 import { Ingredient } from '..';
 
 type IngredientListProps = {
-    title: string,
-    ingredients: any,
-    fileName: string
+	title: string,
+	ingredients: RecipeIngredient[],
+	fileName: string
 }
 
 export const IngredientList: FunctionComponent<IngredientListProps> = ({
@@ -17,8 +18,9 @@ export const IngredientList: FunctionComponent<IngredientListProps> = ({
 		<ul>
 			{ ingredients.map((ingredient) => (
 				<Ingredient
-					ingredientName={ingredient}
-					key={ingredient}
+					ingredientName={ingredient.text}
+					ingredientType={ingredient.type}
+					key={ingredient.text}
 					recipeName={fileName}
 				/>
 			))}

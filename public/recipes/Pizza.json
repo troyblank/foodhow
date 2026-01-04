@@ -3,20 +3,20 @@
     "meta": "2 day process.",
     "ingredients": {
         "Dough": [
-            "2 TBSP honey",
-            "2 TBSP active dry yeast",
-            "12oz bottle of wheat beer",
-            "6 cups of all purpose flour",
-            "2 tsp of salt",
-            "cornmeal"
+            { "text": "2 TBSP honey", "type": "imperishable" },
+            { "text": "2 TBSP active dry yeast", "type": "imperishable" },
+            { "text": "12oz bottle of wheat beer", "type": "imperishable" },
+            { "text": "6 cups of all purpose flour", "type": "imperishable" },
+            { "text": "2 tsp of salt", "type": "spice" },
+            { "text": "cornmeal", "type": "imperishable" }
         ],
         "Toppings": [
-            "2 balls of fresh mozzarella",
-            "2 oz of sun dried tomatoes",
-            "&frac34; cup of tomato sauce",
-            "&frac34; cup of tomato paste",
-            "4 tsp pizza seasoning",
-            "Pizza toppings of your choice"
+            { "text": "2 balls of fresh mozzarella", "type": "perishable" },
+            { "text": "2 oz of sun dried tomatoes", "type": "imperishable" },
+            { "text": "&frac34; cup of tomato sauce", "type": "imperishable" },
+            { "text": "&frac34; cup of tomato paste", "type": "imperishable" },
+            { "text": "4 tsp pizza seasoning", "type": "spice" },
+            { "text": "Pizza toppings of your choice", "type": "uncommon" }
         ]
     },
     "directions": [

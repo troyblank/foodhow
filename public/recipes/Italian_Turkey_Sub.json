@@ -2,17 +2,17 @@
     "title": "Italian Turkey Sub",
     "meta": "",
     "ingredients": [
-        "1 &frac12; lb sliced turkey",
-        "6 garlic cloves",
-        "1 cup mushrooms",
-        "6 6′ sub rolls",
-        "12 oz mozzarella",
-        "1 cup basil pesto",
-        "3 TBSP olive oil",
-        "2 14.5 oz cans of diced tomatoes (drained)",
-        "&frac18; tsp red pepper flakes",
-        "1 tsp salt",
-        "1 tsp pepper"
+        { "text": "1 &frac12; lb sliced turkey", "type": "meat" },
+        { "text": "6 garlic cloves", "type": "produce" },
+        { "text": "1 cup mushrooms", "type": "produce" },
+        { "text": "6 6′ sub rolls", "type": "perishable" },
+        { "text": "12 oz mozzarella", "type": "perishable" },
+        { "text": "1 cup basil pesto", "type": "imperishable" },
+        { "text": "3 TBSP olive oil", "type": "imperishable" },
+        { "text": "2 14.5 oz cans of diced tomatoes (drained)", "type": "imperishable" },
+        { "text": "&frac18; tsp red pepper flakes", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" },
+        { "text": "1 tsp pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Heat oven to 500°." },

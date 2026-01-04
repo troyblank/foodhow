@@ -2,16 +2,16 @@
     "title": "Hummus",
     "meta": "Can refrigerate for 3 days. Liquid from can is experimental",
     "ingredients": [
-        "1 garlic clove",
-        "1 lemon worth of juice",
-        "1 16oz can of chickpeas (garbanzo beans)",
-        "&frac14; cup liquid from can of chickpeas",
-        "3 TBSP tahini",
-        "&frac12; cup olive oil",
-        "1 tsp cumin",
-        "1 tsp black pepper",
-        "&frac12; tsp cayenne pepper",
-        "1 tsp salt"
+        { "text": "1 garlic clove", "type": "produce" },
+        { "text": "1 lemon worth of juice", "type": "produce" },
+        { "text": "1 16oz can of chickpeas (garbanzo beans)", "type": "imperishable" },
+        { "text": "&frac14; cup liquid from can of chickpeas", "type": "imperishable" },
+        { "text": "3 TBSP tahini", "type": "imperishable" },
+        { "text": "&frac12; cup olive oil", "type": "imperishable" },
+        { "text": "1 tsp cumin", "type": "spice" },
+        { "text": "1 tsp black pepper", "type": "spice" },
+        { "text": "&frac12; tsp cayenne pepper", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Drain chickpeas and set aside liquid from can." },

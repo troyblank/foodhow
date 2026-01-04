@@ -2,9 +2,9 @@
     "title": "Orange Mocktini",
     "meta": "",
     "ingredients": [
-        "2 limes",
-        "3 oz orange juice",
-        "2 tsp grenadine"
+        { "text": "2 limes", "type": "produce" },
+        { "text": "3 oz orange juice", "type": "imperishable" },
+        { "text": "2 tsp grenadine", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Make 1 oz lime juice from limes." },

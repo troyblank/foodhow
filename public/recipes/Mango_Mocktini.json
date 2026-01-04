@@ -2,9 +2,9 @@
     "title": "Mango Mocktini",
     "meta": "",
     "ingredients": [
-        "6 oz ginger ale",
-        "2 oz mango juice",
-        "2 oz pineapple juice"
+        { "text": "6 oz ginger ale", "type": "imperishable" },
+        { "text": "2 oz mango juice", "type": "imperishable" },
+        { "text": "2 oz pineapple juice", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Stir ingredients together." }

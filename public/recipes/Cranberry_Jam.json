@@ -2,9 +2,9 @@
     "title": "Cranberry Jam",
     "meta": "",
     "ingredients": [
-        "[2 cups Cranberry Dipping Sauce](/recipe/Cranberry_Dipping_Sauce)",
-        "4 oz ginger beer",
-        "1 cup sugar"
+        { "text": "[2 cups Cranberry Dipping Sauce](/recipe/Cranberry_Dipping_Sauce)" },
+        { "text": "4 oz ginger beer", "type": "imperishable" },
+        { "text": "1 cup sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Combine all but cranberries and bring to a simmer." },

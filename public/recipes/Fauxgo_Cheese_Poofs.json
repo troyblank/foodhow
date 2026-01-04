@@ -2,15 +2,15 @@
     "title": "Fauxgo Cheese Poofs",
     "meta": "",
     "ingredients": [
-        "1 cup tapioca flour",
-        "&frac12; cup whole milk",
-        "&frac13; cup butter",
-        "&frac12; tsp salt",
-        "1 oz shredded parmesan or cotija cheese",
-        "1 egg",
-        "&frac12; TBSP olive oil",
-        "1 tsp sugar",
-        "butter cooking spray"
+        { "text": "1 cup tapioca flour", "type": "imperishable" },
+        { "text": "&frac12; cup whole milk", "type": "perishable" },
+        { "text": "&frac13; cup butter", "type": "imperishable" },
+        { "text": "&frac12; tsp salt", "type": "spice" },
+        { "text": "1 oz shredded parmesan or cotija cheese", "type": "imperishable" },
+        { "text": "1 egg", "type": "perishable" },
+        { "text": "&frac12; TBSP olive oil", "type": "imperishable" },
+        { "text": "1 tsp sugar", "type": "imperishable" },
+        { "text": "butter cooking spray", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Combine butter, salt and milk in a sauce pan and bring to low boil." },

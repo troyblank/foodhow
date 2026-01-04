@@ -2,15 +2,15 @@
     "title": "Gunpowder",
     "meta": "",
     "ingredients": [
-        "1 oz split yellow lentils",
-        "1 oz black split gram lentils",
-        "1 oz coconut flakes",
-        "1 TBSP black sesame seeds",
-        "2 TBSP Curry leaves",
-        "3 dried red chilies",
-        "1 TBSP tamarind powder",
-        "&frac14; tsp asafetida",
-        "2 tsp sugar"
+        { "text": "1 oz split yellow lentils", "type": "imperishable" },
+        { "text": "1 oz black split gram lentils", "type": "imperishable" },
+        { "text": "1 oz coconut flakes", "type": "imperishable" },
+        { "text": "1 TBSP black sesame seeds", "type": "spice" },
+        { "text": "2 TBSP Curry leaves", "type": "spice" },
+        { "text": "3 dried red chilies", "type": "spice" },
+        { "text": "1 TBSP tamarind powder", "type": "spice" },
+        { "text": "&frac14; tsp asafetida", "type": "spice" },
+        { "text": "2 tsp sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Toast the lentils over low heat for 8&frac12; mins, stirring continuously." },

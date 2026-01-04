@@ -2,8 +2,8 @@
     "title": "Lemon Sorbet",
     "meta": "",
     "ingredients": [
-        "16 lemons",
-        "2 cups sugar"
+        { "text": "16 lemons", "type": "produce" },
+        { "text": "2 cups sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Strain 2 cups lemon juice, refrigerate overnight." },

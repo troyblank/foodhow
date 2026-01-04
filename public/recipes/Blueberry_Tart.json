@@ -3,16 +3,16 @@
     "meta": "",
     "ingredients": {
         "Dough": [
-            "2 cups flour",
-            "3 tsp baking powder",
-            "6 TBSP butter",
-            "&frac14; cup sugar",
-            "&frac12; tsp salt"
+            { "text": "2 cups flour", "type": "imperishable" },
+            { "text": "3 tsp baking powder", "type": "imperishable" },
+            { "text": "6 TBSP butter", "type": "perishable" },
+            { "text": "&frac14; cup sugar", "type": "imperishable" },
+            { "text": "&frac12; tsp salt", "type": "spice" }
         ],
         "Topping": [
-            "21 ox blueberry pie filling",
-            "&frac12; cup dried cranberries",
-            "1 tsp orange zest"
+            { "text": "21 ox blueberry pie filling", "type": "imperishable" },
+            { "text": "&frac12; cup dried cranberries", "type": "imperishable" },
+            { "text": "1 tsp orange zest", "type": "produce" }
         ]
     },
     "directions": [

@@ -3,23 +3,23 @@
     "meta": "Serve over rice.",
     "ingredients": {
         "Masala Paste": [
-            "4 cups chopped tomatoes",
-            "1 serrano peppers",
-            "1\" piece of gingerroot (peeled)",
-            "5 cloves garlic",
-            "&frac12; cup cilantro (chopped)",
-            "1&frac12; cups crispy fried onions",
-            "&frac12; cup cashews",
-            "3 TBSP vegetable oil",
-            "1 tsp saffron",
-            "2 tsp cayenne pepper"
+            { "text": "4 cups chopped tomatoes", "type": "produce" },
+            { "text": "1 serrano peppers", "type": "produce" },
+            { "text": "1\" piece of gingerroot (peeled)", "type": "produce" },
+            { "text": "5 cloves garlic", "type": "produce" },
+            { "text": "&frac12; cup cilantro (chopped)", "type": "produce" },
+            { "text": "1&frac12; cups crispy fried onions", "type": "imperishable" },
+            { "text": "&frac12; cup cashews", "type": "imperishable" },
+            { "text": "3 TBSP vegetable oil", "type": "imperishable" },
+            { "text": "1 tsp saffron", "type": "spice" },
+            { "text": "2 tsp cayenne pepper", "type": "spice" }
         ],
         "Chicken": [
-            "12 bone-in chicken thighs",
-            "1 cup cilantro (chopped)",
-            "2 tsp salt",
-            "1 tsp garam masala",
-            "1 tsp cardamon powder"
+            { "text": "12 bone-in chicken thighs", "type": "meat" },
+            { "text": "1 cup cilantro (chopped)", "type": "produce" },
+            { "text": "2 tsp salt", "type": "spice" },
+            { "text": "1 tsp garam masala", "type": "spice" },
+            { "text": "1 tsp cardamon powder", "type": "spice" }
         ]
     },
     "directions": [

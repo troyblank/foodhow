@@ -2,12 +2,12 @@
     "title": "Key Lime Sorbet",
     "meta": "Kitchen Aid Mixer attachment takes 30 mins on 'stir' setting.",
     "ingredients": [
-        "1 lemon",
-        "1 lime",
-        "1 cup key lime preserves",
-        "4 cups lime flavored club soda",
-        "1 cup sugar",
-        "Pinch of salt"
+        { "text": "1 lemon", "type": "produce" },
+        { "text": "1 lime", "type": "produce" },
+        { "text": "1 cup key lime preserves", "type": "imperishable" },
+        { "text": "4 cups lime flavored club soda", "type": "imperishable" },
+        { "text": "1 cup sugar", "type": "imperishable" },
+        { "text": "Pinch of salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Combine sugar, preserves and 1 cup of the soda in a pan." },

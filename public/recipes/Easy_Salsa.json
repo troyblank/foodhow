@@ -2,15 +2,15 @@
     "title": "Easy Salsa",
     "meta": "",
     "ingredients": [
-        "1 14.5oz can of diced tomatoes",
-        "1 14.5oz can of fire-roasted tomatoes",
-        "&frac13; cup chopped cilantro",
-        "1 jalapeño",
-        "1 small onion",
-        "1 lime (juiced)",
-        "3 garlic gloves",
-        "&frac12; tsp cumin",
-        "1 tsp salt"
+        { "text": "1 14.5oz can of diced tomatoes", "type": "imperishable" },
+        { "text": "1 14.5oz can of fire-roasted tomatoes", "type": "imperishable" },
+        { "text": "&frac13; cup chopped cilantro", "type": "produce" },
+        { "text": "1 jalapeño", "type": "produce" },
+        { "text": "1 small onion", "type": "produce" },
+        { "text": "1 lime (juiced)", "type": "produce" },
+        { "text": "3 garlic gloves", "type": "produce" },
+        { "text": "&frac12; tsp cumin", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Add all ingredients to a food processor and run into smooth consistency." },

@@ -2,17 +2,17 @@
     "title": "Elotes Salad",
     "meta": "Summer season",
     "ingredients": [
-        "4 ears of corn (kernels removed)",
-        "&frac12; cup scallions (sliced)",
-        "&frac12; cup cilantro (chopped)",
-        "&frac12; Jalapeno (minced)",
-        "1 lime (juiced)",
-        "2 garlic cloves (minced)",
-        "2 oz Pecorino Romano (grated)",
-        "1 TBSP mayonnaise",
-        "2 TBSP vegetable oil",
-        "&frac14; tsp chili powder",
-        "1 tsp salt"
+        { "text": "4 ears of corn (kernels removed)", "type": "produce" },
+        { "text": "&frac12; cup scallions (sliced)", "type": "produce" },
+        { "text": "&frac12; cup cilantro (chopped)", "type": "produce" },
+        { "text": "&frac12; Jalapeno (minced)", "type": "produce" },
+        { "text": "1 lime (juiced)", "type": "produce" },
+        { "text": "2 garlic cloves (minced)", "type": "produce" },
+        { "text": "2 oz Pecorino Romano (grated)", "type": "imperishable" },
+        { "text": "1 TBSP mayonnaise", "type": "imperishable" },
+        { "text": "2 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "&frac14; tsp chili powder", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cook kernels and &frac12; tsp salt using the oil in a wok for 10 mins, flipping kernels every 2 mins." },

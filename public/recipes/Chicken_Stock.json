@@ -2,17 +2,17 @@
     "title": "Chicken Stock",
     "meta": "Rotisserie chickens work well for carcasses",
     "ingredients": [
-        "1 large onion (chopped)",
-        "1 large carrot (peeled and chopped)",
-        "2 stalks celery (chopped)",
-        "6 sprigs fresh parsley",
-        "2 lb chicken wing",
-        "2 chicken carcasses",
-        "1 oz unflavored gelatin",
-        "2 bay leaves",
-        "2 tsp whole black peppercorns",
-        "1 tsp fennel seeds",
-        "1 tsp coriander seeds"
+        { "text": "1 large onion (chopped)", "type": "produce" },
+        { "text": "1 large carrot (peeled and chopped)", "type": "produce" },
+        { "text": "2 stalks celery (chopped)", "type": "produce" },
+        { "text": "6 sprigs fresh parsley", "type": "produce" },
+        { "text": "2 lb chicken wing", "type": "meat" },
+        { "text": "2 chicken carcasses", "type": "meat" },
+        { "text": "1 oz unflavored gelatin", "type": "imperishable" },
+        { "text": "2 bay leaves", "type": "spice" },
+        { "text": "2 tsp whole black peppercorns", "type": "spice" },
+        { "text": "1 tsp fennel seeds", "type": "spice" },
+        { "text": "1 tsp coriander seeds", "type": "spice" }
     ],
     "directions": [
         {

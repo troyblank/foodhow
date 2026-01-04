@@ -2,9 +2,9 @@
     "title": "Doctored Cinnamon Rolls",
     "meta": "",
     "ingredients": [
-        "1 Pillsbury™ Grands!™ Cinnamon Rolls",
-        "&frac34; cups heavy cream",
-        "2 TBSP brown sugar"
+        { "text": "1 Pillsbury™ Grands!™ Cinnamon Rolls", "type": "imperishable" },
+        { "text": "&frac34; cups heavy cream", "type": "perishable" },
+        { "text": "2 TBSP brown sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Lay rolls out in a 9″ pie pan." },

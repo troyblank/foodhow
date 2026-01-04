@@ -2,10 +2,10 @@
     "title": "Pan Roasted Salmon",
     "meta": "",
     "ingredients": [
-        "2 Salmon fillets with skin",
-        "2 TBSP vegetable oil",
-        "salt",
-        "pepper"
+        { "text": "2 Salmon fillets with skin", "type": "meat" },
+        { "text": "2 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "salt", "type": "spice" },
+        { "text": "pepper", "type": "spice" }
     ],
     "directions": [
         {

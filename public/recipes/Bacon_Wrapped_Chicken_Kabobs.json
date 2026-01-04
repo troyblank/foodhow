@@ -2,17 +2,17 @@
     "title": "Bacon Wrapped Chicken Kabobs",
     "meta": "",
     "ingredients": [
-        "1 lb mushrooms",
-        "1 large red onion",
-        "1 pineapple",
-        "1 red pepper",
-        "2 chicken breasts",
-        "1 lb bacon",
-        "&frac12; cup orange marmalade",
-        "&frac12; soy sauce",
-        "2 TB honey",
-        "1 tsp ginger powder",
-        "1 garlic clove"
+        { "text": "1 lb mushrooms", "type": "produce" },
+        { "text": "1 large red onion", "type": "produce" },
+        { "text": "1 pineapple", "type": "produce" },
+        { "text": "1 red pepper", "type": "produce" },
+        { "text": "2 chicken breasts", "type": "meat" },
+        { "text": "1 lb bacon", "type": "meat" },
+        { "text": "&frac12; cup orange marmalade", "type": "imperishable" },
+        { "text": "&frac12; soy sauce", "type": "imperishable" },
+        { "text": "2 TB honey", "type": "imperishable" },
+        { "text": "1 tsp ginger powder", "type": "spice" },
+        { "text": "1 garlic clove", "type": "produce" }
     ],
     "directions": [
         { "text": "Combine marmalade, soy sauce, honey, ginger and diced garlic in a saucepan." },

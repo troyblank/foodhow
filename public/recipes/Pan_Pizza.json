@@ -3,23 +3,23 @@
     "meta": "",
     "ingredients":{
         "Dough": [
-            "1 cup beer",
-            "2&frac12; cups bread flour",
-            "1 package dry active yeast",
-            "1 tsp sugar",
-            "2 tsp olive oil",
-            "1 tsp salt"
+            { "text": "1 cup beer", "type": "imperishable" },
+            { "text": "2&frac12; cups bread flour", "type": "imperishable" },
+            { "text": "1 package dry active yeast", "type": "imperishable" },
+            { "text": "1 tsp sugar", "type": "imperishable" },
+            { "text": "2 tsp olive oil", "type": "imperishable" },
+            { "text": "1 tsp salt", "type": "spice" }
         ],
         "Sauce": [
-            "24oz marinara sauce",
-            "2 tsp oregano",
-            "1 tsp red chili flakes",
-            "1 tsp garlic powder"
+            { "text": "24oz marinara sauce", "type": "imperishable" },
+            { "text": "2 tsp oregano", "type": "spice" },
+            { "text": "1 tsp red chili flakes", "type": "spice" },
+            { "text": "1 tsp garlic powder", "type": "spice" }
         ],
         "Toppings": [
-            "8oz pepperoni",
-            "8oz monterey jack",
-            "4oz mozzarella"
+            { "text": "8oz pepperoni", "type": "imperishable" },
+            { "text": "8oz monterey jack", "type": "perishable" },
+            { "text": "4oz mozzarella", "type": "perishable" }
         ]
     },
     "directions": [

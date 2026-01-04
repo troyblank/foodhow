@@ -1,15 +1,15 @@
 {
     "title": "Chorizo Gnocchi",
     "ingredients": [
-        "[3 cups Gnocchi](/recipe/gnocchi)",
-        "1 lb chorizo",
-        "2 red bell peppers (diced)",
-        "4 cups spinach",
-        "1 yellow onion (sliced)",
-        "6 garlic cloves (minced)",
-        "2 TBSP olive oil",
-        "2 tsp italian seasoning",
-        "1 tsp salt"
+        { "text": "[3 cups Gnocchi](/recipe/gnocchi)" },
+        { "text": "1 lb chorizo", "type": "meat" },
+        { "text": "2 red bell peppers (diced)", "type": "produce" },
+        { "text": "4 cups spinach", "type": "produce" },
+        { "text": "1 yellow onion (sliced)", "type": "produce" },
+        { "text": "6 garlic cloves (minced)", "type": "produce" },
+        { "text": "2 TBSP olive oil", "type": "imperishable" },
+        { "text": "2 tsp italian seasoning", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "sauté chorizo with oil, onion, pepper, and gnocchi for 4 mins on high heat." },

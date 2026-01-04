@@ -2,13 +2,13 @@
     "title": "Cranberry Dipping Sauce",
     "meta": "",
     "ingredients": [
-        "1 pound of frozen cranberries",
-        "2 cups freshly squeezed orange juice",
-        "zest from one orange",
-        "3 cups ginger beer",
-        "2 TBSP maple syrup",
-        "2 TBSP light brown sugar",
-        "&frac12; tsp salt"
+        { "text": "1 pound of frozen cranberries", "type": "frozen" },
+        { "text": "2 cups freshly squeezed orange juice", "type": "produce" },
+        { "text": "zest from one orange", "type": "produce" },
+        { "text": "3 cups ginger beer", "type": "imperishable" },
+        { "text": "2 TBSP maple syrup", "type": "imperishable" },
+        { "text": "2 TBSP light brown sugar", "type": "imperishable" },
+        { "text": "&frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Combine all ingredients and simmer for 45 mins." },

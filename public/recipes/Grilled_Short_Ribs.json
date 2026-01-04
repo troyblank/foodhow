@@ -2,14 +2,14 @@
     "title": "Grilled Short Ribs",
     "meta": "",
     "ingredients": [
-        "4 lbs flanken style short ribs",
-        "3 garlic cloves (minced)",
-        "1 small shallot (minced)",
-        "&frac12; cup olive oil",
-        "2 TBSP fresh oregano (minced)",
-        "&frac14; tsp red pepper flakes",
-        "salt",
-        "black pepper"
+        { "text": "4 lbs flanken style short ribs", "type": "meat" },
+        { "text": "3 garlic cloves (minced)", "type": "produce" },
+        { "text": "1 small shallot (minced)", "type": "produce" },
+        { "text": "&frac12; cup olive oil", "type": "imperishable" },
+        { "text": "2 TBSP fresh oregano (minced)", "type": "produce" },
+        { "text": "&frac14; tsp red pepper flakes", "type": "spice" },
+        { "text": "salt", "type": "spice" },
+        { "text": "black pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Combine all but ribs, salt, and pepper in a bowl." },

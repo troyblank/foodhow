@@ -2,15 +2,15 @@
     "title": "Pecan Tarts",
     "meta": "",
     "ingredients": [
-        "6 oz cream cheese",
-        "2 eggs",
-        "3 sticks butter",
-        "2 cup flour",
-        "1 cup chopped pecans",
-        "2 tsp vanilla extract",
-        "1 &frac12; cup light brown sugar",
-        "&frac12; tsp cinnamon",
-        "1 &frac12; tsp salt"
+        { "text": "6 oz cream cheese", "type": "perishable" },
+        { "text": "2 eggs", "type": "perishable" },
+        { "text": "3 sticks butter", "type": "imperishable" },
+        { "text": "2 cup flour", "type": "imperishable" },
+        { "text": "1 cup chopped pecans", "type": "imperishable" },
+        { "text": "2 tsp vanilla extract", "type": "imperishable" },
+        { "text": "1 &frac12; cup light brown sugar", "type": "imperishable" },
+        { "text": "&frac12; tsp cinnamon", "type": "spice" },
+        { "text": "1 &frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cream cheese and butter until light and fluffy." },

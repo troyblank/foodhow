@@ -2,14 +2,14 @@
     "title": "Chimichurri",
     "meta": "Maybe missing 1 cup of parsley. Refrigerate for up to 1 week.",
     "ingredients": [
-            "&frac12; jalapeño",
-            "2 garlic cloves",
-            "&frac14; cup chopped onion",
-            "1 cup cilantro",
-            "&frac12; cup olive oil",
-            "2 limes (juiced)",
-            "2 tsp cumin",
-            "&frac34; tsp salt"
+            { "text": "&frac12; jalapeño", "type": "produce" },
+            { "text": "2 garlic cloves", "type": "produce" },
+            { "text": "&frac14; cup chopped onion", "type": "produce" },
+            { "text": "1 cup cilantro", "type": "produce" },
+            { "text": "&frac12; cup olive oil", "type": "imperishable" },
+            { "text": "2 limes (juiced)", "type": "produce" },
+            { "text": "2 tsp cumin", "type": "spice" },
+            { "text": "&frac34; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Lightly process jalapeño, garlic, an onion." },

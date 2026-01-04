@@ -2,12 +2,12 @@
     "title": "Jerk Chicken",
     "meta": "",
     "ingredients": [
-        "4 chicken breasts",
-        "1 lemon",
-        "2 limes",
-        "1 cup tomato puree",
-        "5 TBSP jerk seasoning",
-        "1 TBSP salt"
+        { "text": "4 chicken breasts", "type": "meat" },
+        { "text": "1 lemon", "type": "produce" },
+        { "text": "2 limes", "type": "produce" },
+        { "text": "1 cup tomato puree", "type": "imperishable" },
+        { "text": "5 TBSP jerk seasoning", "type": "spice" },
+        { "text": "1 TBSP salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Mix 8 TBSP of water and 4 TBSP of the seasoning, let stand for 10 min." },

@@ -2,14 +2,14 @@
     "title": "Cake",
     "meta": "",
     "ingredients": [
-        "&frac34 cup butter flavored vegetable shortening",
-        "2 &frac12; cups cups cake flour",
-        "3 tsp baking powder",
-        "&frac34; cup milk",
-        "8 eggs yolks",
-        "1 tsp vanilla extract",
-        "1 &frac14; cups sugar",
-        "&frac14; tsp salt"
+        { "text": "&frac34 cup butter flavored vegetable shortening", "type": "imperishable" },
+        { "text": "2 &frac12; cups cups cake flour", "type": "imperishable" },
+        { "text": "3 tsp baking powder", "type": "imperishable" },
+        { "text": "&frac34; cup milk", "type": "perishable" },
+        { "text": "8 eggs yolks", "type": "perishable" },
+        { "text": "1 tsp vanilla extract", "type": "imperishable" },
+        { "text": "1 &frac14; cups sugar", "type": "imperishable" },
+        { "text": "&frac14; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Heat oven to 350, and grease two cake pans with some extra shortening." },

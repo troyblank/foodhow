@@ -2,14 +2,14 @@
     "title": "Rack of Lamb 2",
     "meta": "",
     "ingredients": [
-        "1.5 lb frenched lamb rack",
-        "&frac23; cup bread crumbs",
-        "2 TBSP Dijon mustard",
-        "4 TBSP butter (melted)",
-        "1 TBSP fresh rosemary (chopped)",
-        "1 TBSP fresh parsley (chopped)",
-        "salt",
-        "pepper"
+        { "text": "1.5 lb frenched lamb rack", "type": "meat" },
+        { "text": "&frac23; cup bread crumbs", "type": "imperishable" },
+        { "text": "2 TBSP Dijon mustard", "type": "imperishable" },
+        { "text": "4 TBSP butter (melted)", "type": "imperishable" },
+        { "text": "1 TBSP fresh rosemary (chopped)", "type": "produce" },
+        { "text": "1 TBSP fresh parsley (chopped)", "type": "produce" },
+        { "text": "salt", "type": "spice" },
+        { "text": "pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "In a bowl mix bread crumbs, rosemary, parsley and butter." },

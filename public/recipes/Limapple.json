@@ -2,9 +2,9 @@
     "title": "Limapple",
     "meta": "drink",
     "ingredients": [
-        "5 oz lemon-lime soda",
-        "3 oz pineapple juice",
-        "1 tsp grenadine"
+        { "text": "5 oz lemon-lime soda", "type": "imperishable" },
+        { "text": "3 oz pineapple juice", "type": "imperishable" },
+        { "text": "1 tsp grenadine", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Stir together ingredients." }

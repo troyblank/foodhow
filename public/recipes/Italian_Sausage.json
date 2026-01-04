@@ -2,12 +2,12 @@
     "title": "Italian Sausage",
     "meta": "",
     "ingredients": [
-        "2 lbs pork butt",
-        "5 feet of casing",
-        "1 &frac12; tsp fennel seeds",
-        "1 TBSP parsley",
-        "1 &frac12 tsp black pepper",
-        "2 tsp salt"
+        { "text": "2 lbs pork butt", "type": "meat" },
+        { "text": "5 feet of casing", "type": "uncommon" },
+        { "text": "1 &frac12; tsp fennel seeds", "type": "spice" },
+        { "text": "1 TBSP parsley", "type": "spice" },
+        { "text": "1 &frac12 tsp black pepper", "type": "spice" },
+        { "text": "2 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Toast fennel seeds over medium heat for 5 mins and grind." },

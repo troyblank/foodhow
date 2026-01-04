@@ -2,10 +2,10 @@
     "title": "Fig Sauce",
     "meta": "Great on pork chops",
     "ingredients": [
-        "2 cups dried figs",
-        "4 cups shiraz red wine",
-        "4 TBSP red wine vinegar",
-        "&frac12; cup sugar"
+        { "text": "2 cups dried figs", "type": "imperishable" },
+        { "text": "4 cups shiraz red wine", "type": "imperishable" },
+        { "text": "4 TBSP red wine vinegar", "type": "imperishable" },
+        { "text": "&frac12; cup sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Cut figs in half long way." },

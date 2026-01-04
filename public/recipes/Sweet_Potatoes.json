@@ -2,14 +2,14 @@
     "title": "Sweet Potatoes",
     "meta": "",
     "ingredients": [
-        "4 lbs sweet potatoes",
-        "2 cups mini marshmallows",
-        "15 TBSP butter",
-        "2 cups golden brown sugar",
-        "&frac34; tsp ground nutmeg",
-        "1 TBSP ground cinnamon",
-        "&frac12; tsp of ground ginger",
-        "1 &frac12; tsp salt"
+        { "text": "4 lbs sweet potatoes", "type": "produce" },
+        { "text": "2 cups mini marshmallows", "type": "imperishable" },
+        { "text": "15 TBSP butter", "type": "imperishable" },
+        { "text": "2 cups golden brown sugar", "type": "imperishable" },
+        { "text": "&frac34; tsp ground nutmeg", "type": "spice" },
+        { "text": "1 TBSP ground cinnamon", "type": "spice" },
+        { "text": "&frac12; tsp of ground ginger", "type": "spice" },
+        { "text": "1 &frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Peel and cut potatoes into 1 inch pieces." },

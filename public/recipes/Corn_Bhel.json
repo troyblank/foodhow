@@ -3,25 +3,25 @@
     "meta": "Excess chutney will keep for 1 month refrigerated.",
     "ingredients": {
         "Chutney": [
-            "2 cups cilantro leaves",
-            "1 serranos pepper",
-            "&frac12; green pepper",
-            "1 tsp ginger",
-            "&frac14; cup lemon juice",
-            "1 tsp sugar",
-            "&frac12; tsp salt"
+            { "text": "2 cups cilantro leaves", "type": "produce" },
+            { "text": "1 serranos pepper", "type": "produce" },
+            { "text": "&frac12; green pepper", "type": "produce" },
+            { "text": "1 tsp ginger", "type": "produce" },
+            { "text": "&frac14; cup lemon juice", "type": "produce" },
+            { "text": "1 tsp sugar", "type": "imperishable" },
+            { "text": "&frac12; tsp salt", "type": "spice" }
         ],
         "Bhel": [
-            "&frac34; cup sev",
-            "2 cups potatoes (diced)",
-            "&frac12; cup cilantro (chopped}",
-            "&frac13; red onion (diced)",
-            "&frac14; cup lime juice",
-            "2 cups corn",
-            "2 large tortillas",
-            "1 &frac12; tsp cumin",
-            "&frac12; tsp cayenne powder",
-            "1 tsp salt"
+            { "text": "&frac34; cup sev", "type": "uncommon" },
+            { "text": "2 cups potatoes (diced)", "type": "produce" },
+            { "text": "&frac12; cup cilantro (chopped}", "type": "produce" },
+            { "text": "&frac13; red onion (diced)", "type": "produce" },
+            { "text": "&frac14; cup lime juice", "type": "produce" },
+            { "text": "2 cups corn", "type": "produce" },
+            { "text": "2 large tortillas", "type": "imperishable" },
+            { "text": "1 &frac12; tsp cumin", "type": "spice" },
+            { "text": "&frac12; tsp cayenne powder", "type": "spice" },
+            { "text": "1 tsp salt", "type": "spice" }
         ]
     },
     "directions": [

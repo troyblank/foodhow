@@ -2,16 +2,16 @@
     "title": "Tandoori Chicken",
     "meta": "2 day process.",
     "ingredients": [
-        "12 chicken thighs",
-        "2 lemons",
-        "3 limes",
-        "1 TBSP minced peeled ginger root",
-        "1 minced garlic",
-        "2 tsp coriander",
-        "2 tsp cumin",
-        "2 tsp garam masala",
-        "1 tsp cayenne pepper",
-        "1 &frac12; tsp salt"
+        { "text": "12 chicken thighs", "type": "meat" },
+        { "text": "2 lemons", "type": "produce" },
+        { "text": "3 limes", "type": "produce" },
+        { "text": "1 TBSP minced peeled ginger root", "type": "produce" },
+        { "text": "1 minced garlic", "type": "produce" },
+        { "text": "2 tsp coriander", "type": "spice" },
+        { "text": "2 tsp cumin", "type": "spice" },
+        { "text": "2 tsp garam masala", "type": "spice" },
+        { "text": "1 tsp cayenne pepper", "type": "spice" },
+        { "text": "1 &frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cut large slits in chicken going against the grain." },

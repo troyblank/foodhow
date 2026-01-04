@@ -2,15 +2,15 @@
     "title": "Rigatoni Negatano",
     "meta": "",
     "ingredients": [
-        "1.5 lb chicken",
-        "2 lb zucchini",
-        "1 lb mushrooms",
-        "1 minced garlic",
-        "1 oz fresh basil",
-        "8 oz mozzarella",
-        "25 oz marinara sauce",
-        "4 oz olive oil",
-        "10 oz rigatoni pasta"
+        { "text": "1.5 lb chicken", "type": "meat" },
+        { "text": "2 lb zucchini", "type": "produce" },
+        { "text": "1 lb mushrooms", "type": "produce" },
+        { "text": "1 minced garlic", "type": "produce" },
+        { "text": "1 oz fresh basil", "type": "produce" },
+        { "text": "8 oz mozzarella", "type": "perishable" },
+        { "text": "25 oz marinara sauce", "type": "imperishable" },
+        { "text": "4 oz olive oil", "type": "imperishable" },
+        { "text": "10 oz rigatoni pasta", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Cut up chicken into bite sized pieces, cook and set aside." },

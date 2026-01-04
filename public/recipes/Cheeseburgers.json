@@ -2,12 +2,12 @@
     "title": "Cheeseburgers",
     "meta": "",
     "ingredients": [
-        "1 &frac12; lbs ground beef",
-        "2 TBSP vegetable oil",
-        "4 slices of swiss cheese",
-        "4 hamburger buns (toasted)",
-        "salt",
-        "pepper"
+        { "text": "1 &frac12; lbs ground beef", "type": "meat" },
+        { "text": "2 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "4 slices of swiss cheese", "type": "perishable" },
+        { "text": "4 hamburger buns (toasted)", "type": "perishable" },
+        { "text": "salt", "type": "spice" },
+        { "text": "pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Divide meat into four patties and season with salt and pepper." },

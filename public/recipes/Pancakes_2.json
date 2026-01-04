@@ -1,15 +1,15 @@
 {
     "title": "Pancakes 2",
     "ingredients": [
-        "2 cups all purpose flour",
-        "2 TBSP sugar",
-        "2 tsp baking powder",
-        "2 eggs",
-        "1 cup buttermilk",
-        "1 &frac12; cup whole milk",
-        "4 TBSP butter (melted)",
-        "3 TBSP vegetable oil",
-        "&frac12; tsp salt"
+        { "text": "2 cups all purpose flour", "type": "imperishable" },
+        { "text": "2 TBSP sugar", "type": "imperishable" },
+        { "text": "2 tsp baking powder", "type": "imperishable" },
+        { "text": "2 eggs", "type": "perishable" },
+        { "text": "1 cup buttermilk", "type": "perishable" },
+        { "text": "1 &frac12; cup whole milk", "type": "perishable" },
+        { "text": "4 TBSP butter (melted)", "type": "imperishable" },
+        { "text": "3 TBSP vegetable oil", "type": "imperishable" },
+        { "text": "&frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "In a large bowl combine flour, sugar, baking powder and salt." },

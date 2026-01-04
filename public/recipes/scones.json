@@ -2,14 +2,14 @@
     "title": "Scones",
     "meta": "",
     "ingredients": [
-        "1 &frac14; cups heavy cream",
-        "2 cups flour",
-        "1 TBSP baking powder",
-        "3 TBSP sugar",
-        "&frac34; tsp salt",
-        "4 TBSP butter (melted)",
-        "2 TBSP butter (melted)",
-        "&frac12; cup currants"
+        { "text": "1 &frac14; cups heavy cream", "type": "perishable" },
+        { "text": "2 cups flour", "type": "imperishable" },
+        { "text": "1 TBSP baking powder", "type": "imperishable" },
+        { "text": "3 TBSP sugar", "type": "imperishable" },
+        { "text": "&frac34; tsp salt", "type": "spice" },
+        { "text": "4 TBSP butter (melted)", "type": "imperishable" },
+        { "text": "2 TBSP butter (melted)", "type": "imperishable" },
+        { "text": "&frac12; cup currants", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Whisk the flour, baking powder, sugar, and salt in a large bowl." },

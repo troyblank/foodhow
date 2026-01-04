@@ -2,10 +2,10 @@
     "title": "Cranberry Sauce",
     "meta": "Needs an overnight chill.",
     "ingredients": [
-        "1 pound of fresh cranberries",
-        "&frac14; cup freshly squeezed orange juice",
-        "&frac14; cup 100% cranberry juice",
-        "1 cup of honey"
+        { "text": "1 pound of fresh cranberries", "type": "produce" },
+        { "text": "&frac14; cup freshly squeezed orange juice", "type": "produce" },
+        { "text": "&frac14; cup 100% cranberry juice", "type": "imperishable" },
+        { "text": "1 cup of honey", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Combine all but cranberries and bring to boil over medium heat." },

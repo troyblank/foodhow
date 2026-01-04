@@ -2,16 +2,16 @@
     "title": "Cinnamon Squash Bread",
     "meta": "",
     "ingredients": [
-        "1 butternut squash",
-        "2 eggs",
-        "1 cup vegetable oil",
-        "2 cups sugar",
-        "3 cups flour",
-        "&frac12; cup cashews",
-        "2 tsp vanilla extract",
-        "3 tsp baking powder",
-        "1 tsp cinnamon",
-        "1 tsp salt"
+        { "text": "1 butternut squash", "type": "produce" },
+        { "text": "2 eggs", "type": "imperishable" },
+        { "text": "1 cup vegetable oil", "type": "imperishable" },
+        { "text": "2 cups sugar", "type": "imperishable" },
+        { "text": "3 cups flour", "type": "imperishable" },
+        { "text": "&frac12; cup cashews", "type": "imperishable" },
+        { "text": "2 tsp vanilla extract", "type": "imperishable" },
+        { "text": "3 tsp baking powder", "type": "imperishable" },
+        { "text": "1 tsp cinnamon", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Grate squash down to 2 cups worth." },

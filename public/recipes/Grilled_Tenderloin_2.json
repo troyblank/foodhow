@@ -2,17 +2,17 @@
     "title": "Grilled Tenderloin 2",
     "meta": "",
     "ingredients": [
-        "3lb pork tenderloin",
-        "2 oranges",
-        "2 limes",
-        "&frac12; cup dark rum",
-        "1 medium onion thinly sliced",
-        "6 garlic gloves minced",
-        "1 bay leaf",
-        "2 tsp oregano",
-        "2 tsp cumin",
-        "1 tsp salt",
-        "&frac12; tsp black pepper;"
+        { "text": "3lb pork tenderloin", "type": "meat" },
+        { "text": "2 oranges", "type": "produce" },
+        { "text": "2 limes", "type": "produce" },
+        { "text": "&frac12; cup dark rum", "type": "imperishable" },
+        { "text": "1 medium onion thinly sliced", "type": "produce" },
+        { "text": "6 garlic gloves minced", "type": "produce" },
+        { "text": "1 bay leaf", "type": "spice" },
+        { "text": "2 tsp oregano", "type": "spice" },
+        { "text": "2 tsp cumin", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" },
+        { "text": "&frac12; tsp black pepper;", "type": "spice" }
     ],
     "directions": [
         { "text": "Rinse and pat dry tenderloins. Juice oranges and limes." },

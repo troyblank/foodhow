@@ -2,11 +2,11 @@
     "title": "Saffron Rice",
     "meta": "",
     "ingredients": [
-        "1 cup long-grain rice",
-        "2 TBSP butter",
-        "pinch of saffron",
-        "1 tsp salt",
-        "1 tsp tandoori spice <sup>optional</sup>"
+        { "text": "1 cup long-grain rice", "type": "imperishable" },
+        { "text": "2 TBSP butter", "type": "imperishable" },
+        { "text": "pinch of saffron", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" },
+        { "text": "1 tsp tandoori spice <sup>optional</sup>", "type": "spice" }
     ],
     "directions": [
         { "text": "Steep saffron in 2 cups of warm water for a 3 mins." },

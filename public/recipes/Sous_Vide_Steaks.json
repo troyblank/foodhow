@@ -2,14 +2,14 @@
     "title": "Sous Vide Steaks",
     "meta": "Cooked with a cooler",
     "ingredients": [
-        "2 bone-in 2″ thick rib-eye steaks",
-        "2 TBSP canola oil",
-        "4 TBSP butter",
-        "1 medium shallot (sliced)",
-        "4 coves garlic (crushed)",
-        "4 sprigs of thyme",
-        "salt",
-        "black pepper"
+        { "text": "2 bone-in 2″ thick rib-eye steaks", "type": "meat" },
+        { "text": "2 TBSP canola oil", "type": "imperishable" },
+        { "text": "4 TBSP butter", "type": "imperishable" },
+        { "text": "1 medium shallot (sliced)", "type": "produce" },
+        { "text": "4 coves garlic (crushed)", "type": "produce" },
+        { "text": "4 sprigs of thyme", "type": "produce" },
+        { "text": "salt", "type": "spice" },
+        { "text": "black pepper", "type": "spice" }
     ],
     "directions": [
         {

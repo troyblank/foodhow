@@ -2,15 +2,15 @@
     "title": "Tempura Vegetables",
     "meta": "",
     "ingredients": [
-        "&frac12; eggplant",
-        "1 zucchini",
-        "1 carrot",
-        "&frac12; yellow onion",
-        "1 egg",
-        "1 cup flour",
-        "32oz vegetable oil",
-        "black pepper",
-        "salt"
+        { "text": "&frac12; eggplant", "type": "produce" },
+        { "text": "1 zucchini", "type": "produce" },
+        { "text": "1 carrot", "type": "produce" },
+        { "text": "&frac12; yellow onion", "type": "produce" },
+        { "text": "1 egg", "type": "perishable" },
+        { "text": "1 cup flour", "type": "imperishable" },
+        { "text": "32oz vegetable oil", "type": "imperishable" },
+        { "text": "black pepper", "type": "spice" },
+        { "text": "salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cut and separate all vegetables into long thin strips." },

@@ -2,9 +2,9 @@
     "title": "Parsley Butter",
     "meta": "Goes great on potatoes or steak.",
     "ingredients": [
-        "4 TBSP butter",
-        "2 TBSP parsley",
-        "1 TBSP garlic powder"
+        { "text": "4 TBSP butter", "type": "imperishable" },
+        { "text": "2 TBSP parsley", "type": "produce" },
+        { "text": "1 TBSP garlic powder", "type": "spice" }
     ],
     "directions": [
         { "text": "Put all ingredients in a bowl and mash together." }

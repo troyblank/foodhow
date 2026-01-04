@@ -2,9 +2,9 @@
     "title": "Kiwi Sorbet",
     "meta": "",
     "ingredients": [
-        "4 kiwis",
-        "1 lime",
-        "2 cups sugar"
+        { "text": "4 kiwis", "type": "produce" },
+        { "text": "1 lime", "type": "produce" },
+        { "text": "2 cups sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Process skinned kiwis and juice from lime until smooth." },

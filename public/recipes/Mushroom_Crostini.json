@@ -3,20 +3,20 @@
     "meta": "",
     "ingredients": {
         "Crostini": [
-            "1 french baguette (cut into &frac12;″ slices)",
-            "&frac12; cup olive oil",
-            "2 TBSP herbes de provence"
+            { "text": "1 french baguette (cut into &frac12;″ slices)", "type": "perishable" },
+            { "text": "&frac12; cup olive oil", "type": "imperishable" },
+            { "text": "2 TBSP herbes de provence", "type": "spice" }
         ],
         "Topping": [
-            "1 lb mushrooms (chopped at &frac12;″ pieces)",
-            "1 tsp fresh thyme",
-            "1 tsp fresh rosemary (chopped)",
-            "&frac14; cup parsley (chopped)",
-            "&frac14; cup olive oil",
-            "1 TBSP worcestershire sauce",
-            "a pinch of salt",
-            "a pinch of black pepper",
-            "6 oz goat cheese or mozzarella cheese"
+            { "text": "1 lb mushrooms (chopped at &frac12;″ pieces)", "type": "produce" },
+            { "text": "1 tsp fresh thyme", "type": "produce" },
+            { "text": "1 tsp fresh rosemary (chopped)", "type": "produce" },
+            { "text": "&frac14; cup parsley (chopped)", "type": "produce" },
+            { "text": "&frac14; cup olive oil", "type": "imperishable" },
+            { "text": "1 TBSP worcestershire sauce", "type": "imperishable" },
+            { "text": "a pinch of salt", "type": "spice" },
+            { "text": "a pinch of black pepper", "type": "spice" },
+            { "text": "6 oz goat cheese or mozzarella cheese", "type": "perishable" }
         ]
     },
     "directions": [

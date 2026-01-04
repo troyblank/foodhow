@@ -2,14 +2,14 @@
     "title": "French Toast",
     "meta": "May be served with maple syrup",
     "ingredients": [
-        "2 eggs",
-        "1 cup milk",
-        "6 slices of Texas toast bread",
-        "2 TBSP butter (divided)",
-        "2 tsp pure vanilla extract",
-        "2 tsp sugar",
-        "3 TBSP cinnamon",
-        "&frac12; tsp salt"
+        { "text": "2 eggs", "type": "perishable" },
+        { "text": "1 cup milk", "type": "perishable" },
+        { "text": "6 slices of Texas toast bread", "type": "perishable" },
+        { "text": "2 TBSP butter (divided)", "type": "imperishable" },
+        { "text": "2 tsp pure vanilla extract", "type": "imperishable" },
+        { "text": "2 tsp sugar", "type": "imperishable" },
+        { "text": "3 TBSP cinnamon", "type": "spice" },
+        { "text": "&frac12; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "In a wide bowl mix eggs, milk, vanilla, sugar, salt and half the cinnamon." },

@@ -2,11 +2,11 @@
     "title": "Gnocchi",
     "meta": "",
     "ingredients": [
-        "1 cup dry potato flakes",
-        "1 egg",
-        "1 &frac12; cups all-purpose floor",
-        "1 tsp salt",
-        "pinch of ground pepper"
+        { "text": "1 cup dry potato flakes", "type": "imperishable" },
+        { "text": "1 egg", "type": "perishable" },
+        { "text": "1 &frac12; cups all-purpose floor", "type": "imperishable" },
+        { "text": "1 tsp salt", "type": "spice" },
+        { "text": "pinch of ground pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Place potato flakes in a medium bowl, pour in 1 cup boiling water, stir till blended, let cool." },

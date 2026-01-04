@@ -2,11 +2,11 @@
     "title": "Baked Chicken",
     "meta": "Grandma's",
     "ingredients": [
-        "1 4lb fryer chicken",
-        "Canola oil",
-        "Paprika",
-        "Black Pepper",
-        "Salt"
+        { "text": "1 4lb fryer chicken", "type": "meat" },
+        { "text": "Canola oil", "type": "imperishable" },
+        { "text": "Paprika", "type": "spice" },
+        { "text": "Black Pepper", "type": "spice" },
+        { "text": "Salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cut up chicken and place in a baking dish." },

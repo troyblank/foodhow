@@ -2,12 +2,12 @@
     "title": "Peanut Butter Fudge",
     "meta": "Aunt Pat via Grandma Shane Version",
     "ingredients": [
-        "&frac34; cup peanut butter",
-        "&frac12; cup butter",
-        "&frac12; cup white corn syrup",
-        "1 tsp vanilla extract",
-        "&frac12; tsp salt",
-        "4 cups powdered sugar"
+        { "text": "&frac34; cup peanut butter", "type": "imperishable" },
+        { "text": "&frac12; cup butter", "type": "imperishable" },
+        { "text": "&frac12; cup white corn syrup", "type": "imperishable" },
+        { "text": "1 tsp vanilla extract", "type": "imperishable" },
+        { "text": "&frac12; tsp salt", "type": "spice" },
+        { "text": "4 cups powdered sugar", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Combine all ingredients and mix until even consistency." },

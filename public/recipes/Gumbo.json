@@ -2,15 +2,15 @@
     "title": "Gumbo",
     "meta": "Serve with rice.",
     "ingredients": [
-        "1 rotisserie chicken",
-        "4 andouille sausages",
-        "1 onion",
-        "1 red bell pepper",
-        "1 celery stalk",
-        "&frac14 cup vegetable oil",
-        "6 TBSP flour",
-        "[2&frac12; cups Chicken Stock](/recipe/Chicken_Stock)",
-        "2 tsp thyme"
+        { "text": "1 rotisserie chicken", "type": "meat" },
+        { "text": "4 andouille sausages", "type": "meat" },
+        { "text": "1 onion", "type": "produce" },
+        { "text": "1 red bell pepper", "type": "produce" },
+        { "text": "1 celery stalk", "type": "produce" },
+        { "text": "&frac14 cup vegetable oil", "type": "imperishable" },
+        { "text": "6 TBSP flour", "type": "imperishable" },
+        { "text": "[2&frac12; cups Chicken Stock](/recipe/Chicken_Stock)" },
+        { "text": "2 tsp thyme", "type": "spice" }
     ],
     "directions": [
         {

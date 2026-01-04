@@ -2,11 +2,11 @@
     "title": "Za'atar",
     "meta": "Great on hummus",
     "ingredients": [
-        "2 TBSP cumin seeds",
-        "1 tsp salt",
-        "2 TBSP sesame seeds",
-        "2 TBSP dried oregano",
-        "2 tsp sumac"
+        { "text": "2 TBSP cumin seeds", "type": "spice" },
+        { "text": "1 tsp salt", "type": "spice" },
+        { "text": "2 TBSP sesame seeds", "type": "spice" },
+        { "text": "2 TBSP dried oregano", "type": "spice" },
+        { "text": "2 tsp sumac", "type": "spice" }
     ],
     "directions": [
         { "text": "Rost cumin seeds over low heat for about 6 mins." },

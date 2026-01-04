@@ -2,12 +2,12 @@
     "title": "Vanilla Ice Cream",
     "meta": "Kitchen Aid Mixer attachment takes 30 mins on 'stir' setting.",
     "ingredients": [
-        "2 cups Half and Half",
-        "1 cup whipping cream",
-        "1 cup sugar",
-        "2 TBSP peach preserves",
-        "1 vanilla bean",
-        "Pinch of salt"
+        { "text": "2 cups Half and Half", "type": "perishable" },
+        { "text": "1 cup whipping cream", "type": "perishable" },
+        { "text": "1 cup sugar", "type": "imperishable" },
+        { "text": "2 TBSP peach preserves", "type": "imperishable" },
+        { "text": "1 vanilla bean", "type": "spice" },
+        { "text": "Pinch of salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Split the bean, and scrape out the seeds." },

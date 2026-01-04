@@ -2,14 +2,14 @@
     "title": "Chicken and Onions",
     "meta": "",
     "ingredients": [
-        "4 large white onions",
-        "4 chicken breasts",
-        "2 TB oil",
-        "1 TB lemon juice",
-        "2 TB butter",
-        "5 tsp lemon pepper",
-        "&frac12; tsp ground pepper",
-        "1 cup beer"
+        { "text": "4 large white onions", "type": "produce" },
+        { "text": "4 chicken breasts", "type": "meat" },
+        { "text": "2 TB oil", "type": "imperishable" },
+        { "text": "1 TB lemon juice", "type": "produce" },
+        { "text": "2 TB butter", "type": "imperishable" },
+        { "text": "5 tsp lemon pepper", "type": "spice" },
+        { "text": "&frac12; tsp ground pepper", "type": "spice" },
+        { "text": "1 cup beer", "type": "imperishable" }
     ],
     "directions": [
         { "text": "Marinate chicken for at least 30 mins with beer, oil, lemon juice, 4 tsp lemon pepper and ground pepper." },

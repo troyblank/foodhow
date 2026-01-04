@@ -2,11 +2,11 @@
     "title": "Ravioli",
     "meta": "See other recipes for fillings.",
     "ingredients": [
-        "Filling of choice",
-        "6 cups flour",
-        "6 eggs",
-        "2 tsp olive oil",
-        "1 tsp salt"
+        { "text": "Filling of choice", "type": "perishable" },
+        { "text": "6 cups flour", "type": "imperishable" },
+        { "text": "6 eggs", "type": "perishable" },
+        { "text": "2 tsp olive oil", "type": "imperishable" },
+        { "text": "1 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Make a well with flour." },

@@ -2,16 +2,16 @@
     "title": "Cookies",
     "meta": "",
     "ingredients": [
-        "2 &frac14; cups flour",
-        "2 sticks butter",
-        "2 cups chocolate or peanut butter chips",
-        "1 egg",
-        "2 oz milk",
-        "1 &frac12; tsp vanilla extract",
-        "1 cup sugar",
-        "&frac12; cup brown sugar",
-        "1 tsp baking soda",
-        "1 tsp salt"
+        { "text": "2 &frac14; cups flour", "type": "imperishable" },
+        { "text": "2 sticks butter", "type": "imperishable" },
+        { "text": "2 cups chocolate or peanut butter chips", "type": "imperishable" },
+        { "text": "1 egg", "type": "imperishable" },
+        { "text": "2 oz milk", "type": "perishable" },
+        { "text": "1 &frac12; tsp vanilla extract", "type": "imperishable" },
+        { "text": "1 cup sugar", "type": "imperishable" },
+        { "text": "&frac12; cup brown sugar", "type": "imperishable" },
+        { "text": "1 tsp baking soda", "type": "imperishable" },
+        { "text": "1 tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Heat oven to 375°." },

@@ -2,13 +2,13 @@
     "title": "Tahini",
     "meta": "Makes &frac12; cup. Keeps in fridge for 5 months",
     "ingredients": [
-        "2 garlic cloves",
-        "1 TBSP fresh lemon juice",
-        "1 TBSP balsamic vinegar",
-        "4 TBSP olive oil",
-        "&frac14; cup sesame seeds toasted",
-        "&frac18; tsp black pepper",
-        "&frac14; tsp salt"
+        { "text": "2 garlic cloves", "type": "produce" },
+        { "text": "1 TBSP fresh lemon juice", "type": "produce" },
+        { "text": "1 TBSP balsamic vinegar", "type": "imperishable" },
+        { "text": "4 TBSP olive oil", "type": "imperishable" },
+        { "text": "&frac14; cup sesame seeds toasted", "type": "spice" },
+        { "text": "&frac18; tsp black pepper", "type": "spice" },
+        { "text": "&frac14; tsp salt", "type": "spice" }
     ],
     "directions": [
         { "text": "In a food processor pulse sesame seeds a few times." },

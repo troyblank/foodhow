@@ -2,12 +2,12 @@
     "title": "Raspberry Nectarine Pie Filling",
     "meta": "",
     "ingredients": [
-        "4 Nectarines",
-        "10 oz raspberries",
-        "1 lemon",
-        "1 cup sugar",
-        "4 tsp cornstarch",
-        "A pinch of salt"
+        { "text": "4 Nectarines", "type": "produce" },
+        { "text": "10 oz raspberries", "type": "produce" },
+        { "text": "1 lemon", "type": "produce" },
+        { "text": "1 cup sugar", "type": "imperishable" },
+        { "text": "4 tsp cornstarch", "type": "imperishable" },
+        { "text": "A pinch of salt", "type": "spice" }
     ],
     "directions": [
         { "text": "Cut up nectarines into &frac12; inch size pieces." },

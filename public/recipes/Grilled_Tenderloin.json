@@ -2,14 +2,14 @@
     "title": "Grilled Tenderloin",
     "meta": "",
     "ingredients": [
-        "1lb pork tenderloin",
-        "&frac34; brown sugar",
-        "1 garlic glove",
-        "2 TBSP olive oil",
-        "1 TBSP parsley",
-        "&frac12; tsp rosemary",
-        "&frac12 tsp coriander",
-        "salt and pepper"
+        { "text": "1lb pork tenderloin", "type": "meat" },
+        { "text": "&frac34; brown sugar", "type": "imperishable" },
+        { "text": "1 garlic glove", "type": "produce" },
+        { "text": "2 TBSP olive oil", "type": "imperishable" },
+        { "text": "1 TBSP parsley", "type": "produce" },
+        { "text": "&frac12; tsp rosemary", "type": "spice" },
+        { "text": "&frac12 tsp coriander", "type": "spice" },
+        { "text": "salt and pepper", "type": "spice" }
     ],
     "directions": [
         { "text": "Whisk 2 TBSP oil with parsley, rosemary, garlic &frac18; tsp salt, and &frac18; tsp pepper in a small bowl." },

@@ -2,12 +2,12 @@
     "title": "Sweet Carrots",
     "meta": "",
     "ingredients": [
-        "3 lbs carrots",
-        "2 TBSP lemon juice",
-        "2 TBSP brown sugar",
-        "2 TBSP butter",
-        "1 tsp salt",
-        "4 tsp minced chives"
+        { "text": "3 lbs carrots", "type": "produce" },
+        { "text": "2 TBSP lemon juice", "type": "produce" },
+        { "text": "2 TBSP brown sugar", "type": "imperishable" },
+        { "text": "2 TBSP butter", "type": "imperishable" },
+        { "text": "1 tsp salt", "type": "spice" },
+        { "text": "4 tsp minced chives", "type": "produce" }
     ],
     "directions": [
         { "text": "Place peeled and diced carrots in a steamer basket." },

@@ -2,15 +2,15 @@
     "title": "Tikka Masala",
     "meta": "",
     "ingredients": [
-        "12 chicken thighs",
-        "2 green serranos peppers",
-        "1 piece ginger root",
-        "1 can of diced tomatoes",
-        "&frac12; cup of butter (divided)",
-        "2 TBSP cumin seed",
-        "2 tsp paprika",
-        "1 &frac12; tsp salt",
-        "2 tsp garam masala"
+        { "text": "12 chicken thighs", "type": "meat" },
+        { "text": "2 green serranos peppers", "type": "produce" },
+        { "text": "1 piece ginger root", "type": "produce" },
+        { "text": "1 can of diced tomatoes", "type": "imperishable" },
+        { "text": "&frac12; cup of butter (divided)", "type": "imperishable" },
+        { "text": "2 TBSP cumin seed", "type": "spice" },
+        { "text": "2 tsp paprika", "type": "spice" },
+        { "text": "1 &frac12; tsp salt", "type": "spice" },
+        { "text": "2 tsp garam masala", "type": "spice" }
     ],
     "directions": [
         { "text": "Cook the chicken in a covered pot with water." },

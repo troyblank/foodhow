@@ -3,6 +3,7 @@ import { useAuth } from '../../contexts';
 import { useShoppingList, useDeleteShoppingListItems } from '../../data';
 import { Button, FloatingButton, Modal, HeaderMessage, Spinner } from '..';
 import { ShoppingListItem } from './shoppingListItem';
+import { UncheckedItems } from './uncheckedItems';
 import { AddListItemForm } from './addListItemForm';
 import styles from './shoppingList.module.css';
 
@@ -114,16 +115,7 @@ export const ShoppingList = () => {
 					<HeaderMessage headline={'Nothing to shop for'} message={'Add items using the button below, or clicking on ingredients from a recipe.'} />
 				</div>
 			)}
-			<ul className={styles['shopping-list__items']}>
-				{uncheckedItems.map((item) => (
-					<ShoppingListItem
-						key={item.id}
-						item={item}
-						checked={checkedItemIds.has(item.id)}
-						onToggle={toggleItemChecked}
-					/>
-				))}
-			</ul>
+			<UncheckedItems items={uncheckedItems} onToggle={toggleItemChecked} />
 			{ isAnyItemsChecked && (
 				<div className={styles['shopping-list__clear-button']}>
 					<Button

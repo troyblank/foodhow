@@ -8,6 +8,9 @@
     background: var(--color-modal-backing);
     box-sizing: border-box;
     z-index: 100;
+    border: none;
+    font: inherit;
+    cursor: default;
 }
 
 .modal {

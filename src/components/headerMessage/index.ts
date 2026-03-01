@@ -1,1 +1,1 @@
-export * from './headerMessage';
+export * from './headerMessage'

@@ -1,13 +1,13 @@
 // @ts-nocheck // remove when removing reducers
-import React, { Fragment, type FunctionComponent } from 'react';
-import { type GetServerSidePropsContext } from 'next';
-import { type User } from '../types';
-import { AuthProvider } from '../contexts';
-import { recipes } from '../../public/recipes.json';
-import { Head, Navigation, RecipeList } from '../components';
-import { getServerSidePropsWithoutAuthRedirect } from '../utils';
+import React, { Fragment, type FunctionComponent } from 'react'
+import { type GetServerSidePropsContext } from 'next'
+import { type User } from '../types'
+import { AuthProvider } from '../contexts'
+import { recipes } from '../../public/recipes.json'
+import { Head, Navigation, RecipeList } from '../components'
+import { getServerSidePropsWithoutAuthRedirect } from '../utils'
 
-export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => getServerSidePropsWithoutAuthRedirect(serverSideContext);
+export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => getServerSidePropsWithoutAuthRedirect(serverSideContext)
 
 export const HomePage: FunctionComponent = ({ user }: { user: User }) => (
 	<AuthProvider user={user}>
@@ -17,6 +17,6 @@ export const HomePage: FunctionComponent = ({ user }: { user: User }) => (
 			<RecipeList recipes={recipes} />
 		</Fragment>
 	</AuthProvider>
-);
+)
 
-export default HomePage;
+export default HomePage

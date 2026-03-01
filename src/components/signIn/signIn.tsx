@@ -1,43 +1,42 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import classnames from 'classnames';
-import { type SignInOutput } from '../../types';
-import { useAuth } from '../../contexts';
-import { HOME_PATH } from '../../utils';
-// import { AlertGraphic, LogoGraphic } from '../../graphics';
+import React, { useState } from 'react'
+import { useRouter } from 'next/router'
+import classnames from 'classnames'
+import { type SignInOutput } from '../../types'
+import { useAuth } from '../../contexts'
+import { HOME_PATH } from '../../utils'
 
 export const SignIn = () => {
-	const { push } = useRouter();
-	const { attemptToSignIn } = useAuth();
-	const [username, setUsername] = useState<string>('');
-	const [password, setPassword] = useState<string>('');
-	const [pending, setPending] = useState<boolean>(false);
-	const [errorMessage, setErrorMessage] = useState<string | null>(null);
-	const [forgotPasswordRedirect, setForgotPasswordRedirect] = useState<string>('');
+	const { push } = useRouter()
+	const { attemptToSignIn } = useAuth()
+	const [username, setUsername] = useState<string>('')
+	const [password, setPassword] = useState<string>('')
+	const [pending, setPending] = useState<boolean>(false)
+	const [errorMessage, setErrorMessage] = useState<string | null>(null)
+	const [forgotPasswordRedirect] = useState<string>(() => {
+		// istanbul ignore next -- SSR; window is always defined in jsdom
+		if (typeof window === 'undefined') {
+			return ''
+		}
+		return window.location.href
+	})
 
 	const onSignIn = (event) => {
-		setPending(true);
+		setPending(true)
 
 		attemptToSignIn({ username, password }).then(({ isUserComplete }: SignInOutput) => {
 			if (isUserComplete) {
-				push(HOME_PATH);
+				push(HOME_PATH)
 			} else {
-				setErrorMessage('User is invalid.');
+				setErrorMessage('User is invalid.')
 			}
 		}).catch((error) => {
-			setErrorMessage(String(error));
+			setErrorMessage(String(error))
 		}).finally(() => {
-			setPending(false);
-		});
+			setPending(false)
+		})
 
-		event.preventDefault();
-	};
-
-	useEffect(() => {
-		setForgotPasswordRedirect(window.location.href);
-	}, []);
-
-	// <LogoGraphic />
+		event.preventDefault()
+	}
 
 	return (
 		<div className={'page-wrap sign-in'}>
@@ -90,5 +89,5 @@ export const SignIn = () => {
 				</div>
 			</form>
 		</div>
-	);
-};
+	)
+}

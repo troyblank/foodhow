@@ -3,8 +3,6 @@
 @import '../../node_modules/@troyblank/food-how-components/assets/sass/base/base';
 @import '../../node_modules/@troyblank/food-how-components/dist/components';
 
-@import './globals';
-
 @import './mixins/breakpoint';
 @import './silents/clearfix';
 @import './silents/containers';
@@ -15,3 +13,7 @@
 @import './components/navigation';
 @import './components/recipe';
 @import './components/recipeList';
+
+body {
+    padding: 0;
+}

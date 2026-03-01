@@ -1,38 +1,38 @@
-import { type GetServerSidePropsContext } from 'next';
-import { type User } from '../types';
-import { getUserFromAmplify, SIGN_IN_PATH } from '.';
+import { type GetServerSidePropsContext } from 'next'
+import { type User } from '../types'
+import { getUserFromAmplify, SIGN_IN_PATH } from '.'
 
 
 export const getServerSidePropsWithoutAuthRedirect: (_context: GetServerSidePropsContext) => Promise<{ props: { user: User | null } } | null> = async (serverSideContext) => {
-	let user: User | null = null;
+	let user: User | null
 
 	try {
-		user = await getUserFromAmplify(serverSideContext);
+		user = await getUserFromAmplify(serverSideContext)
 	} finally {
 		// Do nothing
 	}
 
-	return { props: { user } };
-};
+	return { props: { user } }
+}
 
 export const getServerSidePropsWithUnauthRedirect: (_context: GetServerSidePropsContext) => Promise<{ props: { user: User | null } } | null> = async (serverSideContext) => {
-	let user: User | null = null;
+	let user: User | null = null
 
 	const respondWithUnauthenticated = (): null => {
-		const { res: response } = serverSideContext;
+		const { res: response } = serverSideContext
 
-		response.setHeader('location', SIGN_IN_PATH);
-		response.statusCode = 302;
-		response.end();
+		response.setHeader('location', SIGN_IN_PATH)
+		response.statusCode = 302
+		response.end()
 
-		return null;
-	};
-
-	try {
-		user = await getUserFromAmplify(serverSideContext);
-	} catch (error) {
-		respondWithUnauthenticated();
+		return null
 	}
 
-	return { props: { user } };
-};
+	try {
+		user = await getUserFromAmplify(serverSideContext)
+	} catch (_) {
+		respondWithUnauthenticated()
+	}
+
+	return { props: { user } }
+}

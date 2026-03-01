@@ -1,4 +1,4 @@
-import React, { type FunctionComponent } from 'react';
+import React, { type FunctionComponent } from 'react'
 
 export const Guide: FunctionComponent = () => (
 	<section className={'guide'}>
@@ -65,4 +65,4 @@ export const Guide: FunctionComponent = () => (
 			</tbody>
 		</table>
 	</section>
-);
+)

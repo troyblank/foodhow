@@ -1,38 +1,38 @@
-import { render } from '@testing-library/react';
-import { type GetServerSidePropsContext } from 'next';
-import React from 'react';
+import { render } from '@testing-library/react'
+import { type GetServerSidePropsContext } from 'next'
+import React from 'react'
 
-import { getServerSidePropsWithoutAuthRedirect } from '../utils';
-import GuidePage, { getServerSideProps } from '../pages/guide';
+import { getServerSidePropsWithoutAuthRedirect } from '../utils'
+import GuidePage, { getServerSideProps } from '../pages/guide'
 
 jest.mock('../utils', () => ({
-	getServerSidePropsWithoutAuthRedirect: jest.fn()
-}));
+	getServerSidePropsWithoutAuthRedirect: jest.fn(),
+}))
 
 describe('Page - Guide', () => {
 	it('should render', () => {
-		const { container } = render(<GuidePage />);
+		const { container } = render(<GuidePage />)
 
-		expect(container).toBeInTheDocument();
-	});
+		expect(container).toBeInTheDocument()
+	})
 
 	it('should call getServerSidePropsWithoutAuthRedirect with context', async () => {
 		const context: Partial<GetServerSidePropsContext> = {
 			req: {} as any,
 			res: {} as any,
 			params: {},
-			query: {}
-		} as GetServerSidePropsContext;
+			query: {},
+		} as GetServerSidePropsContext
 
 		jest.mocked(getServerSidePropsWithoutAuthRedirect).mockResolvedValue({
-			props: { user: { name: 'Troy' } } as any
-		});
+			props: { user: { name: 'Troy' } } as any,
+		})
 
-		const result = await getServerSideProps(context as GetServerSidePropsContext);
+		const result = await getServerSideProps(context as GetServerSidePropsContext)
 
-		expect(getServerSidePropsWithoutAuthRedirect).toHaveBeenCalledWith(context);
+		expect(getServerSidePropsWithoutAuthRedirect).toHaveBeenCalledWith(context)
 		expect(result).toEqual({
-			props: { user: { name: 'Troy' } }
-		});
-	});
-});
+			props: { user: { name: 'Troy' } },
+		})
+	})
+})

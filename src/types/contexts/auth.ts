@@ -1,5 +1,5 @@
-import { type SignInInput } from 'aws-amplify/auth';
-import { USERS } from '../../../config';
+import { type SignInInput } from 'aws-amplify/auth'
+import { USERS } from '../../../config'
 
 export type User = {
     fullName: string,

@@ -1,9 +1,9 @@
-import React, { type FunctionComponent } from 'react';
-import Link from 'next/link';
-import { useAuth } from '../../contexts';
+import React, { type FunctionComponent } from 'react'
+import Link from 'next/link'
+import { useAuth } from '../../contexts'
 
 export const Navigation: FunctionComponent = () => {
-	const { user } = useAuth();
+	const { user } = useAuth()
 
 	return (
 		<nav className={'navigation'}>
@@ -27,5 +27,5 @@ export const Navigation: FunctionComponent = () => {
 			)}
 		</nav>
 
-	);
-};
+	)
+}

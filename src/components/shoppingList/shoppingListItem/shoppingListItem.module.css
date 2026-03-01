@@ -20,6 +20,14 @@
     outline-offset:2px;
 }
 
+.list-item-box__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
 .list-item-box__item-name {
     flex: 1;
 }

@@ -1,24 +1,24 @@
-import React, { useCallback, useState, ChangeEvent, type FunctionComponent } from 'react';
-import Link from 'next/link';
-import { getRecipes } from '../../data';
-import { HeaderMessage } from '..';
-import styles from './recipeList.module.css';
+import React, { useCallback, useState, ChangeEvent, type FunctionComponent } from 'react'
+import Link from 'next/link'
+import { getRecipes } from '../../data'
+import { HeaderMessage } from '..'
+import styles from './recipeList.module.css'
 
 export const RecipeList: FunctionComponent = () => {
-	const recipes = useCallback(() => getRecipes(), [])();
-	const [filteredRecipes, setFilteredRecipes] = useState(recipes);
+	const recipes = useCallback(() => getRecipes(), [])()
+	const [filteredRecipes, setFilteredRecipes] = useState(recipes)
 
 	const filterList = (value: string) => {
-		const regex = new RegExp(value, 'i');
+		const regex = new RegExp(value, 'i')
 
-		setFilteredRecipes(recipes.filter((recipe) => Boolean(regex.test(recipe))));
-	};
+		setFilteredRecipes(recipes.filter((recipe) => Boolean(regex.test(recipe))))
+	}
 
 	const onSearch = (event: ChangeEvent<HTMLInputElement>) => {
-		const { value } = event.target;
+		const { value } = event.target
 
-		filterList(value);
-	};
+		filterList(value)
+	}
 
 	return (
 		<div className={styles['recipe-list']}>
@@ -43,5 +43,5 @@ export const RecipeList: FunctionComponent = () => {
 				))}
 			</section>
 		</div>
-	);
-};
+	)
+}

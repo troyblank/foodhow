@@ -1,1 +1,1 @@
-export { UncheckedItems } from './uncheckedItems';
+export { UncheckedItems } from './uncheckedItems'

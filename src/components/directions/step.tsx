@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from 'react';
-import dompurify from 'dompurify';
-import classnames from 'classnames';
+import React, { FunctionComponent } from 'react'
+import dompurify from 'dompurify'
+import classnames from 'classnames'
 
 type StepProps = {
     text: string,
@@ -10,8 +10,8 @@ type StepProps = {
 export const Step: FunctionComponent<StepProps> = ({ text, type }) => (
 	<li
 		className={classnames({
-			'direction-optional': type === 'optional'
+			'direction-optional': type === 'optional',
 		})}
 		dangerouslySetInnerHTML={{ __html: dompurify.sanitize(text) }}
 	/>
-);
+)

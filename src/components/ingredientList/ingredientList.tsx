@@ -1,5 +1,5 @@
-import React, { Fragment, type FunctionComponent } from 'react';
-import { Ingredient } from '..';
+import React, { Fragment, type FunctionComponent } from 'react'
+import { Ingredient } from '..'
 
 type IngredientListProps = {
     title: string,
@@ -10,7 +10,7 @@ type IngredientListProps = {
 export const IngredientList: FunctionComponent<IngredientListProps> = ({
 	fileName,
 	ingredients,
-	title
+	title,
 }) => (
 	<Fragment>
 		{ title && <h3 className={'ingredient__title'}>{title}</h3> }
@@ -24,4 +24,4 @@ export const IngredientList: FunctionComponent<IngredientListProps> = ({
 			))}
 		</ul>
 	</Fragment>
-);
+)

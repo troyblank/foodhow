@@ -1,112 +1,95 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { useAuth } from '../../contexts';
-import { useShoppingList, useDeleteShoppingListItems } from '../../data';
-import { Button, FloatingButton, Modal, HeaderMessage, Spinner } from '..';
-import { ShoppingListItem } from './shoppingListItem';
-import { UncheckedItems } from './uncheckedItems';
-import { AddListItemForm } from './addListItemForm';
-import styles from './shoppingList.module.css';
+import React, { useState, useMemo, useEffect } from 'react'
+import { useAuth } from '../../contexts'
+import { useShoppingList, useDeleteShoppingListItems } from '../../data'
+import { Button, FloatingButton, Modal, HeaderMessage, Spinner } from '..'
+import { ShoppingListItem } from './shoppingListItem'
+import { UncheckedItems } from './uncheckedItems'
+import { AddListItemForm } from './addListItemForm'
+import styles from './shoppingList.module.css'
 
-const STORAGE_KEY = 'shoppingListCheckedShoppingListItems';
+const STORAGE_KEY = 'shoppingListCheckedShoppingListItems'
 
 /* istanbul ignore next */
 export const throwLocalStorageError = (): never => {
-	throw new Error('Error saving checked items to localStorage');
-};
+	throw new Error('Error saving checked items to localStorage')
+}
 
 export const ShoppingList = () => {
-	const { user } = useAuth();
-	const { isLoading, data: shoppingList } = useShoppingList(user);
-	const { mutate: deleteShoppingListItems, isPending: isDeletingCheckedItems } = useDeleteShoppingListItems(user);
-	const [checkedItemIds, setCheckedItemIds] = useState<Set<number>>(new Set());
-	const [isShowingConfirmModal, setIsShowingConfirmModal] = useState(false);
-	const [isShowingAddItemModal, setIsShowingAddItemModal] = useState(false);
-	const isInitialized = useRef(false);
-
-
-	// Loads checked items from localStorage once shopping list data is available
-	useEffect(() => {
-		if (isLoading || !shoppingList) {
-			return;
-		}
-
+	const { user } = useAuth()
+	const { isLoading, data: shoppingList } = useShoppingList(user)
+	const { mutate: deleteShoppingListItems, isPending: isDeletingCheckedItems } = useDeleteShoppingListItems(user)
+	const [checkedItemIds, setCheckedItemIds] = useState<Set<number>>(() => {
 		try {
-			const stored = localStorage.getItem(STORAGE_KEY);
-
+			const stored = localStorage.getItem(STORAGE_KEY)
 			if (stored) {
-				const parsedIds = JSON.parse(stored) as number[];
-				const validItemIds = new Set(shoppingList.map((item) => item.id));
-				const validCheckedIds = parsedIds.filter((id: number) => validItemIds.has(id));
-
-				setCheckedItemIds(new Set(validCheckedIds));
+				return new Set(JSON.parse(stored) as number[])
 			}
 		} catch {
 			// Use default of no checked items
 		}
+		return new Set()
+	})
+	const [isShowingConfirmModal, setIsShowingConfirmModal] = useState(false)
+	const [isShowingAddItemModal, setIsShowingAddItemModal] = useState(false)
 
-		isInitialized.current = true;
-	}, [shoppingList, isLoading]);
-
-	// Save checked items to localStorage whenever they change
+	// Save checked items to localStorage whenever they change (only persist IDs that exist in current list)
 	useEffect(() => {
-		if (!isInitialized.current) {
-			// Local store is not initialized yet.
-			return;
-		}
+		if (!shoppingList) return
 
 		try {
-			const itemIds = Array.from(checkedItemIds);
-			localStorage.setItem(STORAGE_KEY, JSON.stringify(itemIds));
+			const validItemIds = new Set(shoppingList.map((item) => item.id))
+			const itemIds = Array.from(checkedItemIds).filter((id) => validItemIds.has(id))
+			localStorage.setItem(STORAGE_KEY, JSON.stringify(itemIds))
 		} catch {
-			throwLocalStorageError();
+			throwLocalStorageError()
 		}
-	}, [checkedItemIds]);
+	}, [checkedItemIds, shoppingList])
 
 	const toggleItemChecked = (id: number) => {
 		setCheckedItemIds((prev) => {
-			const newSet = new Set(prev);
+			const newSet = new Set(prev)
 			if (newSet.has(id)) {
-				newSet.delete(id);
+				newSet.delete(id)
 			} else {
-				newSet.add(id);
+				newSet.add(id)
 			}
-			return newSet;
-		});
-	};
+			return newSet
+		})
+	}
 
 	const onDeleteCheckedItems = () => {
-		setIsShowingConfirmModal(false);
-		deleteShoppingListItems(Array.from(checkedItemIds));
-	};
+		setIsShowingConfirmModal(false)
+		deleteShoppingListItems(Array.from(checkedItemIds))
+	}
 
 	const { uncheckedItems, checkedItems } = useMemo(() => {
 		if (!shoppingList) {
-			return { uncheckedItems: [], checkedItems: [] };
+			return { uncheckedItems: [], checkedItems: [] }
 		}
-		const unchecked: typeof shoppingList = [];
-		const checked: typeof shoppingList = [];
+		const unchecked: typeof shoppingList = []
+		const checked: typeof shoppingList = []
 
 		shoppingList.forEach((item) => {
 			if (checkedItemIds.has(item.id)) {
-				checked.push(item);
+				checked.push(item)
 			} else {
-				unchecked.push(item);
+				unchecked.push(item)
 			}
-		});
+		})
 
-		return { uncheckedItems: unchecked, checkedItems: checked };
-	}, [shoppingList, checkedItemIds]);
+		return { uncheckedItems: unchecked, checkedItems: checked }
+	}, [shoppingList, checkedItemIds])
 
 	if (isLoading) {
 		return (
 			<div className={styles['shopping-list__loading']}>
 				<Spinner size={'large'} color={'brown'} />
 			</div>
-		);
+		)
 	}
 
-	const isEmpty = 0 === shoppingList.length;
-	const isAnyItemsChecked = checkedItemIds.size > 0;
+	const isEmpty = 0 === shoppingList.length
+	const isAnyItemsChecked = checkedItemIds.size > 0
 
 	return (
 		<section className={styles['shopping-list']}>
@@ -149,5 +132,5 @@ export const ShoppingList = () => {
 				onClose={() => setIsShowingAddItemModal(false)}
 			/>
 		</section>
-	);
-};
+	)
+}

@@ -1,13 +1,13 @@
-import React, { useMemo, type FunctionComponent } from 'react';
-import type { ShoppingListItem as ShoppingListItemType, ShoppingItemType } from '../../../types';
-import { SHOPPING_ITEM_TYPE } from '../../../types';
-import { ShoppingListItem } from '../shoppingListItem';
-import styles from './uncheckedItems.module.css';
+import React, { useMemo, type FunctionComponent } from 'react'
+import type { ShoppingListItem as ShoppingListItemType, ShoppingItemType } from '../../../types'
+import { SHOPPING_ITEM_TYPE } from '../../../types'
+import { ShoppingListItem } from '../shoppingListItem'
+import styles from './uncheckedItems.module.css'
 
 type UncheckedItemsProps = {
-	items: ShoppingListItemType[];
-	onToggle: (id: number) => void;
-};
+	items: ShoppingListItemType[]
+	onToggle: (id: number) => void
+}
 
 const TYPE_ORDER: ShoppingItemType[] = [
 	SHOPPING_ITEM_TYPE.uncommon,
@@ -16,29 +16,29 @@ const TYPE_ORDER: ShoppingItemType[] = [
 	SHOPPING_ITEM_TYPE.imperishable,
 	SHOPPING_ITEM_TYPE.meat,
 	SHOPPING_ITEM_TYPE.perishable,
-	SHOPPING_ITEM_TYPE.frozen
-];
+	SHOPPING_ITEM_TYPE.frozen,
+]
 
-const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
 
 export const UncheckedItems: FunctionComponent<UncheckedItemsProps> = ({ items, onToggle }) => {
 	const groupedItems = useMemo(() => {
-		const groups = new Map<ShoppingItemType, ShoppingListItemType[]>();
+		const groups = new Map<ShoppingItemType, ShoppingListItemType[]>()
 
 		items.forEach((item) => {
-			const existing = groups.get(item.type) || [];
-			groups.set(item.type, [...existing, item]);
-		});
+			const existing = groups.get(item.type) || []
+			groups.set(item.type, [...existing, item])
+		})
 
-		return groups;
-	}, [items]);
+		return groups
+	}, [items])
 
 	return (
 		<div className={styles['unchecked-items']}>
 			{TYPE_ORDER.map((type) => {
-				const typeItems = groupedItems.get(type);
+				const typeItems = groupedItems.get(type)
 				if (!typeItems || 0 === typeItems.length) {
-					return null;
+					return null
 				}
 
 				return (
@@ -55,8 +55,8 @@ export const UncheckedItems: FunctionComponent<UncheckedItemsProps> = ({ items, 
 							))}
 						</ul>
 					</section>
-				);
+				)
 			})}
 		</div>
-	);
-};
+	)
+}

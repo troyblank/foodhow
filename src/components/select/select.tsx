@@ -1,25 +1,25 @@
-import React from 'react';
-import styles from './select.module.css';
+import React from 'react'
+import styles from './select.module.css'
 
 type SelectOption = {
-	value: string;
-	label: string;
-};
+	value: string
+	label: string
+}
 
 type SelectProps = {
-	value: string;
-	onChange: (value: string) => void;
-	options: SelectOption[];
-	id?: string;
-	name?: string;
-};
+	value: string
+	onChange: (value: string) => void
+	options: SelectOption[]
+	id?: string
+	name?: string
+}
 
 export const Select = ({
 	value,
 	onChange,
 	options,
 	id,
-	name
+	name,
 }: SelectProps) => (
 	<select
 		className={styles.select}
@@ -34,4 +34,4 @@ export const Select = ({
 			</option>
 		))}
 	</select>
-);
+)

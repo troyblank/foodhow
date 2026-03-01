@@ -1,9 +1,9 @@
-import React, { FunctionComponent } from 'react';
-import NextHead from 'next/head';
+import React, { FunctionComponent } from 'react'
+import NextHead from 'next/head'
 
 export const Head: FunctionComponent = () => (
 	<NextHead>
-		<meta httpEquiv={'Content-Type'} content={'text/html; charset=utf-8'} />
+		<meta httpEquiv={'Content-Type'} content={'text/html charset=utf-8'} />
 		<meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
 
 		<title>Food How</title>
@@ -30,4 +30,4 @@ export const Head: FunctionComponent = () => (
 		{/* Landscape share social media icon */}
 		<meta property={'og:image'} content={'/icons/social-1200x627.png'} />
 	</NextHead>
-);
+)

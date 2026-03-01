@@ -1,3 +1,3 @@
-export * from './authContext';
-export * from './shoppingList';
-export * from './user';
+export * from './authContext'
+export * from './shoppingList'
+export * from './user'

@@ -1,10 +1,10 @@
-import React, { type FunctionComponent } from 'react';
-import styles from './floatingButton.module.css';
+import React, { type FunctionComponent } from 'react'
+import styles from './floatingButton.module.css'
 
 type FloatingButtonProps = {
-    onClick?: () => void;
-    ariaLabel: string;
-};
+    onClick?: () => void
+    ariaLabel: string
+}
 
 export const FloatingButton: FunctionComponent<FloatingButtonProps> = ({ onClick, ariaLabel }) => (
 	<button
@@ -15,4 +15,4 @@ export const FloatingButton: FunctionComponent<FloatingButtonProps> = ({ onClick
 	>
 		+
 	</button>
-);
+)

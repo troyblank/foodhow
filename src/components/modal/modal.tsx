@@ -1,16 +1,16 @@
-import React, { type FunctionComponent, type ReactNode } from 'react';
-import { Button } from '..';
-import styles from './modal.module.css';
+import React, { type FunctionComponent, type ReactNode } from 'react'
+import { Button } from '..'
+import styles from './modal.module.css'
 
 type ModalProps = {
-    message: string;
-    isShowing: boolean;
-    onConfirm: () => void;
-    onCancel: () => void;
-    children?: ReactNode;
-    isConfirmDisabled?: boolean;
-    isPending?: boolean;
-};
+    message: string
+    isShowing: boolean
+    onConfirm: () => void
+    onCancel: () => void
+    children?: ReactNode
+    isConfirmDisabled?: boolean
+    isPending?: boolean
+}
 
 export const Modal: FunctionComponent<ModalProps> = ({
 	message,
@@ -19,12 +19,16 @@ export const Modal: FunctionComponent<ModalProps> = ({
 	onCancel,
 	children,
 	isConfirmDisabled = false,
-	isPending = false
+	isPending = false,
 }) => isShowing && (
-	<div className={styles.overlay} onMouseDown={onCancel}>
+	<button
+		type={'button'}
+		className={styles.overlay}
+		onClick={(event) => event.target === event.currentTarget && onCancel()}
+		aria-label={'Close modal'}
+	>
 		<div
 			className={styles.modal}
-			onMouseDown={(event) => event.stopPropagation()}
 			role={'dialog'}
 			aria-modal={'true'}
 		>
@@ -35,5 +39,5 @@ export const Modal: FunctionComponent<ModalProps> = ({
 				<Button text={'Confirm'} buttonClickHand={onConfirm} disabled={isConfirmDisabled} isPending={isPending} />
 			</div>
 		</div>
-	</div>
-);
+	</button>
+)

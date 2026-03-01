@@ -1,22 +1,23 @@
-import React, { type FunctionComponent } from 'react';
-import { Spinner } from '..';
-import styles from './button.module.css';
+import React, { useCallback, type FunctionComponent } from 'react'
+import { Spinner } from '..'
+import styles from './button.module.css'
 
 type ButtonProps = {
-    text: string;
-    buttonClickHand: () => void;
-    isPending?: boolean;
-    disabled?: boolean;
-};
+    text: string
+    buttonClickHand: () => void
+    isPending?: boolean
+    disabled?: boolean
+}
 
 export const Button: FunctionComponent<ButtonProps> = ({ text, buttonClickHand, isPending = false, disabled = false }) => {
-	const isDisabled = isPending || disabled;
+	const isDisabled = isPending || disabled
 
-	function onClick() {
+	const onClick = useCallback(() => {
+		// istanbul ignore else -- disabled buttons do not receive click events so this path is unreachable in tests
 		if (!isDisabled) {
-			buttonClickHand();
+			buttonClickHand()
 		}
-	}
+	}, [buttonClickHand, isDisabled])
 
 	return (
 		<button
@@ -33,5 +34,5 @@ export const Button: FunctionComponent<ButtonProps> = ({ text, buttonClickHand, 
 				text
 			)}
 		</button>
-	);
-};
+	)
+}

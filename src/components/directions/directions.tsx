@@ -1,5 +1,5 @@
-import React, { type FunctionComponent } from 'react';
-import { Step } from '.';
+import React, { type FunctionComponent } from 'react'
+import { Step } from '.'
 
 type DirectionsProps = {
     steps: any
@@ -21,4 +21,4 @@ export const Directions: FunctionComponent<DirectionsProps> = ({ steps }) => (
 				/>
 		))}
 	</ol>
-);
+)

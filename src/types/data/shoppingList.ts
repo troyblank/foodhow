@@ -5,18 +5,18 @@ export const SHOPPING_ITEM_TYPE = {
 	frozen: 'frozen',
 	imperishable: 'imperishable',
 	spice: 'spice',
-	uncommon: 'uncommon'
-} as const;
+	uncommon: 'uncommon',
+} as const
 
 export const SHOPPING_ITEM_STORE = {
 	jewelOsco: 'Jewel-Osco',
 	petes: 'Pete\'s',
 	wildFork: 'Wild Fork',
-	unspecified: 'Unspecified'
-} as const;
+	unspecified: 'Unspecified',
+} as const
 
-export type ShoppingItemType = typeof SHOPPING_ITEM_TYPE[keyof typeof SHOPPING_ITEM_TYPE];
-export type ShoppingItemStore = typeof SHOPPING_ITEM_STORE[keyof typeof SHOPPING_ITEM_STORE];
+export type ShoppingItemType = typeof SHOPPING_ITEM_TYPE[keyof typeof SHOPPING_ITEM_TYPE]
+export type ShoppingItemStore = typeof SHOPPING_ITEM_STORE[keyof typeof SHOPPING_ITEM_STORE]
 
 export type NewShoppingListItem = {
     amount: number,

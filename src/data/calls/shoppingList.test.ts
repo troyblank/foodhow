@@ -9,15 +9,16 @@ jest.mock('../../utils/apiCommunication')
 describe('Balance', () => {
 	const chance = new Chance()
 
-	it('Should be able to get a balance.', async () => {
+	it('Fetches the shopping list from the server.', async () => {
 		const shoppingList = mockShoppingList()
+		const user = mockUser()
 
 		jest.mocked(getAndValidateResponseData).mockResolvedValue({ data: { shoppingList } })
 
-		expect(await getShoppingList(mockUser())).toEqual(shoppingList)
+		expect(await getShoppingList(user.jwtToken)).toEqual(shoppingList)
 	})
 
-	it('Should be able to create a shopping list item.', async () => {
+	it('Creates a new item on the shopping list.', async () => {
 		const newItem: NewShoppingListItem = {
 			amount: chance.natural(),
 			name: chance.word(),
@@ -27,14 +28,14 @@ describe('Balance', () => {
 
 		jest.mocked(getAndValidateResponseData).mockResolvedValue({ data: {} })
 
-		await expect(createShoppingListItem(mockUser(), newItem)).resolves.toBeUndefined()
+		await expect(createShoppingListItem(mockUser().jwtToken, newItem)).resolves.toBeUndefined()
 	})
 
-	it('Should be able to delete shopping list items.', async () => {
+	it('Deletes the given items from the shopping list.', async () => {
 		const itemIds = [chance.integer(), chance.integer(), chance.integer()]
 
 		jest.mocked(getAndValidateResponseData).mockResolvedValue({ data: {} })
 
-		await expect(deleteShoppingListItems(mockUser(), itemIds)).resolves.toBeUndefined()
+		await expect(deleteShoppingListItems(mockUser().jwtToken, itemIds)).resolves.toBeUndefined()
 	})
 })

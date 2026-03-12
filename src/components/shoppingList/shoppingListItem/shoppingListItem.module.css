@@ -26,6 +26,7 @@
     gap: 10px;
     flex: 1;
     min-width: 0;
+    cursor: pointer;
 }
 
 .list-item-box__item-name {

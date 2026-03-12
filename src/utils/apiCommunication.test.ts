@@ -4,6 +4,7 @@ import {
 	getAPIURL,
 	getHeaders,
 	getAndValidateResponseData,
+	getErrorMessage,
 	ERROR_DELIMITER,
 	GENERAL_ERROR_HEADING,
 	INTERNAL_SERVICE_ERROR_HEADING,
@@ -182,5 +183,14 @@ describe('API Communication Util', () => {
 		}
 
 		await expect(getAndValidateResponseData(response as Response)).rejects.toThrow(GENERAL_ERROR_HEADING)
+	})
+
+	it('Formats a thrown Error for display.', () => {
+		expect(getErrorMessage(new Error('Something failed'))).toBe('Something failed')
+	})
+
+	it('Formats a non-Error value for display.', () => {
+		expect(getErrorMessage('string error')).toBe('string error')
+		expect(getErrorMessage(42)).toBe('42')
 	})
 })

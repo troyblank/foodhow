@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { SHOPPING_ITEM_TYPE, SHOPPING_ITEM_STORE, type ShoppingItemType } from '../../../types/data/shoppingList'
 import { useAuth } from '../../../contexts'
 import { useCreateShoppingListItem } from '../../../data'
+import { getErrorMessage } from '../../../utils/apiCommunication'
 import { Modal, Input, Select } from '../..'
 import styles from './addListItemForm.module.css'
 
@@ -30,14 +31,18 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 	}
 
 	const onConfirm = async () => {
-		await createItem({
-			name: name.trim(),
-			amount: 1,
-			store: SHOPPING_ITEM_STORE.unspecified,
-			type: selectedType as ShoppingItemType,
-		})
-		onClose()
-		resetForm()
+		try {
+			await createItem({
+				name: name.trim(),
+				amount: 1,
+				store: SHOPPING_ITEM_STORE.unspecified,
+				type: selectedType as ShoppingItemType,
+			})
+			onClose()
+			resetForm()
+		} catch (error) {
+			alert(getErrorMessage(error))
+		}
 	}
 
 	const onCancel = () => {

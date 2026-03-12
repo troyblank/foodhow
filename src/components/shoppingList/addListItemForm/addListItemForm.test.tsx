@@ -114,7 +114,7 @@ describe('AddListItemForm', () => {
 		expect(getByText('Confirm')).not.toBeDisabled()
 	})
 
-	it('should call createItem with correct data on confirm', async () => {
+	it('Sends the new item with the correct name, amount, and type on confirm.', async () => {
 		const itemName = chance.word()
 		const selectedType = SHOPPING_ITEM_TYPE.produce
 		const onClose = jest.fn()
@@ -249,5 +249,27 @@ describe('AddListItemForm', () => {
 		)
 
 		expect(getByLabelText('Type')).toHaveValue('')
+	})
+
+	it('shows an error message when adding an item fails', async () => {
+		const errorMessage = chance.sentence()
+		mockMutateAsync.mockRejectedValue(new Error(errorMessage))
+
+		const alertSpy = jest.spyOn(window, 'alert').mockImplementation(() => {})
+
+		const { getByLabelText, getByText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper },
+		)
+
+		await userEvent.type(getByLabelText('Name'), 'Milk')
+		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.perishable)
+		await userEvent.click(getByText('Confirm'))
+
+		await waitFor(() => {
+			expect(alertSpy).toHaveBeenCalledWith(errorMessage)
+		})
+
+		alertSpy.mockRestore()
 	})
 })

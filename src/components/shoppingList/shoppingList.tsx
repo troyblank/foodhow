@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react'
 import { useAuth } from '../../contexts'
 import { useShoppingList, useDeleteShoppingListItems } from '../../data'
+import { getErrorMessage } from '../../utils/apiCommunication'
 import { Button, FloatingButton, Modal, HeaderMessage, Spinner } from '..'
 import { ShoppingListItem } from './shoppingListItem'
 import { UncheckedItems } from './uncheckedItems'
@@ -59,7 +60,9 @@ export const ShoppingList = () => {
 
 	const onDeleteCheckedItems = () => {
 		setIsShowingConfirmModal(false)
-		deleteShoppingListItems(Array.from(checkedItemIds))
+		deleteShoppingListItems(Array.from(checkedItemIds), {
+			onError: (error) => alert(getErrorMessage(error)),
+		})
 	}
 
 	const { uncheckedItems, checkedItems } = useMemo(() => {

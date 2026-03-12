@@ -213,7 +213,61 @@ describe('Shopping List', () => {
 
 		await user.click(confirmButton)
 
-		expect(mockMutate).toHaveBeenCalledWith([checkedItemId])
+		expect(mockMutate).toHaveBeenCalledWith(
+			[checkedItemId],
+			{ onError: expect.any(Function) },
+		)
+	})
+
+	it('Shows an error message when deleting checked items fails.', async () => {
+		const user = userEvent.setup()
+		const mockMutate = jest.fn()
+		const checkedItemId = chance.natural()
+		const shoppingList = [
+			mockShoppingListItem({ name: chance.word(), id: chance.natural() }),
+			mockShoppingListItem({ name: chance.word(), id: checkedItemId }),
+		]
+		const errorMessage = chance.sentence()
+
+		jest.mocked(useAuth).mockReturnValue({
+			user: mockUser(),
+			attemptToSignIn: jest.fn(),
+		})
+
+		jest.mocked(useShoppingList).mockReturnValue({
+			isLoading: false,
+			isError: false,
+			data: shoppingList,
+			error: null,
+		} as any)
+
+		jest.mocked(useDeleteShoppingListItems).mockReturnValue({
+			mutate: mockMutate,
+			isPending: false,
+		} as any)
+
+		const alertSpy = jest.spyOn(window, 'alert').mockImplementation(() => {})
+
+		const { getByText, findByText } = render(<ShoppingList />, { wrapper: TestWrapper })
+		const checkedItemName = shoppingList.find((item) => item.id === checkedItemId)!.name
+
+		await waitFor(() => {
+			expect(getByText(checkedItemName)).toBeInTheDocument()
+		})
+
+		await user.click(getByText(checkedItemName))
+		await user.click(await findByText('Delete Checked'))
+		await user.click(await findByText('Confirm'))
+
+		const [, options] = mockMutate.mock.calls[0]
+		const onError = options.onError
+		const deleteError = new Error(errorMessage)
+
+		onError(deleteError)
+
+		expect(alertSpy).toHaveBeenCalledWith(errorMessage)
+
+		alertSpy.mockRestore()
 	})
 
 	it('Should close modal and not delete when cancel is clicked.', async () => {
@@ -265,7 +319,7 @@ describe('Shopping List', () => {
 		expect(mockMutate).not.toHaveBeenCalled()
 	})
 
-	it('Should throw error when localStorage.setItem fails.', async () => {
+	it('Shows an error when saving checked items to the browser fails.', async () => {
 		const itemName = chance.word()
 		const itemId = chance.natural()
 		const shoppingList = [

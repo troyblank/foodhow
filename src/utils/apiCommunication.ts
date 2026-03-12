@@ -43,3 +43,6 @@ export const getAndValidateResponseData = async (response: Response, errorMessag
 
 	return { response, data }
 }
+
+export const getErrorMessage = (error: unknown): string =>
+	error instanceof Error ? error.message : String(error)

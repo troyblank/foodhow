@@ -1,0 +1,17 @@
+{
+    "title": "Garlic Lemon Sauce",
+    "meta": "Great on pasta.",
+    "ingredients": [
+        { "text": "1 head of garlic", "type": "produce" },
+        { "text": "1 TSBP lemon juice", "type": "produce" },
+        { "text": "3 TSBP olive oil", "type": "imperishable" },
+        { "text": "1 tsp pepper", "type": "spice" }
+    ],
+    "directions": [
+        { "text": "Cut off top of garlic head exposing all cloves, on a sheet of foil." },
+        { "text": "Drizzle garlic with 1 TBSP olive oil, and wrap in foil." },
+        { "text": "Cook at 500° for 35 minutes." },
+        { "text": "Let garlic cool for 10 mins, and squeeze out all gloves." },
+        { "text": "Blend with lemon juice, 2 TBSP oil and pepper." }
+    ]
+}

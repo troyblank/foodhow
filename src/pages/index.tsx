@@ -5,9 +5,13 @@ import { type User } from '../types'
 import { AuthProvider } from '../contexts'
 import { recipes } from '../../public/recipes.json'
 import { Head, Navigation, RecipeList } from '../components'
-import { getServerSidePropsWithoutAuthRedirect } from '../utils'
+import { getRedirectToShoppingListIfDirectLoad, getServerSidePropsWithoutAuthRedirect } from '../utils'
 
-export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => getServerSidePropsWithoutAuthRedirect(serverSideContext)
+export const getServerSideProps = async (serverSideContext: GetServerSidePropsContext) => {
+	const redirect = getRedirectToShoppingListIfDirectLoad(serverSideContext)
+	if (redirect) return redirect
+	return getServerSidePropsWithoutAuthRedirect(serverSideContext)
+}
 
 export const HomePage: FunctionComponent = ({ user }: { user: User }) => (
 	<AuthProvider user={user}>

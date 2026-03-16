@@ -1,0 +1,15 @@
+{
+    "title": "Adobo Marinade",
+    "meta": "Great on pork tenderloin.",
+    "ingredients": [
+        { "text": "3 &frac12; oz cider vinegar", "type": "imperishable" },
+        { "text": "1 &frac34; oz soy sauce", "type": "imperishable" },
+        { "text": "3 garlic cloves", "type": "produce" },
+        { "text": "1 tsp black peppercorns", "type": "spice" },
+        { "text": "2 bay leaves", "type": "spice" }
+    ],
+    "directions": [
+        { "text": "Bring all ingredients to a boil, then let cool." },
+        { "text": "Use as an overnight marinade." }
+    ]
+}

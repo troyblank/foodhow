@@ -22,12 +22,10 @@ module.exports = {
     setupFilesAfterEnv: ['./jest.setup.js'],
     transform: {
         '\\.[jt]sx?$': ['ts-jest', {
-            isolatedModules: true,
-            tsconfig: {
-                jsx: 'react-jsx'
-            },
+            tsconfig: '<rootDir>/tsconfig.json',
             diagnostics: {
-                ignoreCodes: [6133, 6192, 6198]
+                // TS5107: ts-jest still applies legacy moduleResolution for transforms until it catches up to TS 7
+                ignoreCodes: [5107, 6133, 6192, 6198]
             }
         }]
     },

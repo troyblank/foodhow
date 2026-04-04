@@ -92,7 +92,7 @@ export const ShoppingList = () => {
 	}
 
 	const isEmpty = 0 === shoppingList.length
-	const isAnyItemsChecked = checkedItemIds.size > 0
+	const hasCheckedItemsInList = checkedItems.length > 0
 
 	return (
 		<section className={styles['shopping-list']}>
@@ -102,7 +102,7 @@ export const ShoppingList = () => {
 				</div>
 			)}
 			<UncheckedItems items={uncheckedItems} onToggle={toggleItemChecked} />
-			{ isAnyItemsChecked && (
+			{ hasCheckedItemsInList && (
 				<div className={styles['shopping-list__clear-button']}>
 					<Button
 						text={'Delete Checked'}

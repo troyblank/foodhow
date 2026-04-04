@@ -39,14 +39,14 @@ export const Ingredient: FunctionComponent<IngredientProps> = ({
 	const canAddToList = !link && user
 
 	const isInList = shoppingList.some(
-		(item) => item.name === ingredientName && item.recipe === recipeName,
+		(item) => item.name === ingredientName && item.purpose === recipeName,
 	)
 
 	const onToggle = () => {
 		createShoppingListItem({
 			amount: 1,
 			name: ingredientName,
-			recipe: recipeName,
+			purpose: recipeName,
 			type: ingredientType,
 			store: 'Unspecified',
 		})

@@ -21,7 +21,7 @@ export type ShoppingItemStore = typeof SHOPPING_ITEM_STORE[keyof typeof SHOPPING
 export type NewShoppingListItem = {
     amount: number,
     name: string,
-    recipe?: string,
+    purpose?: string,
     store: ShoppingItemStore,
     type: ShoppingItemType,
 }

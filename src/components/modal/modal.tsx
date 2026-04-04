@@ -21,10 +21,18 @@ export const Modal: FunctionComponent<ModalProps> = ({
 	isConfirmDisabled = false,
 	isPending = false,
 }) => isShowing && (
-	<button
-		type={'button'}
+	<div
+		role={'button'}
+		tabIndex={0}
 		className={styles.overlay}
 		onClick={(event) => event.target === event.currentTarget && onCancel()}
+		onKeyDown={(event) => {
+			if (event.target !== event.currentTarget) return
+			if (event.key === 'Enter' || event.key === ' ') {
+				event.preventDefault()
+				onCancel()
+			}
+		}}
 		aria-label={'Close modal'}
 	>
 		<div
@@ -39,5 +47,5 @@ export const Modal: FunctionComponent<ModalProps> = ({
 				<Button text={'Confirm'} buttonClickHand={onConfirm} disabled={isConfirmDisabled} isPending={isPending} />
 			</div>
 		</div>
-	</button>
+	</div>
 )

@@ -116,6 +116,30 @@ describe('Shopping List', () => {
 		})
 	})
 
+	it('Should not show Delete Checked when the list is empty even if checked ids were stored for removed items.', async () => {
+		localStorage.setItem('shoppingListCheckedShoppingListItems', JSON.stringify([chance.natural()]))
+
+		jest.mocked(useAuth).mockReturnValue({
+			user: mockUser(),
+			attemptToSignIn: jest.fn(),
+		})
+
+		jest.mocked(useShoppingList).mockReturnValue({
+			isLoading: false,
+			isError: false,
+			data: [],
+			error: null,
+		} as any)
+
+		const { queryByText, getByText } = render(<ShoppingList />, { wrapper: TestWrapper })
+
+		await waitFor(() => {
+			expect(getByText('Nothing to shop for')).toBeInTheDocument()
+		})
+
+		expect(queryByText('Delete Checked')).not.toBeInTheDocument()
+	})
+
 	it('Should handle toggling an item.', async () => {
 		const user = userEvent.setup()
 		const itemName = chance.word({ syllables: 5 })

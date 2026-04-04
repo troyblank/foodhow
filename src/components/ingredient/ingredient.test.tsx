@@ -52,7 +52,7 @@ describe('Ingredient', () => {
 	it('Should be able to determine if an ingredient is in the shopping list.', async () => {
 		const shoppingListItem = mockShoppingListItem({
 			name: ingredientName,
-			recipe: recipeName,
+			purpose: recipeName,
 		})
 
 		jest.mocked(useShoppingList).mockReturnValue({
@@ -101,7 +101,7 @@ describe('Ingredient', () => {
 		expect(mutateAsync).toHaveBeenCalledWith({
 			amount: 1,
 			name: ingredientName,
-			recipe: recipeName,
+			purpose: recipeName,
 			type: ingredientType,
 			store: 'Unspecified',
 		})

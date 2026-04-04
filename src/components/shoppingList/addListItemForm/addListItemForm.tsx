@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { SHOPPING_ITEM_TYPE, SHOPPING_ITEM_STORE, type ShoppingItemType } from '../../../types/data/shoppingList'
 import { useAuth } from '../../../contexts'
-import { useCreateShoppingListItem } from '../../../data'
+import { useCreateShoppingListItem, useShoppingList } from '../../../data'
 import { getErrorMessage } from '../../../utils/apiCommunication'
 import { Modal, Input, Select } from '../..'
 import styles from './addListItemForm.module.css'
@@ -19,24 +19,42 @@ const shoppingItemTypeOptions = [
 	})),
 ]
 
+const PURPOSE_DATALIST_ID = 'add-item-purpose-suggestions'
+
 export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) => {
 	const { user } = useAuth()
+	const { data: shoppingList = [] } = useShoppingList(user)
 	const { mutateAsync: createItem, isPending } = useCreateShoppingListItem(user)
 	const [name, setName] = useState('')
+	const [purpose, setPurpose] = useState('')
 	const [selectedType, setSelectedType] = useState<ShoppingItemType | ''>('')
+
+	const purposeSuggestions = useMemo(() => {
+		const seen = new Set<string>()
+		for (const item of shoppingList) {
+			const purposeFromItem = item.purpose?.trim()
+			if (purposeFromItem) {
+				seen.add(purposeFromItem)
+			}
+		}
+		return Array.from(seen).sort((itemA, itemB) => itemA.localeCompare(itemB))
+	}, [shoppingList])
 
 	const resetForm = () => {
 		setName('')
+		setPurpose('')
 		setSelectedType('')
 	}
 
 	const onConfirm = async () => {
 		try {
+			const trimmedPurpose = purpose.trim()
 			await createItem({
 				name: name.trim(),
 				amount: 1,
 				store: SHOPPING_ITEM_STORE.unspecified,
 				type: selectedType as ShoppingItemType,
+				...(trimmedPurpose ? { purpose: trimmedPurpose } : {}),
 			})
 			onClose()
 			resetForm()
@@ -86,9 +104,24 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 				<Select
 					id={'add-item-type'}
 					value={selectedType}
-					onChange={(value) => setSelectedType(value as ShoppingItemType | '')}
+					onChange={(selectedTypeValue) => setSelectedType(selectedTypeValue as ShoppingItemType | '')}
 					options={shoppingItemTypeOptions}
 				/>
+				<label htmlFor={'add-item-purpose'} className={styles.label}>
+					Purpose
+				</label>
+				<Input
+					id={'add-item-purpose'}
+					name={'purpose'}
+					value={purpose}
+					onChange={setPurpose}
+					list={PURPOSE_DATALIST_ID}
+				/>
+				<datalist id={PURPOSE_DATALIST_ID}>
+					{purposeSuggestions.map((purposeSuggestion) => (
+						<option key={purposeSuggestion} value={purposeSuggestion} />
+					))}
+				</datalist>
 			</form>
 		</Modal>
 	)

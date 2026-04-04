@@ -7,6 +7,7 @@ type InputProps = {
     type?: 'text' | 'number' | 'email'
     id?: string
     name?: string
+    list?: string
 }
 
 export const Input = ({
@@ -15,6 +16,7 @@ export const Input = ({
 	type = 'text',
 	id,
 	name,
+	list,
 }: InputProps) => (
 	<input
 		className={styles.input}
@@ -23,6 +25,7 @@ export const Input = ({
 		onChange={({ target }) => onChange(target.value)}
 		id={id}
 		name={name}
+		list={list}
 		data-1p-ignore={true}
 	/>
 )

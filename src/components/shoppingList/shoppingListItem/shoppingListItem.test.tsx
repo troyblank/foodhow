@@ -21,6 +21,29 @@ describe('ShoppingListItem', () => {
 		expect(getByText(itemName)).toBeInTheDocument()
 	})
 
+	it('Shows the purpose in smaller secondary text below a line when the item has a purpose.', () => {
+		const itemName = chance.word()
+		const purposeLabel = chance.word()
+		const item = mockShoppingListItem({ name: itemName, purpose: purposeLabel })
+		const { getByText } = render(<ShoppingListItem item={item} checked={false} onToggle={jest.fn()} />)
+
+		expect(getByText(purposeLabel)).toBeInTheDocument()
+	})
+
+	it('Shows nothing for purpose when it is missing or only whitespace.', () => {
+		const itemName = chance.word()
+		const itemMissingPurpose = mockShoppingListItem({ name: itemName })
+		const { queryByText, rerender } = render(<ShoppingListItem item={itemMissingPurpose} checked={false} onToggle={jest.fn()} />)
+
+		expect(queryByText(itemName)?.closest('li')?.querySelectorAll('span')).toHaveLength(2)
+
+		const itemWhitespacePurpose = mockShoppingListItem({ name: itemName, purpose: '   \t  ' })
+		rerender(<ShoppingListItem item={itemWhitespacePurpose} checked={false} onToggle={jest.fn()} />)
+
+		expect(itemWhitespacePurpose.purpose?.trim()).toBe('')
+		expect(queryByText(itemName)?.closest('li')?.querySelectorAll('span')).toHaveLength(2)
+	})
+
 	it('Should render checkbox as unchecked when checked prop is false.', () => {
 		const item = mockShoppingListItem()
 		const { getByRole } = render(<ShoppingListItem item={item} checked={false} onToggle={jest.fn()} />)

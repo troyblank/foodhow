@@ -1,8 +1,8 @@
 import React from 'react'
-import { fireEvent, render, waitFor } from '@testing-library/react'
+import { fireEvent, render, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Chance from 'chance'
-import { AddListItemForm } from './addListItemForm'
+import { AddListItemForm, DEFAULT_PURPOSE_SUGGESTIONS } from './addListItemForm'
 import { TestWrapper, mockUser, mockShoppingListItem } from '../../../testing'
 import { useAuth } from '../../../contexts'
 import { useCreateShoppingListItem, useShoppingList } from '../../../data'
@@ -79,33 +79,46 @@ describe('Add list item form.', () => {
 	it('Treats a missing shopping list query as an empty list for purpose suggestions.', () => {
 		jest.mocked(useShoppingList).mockReturnValue({} as any)
 
-		const { container } = render(
+		render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
 		)
 
-		expect(container.querySelectorAll('#add-item-purpose-suggestions option')).toHaveLength(0)
+		expect(document.querySelectorAll('[role="option"]')).toHaveLength(0)
 	})
 
-	it('Renders the purpose input with suggestions from existing list items.', () => {
+	it('Shows purpose suggestions from existing list items when the field is opened.', async () => {
+		let purposeFromListA = chance.word()
+		let purposeFromListB = chance.word()
+		while (purposeFromListB === purposeFromListA) {
+			purposeFromListB = chance.word()
+		}
+
 		jest.mocked(useShoppingList).mockReturnValue({
 			data: [
-				mockShoppingListItem({ purpose: 'Zebra recipe' }),
-				mockShoppingListItem({ purpose: 'Apple pie' }),
+				mockShoppingListItem({ purpose: purposeFromListA }),
+				mockShoppingListItem({ purpose: purposeFromListB }),
 			],
 		} as any)
 
-		const { getByLabelText, container } = render(
+		const { getByLabelText, getByRole } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
 		)
 
-		const purposeInput = getByLabelText('Purpose')
-		expect(purposeInput).toHaveAttribute('list', 'add-item-purpose-suggestions')
+		await userEvent.click(getByLabelText('Purpose'))
 
-		const options = container.querySelectorAll('#add-item-purpose-suggestions option')
-		const values = Array.from(options).map((option) => option.getAttribute('value'))
-		expect(values).toEqual(['Apple pie', 'Zebra recipe'])
+		await waitFor(() => {
+			expect(getByRole('listbox')).toBeInTheDocument()
+		})
+
+		const optionLabels = within(getByRole('listbox'))
+			.getAllByRole('option')
+			.map((option) => option.textContent)
+		const expectedLabels = Array.from(
+			new Set([...DEFAULT_PURPOSE_SUGGESTIONS, purposeFromListA, purposeFromListB]),
+		).sort((labelA, labelB) => labelA.localeCompare(labelB))
+		expect(optionLabels).toEqual(expectedLabels)
 	})
 
 	it('Has the confirm button disabled when the form is empty.', () => {
@@ -261,12 +274,14 @@ describe('Add list item form.', () => {
 	})
 
 	it('Resets the purpose after cancel.', async () => {
+		const purposeBeforeCancel = chance.word()
+
 		const { getByLabelText, getByText, rerender } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
 		)
 
-		await userEvent.type(getByLabelText('Purpose'), 'Some recipe')
+		await userEvent.type(getByLabelText('Purpose'), purposeBeforeCancel)
 		await userEvent.click(getByText('Cancel'))
 
 		rerender(<AddListItemForm isShowing={true} onClose={jest.fn()} />)

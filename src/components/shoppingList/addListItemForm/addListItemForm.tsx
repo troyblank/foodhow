@@ -3,7 +3,7 @@ import { SHOPPING_ITEM_TYPE, SHOPPING_ITEM_STORE, type ShoppingItemType } from '
 import { useAuth } from '../../../contexts'
 import { useCreateShoppingListItem, useShoppingList } from '../../../data'
 import { getErrorMessage } from '../../../utils/apiCommunication'
-import { Modal, Input, Select } from '../..'
+import { AutoComplete, Modal, Input, Select } from '../..'
 import styles from './addListItemForm.module.css'
 
 type AddListItemFormProps = {
@@ -19,7 +19,7 @@ const shoppingItemTypeOptions = [
 	})),
 ]
 
-const PURPOSE_DATALIST_ID = 'add-item-purpose-suggestions'
+export const DEFAULT_PURPOSE_SUGGESTIONS = ['Bunnies', 'Lurita'] as const
 
 export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) => {
 	const { user } = useAuth()
@@ -30,7 +30,7 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 	const [selectedType, setSelectedType] = useState<ShoppingItemType | ''>('')
 
 	const purposeSuggestions = useMemo(() => {
-		const seen = new Set<string>()
+		const seen = new Set<string>(DEFAULT_PURPOSE_SUGGESTIONS)
 		for (const item of shoppingList) {
 			const purposeFromItem = item.purpose?.trim()
 			if (purposeFromItem) {
@@ -110,18 +110,13 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 				<label htmlFor={'add-item-purpose'} className={styles.label}>
 					Purpose
 				</label>
-				<Input
+				<AutoComplete
 					id={'add-item-purpose'}
 					name={'purpose'}
 					value={purpose}
 					onChange={setPurpose}
-					list={PURPOSE_DATALIST_ID}
+					options={purposeSuggestions}
 				/>
-				<datalist id={PURPOSE_DATALIST_ID}>
-					{purposeSuggestions.map((purposeSuggestion) => (
-						<option key={purposeSuggestion} value={purposeSuggestion} />
-					))}
-				</datalist>
 			</form>
 		</Modal>
 	)

@@ -41,6 +41,14 @@ describe('Input', () => {
 		expect(getByRole('textbox')).toHaveAttribute('name', name)
 	})
 
+	it('should render with the given list id when provided', () => {
+		const listId = chance.word()
+
+		const { getByRole } = render(<Input value={''} onChange={jest.fn()} list={listId} />)
+
+		expect(getByRole('combobox')).toHaveAttribute('list', listId)
+	})
+
 	it('should render with type text by default', () => {
 		const { getByRole } = render(<Input value={''} onChange={jest.fn()} />)
 

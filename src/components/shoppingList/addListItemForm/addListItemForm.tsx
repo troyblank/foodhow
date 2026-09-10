@@ -19,7 +19,7 @@ const shoppingItemTypeOptions = [
 	})),
 ]
 
-export const DEFAULT_PURPOSE_SUGGESTIONS = ['Bunnies', 'Lurita'] as const
+export const DEFAULT_PURPOSE_SUGGESTIONS = ['🐑', '💀'] as const
 
 export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) => {
 	const { user } = useAuth()

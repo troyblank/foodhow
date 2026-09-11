@@ -1,4 +1,6 @@
 .list-item-box {
+    --purpose-badge-size: 40px;
+
     flex: 1;
     position: relative;
     width: 100%;
@@ -48,6 +50,38 @@
     border-top: 1px solid var(--color-brown);
     padding-top: 5px;
     text-align: right;
+}
+
+/* Stops the floating badge from hanging outside the item on short single line rows. */
+.list-item-box--with-badge {
+    min-height: var(--purpose-badge-size);
+    align-items: center;
+}
+
+/* Keeps item text clear of the floating badge. */
+.list-item-box__text--with-badge {
+    padding-right: calc(var(--purpose-badge-size) + 4px);
+}
+
+/* Floats out of the layout flow so a single character purpose never changes the item height. */
+.list-item-box__purpose-badge {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--purpose-badge-size);
+    height: var(--purpose-badge-size);
+    box-sizing: border-box;
+    padding-left: 6px; /* Offsets the flat right edge so the character looks centered in the rounded half. */
+    border-radius: 50% 0 0 50%;
+    background: var(--color-brown);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+    font-size: 1.85rem;
+    line-height: 1;
+    pointer-events: none;
 }
 
 .list-item-box__checkbox {

@@ -30,6 +30,27 @@ describe('ShoppingListItem', () => {
 		expect(getByText(purposeLabel)).toBeInTheDocument()
 	})
 
+	it('Shows a single character purpose, such as an emoji, as a large badge floating over the item.', () => {
+		const item = mockShoppingListItem({ name: chance.word(), purpose: '🐑' })
+		const { getByText } = render(<ShoppingListItem item={item} checked={false} onToggle={jest.fn()} />)
+
+		const badge = getByText('🐑')
+
+		expect(badge).toHaveClass('list-item-box__purpose-badge')
+		expect(badge.closest('label')).toBeNull()
+	})
+
+	it('Keeps a multiple character purpose as the small text line beneath the item name.', () => {
+		const purposeLabel = chance.word({ length: 5 })
+		const item = mockShoppingListItem({ name: chance.word(), purpose: purposeLabel })
+		const { getByText } = render(<ShoppingListItem item={item} checked={false} onToggle={jest.fn()} />)
+
+		const purposeElement = getByText(purposeLabel)
+
+		expect(purposeElement).toHaveClass('list-item-box__purpose')
+		expect(purposeElement.closest('label')).not.toBeNull()
+	})
+
 	it('Shows nothing for purpose when it is missing or only whitespace.', () => {
 		const itemName = chance.word()
 		const itemMissingPurpose = mockShoppingListItem({ name: itemName })

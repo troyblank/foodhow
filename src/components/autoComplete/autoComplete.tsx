@@ -19,6 +19,7 @@ export const AutoComplete = ({
 	options,
 }: AutoCompleteProps) => (
 	<MuiAutocomplete
+		id={id}
 		className={styles.autocomplete}
 		freeSolo={true}
 		options={[...options]}
@@ -37,10 +38,12 @@ export const AutoComplete = ({
 				{...params}
 				className={styles.textField}
 				name={name}
-				inputProps={{
-					...params.inputProps,
-					id,
-					'data-1p-ignore': true,
+				slotProps={{
+					...params.slotProps,
+					htmlInput: {
+						...params.slotProps.htmlInput,
+						'data-1p-ignore': true,
+					},
 				}}
 			/>
 		)}

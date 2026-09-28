@@ -1,7 +1,14 @@
 import Chance from 'chance'
-import { mockShoppingList, mockUser } from '../../testing'
+import { mockShoppingList, mockShoppingListLegend, mockShoppingListLegendItem, mockUser } from '../../testing'
 import { getAndValidateResponseData } from '../../utils/apiCommunication'
-import { createShoppingListItem, deleteShoppingListItems, getShoppingList } from './shoppingList'
+import {
+	createShoppingListItem,
+	deleteShoppingListItems,
+	deleteShoppingListLegendItem,
+	getShoppingList,
+	getShoppingListLegend,
+	saveShoppingListLegendItem,
+} from './shoppingList'
 import { SHOPPING_ITEM_STORE, SHOPPING_ITEM_TYPE, type NewShoppingListItem } from '../../types'
 
 jest.mock('../../utils/apiCommunication')
@@ -37,5 +44,28 @@ describe('Balance', () => {
 		jest.mocked(getAndValidateResponseData).mockResolvedValue({ data: {} })
 
 		await expect(deleteShoppingListItems(mockUser().jwtToken, itemIds)).resolves.toBeUndefined()
+	})
+
+	it('Fetches the shopping list legend from the server.', async () => {
+		const legend = mockShoppingListLegend()
+
+		jest.mocked(getAndValidateResponseData).mockResolvedValue({ data: { legend } })
+
+		expect(await getShoppingListLegend(mockUser().jwtToken)).toEqual(legend)
+	})
+
+	it('Saves a new legend item and returns the saved item from the server.', async () => {
+		const savedLegendItem = mockShoppingListLegendItem()
+		const { emoji, name } = savedLegendItem
+
+		jest.mocked(getAndValidateResponseData).mockResolvedValue({ data: { legendItem: savedLegendItem } })
+
+		expect(await saveShoppingListLegendItem(mockUser().jwtToken, { emoji, name })).toEqual(savedLegendItem)
+	})
+
+	it('Deletes the given legend item.', async () => {
+		jest.mocked(getAndValidateResponseData).mockResolvedValue({ data: {} })
+
+		await expect(deleteShoppingListLegendItem(mockUser().jwtToken, chance.natural())).resolves.toBeUndefined()
 	})
 })

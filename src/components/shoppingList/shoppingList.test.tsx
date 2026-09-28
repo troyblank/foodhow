@@ -19,10 +19,17 @@ jest.mock('../../data', () => ({
 		mutateAsync: jest.fn(),
 		isPending: false,
 	})),
+	useShoppingListLegend: jest.fn(() => ({
+		data: [],
+	})),
 }))
 
 jest.mock('../../contexts', () => ({
 	useAuth: jest.fn(),
+}))
+
+jest.mock('./legend', () => ({
+	Legend: () => <section aria-label={'Legend'} />,
 }))
 
 describe('Shopping List', () => {
@@ -93,6 +100,48 @@ describe('Shopping List', () => {
 			const uncheckedCheckbox = getByRole('checkbox', { name: `Mark ${uncheckedItemName} as checked` })
 			expect(uncheckedCheckbox).not.toBeChecked()
 		})
+	})
+
+	it('Shows the legend section at the bottom, after the list items.', async () => {
+		const itemName = chance.word()
+
+		jest.mocked(useAuth).mockReturnValue({
+			user: mockUser(),
+			attemptToSignIn: jest.fn(),
+		})
+
+		jest.mocked(useShoppingList).mockReturnValue({
+			isLoading: false,
+			isError: false,
+			data: [mockShoppingListItem({ name: itemName })],
+			error: null,
+		} as any)
+
+		const { getByText, getByLabelText } = render(<ShoppingList />, { wrapper: TestWrapper })
+
+		const listItem = getByText(itemName)
+		const legend = getByLabelText('Legend')
+
+		expect(legend).toBeInTheDocument()
+		expect(listItem.compareDocumentPosition(legend) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+	})
+
+	it('Shows the legend section even when there is nothing to shop for.', async () => {
+		jest.mocked(useAuth).mockReturnValue({
+			user: mockUser(),
+			attemptToSignIn: jest.fn(),
+		})
+
+		jest.mocked(useShoppingList).mockReturnValue({
+			isLoading: false,
+			isError: false,
+			data: [],
+			error: null,
+		} as any)
+
+		const { getByLabelText } = render(<ShoppingList />, { wrapper: TestWrapper })
+
+		expect(getByLabelText('Legend')).toBeInTheDocument()
 	})
 
 	it('Should render a no items message.', async () => {

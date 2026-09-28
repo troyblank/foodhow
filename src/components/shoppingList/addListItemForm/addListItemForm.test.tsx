@@ -1,12 +1,12 @@
 import React from 'react'
-import { fireEvent, render, waitFor, within } from '@testing-library/react'
+import { fireEvent, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Chance from 'chance'
-import { AddListItemForm, DEFAULT_PURPOSE_SUGGESTIONS } from './addListItemForm'
-import { TestWrapper, mockUser, mockShoppingListItem } from '../../../testing'
+import { AddListItemForm } from './addListItemForm'
+import { TestWrapper, mockUser, mockShoppingListLegendItem } from '../../../testing'
 import { useAuth } from '../../../contexts'
-import { useCreateShoppingListItem, useShoppingList } from '../../../data'
-import { SHOPPING_ITEM_TYPE, SHOPPING_ITEM_STORE } from '../../../types'
+import { useCreateShoppingListItem, useShoppingListLegend } from '../../../data'
+import { SHOPPING_ITEM_TYPE, SHOPPING_ITEM_STORE, type ShoppingItemType } from '../../../types'
 
 jest.mock('../../../contexts', () => ({
 	useAuth: jest.fn(),
@@ -14,12 +14,23 @@ jest.mock('../../../contexts', () => ({
 
 jest.mock('../../../data', () => ({
 	useCreateShoppingListItem: jest.fn(),
-	useShoppingList: jest.fn(),
+	useShoppingListLegend: jest.fn(),
 }))
 
 describe('Add list item form.', () => {
 	const chance = new Chance()
 	const mockMutateAsync = jest.fn()
+	const legendItem = mockShoppingListLegendItem({ id: 1, emoji: '🐑', name: 'Lamb' })
+
+	const fillValidForm = async (
+		getByLabelText: (label: string) => HTMLElement,
+		itemName = 'Milk',
+		type: ShoppingItemType = SHOPPING_ITEM_TYPE.perishable,
+	) => {
+		await userEvent.type(getByLabelText('Name'), itemName)
+		await userEvent.selectOptions(getByLabelText('Type'), type)
+		await userEvent.selectOptions(getByLabelText('Purpose'), String(legendItem.id))
+	}
 
 	beforeEach(() => {
 		jest.clearAllMocks()
@@ -30,8 +41,8 @@ describe('Add list item form.', () => {
 			attemptToSignIn: jest.fn(),
 		})
 
-		jest.mocked(useShoppingList).mockReturnValue({
-			data: [],
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			data: [legendItem],
 		} as any)
 
 		jest.mocked(useCreateShoppingListItem).mockReturnValue({
@@ -76,49 +87,40 @@ describe('Add list item form.', () => {
 		expect(getByLabelText('Type')).toBeInTheDocument()
 	})
 
-	it('Treats a missing shopping list query as an empty list for purpose suggestions.', () => {
-		jest.mocked(useShoppingList).mockReturnValue({} as any)
+	it('Offers only the legend emojis as purpose choices.', () => {
+		const laterItem = mockShoppingListLegendItem({ id: 3, emoji: '💀', name: 'Bones' })
+		const earlierItem = mockShoppingListLegendItem({ id: 2, emoji: '🥦', name: 'Veg' })
 
-		render(
-			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
-			{ wrapper: TestWrapper },
-		)
-
-		expect(document.querySelectorAll('[role="option"]')).toHaveLength(0)
-	})
-
-	it('Shows purpose suggestions from existing list items when the field is opened.', async () => {
-		let purposeFromListA = chance.word()
-		let purposeFromListB = chance.word()
-		while (purposeFromListB === purposeFromListA) {
-			purposeFromListB = chance.word()
-		}
-
-		jest.mocked(useShoppingList).mockReturnValue({
-			data: [
-				mockShoppingListItem({ purpose: purposeFromListA }),
-				mockShoppingListItem({ purpose: purposeFromListB }),
-			],
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			data: [laterItem, earlierItem],
 		} as any)
 
-		const { getByLabelText, getByRole } = render(
+		const { getByLabelText } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
 		)
 
-		await userEvent.click(getByLabelText('Purpose'))
+		const purposeSelect = getByLabelText('Purpose')
+		const optionLabels = Array.from(purposeSelect.querySelectorAll('option')).map((option) => option.textContent)
 
-		await waitFor(() => {
-			expect(getByRole('listbox')).toBeInTheDocument()
-		})
+		expect(optionLabels).toEqual([
+			'Select a purpose...',
+			`${earlierItem.emoji} ${earlierItem.name}`,
+			`${laterItem.emoji} ${laterItem.name}`,
+		])
+	})
 
-		const optionLabels = within(getByRole('listbox'))
-			.getAllByRole('option')
-			.map((option) => option.textContent)
-		const expectedLabels = Array.from(
-			new Set([...DEFAULT_PURPOSE_SUGGESTIONS, purposeFromListA, purposeFromListB]),
-		).sort((labelA, labelB) => labelA.localeCompare(labelB))
-		expect(optionLabels).toEqual(expectedLabels)
+	it('Treats a legend that has not loaded yet as having no purpose choices.', () => {
+		jest.mocked(useShoppingListLegend).mockReturnValue({} as any)
+
+		const { getByLabelText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper },
+		)
+
+		const optionLabels = Array.from(getByLabelText('Purpose').querySelectorAll('option')).map((option) => option.textContent)
+
+		expect(optionLabels).toEqual(['No purposes in the legend yet'])
 	})
 
 	it('Has the confirm button disabled when the form is empty.', () => {
@@ -152,7 +154,18 @@ describe('Add list item form.', () => {
 		expect(getByText('Confirm')).toBeDisabled()
 	})
 
-	it('Enables the confirm button when the name and type are filled.', async () => {
+	it('Keeps the confirm button disabled when only the purpose is selected.', async () => {
+		const { getByLabelText, getByText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper },
+		)
+
+		await userEvent.selectOptions(getByLabelText('Purpose'), String(legendItem.id))
+
+		expect(getByText('Confirm')).toBeDisabled()
+	})
+
+	it('Keeps the confirm button disabled when the name and type are filled but no purpose is selected.', async () => {
 		const { getByLabelText, getByText } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
@@ -161,21 +174,30 @@ describe('Add list item form.', () => {
 		await userEvent.type(getByLabelText('Name'), 'Milk')
 		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.perishable)
 
+		expect(getByText('Confirm')).toBeDisabled()
+	})
+
+	it('Enables the confirm button when the name, type, and purpose are filled.', async () => {
+		const { getByLabelText, getByText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper },
+		)
+
+		await fillValidForm(getByLabelText)
+
 		expect(getByText('Confirm')).not.toBeDisabled()
 	})
 
-	it('Sends the new item with the correct name, amount, and type on confirm.', async () => {
+	it('Sends the new item with the chosen legend emoji as its purpose.', async () => {
 		const itemName = chance.word()
 		const selectedType = SHOPPING_ITEM_TYPE.produce
-		const onClose = jest.fn()
 
 		const { getByLabelText, getByText } = render(
-			<AddListItemForm isShowing={true} onClose={onClose} />,
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
 		)
 
-		await userEvent.type(getByLabelText('Name'), `  ${itemName}  `)
-		await userEvent.selectOptions(getByLabelText('Type'), selectedType)
+		await fillValidForm(getByLabelText, `  ${itemName}  `, selectedType)
 		await userEvent.click(getByText('Confirm'))
 
 		await waitFor(() => {
@@ -184,33 +206,7 @@ describe('Add list item form.', () => {
 				amount: 1,
 				store: SHOPPING_ITEM_STORE.unspecified,
 				type: selectedType,
-			})
-		})
-	})
-
-	it('Includes purpose in the new item when the purpose field is filled.', async () => {
-		const itemName = chance.word()
-		const purposeLabel = chance.word()
-		const selectedType = SHOPPING_ITEM_TYPE.produce
-		const onClose = jest.fn()
-
-		const { getByLabelText, getByText } = render(
-			<AddListItemForm isShowing={true} onClose={onClose} />,
-			{ wrapper: TestWrapper },
-		)
-
-		await userEvent.type(getByLabelText('Name'), itemName)
-		await userEvent.type(getByLabelText('Purpose'), purposeLabel)
-		await userEvent.selectOptions(getByLabelText('Type'), selectedType)
-		await userEvent.click(getByText('Confirm'))
-
-		await waitFor(() => {
-			expect(mockMutateAsync).toHaveBeenCalledWith({
-				name: itemName,
-				amount: 1,
-				store: SHOPPING_ITEM_STORE.unspecified,
-				type: selectedType,
-				purpose: purposeLabel,
+				purpose: legendItem.emoji,
 			})
 		})
 	})
@@ -223,8 +219,7 @@ describe('Add list item form.', () => {
 			{ wrapper: TestWrapper },
 		)
 
-		await userEvent.type(getByLabelText('Name'), 'Milk')
-		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.perishable)
+		await fillValidForm(getByLabelText)
 		await userEvent.click(getByText('Confirm'))
 
 		await waitFor(() => {
@@ -274,14 +269,12 @@ describe('Add list item form.', () => {
 	})
 
 	it('Resets the purpose after cancel.', async () => {
-		const purposeBeforeCancel = chance.word()
-
 		const { getByLabelText, getByText, rerender } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
 		)
 
-		await userEvent.type(getByLabelText('Purpose'), purposeBeforeCancel)
+		await userEvent.selectOptions(getByLabelText('Purpose'), String(legendItem.id))
 		await userEvent.click(getByText('Cancel'))
 
 		rerender(<AddListItemForm isShowing={true} onClose={jest.fn()} />)
@@ -295,8 +288,7 @@ describe('Add list item form.', () => {
 			{ wrapper: TestWrapper },
 		)
 
-		await userEvent.type(getByLabelText('Name'), '   ')
-		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.produce)
+		await fillValidForm(getByLabelText, '   ')
 
 		expect(getByText('Confirm')).toBeDisabled()
 	})
@@ -312,8 +304,7 @@ describe('Add list item form.', () => {
 			{ wrapper: TestWrapper },
 		)
 
-		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.produce)
-		await userEvent.type(getByLabelText('Name'), 'Milk')
+		await fillValidForm(getByLabelText)
 		fireEvent.submit(container.querySelector('form') as HTMLFormElement)
 
 		expect(mockMutateAsync).not.toHaveBeenCalled()
@@ -322,15 +313,13 @@ describe('Add list item form.', () => {
 	it('Submits through the form element when the form receives a submit event and the fields are valid.', async () => {
 		const itemName = chance.word()
 		const selectedType = SHOPPING_ITEM_TYPE.frozen
-		const onClose = jest.fn()
 
 		const { getByLabelText, container } = render(
-			<AddListItemForm isShowing={true} onClose={onClose} />,
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
 		)
 
-		await userEvent.selectOptions(getByLabelText('Type'), selectedType)
-		await userEvent.type(getByLabelText('Name'), itemName)
+		await fillValidForm(getByLabelText, itemName, selectedType)
 		fireEvent.submit(container.querySelector('form') as HTMLFormElement)
 
 		await waitFor(() => {
@@ -339,6 +328,7 @@ describe('Add list item form.', () => {
 				amount: 1,
 				store: SHOPPING_ITEM_STORE.unspecified,
 				type: selectedType,
+				purpose: legendItem.emoji,
 			})
 		})
 	})
@@ -354,13 +344,14 @@ describe('Add list item form.', () => {
 		expect(mockMutateAsync).not.toHaveBeenCalled()
 	})
 
-	it('Has the placeholder option selected by default.', () => {
+	it('Has the placeholder options selected by default.', () => {
 		const { getByLabelText } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
 		)
 
 		expect(getByLabelText('Type')).toHaveValue('')
+		expect(getByLabelText('Purpose')).toHaveValue('')
 	})
 
 	it('Shows an error message when adding an item fails.', async () => {
@@ -374,8 +365,7 @@ describe('Add list item form.', () => {
 			{ wrapper: TestWrapper },
 		)
 
-		await userEvent.type(getByLabelText('Name'), 'Milk')
-		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.perishable)
+		await fillValidForm(getByLabelText)
 		await userEvent.click(getByText('Confirm'))
 
 		await waitFor(() => {

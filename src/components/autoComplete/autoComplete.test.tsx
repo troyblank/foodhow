@@ -2,7 +2,7 @@ import React from 'react'
 import { render, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Chance from 'chance'
-import { AutoComplete } from './autoComplete'
+import { AutoComplete } from '.'
 
 describe('AutoComplete', () => {
 	const chance = new Chance()

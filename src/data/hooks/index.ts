@@ -1,3 +1,6 @@
 export * from './createShoppingListItem'
 export * from './deleteShoppingListItems'
+export * from './deleteShoppingListLegendItem'
 export * from './getShoppingList'
+export * from './getShoppingListLegend'
+export * from './saveShoppingListLegendItem'

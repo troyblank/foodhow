@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react'
 import { SHOPPING_ITEM_TYPE, SHOPPING_ITEM_STORE, type ShoppingItemType } from '../../../types/data/shoppingList'
 import { useAuth } from '../../../contexts'
-import { useCreateShoppingListItem, useShoppingList } from '../../../data'
+import { useCreateShoppingListItem, useShoppingListLegend } from '../../../data'
 import { getErrorMessage } from '../../../utils/apiCommunication'
-import { AutoComplete, Modal, Input, Select } from '../..'
+import { Modal, Input, Select } from '../..'
 import styles from './addListItemForm.module.css'
 
 type AddListItemFormProps = {
@@ -19,42 +19,43 @@ const shoppingItemTypeOptions = [
 	})),
 ]
 
-export const DEFAULT_PURPOSE_SUGGESTIONS = ['🐑', '💀'] as const
-
 export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) => {
 	const { user } = useAuth()
-	const { data: shoppingList = [] } = useShoppingList(user)
+	const { data: legend = [] } = useShoppingListLegend(user)
 	const { mutateAsync: createItem, isPending } = useCreateShoppingListItem(user)
 	const [name, setName] = useState('')
-	const [purpose, setPurpose] = useState('')
+	const [selectedPurposeId, setSelectedPurposeId] = useState('')
 	const [selectedType, setSelectedType] = useState<ShoppingItemType | ''>('')
 
-	const purposeSuggestions = useMemo(() => {
-		const seen = new Set<string>(DEFAULT_PURPOSE_SUGGESTIONS)
-		for (const item of shoppingList) {
-			const purposeFromItem = item.purpose?.trim()
-			if (purposeFromItem) {
-				seen.add(purposeFromItem)
-			}
-		}
-		return Array.from(seen).sort((itemA, itemB) => itemA.localeCompare(itemB))
-	}, [shoppingList])
+	// Purposes come from the legend so every item on the list uses an emoji the legend explains.
+	const purposeOptions = useMemo(() => {
+		const sortedLegend = [...legend].sort((itemA, itemB) => itemA.id - itemB.id)
+
+		return [
+			{ value: '', label: 0 === sortedLegend.length ? 'No purposes in the legend yet' : 'Select a purpose...' },
+			...sortedLegend.map((item) => ({
+				value: String(item.id),
+				label: `${item.emoji} ${item.name}`,
+			})),
+		]
+	}, [legend])
+
+	const selectedPurpose = legend.find((item) => String(item.id) === selectedPurposeId)
 
 	const resetForm = () => {
 		setName('')
-		setPurpose('')
+		setSelectedPurposeId('')
 		setSelectedType('')
 	}
 
 	const onConfirm = async () => {
 		try {
-			const trimmedPurpose = purpose.trim()
 			await createItem({
 				name: name.trim(),
 				amount: 1,
 				store: SHOPPING_ITEM_STORE.unspecified,
 				type: selectedType as ShoppingItemType,
-				...(trimmedPurpose ? { purpose: trimmedPurpose } : {}),
+				purpose: selectedPurpose.emoji,
 			})
 			onClose()
 			resetForm()
@@ -70,7 +71,8 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 
 	const isNameEmpty = 0 === name.trim().length
 	const isTypeEmpty = '' === selectedType
-	const isFormInvalid = isNameEmpty || isTypeEmpty
+	const isPurposeEmpty = !selectedPurpose
+	const isFormInvalid = isNameEmpty || isTypeEmpty || isPurposeEmpty
 
 	const onSubmit = (event: React.FormEvent) => {
 		event.preventDefault()
@@ -110,12 +112,11 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 				<label htmlFor={'add-item-purpose'} className={styles.label}>
 					Purpose
 				</label>
-				<AutoComplete
+				<Select
 					id={'add-item-purpose'}
-					name={'purpose'}
-					value={purpose}
-					onChange={setPurpose}
-					options={purposeSuggestions}
+					value={selectedPurposeId}
+					onChange={setSelectedPurposeId}
+					options={purposeOptions}
 				/>
 			</form>
 		</Modal>

@@ -6,6 +6,7 @@ import { Button, FloatingButton, Modal, HeaderMessage, Spinner } from '..'
 import { ShoppingListItem } from './shoppingListItem'
 import { UncheckedItems } from './uncheckedItems'
 import { AddListItemForm } from './addListItemForm'
+import { Legend } from './legend'
 import styles from './shoppingList.module.css'
 
 const STORAGE_KEY = 'shoppingListCheckedShoppingListItems'
@@ -123,6 +124,7 @@ export const ShoppingList = () => {
 					))}
 				</ul>
 			)}
+			<Legend />
 			<Modal
 				message={'Are you sure you want to delete the checked items?'}
 				isShowing={isShowingConfirmModal}

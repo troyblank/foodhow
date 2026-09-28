@@ -31,3 +31,15 @@ export type ShoppingListItem = NewShoppingListItem & {
 }
 
 export type ShoppingList = ShoppingListItem[]
+
+export type NewShoppingListLegendItem = {
+    emoji: string,
+    name: string,
+}
+
+export type ShoppingListLegendItem = NewShoppingListLegendItem & {
+    id: number,
+    user: string,
+}
+
+export type ShoppingListLegend = ShoppingListLegendItem[]

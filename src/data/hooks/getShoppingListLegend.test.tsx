@@ -1,7 +1,7 @@
 import { renderHook, waitFor } from '@testing-library/react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import React from 'react'
-import { TestWrapper, mockShoppingListLegend, mockUser } from '../../testing'
+import { TestWrapper, mockShoppingListLegend, mockShoppingListLegendItem, mockUser } from '../../testing'
 import { getShoppingListLegend } from '../calls'
 import { useShoppingListLegend } from './getShoppingListLegend'
 import { getClientJwt } from '../../utils/amplifyClient'
@@ -41,8 +41,28 @@ describe('useShoppingListLegend', () => {
 			expect(result.current.isSuccess).toBe(true)
 		})
 
-		expect(result.current.data).toEqual(legend)
+		expect(result.current.data).toEqual([...legend].sort((itemA, itemB) => itemA.id - itemB.id))
 		expect(getShoppingListLegend).toHaveBeenCalledWith(user.jwtToken)
+	})
+
+	it('Returns legend items in the order they were created.', async () => {
+		const user = mockUser()
+		const firstCreated = mockShoppingListLegendItem({ id: 1 })
+		const secondCreated = mockShoppingListLegendItem({ id: 2 })
+		const thirdCreated = mockShoppingListLegendItem({ id: 3 })
+
+		jest.mocked(getClientJwt).mockResolvedValue(user.jwtToken)
+		jest.mocked(getShoppingListLegend).mockResolvedValue([thirdCreated, firstCreated, secondCreated])
+
+		const { result } = renderHook(() => useShoppingListLegend(user), {
+			wrapper: TestWrapper,
+		})
+
+		await waitFor(() => {
+			expect(result.current.isSuccess).toBe(true)
+		})
+
+		expect(result.current.data).toEqual([firstCreated, secondCreated, thirdCreated])
 	})
 
 	it('Shows loading while the legend is being fetched.', () => {

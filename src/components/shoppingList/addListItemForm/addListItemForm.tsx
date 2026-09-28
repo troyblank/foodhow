@@ -21,24 +21,29 @@ const shoppingItemTypeOptions = [
 
 export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) => {
 	const { user } = useAuth()
-	const { data: legend = [] } = useShoppingListLegend(user)
+	const { data: legend = [], isError: isLegendError } = useShoppingListLegend(user)
 	const { mutateAsync: createItem, isPending } = useCreateShoppingListItem(user)
 	const [name, setName] = useState('')
 	const [selectedPurposeId, setSelectedPurposeId] = useState('')
 	const [selectedType, setSelectedType] = useState<ShoppingItemType | ''>('')
 
 	// Purposes come from the legend so every item on the list uses an emoji the legend explains.
+	// Picking one is optional so a new user can add items before the legend has anything in it.
 	const purposeOptions = useMemo(() => {
-		const sortedLegend = [...legend].sort((itemA, itemB) => itemA.id - itemB.id)
+		const getPlaceholderLabel = () => {
+			if (isLegendError) return 'Couldn\'t load the legend (optional)'
+			if (0 === legend.length) return 'No purposes in the legend yet (optional)'
+			return 'No purpose (optional)'
+		}
 
 		return [
-			{ value: '', label: 0 === sortedLegend.length ? 'No purposes in the legend yet' : 'Select a purpose...' },
-			...sortedLegend.map((item) => ({
+			{ value: '', label: getPlaceholderLabel() },
+			...legend.map((item) => ({
 				value: String(item.id),
 				label: `${item.emoji} ${item.name}`,
 			})),
 		]
-	}, [legend])
+	}, [legend, isLegendError])
 
 	const selectedPurpose = legend.find((item) => String(item.id) === selectedPurposeId)
 
@@ -55,7 +60,7 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 				amount: 1,
 				store: SHOPPING_ITEM_STORE.unspecified,
 				type: selectedType as ShoppingItemType,
-				purpose: selectedPurpose.emoji,
+				...(selectedPurpose ? { purpose: selectedPurpose.emoji } : {}),
 			})
 			onClose()
 			resetForm()
@@ -71,8 +76,7 @@ export const AddListItemForm = ({ isShowing, onClose }: AddListItemFormProps) =>
 
 	const isNameEmpty = 0 === name.trim().length
 	const isTypeEmpty = '' === selectedType
-	const isPurposeEmpty = !selectedPurpose
-	const isFormInvalid = isNameEmpty || isTypeEmpty || isPurposeEmpty
+	const isFormInvalid = isNameEmpty || isTypeEmpty
 
 	const onSubmit = (event: React.FormEvent) => {
 		event.preventDefault()

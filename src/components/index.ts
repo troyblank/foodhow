@@ -1,6 +1,5 @@
 export * from './button'
 export * from './directions'
-export * from './autoComplete'
 export * from './floatingButton'
 export * from './guide'
 export * from './head'

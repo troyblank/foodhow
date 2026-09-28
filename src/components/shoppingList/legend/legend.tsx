@@ -1,15 +1,14 @@
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 import { type ShoppingListLegendItem } from '../../../types'
 import { useAuth } from '../../../contexts'
 import { useDeleteShoppingListLegendItem, useSaveShoppingListLegendItem, useShoppingListLegend } from '../../../data'
-import { getErrorMessage } from '../../../utils/apiCommunication'
-import { isAShoppingListLegendEmoji } from '../../../utils/shoppingListLegend'
+import { getErrorMessage, isAShoppingListLegendEmoji } from '../../../utils'
 import { Input, Modal, Spinner } from '../..'
 import styles from './legend.module.css'
 
 export const Legend = () => {
 	const { user } = useAuth()
-	const { isLoading, data: legend = [] } = useShoppingListLegend(user)
+	const { isLoading, isError, data: legend = [], refetch } = useShoppingListLegend(user)
 	const { mutateAsync: saveLegendItem, isPending: isSaving } = useSaveShoppingListLegendItem(user)
 	const { mutate: deleteLegendItem, isPending: isDeleting } = useDeleteShoppingListLegendItem(user)
 	const [emoji, setEmoji] = useState('')
@@ -17,10 +16,10 @@ export const Legend = () => {
 	const [isAdding, setIsAdding] = useState(false)
 	const [itemToDelete, setItemToDelete] = useState<ShoppingListLegendItem | null>(null)
 
-	// Ids are creation timestamps, so this keeps the legend in the order items were added.
-	const sortedLegend = useMemo(() => [...legend].sort((itemA, itemB) => itemA.id - itemB.id), [legend])
+	// List items store the emoji alone, so a second entry with the same emoji can't be told apart on the list.
+	const isEmojiAlreadyUsed = legend.some((item) => item.emoji === emoji.trim())
 
-	const isFormInvalid = !isAShoppingListLegendEmoji(emoji) || 0 === name.trim().length
+	const isFormInvalid = !isAShoppingListLegendEmoji(emoji) || 0 === name.trim().length || isEmojiAlreadyUsed
 
 	const resetForm = () => {
 		setEmoji('')
@@ -76,12 +75,20 @@ export const Legend = () => {
 					<Spinner size={'small'} color={'brown'} />
 				</div>
 			)}
-			{!isLoading && 0 === sortedLegend.length && (
+			{isError && (
+				<div className={styles.legend__error} role={'alert'}>
+					<p className={styles['legend__error-message']}>{'Couldn\'t load the legend.'}</p>
+					<button type={'button'} className={styles.legend__retry} onClick={() => refetch()}>
+						Try again
+					</button>
+				</div>
+			)}
+			{!isLoading && !isError && 0 === legend.length && (
 				<p className={styles['legend__empty-message']}>No legend items yet.</p>
 			)}
-			{sortedLegend.length > 0 && (
+			{legend.length > 0 && (
 				<ul className={styles.legend__items}>
-					{sortedLegend.map((item) => (
+					{legend.map((item) => (
 						<li key={item.id} className={styles.legend__item}>
 							<span className={styles.legend__emoji} aria-hidden={'true'}>{item.emoji}</span>
 							<span className={styles.legend__name}>{item.name}</span>

@@ -70,6 +70,37 @@
     opacity: 0.8;
 }
 
+.legend__error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.legend__error-message {
+    margin: 0;
+    color: var(--color-brown);
+    font-style: italic;
+}
+
+.legend__retry {
+    flex-shrink: 0;
+    padding: 4px 10px;
+    border: 1px solid var(--color-brown);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--color-brown);
+    font: inherit;
+    cursor: pointer;
+}
+
+.legend__retry:hover,
+.legend__retry:focus-visible {
+    background: var(--color-brown);
+    color: var(--color-cream);
+    outline: none;
+}
+
 .legend__items {
     display: flex;
     flex-direction: column;

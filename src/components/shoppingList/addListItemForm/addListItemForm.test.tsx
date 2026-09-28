@@ -92,7 +92,7 @@ describe('Add list item form.', () => {
 		const earlierItem = mockShoppingListLegendItem({ id: 2, emoji: '🥦', name: 'Veg' })
 
 		jest.mocked(useShoppingListLegend).mockReturnValue({
-			data: [laterItem, earlierItem],
+			data: [earlierItem, laterItem],
 		} as any)
 
 		const { getByLabelText } = render(
@@ -104,7 +104,7 @@ describe('Add list item form.', () => {
 		const optionLabels = Array.from(purposeSelect.querySelectorAll('option')).map((option) => option.textContent)
 
 		expect(optionLabels).toEqual([
-			'Select a purpose...',
+			'No purpose (optional)',
 			`${earlierItem.emoji} ${earlierItem.name}`,
 			`${laterItem.emoji} ${laterItem.name}`,
 		])
@@ -120,7 +120,40 @@ describe('Add list item form.', () => {
 
 		const optionLabels = Array.from(getByLabelText('Purpose').querySelectorAll('option')).map((option) => option.textContent)
 
-		expect(optionLabels).toEqual(['No purposes in the legend yet'])
+		expect(optionLabels).toEqual(['No purposes in the legend yet (optional)'])
+	})
+
+	it('Tells the user the legend failed to load instead of saying it has no purposes.', () => {
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			isError: true,
+			data: undefined,
+		} as any)
+
+		const { getByLabelText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper },
+		)
+
+		const optionLabels = Array.from(getByLabelText('Purpose').querySelectorAll('option')).map((option) => option.textContent)
+
+		expect(optionLabels).toEqual(['Couldn\'t load the legend (optional)'])
+	})
+
+	it('Still lets the user add an item without a purpose when the legend failed to load.', async () => {
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			isError: true,
+			data: undefined,
+		} as any)
+
+		const { getByLabelText, getByText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper },
+		)
+
+		await userEvent.type(getByLabelText('Name'), 'Milk')
+		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.perishable)
+
+		expect(getByText('Confirm')).not.toBeDisabled()
 	})
 
 	it('Has the confirm button disabled when the form is empty.', () => {
@@ -165,7 +198,7 @@ describe('Add list item form.', () => {
 		expect(getByText('Confirm')).toBeDisabled()
 	})
 
-	it('Keeps the confirm button disabled when the name and type are filled but no purpose is selected.', async () => {
+	it('Enables the confirm button when the name and type are filled but no purpose is selected.', async () => {
 		const { getByLabelText, getByText } = render(
 			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
 			{ wrapper: TestWrapper },
@@ -174,7 +207,46 @@ describe('Add list item form.', () => {
 		await userEvent.type(getByLabelText('Name'), 'Milk')
 		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.perishable)
 
-		expect(getByText('Confirm')).toBeDisabled()
+		expect(getByText('Confirm')).not.toBeDisabled()
+	})
+
+	it('Lets a user add an item when the legend is still empty.', async () => {
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			data: [],
+		} as any)
+
+		const { getByLabelText, getByText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper },
+		)
+
+		await userEvent.type(getByLabelText('Name'), 'Milk')
+		await userEvent.selectOptions(getByLabelText('Type'), SHOPPING_ITEM_TYPE.perishable)
+
+		expect(getByText('Confirm')).not.toBeDisabled()
+	})
+
+	it('Sends the new item without a purpose when none is selected.', async () => {
+		const itemName = chance.word()
+		const selectedType = SHOPPING_ITEM_TYPE.produce
+
+		const { getByLabelText, getByText } = render(
+			<AddListItemForm isShowing={true} onClose={jest.fn()} />,
+			{ wrapper: TestWrapper },
+		)
+
+		await userEvent.type(getByLabelText('Name'), itemName)
+		await userEvent.selectOptions(getByLabelText('Type'), selectedType)
+		await userEvent.click(getByText('Confirm'))
+
+		await waitFor(() => {
+			expect(mockMutateAsync).toHaveBeenCalledWith({
+				name: itemName,
+				amount: 1,
+				store: SHOPPING_ITEM_STORE.unspecified,
+				type: selectedType,
+			})
+		})
 	})
 
 	it('Enables the confirm button when the name, type, and purpose are filled.', async () => {

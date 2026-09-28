@@ -1,5 +1,5 @@
 // Emoji are often several code units long, so count user perceived characters instead of string length.
-const countCharacters = (value: string): number => Array.from(
+export const countCharacters = (value: string): number => Array.from(
 	new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(value),
 ).length
 

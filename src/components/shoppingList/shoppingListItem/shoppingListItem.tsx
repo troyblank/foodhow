@@ -2,6 +2,7 @@ import React from 'react'
 import dompurify from 'dompurify'
 import classnames from 'classnames'
 import { type ShoppingListItem as ShoppingListItemType } from '../../../types'
+import { countCharacters } from '../../../utils'
 import styles from './shoppingListItem.module.css'
 
 type ShoppingListItemProps = {
@@ -9,9 +10,6 @@ type ShoppingListItemProps = {
     checked: boolean
     onToggle: (id: number) => void
 }
-
-// Emoji are often several code units long, so count user perceived characters instead of string length.
-const countCharacters = (value: string) => Array.from(new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(value)).length
 
 export const ShoppingListItem = ({ item, checked, onToggle }: ShoppingListItemProps) => {
 	const { name, id, purpose } = item

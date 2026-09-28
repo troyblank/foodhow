@@ -83,6 +83,37 @@ describe('Shopping list legend.', () => {
 		expect(getByText('No legend items yet.')).toBeInTheDocument()
 	})
 
+	it('Tells the user when the legend could not be loaded instead of calling it empty.', () => {
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			isLoading: false,
+			isError: true,
+			data: undefined,
+			refetch: jest.fn(),
+		} as any)
+
+		const { getByRole, queryByText } = renderLegend()
+
+		expect(getByRole('alert')).toHaveTextContent('Couldn\'t load the legend.')
+		expect(queryByText('No legend items yet.')).not.toBeInTheDocument()
+	})
+
+	it('Lets the user retry loading the legend after it fails.', async () => {
+		const mockRefetch = jest.fn()
+
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			isLoading: false,
+			isError: true,
+			data: undefined,
+			refetch: mockRefetch,
+		} as any)
+
+		const { getByRole } = renderLegend()
+
+		await userEvent.click(getByRole('button', { name: 'Try again' }))
+
+		expect(mockRefetch).toHaveBeenCalled()
+	})
+
 	it('Shows each legend item with its emoji and name.', () => {
 		const legendItem = mockShoppingListLegendItem()
 
@@ -100,14 +131,14 @@ describe('Shopping list legend.', () => {
 		expect(queryByText('No legend items yet.')).not.toBeInTheDocument()
 	})
 
-	it('Lists legend items in the order they were created.', () => {
+	it('Shows legend items in the order the legend provides.', () => {
 		const firstCreated = mockShoppingListLegendItem({ id: 1, name: 'first' })
 		const secondCreated = mockShoppingListLegendItem({ id: 2, name: 'second' })
 		const thirdCreated = mockShoppingListLegendItem({ id: 3, name: 'third' })
 
 		jest.mocked(useShoppingListLegend).mockReturnValue({
 			isLoading: false,
-			data: [thirdCreated, firstCreated, secondCreated],
+			data: [firstCreated, secondCreated, thirdCreated],
 		} as any)
 
 		const { getAllByRole } = renderLegend()
@@ -188,6 +219,51 @@ describe('Shopping list legend.', () => {
 		await userEvent.type(getByLabelText('Name'), '   ')
 
 		expect(getByRole('button', { name: 'Confirm' })).toBeDisabled()
+	})
+
+	it('Keeps confirm disabled when the emoji is already in the legend.', async () => {
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			isLoading: false,
+			data: [mockShoppingListLegendItem({ emoji: '🐑', name: 'Lamb' })],
+		} as any)
+
+		const { getByLabelText, getByRole } = renderLegend()
+
+		await userEvent.click(getByRole('button', { name: 'Add legend item' }))
+		await userEvent.type(getByLabelText('Emoji'), '🐑')
+		await userEvent.type(getByLabelText('Name'), 'Party')
+
+		expect(getByRole('button', { name: 'Confirm' })).toBeDisabled()
+	})
+
+	it('Keeps confirm disabled when the emoji matches an existing one aside from surrounding spaces.', async () => {
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			isLoading: false,
+			data: [mockShoppingListLegendItem({ emoji: '🐑', name: 'Lamb' })],
+		} as any)
+
+		const { getByLabelText, getByRole } = renderLegend()
+
+		await userEvent.click(getByRole('button', { name: 'Add legend item' }))
+		await userEvent.type(getByLabelText('Emoji'), ' 🐑 ')
+		await userEvent.type(getByLabelText('Name'), 'Party')
+
+		expect(getByRole('button', { name: 'Confirm' })).toBeDisabled()
+	})
+
+	it('Enables confirm when the emoji is not already in the legend.', async () => {
+		jest.mocked(useShoppingListLegend).mockReturnValue({
+			isLoading: false,
+			data: [mockShoppingListLegendItem({ emoji: '🐑', name: 'Lamb' })],
+		} as any)
+
+		const { getByLabelText, getByRole } = renderLegend()
+
+		await userEvent.click(getByRole('button', { name: 'Add legend item' }))
+		await userEvent.type(getByLabelText('Emoji'), '💀')
+		await userEvent.type(getByLabelText('Name'), 'Party')
+
+		expect(getByRole('button', { name: 'Confirm' })).not.toBeDisabled()
 	})
 
 	it('Enables confirm when a single emoji and a name are filled.', async () => {

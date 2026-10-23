@@ -1,0 +1,25 @@
+{
+    "title": "Deconstructed Sushi",
+    "meta": "",
+    "ingredients": [
+        { "text": "1 &frac12; lbs sushi grade tuna steak (diced)", "type": "meat" },
+        { "text": "1 &frac14; cups olive oil", "type": "imperishable" },
+        { "text": "5 limes (zested)", "type": "produce" },
+        { "text": "1 cup lime juice", "type": "produce" },
+        { "text": "1 cup scallions (minced)", "type": "produce" },
+        { "text": "2 cups edamame", "type": "produce" },
+        { "text": "3 &frac14; TBSP jalapeño (minced)", "type": "produce" },
+        { "text": "3 ripe avocados (diced)", "type": "produce" },
+        { "text": "1 whole pineapple (diced)", "type": "produce" },
+        { "text": "2 &frac12; TBSP soy sauce", "type": "imperishable" },
+        { "text": "1 &frac12; TBSP toasted sesame seeds", "type": "spice" },
+        { "text": "2 TBSP salt", "type": "spice" },
+        { "text": "1 &frac12; TBSP black pepper", "type": "spice" },
+        { "text": "rice (cooked)", "type": "imperishable" }
+    ],
+    "directions": [
+        { "text": "Whisk together all ingredients expect rice in a bowl." },
+        { "text": "Chill for at least 1 hour." },
+        { "text": "Add mixture on top of rice." }
+    ]
+}

@@ -1,6 +1,6 @@
 # Food How
 
-[![Build Status](https://travis-ci.org/troyblank/foodhow.svg?branch=main)](https://travis-ci.org/troyblank/foodhow)
+[![CI](https://github.com/troyblank/foodhow/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/troyblank/foodhow/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/troyblank/foodhow/badge.svg?branch=main)](https://coveralls.io/github/troyblank/foodhow?branch=main)
 
 Food how is a recipe book and shopping list that deploys as static files. For more information see [troyblank.com](http://troyblank.com/#portfolio:/specimens/2014/foodHow/ "Food How").

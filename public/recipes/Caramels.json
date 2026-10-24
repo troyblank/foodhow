@@ -3,7 +3,7 @@
     "meta": "Grandma's",
     "ingredients": [
         { "text": "2 cups half and half", "type": "perishable" },
-        { "text": "1 cup butter", "type": "perishable" },
+        { "text": "1 TBSP butter", "type": "perishable" },
         { "text": "2 cups sugar", "type": "imperishable" },
         { "text": "1 &frac34; cups light corn syrup", "type": "imperishable" },
         { "text": "1 tsp vanilla extract", "type": "imperishable" }
